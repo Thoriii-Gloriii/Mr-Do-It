@@ -105,7 +105,7 @@ final class CodexSpeech {
                     if (web == mine) fail();
                 });
             }
-        }, "GoDo");
+        }, "MrDoIt");
         web.loadDataWithBaseURL("https://buddy.local/", PAGE, "text/html", "utf-8", null);
         main.postDelayed(watchdog, 1000);
     }

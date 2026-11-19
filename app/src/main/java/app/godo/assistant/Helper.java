@@ -90,13 +90,13 @@ final class Helper {
                         int n;
                         while ((n = in.read(buf)) > 0) out.write(buf, 0, n);
                     } catch (IOException e) { // the log can't be written (no room): the helper works on, its output is dropped
-                        android.util.Log.w("GoDo", "helper log", e);
+                        android.util.Log.w("MrDoIt", "helper log", e);
                         while (in.read(buf) > 0) continue;
                     }
                 }
                 p.waitFor();
             } catch (Exception e) {
-                android.util.Log.w("GoDo", "helper failed", e);
+                android.util.Log.w("MrDoIt", "helper failed", e);
             } finally {
                 // only a helper that has really ended (or never started) is reported as gone
                 if (p == null || !p.isAlive()) McpServer.revoke(runToken);
@@ -151,7 +151,7 @@ final class Helper {
                 }
             }
         } catch (IOException e) {
-            android.util.Log.w("GoDo", "permissions not written", e);
+            android.util.Log.w("MrDoIt", "permissions not written", e);
         }
     }
 

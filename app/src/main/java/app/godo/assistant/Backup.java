@@ -89,7 +89,7 @@ final class Backup {
         }
         ContentValues v = new ContentValues();
         v.put(MediaStore.MediaColumns.DISPLAY_NAME, name);
-        v.put(MediaStore.MediaColumns.RELATIVE_PATH, "Download/Buddy");
+        v.put(MediaStore.MediaColumns.RELATIVE_PATH, "Download/MrDoIt");
         v.put(MediaStore.MediaColumns.MIME_TYPE, "application/zip");
         Uri u = c.getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, v);
         if (u == null) throw new Exception("Couldn't write to Downloads.");

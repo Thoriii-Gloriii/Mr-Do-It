@@ -212,7 +212,7 @@ final class CodexDictation {
                             "the connection failed".equals(why) ? BuddyApp.str(R.string.dictation_connection_failed) : why));
                 });
             }
-        }, "GoDo");
+        }, "MrDoIt");
         web.loadDataWithBaseURL("https://buddy.local/", PAGE, "text/html", "utf-8", null);
     }
 

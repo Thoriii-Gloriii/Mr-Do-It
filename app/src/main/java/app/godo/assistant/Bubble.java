@@ -3432,7 +3432,7 @@ final class Bubble implements ChatHub.Listener {
                 copy.setPadding(dp(9), dp(9), dp(9), dp(9)); // a 16dp icon in a 34dp target
                 copy.setBackgroundResource(Ui.ripple(svc, true));
                 copy.setOnClickListener(x -> {
-                    svc.getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("GoDo", text));
+                    svc.getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("Mr Do It", text));
                     toast(svc.getString(R.string.bubble_copied));
                 });
                 LinearLayout.LayoutParams cp = new LinearLayout.LayoutParams(dp(34), dp(34));
@@ -3539,7 +3539,7 @@ final class Bubble implements ChatHub.Listener {
     private void copyOnLongPress(View v, String text) {
         v.setOnLongClickListener(x -> {
             ClipboardManager cm = svc.getSystemService(ClipboardManager.class);
-            cm.setPrimaryClip(ClipData.newPlainText("GoDo", text));
+            cm.setPrimaryClip(ClipData.newPlainText("Mr Do It", text));
             toast(svc.getString(R.string.bubble_copied));
             return true;
         });

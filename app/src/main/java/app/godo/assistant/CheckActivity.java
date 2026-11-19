@@ -244,7 +244,7 @@ public class CheckActivity extends Screen {
         body.addView(card, full());
         Button copy = button(this, getString(R.string.check_copy), false);
         copy.setOnClickListener(v -> {
-            getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("GoDo", report()));
+            getSystemService(ClipboardManager.class).setPrimaryClip(ClipData.newPlainText("Mr Do It", report()));
             Toast.makeText(this, R.string.check_copied, Toast.LENGTH_SHORT).show();
         });
         body.addView(copy, topGap(16));

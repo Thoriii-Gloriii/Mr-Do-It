@@ -2032,7 +2032,7 @@ final class Tools {
         sel.putInt(AccessibilityNodeInfo.ACTION_ARGUMENT_SELECTION_START_INT, append ? len : 0);
         sel.putInt(AccessibilityNodeInfo.ACTION_ARGUMENT_SELECTION_END_INT, len);
         target.performAction(AccessibilityNodeInfo.ACTION_SET_SELECTION, sel);
-        cm.setPrimaryClip(ClipData.newPlainText("GoDo", text));
+        cm.setPrimaryClip(ClipData.newPlainText("Mr Do It", text));
         return target.performAction(AccessibilityNodeInfo.ACTION_PASTE);
     }
 

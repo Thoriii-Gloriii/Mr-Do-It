@@ -198,7 +198,7 @@ final class SshServer {
                     }
                 }
             } catch (Exception e) {
-                android.util.Log.w("GoDo", "ssh key not saved", e);
+                android.util.Log.w("MrDoIt", "ssh key not saved", e);
                 return null;
             }
         }

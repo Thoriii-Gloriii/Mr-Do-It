@@ -182,7 +182,7 @@ final class McpServers {
         JSONObject init = rpc(url, header, session, new JSONObject().put("jsonrpc", "2.0").put("id", 1)
                 .put("method", "initialize").put("params", new JSONObject().put("protocolVersion", "2025-06-18")
                         .put("capabilities", new JSONObject())
-                        .put("clientInfo", new JSONObject().put("name", "GoDo").put("version", BuildInfo.VERSION))));
+                        .put("clientInfo", new JSONObject().put("name", "Mr Do It").put("version", BuildInfo.VERSION))));
         if (init == null || !init.has("result")) throw new Exception(said(init, "The server didn't answer \"initialize\"."));
         rpc(url, header, session, new JSONObject().put("jsonrpc", "2.0").put("method", "notifications/initialized"));
         JSONArray out = new JSONArray();

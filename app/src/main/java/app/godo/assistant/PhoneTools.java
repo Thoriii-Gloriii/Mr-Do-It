@@ -153,7 +153,7 @@ final class PhoneTools {
         svc.runOnMain(() -> {
             try {
                 ClipboardManager cm = (ClipboardManager) svc.getSystemService(Context.CLIPBOARD_SERVICE);
-                cm.setPrimaryClip(ClipData.newPlainText("GoDo", text));
+                cm.setPrimaryClip(ClipData.newPlainText("Mr Do It", text));
             } catch (Exception e) {
                 err.set(String.valueOf(e.getMessage()));
             }

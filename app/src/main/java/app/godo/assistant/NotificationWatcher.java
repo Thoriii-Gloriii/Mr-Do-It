@@ -72,7 +72,7 @@ public class NotificationWatcher extends NotificationListenerService {
             Rules.Rule rule = Rules.match(this, note);
             if (rule != null) t.fire(rule, note);
         } catch (Exception e) {
-            android.util.Log.w("GoDo", "notification rule failed", e);
+            android.util.Log.w("MrDoIt", "notification rule failed", e);
         }
     }
 
