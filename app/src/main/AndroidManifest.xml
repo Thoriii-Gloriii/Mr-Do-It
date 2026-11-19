@@ -59,6 +59,7 @@
         android:usesCleartextTraffic="true"
         android:enableOnBackInvokedCallback="true"
         android:extractNativeLibs="true"
+        android:resizeableActivity="true"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
 
         <activity
@@ -173,7 +174,7 @@
 
         <activity
             android:name=".SetupActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name=".WaitingActivity"
@@ -206,7 +207,7 @@
 
         <provider
             android:name=".FilesProvider"
-            android:authorities="app.buddy.assistant.files"
+            android:authorities="app.godo.assistant.files"
             android:exported="false"
             android:grantUriPermissions="true" />
 

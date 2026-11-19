@@ -1,13 +1,13 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/bin/bash
 # Builds a signed release APK on-device with aapt2 + javac + d8 + apksigner.
 # Output: build/buddy-release.apk
 set -euo pipefail
 cd "$(dirname "$0")"
 
-SDK_JAR=${SDK_JAR:-$HOME/android-sdk/android-36/android.jar}
-KEYSTORE=${KEYSTORE:-$HOME/.buddy-keys/release.jks}
-PACKAGE=app.buddy.assistant
-INFO=app/src/main/java/app/buddy/assistant/BuildInfo.java
+SDK_JAR=${SDK_JAR:-/root/android-sdk/android-36/android.jar}
+KEYSTORE=${KEYSTORE:-/root/.buddy/keys/apps.jks}
+PACKAGE=app.godo.assistant
+INFO=app/src/main/java/app/godo/assistant/BuildInfo.java
 VERSION_NAME=$(sed -n 's/.*VERSION = "\(.*\)";/\1/p' "$INFO")
 VERSION_CODE=$(sed -n 's/.*VERSION_CODE = \([0-9]*\);/\1/p' "$INFO")
 SRC=app/src/main
@@ -64,7 +64,7 @@ if [ ! -f "$KEYSTORE" ]; then
   keytool -genkeypair -keystore "$KEYSTORE" -alias buddy -keyalg RSA -keysize 4096 -validity 10000 \
     -storepass "$PASS" -keypass "$PASS" -dname "CN=Buddy, O=Personal" >/dev/null 2>&1
 fi
-apksigner sign --ks "$KEYSTORE" --ks-key-alias buddy \
+apksigner sign --ks "$KEYSTORE" --ks-key-alias apps \
   --ks-pass "file:$(dirname "$KEYSTORE")/password" \
   --out "$OUT/buddy-release.apk" "$OUT/aligned.apk"
 apksigner verify "$OUT/buddy-release.apk"
