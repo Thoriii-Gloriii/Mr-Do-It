@@ -44,12 +44,14 @@ jobs:
       # Release signing is optional: add the BUDDY_KEYSTORE_BASE64 and BUDDY_KEYSTORE_PASSWORD
       # repository secrets to get a signed APK; otherwise the APK is unsigned.
       - name: Decode signing key
+        id: decode
         env:
           KEYSTORE_BASE64: ${{ secrets.BUDDY_KEYSTORE_BASE64 }}
         if: env.KEYSTORE_BASE64 != ''
         run: |
           echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
           echo "BUDDY_KEYSTORE=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+          echo "has_key=true" >> "$GITHUB_OUTPUT"
 
       # github: the release here. fdroid: F-Droid builds it from this source too, and ships this signed copy when its
       # own build comes out identical (reproducible builds), so users can switch between the two.
@@ -98,11 +100,13 @@ jobs:
       # What F-Droid will do: build the fdroid APK again, unsigned, somewhere else, and check it matches the signed one
       # above but for the signature. After publishing, so a mismatch shows up red without holding the release back.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        if: steps.decode.outputs.has_key == 'true'
         with:
           submodules: true
           path: rebuild-check # a second copy at another path, as F-Droid's build machine would have
 
       - name: Check the F-Droid APK is reproducible
+        if: steps.decode.outputs.has_key == 'true'
         run: |
           pip install --quiet apksigcopier
           export PATH="$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1):$PATH" # apksigner
