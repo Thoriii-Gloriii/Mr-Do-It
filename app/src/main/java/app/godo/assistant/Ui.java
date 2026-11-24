@@ -1384,60 +1384,77 @@ final class Ui {
 
     // ---------------------------------------------------------------- bottom nav
 
-    static final int NAV_CHATS = 0, NAV_SESSIONS = 1, NAV_SETTINGS = 2;
+    /** Nav destinations for the redesigned 5-tab home nav. */
+    static final int NAV_HOME = 0, NAV_TOOLS = 1, NAV_VOICE = 2, NAV_HISTORY = 3, NAV_SETTINGS = 4;
+    /** Legacy aliases: NAV_CHATS → Home tab, NAV_SESSIONS → Tools tab (for MonitorActivity). */
+    static final int NAV_CHATS = NAV_HOME, NAV_SESSIONS = NAV_TOOLS;
 
-    /** Chats · Sessions · Settings as a floating pill; the active item is a filled capsule with its label. */
+    /**
+     * Five-destination floating nav pill: Home · Tools · Voice · History · Settings.
+     * The active Home item shows its full label; all others show icon + compact label.
+     * sessionsBadge is shown on the Tools tab when > 0.
+     */
     static LinearLayout bottomNav(Activity a, int active, int sessionsBadge) {
         LinearLayout bar = row(a);
         bar.setGravity(Gravity.CENTER);
         bar.setPaddingRelative(dp(a, 6), dp(a, 6), dp(a, 6), dp(a, 6));
         bar.setBackground(glass(a, NAV, 34));
         bar.setElevation(dp(a, DARK ? 8 : 4));
+        // {icon, label, destination class}
         Object[][] items = {
-                {R.drawable.ms_chat_bubble, a.getString(R.string.ui_nav_chats), MainActivity.class},
-                {R.drawable.ms_terminal, a.getString(R.string.ui_nav_sessions), MonitorActivity.class},
-                {R.drawable.ms_tune, a.getString(R.string.ui_nav_settings), SetupActivity.class},
+                {R.drawable.ms_chat_bubble,  "Home",     MainActivity.class},
+                {R.drawable.ms_terminal,     "Tools",    MonitorActivity.class},
+                {R.drawable.ms_mic,          "Voice",    null},               // placeholder: no dedicated screen yet
+                {R.drawable.ms_schedule,     "History",  SearchActivity.class},
+                {R.drawable.ms_tune,         "Settings", SetupActivity.class},
         };
         for (int i = 0; i < items.length; i++) {
             final int idx = i;
             boolean on = i == active;
             LinearLayout it = row(a);
             it.setGravity(Gravity.CENTER);
-            it.setPaddingRelative(dp(a, 8), 0, dp(a, 8), 0);
+            it.setPaddingRelative(dp(a, 6), 0, dp(a, 6), 0);
             it.setMinimumHeight(dp(a, 56));
             if (on) it.setBackground(rounded(a, Theme.withAlpha(ACCENT, 0x29), 28));
             else it.setBackgroundResource(ripple(a, true));
+
             FrameLayout iconBox = new FrameLayout(a);
-            iconBox.addView(icon(a, (Integer) items[i][0], on ? TEXT : MUTED, 20),
+            iconBox.addView(icon(a, (Integer) items[i][0], on ? ACCENT : MUTED, 20),
                     new FrameLayout.LayoutParams(dp(a, 20), dp(a, 20), Gravity.CENTER));
-            it.addView(iconBox, new LinearLayout.LayoutParams(dp(a, 28), dp(a, 28)));
-            TextView label = single(text(a, (String) items[i][1], 14, on ? TEXT : MUTED));
-            label.setTypeface(sans(a, on ? 600 : 500));
-            label.setPaddingRelative(dp(a, 6), 0, 0, 0);
+            it.addView(iconBox, new LinearLayout.LayoutParams(dp(a, 24), dp(a, 24)));
+
+            // Always show label (smaller on non-active)
+            TextView label = single(text(a, (String) items[i][1], on ? 13 : 11, on ? TEXT : MUTED));
+            label.setTypeface(sans(a, on ? 600 : 400));
+            label.setPaddingRelative(dp(a, 4), 0, 0, 0);
             it.addView(label);
-            if (i == NAV_SESSIONS && sessionsBadge > 0) {
+
+            // Badge on Tools tab
+            if (i == NAV_TOOLS && sessionsBadge > 0) {
                 TextView b = text(a, String.valueOf(sessionsBadge), 11, ON_ACCENT);
                 b.setTypeface(sans(a, 700));
                 b.setGravity(Gravity.CENTER);
-                b.setMinWidth(dp(a, 18));
-                b.setBackground(rounded(a, ACCENT, 9));
-                b.setPaddingRelative(dp(a, 5), 0, dp(a, 5), 0);
-                LinearLayout.LayoutParams bp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, dp(a, 18));
-                bp.setMarginStart(dp(a, 6));
+                b.setMinWidth(dp(a, 16));
+                b.setBackground(rounded(a, ACCENT, 8));
+                b.setPaddingRelative(dp(a, 4), 0, dp(a, 4), 0);
+                LinearLayout.LayoutParams bp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, dp(a, 16));
+                bp.setMarginStart(dp(a, 4));
                 it.addView(b, bp);
             }
+
             it.setSelected(on);
             it.setOnClickListener(v -> {
                 if (idx == active) return;
-                Intent in = new Intent(a, (Class<?>) items[idx][2]).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                // Chats is the root: go back to it instead of stacking another copy
-                if (idx == NAV_CHATS) in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                Class<?> dest = (Class<?>) items[idx][2];
+                if (dest == null) return; // Voice: no screen yet
+                Intent in = new Intent(a, dest).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                if (idx == NAV_HOME) in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 a.startActivity(in);
                 a.overridePendingTransition(0, 0);
                 if (!(a instanceof MainActivity)) a.finish();
             });
             LinearLayout.LayoutParams ip = new LinearLayout.LayoutParams(0, dp(a, 56), 1);
-            if (i > 0) ip.setMarginStart(dp(a, 4));
+            if (i > 0) ip.setMarginStart(dp(a, 2));
             bar.addView(it, ip);
         }
         LinearLayout wrap = column(a);

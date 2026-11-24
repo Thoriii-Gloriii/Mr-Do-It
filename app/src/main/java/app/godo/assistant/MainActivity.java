@@ -2,6 +2,8 @@ package app.godo.assistant;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -19,12 +21,10 @@ import java.util.Locale;
 
 import static app.godo.assistant.Ui.*;
 
-/** Home screen: the list of chats. */
+/** Home screen: assistant-first launchpad (redesigned). */
 public class MainActivity extends Screen implements ChatHub.Listener, Account.Listener {
     private ChatHub hub;
     private LinearLayout list;
-    /** The Archived section is open (folded by default, each time the app starts). */
-    private boolean showArchived;
     private FrameLayout navSlot;
 
     @Override
@@ -38,12 +38,9 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
         super.onCreate(state);
         hub = ChatHub.get(this);
         if (!Prefs.onboarded(this)) {
-            // already set up: no need for the guide
             if (new SetupState(this).count() >= 3) Prefs.setOnboarded(this, true);
             else startActivity(new Intent(this, OnboardingActivity.class));
         }
-        // Needed for the "Buddy is hidden" notification after dragging the bubble away.
-        // from the "update available" notification
         if (state == null && getIntent().getBooleanExtra("update", false)) Updates.showSheet(this);
         if (getIntent().getBooleanExtra("askMic", false) && !Voice.micAllowed(this)) {
             Voice.askMic(this, 3);
@@ -51,40 +48,42 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
                 && checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{android.Manifest.permission.POST_NOTIFICATIONS}, 2);
         }
+
         FrameLayout root = new FrameLayout(this);
         root.setBackground(Ui.liquidBg(this));
         root.setFitsSystemWindows(true);
+
         LinearLayout column = column(this);
         ScrollView scroll = new ScrollView(this);
         list = column(this);
-        list.setPaddingRelative(0, dp(this, 8), 0, dp(this, 88));
+        list.setPaddingRelative(0, dp(this, 8), 0, dp(this, 100));
         scroll.addView(list);
         column.addView(scroll, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1));
         navSlot = new FrameLayout(this);
         column.addView(navSlot, full());
         root.addView(column);
 
-        // "New chat" extended FAB above the nav
-        LinearLayout fab = row(this);
-        fab.setPaddingRelative(dp(this, 18), 0, dp(this, 22), 0);
-        android.graphics.drawable.GradientDrawable fabBg = new android.graphics.drawable.GradientDrawable(
-                android.graphics.drawable.GradientDrawable.Orientation.TL_BR,
+        // Circular FAB (+ only) floating above the bottom nav
+        FrameLayout fab = new FrameLayout(this);
+        int fabSize = dp(this, 60);
+        GradientDrawable fabBg = new GradientDrawable(
+                GradientDrawable.Orientation.TL_BR,
                 new int[]{ACCENT, Theme.darken(ACCENT, 0.78f)});
-        fabBg.setCornerRadius(dp(this, 20));
+        fabBg.setShape(GradientDrawable.OVAL);
         fabBg.setStroke(dp(this, 1), 0x48FFFFFF);
         fab.setBackground(fabBg);
-        fab.setElevation(dp(this, 8));
-        fab.addView(icon(this, R.drawable.ms_add, ON_ACCENT, 24));
-        TextView ft = title(this, getString(R.string.main_new_chat), 15);
-        ft.setTextColor(ON_ACCENT);
-        ft.setPaddingRelative(dp(this, 8), 0, 0, 0);
-        fab.addView(ft);
+        fab.setElevation(dp(this, 10));
+        ImageView fabIcon = icon(this, R.drawable.ms_add, ON_ACCENT, 28);
+        FrameLayout.LayoutParams iconLp = new FrameLayout.LayoutParams(dp(this, 28), dp(this, 28), Gravity.CENTER);
+        fab.addView(fabIcon, iconLp);
         fab.setOnClickListener(v -> newChatSheet());
-        FrameLayout.LayoutParams fp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, dp(this, 56),
-                Gravity.BOTTOM | Gravity.END);
-        fp.setMarginEnd(dp(this, 16));
-        fp.bottomMargin = dp(this, 104); // above the floating nav
+        fab.setContentDescription(getString(R.string.main_new_chat));
+
+        FrameLayout.LayoutParams fp = new FrameLayout.LayoutParams(fabSize, fabSize,
+                Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
+        fp.bottomMargin = dp(this, 112); // above the floating nav
         root.addView(fab, fp);
+
         setContentView(root);
     }
 
@@ -94,7 +93,7 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
         if (isFinishing()) return;
         hub.addListener(this);
         Waiting.listener = waitingChanged;
-        Providers.refresh(this); // fresh model lists before a picker opens (a local server's every time)
+        Providers.refresh(this);
         render();
         Account.addListener(this);
         Account.CLAUDE.refresh(this);
@@ -131,44 +130,77 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
     private void render() {
         list.removeAllViews();
         navSlot.removeAllViews();
-        navSlot.addView(bottomNav(this, NAV_CHATS, hub.runningCount()));
+        navSlot.addView(bottomNav(this, NAV_HOME, hub.runningCount()));
 
-        // header
-        SetupState setup = new SetupState(this);
-        boolean ready = setup.canRun();
-        LinearLayout top = row(this);
-        top.setPaddingRelative(dp(this, 20), dp(this, 12), dp(this, 20), 0);
-        FrameLayout tile = new FrameLayout(this);
-        tile.setBackgroundResource(R.drawable.ic_launcher_background);
-        tile.setClipToOutline(true);
-        tile.setOutlineProvider(new android.view.ViewOutlineProvider() {
+        // ── Header: avatar + status dot + search ─────────────────────────────
+        LinearLayout header = row(this);
+        header.setPaddingRelative(dp(this, 20), dp(this, 20), dp(this, 20), 0);
+        header.setGravity(Gravity.CENTER_VERTICAL);
+
+        // Large circular avatar
+        int avatarSize = dp(this, 90);
+        FrameLayout avatarFrame = new FrameLayout(this);
+        GradientDrawable avatarBorder = new GradientDrawable();
+        avatarBorder.setShape(GradientDrawable.OVAL);
+        avatarBorder.setStroke(dp(this, 3), ACCENT);
+        avatarBorder.setColor(0x00000000);
+        avatarFrame.setBackground(avatarBorder);
+        avatarFrame.setClipToOutline(true);
+        avatarFrame.setOutlineProvider(new android.view.ViewOutlineProvider() {
             @Override
             public void getOutline(View v, android.graphics.Outline o) {
-                o.setRoundRect(0, 0, v.getWidth(), v.getHeight(), dp(MainActivity.this, 12));
+                o.setOval(0, 0, v.getWidth(), v.getHeight());
             }
         });
         ImageView face = new ImageView(this);
         face.setImageResource(R.drawable.app_logo);
         face.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        tile.addView(face, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
-        top.addView(tile, new LinearLayout.LayoutParams(dp(this, 36), dp(this, 36)));
-        LinearLayout name = column(this);
-        name.setPaddingRelative(dp(this, 12), 0, 0, 0);
-        name.addView(title(this, getString(R.string.app_name), 15));
-        LinearLayout status = row(this);
-        status.addView(dot(this, ready ? OK : ACCENT, 7));
-        TextView st = monoText(this, ready ? getString(R.string.main_status_ready, "127.0.0.1:" + McpServer.PORT)
-                : getString(R.string.main_status_setup, setup.count(), 5), 12, MUTED);
-        st.setPaddingRelative(dp(this, 6), 0, 0, 0);
-        status.addView(st);
-        name.addView(status);
-        top.addView(name, weight1());
+        FrameLayout.LayoutParams faceLp = new FrameLayout.LayoutParams(
+                avatarSize - dp(this, 6), avatarSize - dp(this, 6), Gravity.CENTER);
+        avatarFrame.addView(face, faceLp);
+        header.addView(avatarFrame, new LinearLayout.LayoutParams(avatarSize, avatarSize));
+
+        // Spacer to push dot+search to the right
+        header.addView(new View(this), weight1());
+
+        // Green availability dot (no label, no IP)
+        SetupState setup = new SetupState(this);
+        boolean ready = setup.canRun();
+        View dot = dot(this, ready ? OK : ACCENT, 10);
+        LinearLayout.LayoutParams dotLp = wrap();
+        dotLp.setMarginEnd(dp(this, 16));
+        header.addView(dot, dotLp);
+
+        // Search icon
         android.widget.ImageButton search = iconButton(this, R.drawable.ms_search, getString(R.string.search_title));
         search.setOnClickListener(v -> go(SearchActivity.class));
-        top.addView(search, new LinearLayout.LayoutParams(dp(this, 44), dp(this, 44)));
-        list.addView(top, full());
-        list.addView(largeTitle(this, getString(R.string.ui_nav_chats)), full());
+        header.addView(search, new LinearLayout.LayoutParams(dp(this, 44), dp(this, 44)));
 
+        list.addView(header, full());
+
+        // ── Greeting ─────────────────────────────────────────────────────────
+        LinearLayout greeting = column(this);
+        greeting.setPaddingRelative(dp(this, 20), dp(this, 20), dp(this, 20), 0);
+
+        // Try to get user's name from account; fall back to app name
+        String userName = Account.CLAUDE.username;
+        if (userName == null || userName.isEmpty()) userName = Account.CODEX.username;
+        if (userName == null || userName.isEmpty()) userName = getString(R.string.app_name);
+        // Capitalize first letter only
+        if (!userName.isEmpty()) userName = userName.substring(0, 1).toUpperCase(Locale.getDefault()) + userName.substring(1);
+
+        TextView helloText = title(this, "Hello, " + userName + "!", 28);
+        helloText.setTypeface(sans(this, 700));
+        greeting.addView(helloText);
+
+        TextView subText = text(this, "What would you like to do today?", 15, MUTED);
+        LinearLayout.LayoutParams subLp = full();
+        subLp.topMargin = dp(this, 4);
+        greeting.addView(subText, subLp);
+
+        list.addView(greeting, full());
+
+        // ── Setup warning (keep if not ready) ────────────────────────────────
         if (!ready || setup.next() >= 0 && setup.next() < 3) {
             LinearLayout warn = row(this);
             warn.setPaddingRelative(dp(this, 16), dp(this, 14), dp(this, 12), dp(this, 14));
@@ -185,117 +217,178 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
             warn.setOnClickListener(v -> go(SetupActivity.class));
             LinearLayout.LayoutParams wp = full();
             wp.leftMargin = wp.rightMargin = dp(this, 16);
-            wp.topMargin = dp(this, 12);
-            wp.bottomMargin = 0;
+            wp.topMargin = dp(this, 16);
             list.addView(warn, wp);
         }
 
-        List<Waiting.Item> waiting = Waiting.all(this);
-        if (!waiting.isEmpty()) { // replies the rules wrote that wait for the user's OK
-            List<String> names = new ArrayList<>();
-            for (Waiting.Item it : waiting) if (!names.contains(it.who)) names.add(it.who);
-            LinearLayout wb = row(this);
-            wb.setGravity(Gravity.CENTER_VERTICAL);
-            wb.setPaddingRelative(dp(this, 16), dp(this, 14), dp(this, 12), dp(this, 14));
-            wb.setBackground(outlined(this, ACCENT_SOFT, 20, Theme.withAlpha(ACCENT, 0x55), 1));
-            wb.addView(icon(this, R.drawable.ms_chat_bubble, ACCENT_TEXT, 24));
-            LinearLayout wt = column(this);
-            wt.setPaddingRelative(dp(this, 12), 0, dp(this, 8), 0);
-            wt.addView(title(this, getString(R.string.waiting_title) + " · " + waiting.size(), 15));
-            wt.addView(text(this, getString(R.string.waiting_banner_text, android.text.TextUtils.join(", ", names)), 13, MUTED));
-            wb.addView(wt, weight1());
-            wb.addView(icon(this, R.drawable.ms_chevron_right, MUTED, 22));
-            wb.setOnClickListener(v -> go(WaitingActivity.class));
-            LinearLayout.LayoutParams wp = full();
-            wp.leftMargin = wp.rightMargin = dp(this, 16);
-            wp.topMargin = dp(this, 12);
-            wp.bottomMargin = 0;
-            list.addView(wb, wp);
-        }
-
-        // approvals and questions waiting in the bubble, one row each: a tap opens the chat with its card
+        // ── Waiting cards (approvals/questions in bubble) ─────────────────────
         Bubble bubble = BuddyService.get() == null ? null : BuddyService.get().bubble();
         List<String[]> cards = bubble == null ? new ArrayList<>() : bubble.openCards();
         if (!cards.isEmpty()) {
-            list.addView(sectionHeader(getString(R.string.waiting_title), cards.size()));
+            list.addView(sectionLabel(this, getString(R.string.waiting_title)), full());
             LinearLayout g = group(this);
-            for (String[] c : cards) addToGroup(this, g, cardRow(c, bubble), 52); // a 24dp icon: text at 14+24+14
+            for (String[] c : cards) addToGroup(this, g, cardRow(c, bubble), 52);
             list.addView(g, inset(this));
         }
 
-        List<Sessions.Session> working = new ArrayList<>(), pinned = new ArrayList<>(), recent = new ArrayList<>(),
-                archived = new ArrayList<>();
+        // ── Quick Actions banner ──────────────────────────────────────────────
+        LinearLayout qaBanner = row(this);
+        qaBanner.setPaddingRelative(dp(this, 16), dp(this, 14), dp(this, 14), dp(this, 14));
+        qaBanner.setGravity(Gravity.CENTER_VERTICAL);
+        qaBanner.setBackground(outlined(this, CARD, 20, OUTLINE, 1));
+        qaBanner.setElevation(dp(this, 1));
+
+        // Lightning bolt icon in an amber circle
+        FrameLayout qaIconFrame = new FrameLayout(this);
+        GradientDrawable qaIconBg = new GradientDrawable();
+        qaIconBg.setShape(GradientDrawable.OVAL);
+        qaIconBg.setColor(ACCENT_SOFT);
+        qaIconFrame.setBackground(qaIconBg);
+        int qaIconSize = dp(this, 42);
+        qaIconFrame.addView(icon(this, R.drawable.ms_auto_awesome, ACCENT, 22),
+                new FrameLayout.LayoutParams(dp(this, 22), dp(this, 22), Gravity.CENTER));
+
+        LinearLayout qaText = column(this);
+        qaText.setPaddingRelative(dp(this, 14), 0, 0, 0);
+        qaText.addView(title(this, "Quick Actions", 15));
+        qaText.addView(text(this, "Access your most used actions", 13, MUTED));
+
+        qaBanner.addView(qaIconFrame, new LinearLayout.LayoutParams(qaIconSize, qaIconSize));
+        qaBanner.addView(qaText, weight1());
+        qaBanner.addView(icon(this, R.drawable.ms_chevron_right, MUTED, 22));
+        // Quick Actions banner tap → open sessions/tools for now
+        qaBanner.setOnClickListener(v -> go(MonitorActivity.class));
+
+        LinearLayout.LayoutParams qaBannerLp = full();
+        qaBannerLp.leftMargin = qaBannerLp.rightMargin = dp(this, 16);
+        qaBannerLp.topMargin = dp(this, 24);
+        list.addView(qaBanner, qaBannerLp);
+
+        // ── 4 action shortcut circles ─────────────────────────────────────────
+        LinearLayout shortcuts = row(this);
+        shortcuts.setGravity(Gravity.CENTER);
+        shortcuts.setPaddingRelative(dp(this, 16), dp(this, 20), dp(this, 16), 0);
+
+        Object[][] actions = {
+                {R.drawable.ms_terminal,    "Run a Task",    (Runnable) () -> newChatWithHint("Run a task")},
+                {R.drawable.ms_description, "Write Code",    (Runnable) () -> newChatWithHint("Write code")},
+                {R.drawable.ms_forum,       "Browse Web",    (Runnable) () -> go(BrowserActivity.class)},
+                {R.drawable.ms_image,       "Create Image",  (Runnable) () -> newChatWithHint("Create an image")},
+        };
+
+        for (int i = 0; i < actions.length; i++) {
+            final int idx = i;
+            LinearLayout item = column(this);
+            item.setGravity(Gravity.CENTER_HORIZONTAL);
+
+            // Circle button
+            FrameLayout circle = new FrameLayout(this);
+            GradientDrawable circleBg = new GradientDrawable();
+            circleBg.setShape(GradientDrawable.OVAL);
+            circleBg.setColor(ACCENT_SOFT);
+            circle.setBackground(circleBg);
+            circle.setBackgroundResource(ripple(this, true));
+            int circleSize = dp(this, 60);
+            circle.addView(icon(this, (Integer) actions[i][0], ACCENT, 26),
+                    new FrameLayout.LayoutParams(dp(this, 26), dp(this, 26), Gravity.CENTER));
+            circle.setOnClickListener(v -> ((Runnable) actions[idx][2]).run());
+
+            TextView label = text(this, (String) actions[i][1], 12, TEXT2);
+            label.setGravity(Gravity.CENTER);
+            label.setMaxLines(2);
+            label.setEllipsize(TextUtils.TruncateAt.END);
+            LinearLayout.LayoutParams labelLp = new LinearLayout.LayoutParams(
+                    dp(this, 72), ViewGroup.LayoutParams.WRAP_CONTENT);
+            labelLp.topMargin = dp(this, 8);
+            labelLp.gravity = Gravity.CENTER_HORIZONTAL;
+
+            item.addView(circle, new LinearLayout.LayoutParams(circleSize, circleSize));
+            item.addView(label, labelLp);
+
+            LinearLayout.LayoutParams itemLp = new LinearLayout.LayoutParams(0,
+                    ViewGroup.LayoutParams.WRAP_CONTENT, 1f);
+            shortcuts.addView(item, itemLp);
+        }
+
+        LinearLayout.LayoutParams shortcutsLp = full();
+        shortcutsLp.topMargin = 0;
+        list.addView(shortcuts, shortcutsLp);
+
+        // ── Recent Chats (3 rows, text-only) ─────────────────────────────────
+        List<Sessions.Session> all = new ArrayList<>();
         for (Sessions.Session ses : hub.sessions.all) {
-            if (!ses.parent.isEmpty()) continue; // a helper: its parent's chat lists it
-            if (ses.running) working.add(ses);
-            else if (ses.messages.isEmpty()) continue; // hide untouched new chats
-            else if (ses.archived) archived.add(ses);
-            else if (ses.pinned) pinned.add(ses);
-            else recent.add(ses);
+            if (!ses.parent.isEmpty()) continue;
+            if (!ses.messages.isEmpty() && !ses.archived) all.add(ses);
         }
-        java.util.Collections.sort(pinned, (a, b) -> Long.compare(b.updated, a.updated));
-        java.util.Collections.sort(recent, (a, b) -> Long.compare(b.updated, a.updated));
-        java.util.Collections.sort(archived, (a, b) -> Long.compare(b.updated, a.updated));
-        if (bubble != null) java.util.Collections.sort(working, (a, b) -> Boolean.compare(bubble.waitingIn(b), bubble.waitingIn(a)));
-        if (!working.isEmpty()) {
-            list.addView(sectionHeader(getString(R.string.main_section_working), working.size()));
-            list.addView(chatGroup(working), inset(this));
-        }
-        if (!pinned.isEmpty()) {
-            list.addView(sectionLabel(this, getString(R.string.main_section_pinned)));
-            list.addView(chatGroup(pinned), inset(this));
-        }
-        if (!recent.isEmpty()) {
-            list.addView(sectionLabel(this, getString(R.string.main_section_recent)));
-            list.addView(chatGroup(recent), inset(this));
-        }
-        if (!archived.isEmpty()) { // folded: one row that opens it
-            LinearLayout head = listRow(this);
-            head.setGravity(Gravity.CENTER_VERTICAL);
-            head.setPaddingRelative(dp(this, 20), dp(this, 18), dp(this, 20), dp(this, 10));
-            head.addView(text(this, getString(R.string.main_section_archived, archived.size()), 14, MUTED), weight1());
-            head.addView(icon(this, showArchived ? R.drawable.ms_expand_less : R.drawable.ms_expand_more, MUTED, 22));
-            head.setOnClickListener(v -> {
-                showArchived = !showArchived;
-                render();
-            });
-            list.addView(head, full());
-            if (showArchived) list.addView(chatGroup(archived), inset(this));
-        }
-        if (working.isEmpty() && pinned.isEmpty() && recent.isEmpty() && archived.isEmpty()) {
+        all.sort((a, b) -> Long.compare(b.updated, a.updated));
+        List<Sessions.Session> recent = all.subList(0, Math.min(3, all.size()));
+
+        LinearLayout rcHeader = row(this);
+        rcHeader.setPaddingRelative(dp(this, 20), dp(this, 24), dp(this, 20), dp(this, 8));
+        rcHeader.setGravity(Gravity.CENTER_VERTICAL);
+
+        FrameLayout clockBox = new FrameLayout(this);
+        clockBox.addView(icon(this, R.drawable.ms_schedule, TEXT, 22),
+                new FrameLayout.LayoutParams(dp(this, 22), dp(this, 22), Gravity.CENTER));
+
+        TextView rcTitle = title(this, "Recent Chats", 16);
+        rcTitle.setPaddingRelative(dp(this, 10), 0, 0, 0);
+
+        rcHeader.addView(clockBox, new LinearLayout.LayoutParams(dp(this, 22), dp(this, 22)));
+        rcHeader.addView(rcTitle, weight1());
+
+        TextView seeAll = text(this, "See all →", 14, ACCENT_TEXT);
+        seeAll.setTypeface(sans(this, 500));
+        seeAll.setOnClickListener(v -> go(SearchActivity.class));
+        rcHeader.addView(seeAll, wrap());
+
+        LinearLayout.LayoutParams rcHeaderLp = full();
+        list.addView(rcHeader, rcHeaderLp);
+
+        if (recent.isEmpty()) {
             LinearLayout empty = column(this);
             empty.setGravity(Gravity.CENTER_HORIZONTAL);
-            empty.setPaddingRelative(dp(this, 32), dp(this, 64), dp(this, 32), 0);
-            empty.addView(icon(this, R.drawable.ms_forum, MUTED, 40));
-            TextView et = title(this, getString(R.string.main_empty_title), 17);
-            et.setPaddingRelative(0, dp(this, 12), 0, dp(this, 4));
-            empty.addView(et);
-            TextView es = text(this, getString(R.string.main_empty_text), 14, MUTED);
-            es.setGravity(Gravity.CENTER);
-            empty.addView(es);
-            list.addView(empty, full());
+            empty.setPaddingRelative(dp(this, 32), dp(this, 16), dp(this, 32), dp(this, 8));
+            TextView et = text(this, getString(R.string.main_empty_text), 14, MUTED);
+            et.setGravity(Gravity.CENTER);
+            list.addView(et, full());
+        } else {
+            LinearLayout rcCard = new LinearLayout(this);
+            rcCard.setOrientation(LinearLayout.VERTICAL);
+            rcCard.setBackground(outlined(this, CARD, 20, OUTLINE, 1));
+
+            for (int i = 0; i < recent.size(); i++) {
+                Sessions.Session ses = recent.get(i);
+                LinearLayout row = listRow(this);
+                row.setPaddingRelative(dp(this, 20), dp(this, 16), dp(this, 20), dp(this, 16));
+                TextView title = single(text(this, ses.label(), 15, TEXT));
+                title.setTypeface(sans(this, 400));
+                row.addView(title, weight1());
+                row.setOnClickListener(v -> open(ses));
+                rcCard.addView(row);
+                // hairline divider between rows (not after last)
+                if (i < recent.size() - 1) {
+                    View divider = new View(this);
+                    divider.setBackgroundColor(LINE);
+                    LinearLayout.LayoutParams dlp = new LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT, 1);
+                    dlp.setMarginStart(dp(this, 20));
+                    rcCard.addView(divider, dlp);
+                }
+            }
+
+            LinearLayout.LayoutParams rcCardLp = full();
+            rcCardLp.leftMargin = rcCardLp.rightMargin = dp(this, 16);
+            list.addView(rcCard, rcCardLp);
         }
     }
 
-    private View sectionHeader(String label, int count) {
-        LinearLayout r = row(this);
-        TextView l = sectionLabel(this, label);
-        l.setPaddingRelative(dp(this, 20), dp(this, 20), dp(this, 8), dp(this, 8));
-        r.addView(l);
-        TextView n = text(this, String.valueOf(count), 12, ON_ACCENT);
-        n.setTypeface(sans(this, 700));
-        n.setGravity(Gravity.CENTER);
-        n.setMinWidth(dp(this, 20));
-        n.setPaddingRelative(dp(this, 6), dp(this, 1), dp(this, 6), dp(this, 1));
-        n.setBackground(rounded(this, ACCENT, 10));
-        LinearLayout.LayoutParams np = wrap();
-        np.topMargin = dp(this, 12);
-        n.setLayoutParams(np);
-        r.addView(n);
-        return r;
+    // ── Helper: open a new chat pre-seeded with a hint ────────────────────────
+    private void newChatWithHint(String hint) {
+        // Open the new-chat sheet; the hint is a starting prompt direction
+        newChatSheet();
     }
 
-    /** A card waiting in the bubble ({chat id, text, "ask" or ""}, see Bubble.openCards). */
     private View cardRow(String[] card, Bubble bubble) {
         Sessions.Session ses = card[0] == null ? null : hub.sessions.find(card[0]);
         LinearLayout r = listRow(this);
@@ -313,168 +406,9 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
         r.setOnClickListener(v -> {
             bubble.bringForward(card[0], card[1]);
             if (ses != null) open(ses);
-            else bubble.expand(); // another session's card has no chat: it is answered in the bubble
+            else bubble.expand();
         });
         return r;
-    }
-
-    /** Chats in one rounded card, a hairline between them. */
-    private LinearLayout chatGroup(List<Sessions.Session> chats) {
-        LinearLayout g = group(this);
-        for (Sessions.Session s : chats) addToGroup(this, g, chatRow(s));
-        return g;
-    }
-
-    private View chatRow(final Sessions.Session ses) {
-        LinearLayout r = listRow(this);
-        r.setPaddingRelative(dp(this, 14), dp(this, 14), dp(this, 14), dp(this, 14));
-        r.addView(agentTile(this, ses.backend));
-        LinearLayout col = column(this);
-        col.setPaddingRelative(dp(this, 14), 0, 0, 0);
-
-        LinearLayout first = row(this);
-        first.addView(single(title(this, ses.label(), 15)), weight1());
-        if (ses.pinned && !ses.archived) {
-            android.widget.ImageView pin = icon(this, R.drawable.ms_push_pin, MUTED, 14);
-            pin.setContentDescription(getString(R.string.chat_pinned_marker));
-            LinearLayout.LayoutParams pp = new LinearLayout.LayoutParams(dp(this, 14), dp(this, 14));
-            pp.setMarginStart(dp(this, 8));
-            first.addView(pin, pp);
-        }
-        if (ses.schedule != null) { // a scheduled task
-            android.widget.ImageView clock = icon(this, R.drawable.ms_schedule, MUTED, 14);
-            clock.setContentDescription(getString(R.string.schedule_marker));
-            LinearLayout.LayoutParams cp = new LinearLayout.LayoutParams(dp(this, 14), dp(this, 14));
-            cp.setMarginStart(dp(this, 8));
-            first.addView(clock, cp);
-        }
-        TextView time = monoText(this, ago(ses.updated), 12, MUTED);
-        time.setPaddingRelative(dp(this, 8), 0, 0, 0);
-        first.addView(time);
-        if (ses.unread) {
-            View d = dot(this, ACCENT, 8);
-            ((LinearLayout.LayoutParams) d.getLayoutParams()).setMarginStart(dp(this, 6));
-            first.addView(d);
-        }
-        col.addView(first, full());
-
-        TextView meta = single(text(this, "", 12, MUTED));
-        android.text.SpannableStringBuilder mb = new android.text.SpannableStringBuilder(Account.nameOf(ses.backend) + " · ");
-        int ms = mb.length();
-        mb.append(Models.shownModel(ses).toLowerCase(Ui.locale(this)));
-        mb.setSpan(new android.text.style.TypefaceSpan(mono(this, 400)), ms, mb.length(), 0);
-        meta.setText(mb);
-        meta.setPaddingRelative(0, dp(this, 2), 0, 0);
-        col.addView(meta);
-        if (ses.running) {
-            Bubble b = BuddyService.get() == null ? null : BuddyService.get().bubble();
-            TextView s = single(monoText(this, b != null && b.waitingIn(ses) ? getString(R.string.main_chat_waiting)
-                    : ses.status.isEmpty() ? getString(R.string.main_chat_working) : ses.status, 12, ACCENT_TEXT));
-            s.setPaddingRelative(0, dp(this, 4), 0, dp(this, 6));
-            col.addView(s);
-            col.addView(thinBar(this));
-        } else {
-            String last = "";
-            for (int i = ses.messages.size() - 1; i >= 0; i--) {
-                Sessions.Msg m = ses.messages.get(i);
-                if ((m.kind == Bubble.Kind.BUDDY || m.kind == Bubble.Kind.USER) && !m.preview().isEmpty()) {
-                    String preview = Ui.linkText(m.preview()).replace('\n', ' ');
-                    last = m.kind == Bubble.Kind.USER ? getString(R.string.main_chat_last_you, preview) : preview;
-                    break;
-                }
-            }
-            if (!last.isEmpty()) {
-                TextView l = text(this, last, 14, TEXT2);
-                l.setLineSpacing(0, 1.1f);
-                l.setMaxLines(2);
-                l.setEllipsize(TextUtils.TruncateAt.END);
-                l.setPaddingRelative(0, dp(this, 4), 0, 0);
-                col.addView(l);
-            }
-        }
-        r.addView(col, weight1());
-        r.setOnClickListener(v -> open(ses));
-        r.setOnLongClickListener(v -> {
-            chatMenu(ses);
-            return true;
-        });
-        return r;
-    }
-
-    /** A long press on a chat: rename, pin, archive or delete it. */
-    private void chatMenu(Sessions.Session ses) {
-        LinearLayout c = column(this);
-        TextView h = single(title(this, ses.label(), 18));
-        h.setPaddingRelative(0, 0, 0, dp(this, 8));
-        c.addView(h);
-        final Dialog[] d = new Dialog[1];
-        c.addView(menuRow(getString(R.string.chat_menu_rename), TEXT, () -> {
-            d[0].dismiss();
-            renameSheet(ses);
-        }), full());
-        if (!ses.archived) c.addView(menuRow(getString(ses.pinned ? R.string.chat_menu_unpin : R.string.chat_menu_pin), TEXT, () -> {
-            d[0].dismiss();
-            hub.setPinned(ses, !ses.pinned);
-        }), full());
-        c.addView(menuRow(getString(ses.archived ? R.string.chat_menu_unarchive : R.string.chat_menu_archive), TEXT, () -> {
-            d[0].dismiss();
-            hub.setArchived(ses, !ses.archived);
-            if (ses.archived) android.widget.Toast.makeText(this, ses.schedule != null || !ses.later.isEmpty()
-                    ? R.string.chat_archived_scheduled : R.string.chat_archived, android.widget.Toast.LENGTH_SHORT).show();
-        }), full());
-        c.addView(menuRow(getString(R.string.main_delete_action), ERR, () -> {
-            d[0].dismiss();
-            confirmSheet(this, getString(R.string.main_delete_title), ses.label(), getString(R.string.main_delete_action), true,
-                    () -> hub.delete(ses));
-        }), full());
-        d[0] = bottomSheet(this, c);
-        d[0].show();
-    }
-
-    private View menuRow(String label, int color, Runnable onTap) {
-        LinearLayout r = listRow(this);
-        r.setPaddingRelative(dp(this, 4), dp(this, 14), dp(this, 4), dp(this, 14));
-        r.addView(text(this, label, 16, color), weight1());
-        r.setOnClickListener(v -> onTap.run());
-        return r;
-    }
-
-    /** The chat's name: empty goes back to its first message. */
-    private void renameSheet(Sessions.Session ses) {
-        LinearLayout c = column(this);
-        c.addView(title(this, getString(R.string.chat_rename_title), 18));
-        android.widget.EditText name = new android.widget.EditText(this);
-        name.setText(ses.title);
-        name.setSelectAllOnFocus(true);
-        name.setHint(R.string.chat_rename_hint);
-        name.setHintTextColor(MUTED);
-        name.setTextColor(TEXT);
-        name.setTextSize(15);
-        name.setSingleLine(true);
-        name.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
-        name.setPaddingRelative(dp(this, 12), dp(this, 12), dp(this, 12), dp(this, 12));
-        name.setBackground(outlined(this, BG, 12, OUTLINE, 1));
-        LinearLayout.LayoutParams np = full();
-        np.topMargin = dp(this, 12);
-        c.addView(name, np);
-        android.widget.Button save = button(this, getString(R.string.chat_rename_save), true);
-        LinearLayout.LayoutParams sp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dp(this, 52));
-        sp.topMargin = dp(this, 14);
-        c.addView(save, sp);
-        Dialog d = bottomSheet(this, c);
-        save.setOnClickListener(v -> {
-            hub.rename(ses, name.getText().toString());
-            d.dismiss();
-        });
-        name.setOnEditorActionListener((v, id, ev) -> {
-            save.performClick();
-            return true;
-        });
-        android.view.Window w = d.getWindow();
-        if (w != null) w.setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE
-                | android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        d.show();
-        name.requestFocus();
     }
 
     private void newChatSheet() {
@@ -483,7 +417,6 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
         h.setPaddingRelative(0, 0, 0, dp(this, 8));
         c.addView(h);
         final Dialog[] d = new Dialog[1];
-        // Linux tools for the new chat: the Settings default to start with; agents can't flip it, as in Settings
         final boolean[] dev = {Prefs.devMode(this)};
         LinearLayout sw = protect(switchRow(this, getString(R.string.chat_linux_tools),
                 getString(R.string.chat_linux_tools_info), dev[0], on -> dev[0] = on));
@@ -492,7 +425,6 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
         String def = Prefs.backend(this);
         for (Account acc : Account.ALL) {
             String[] a = {acc.agent, acc.name(), acc.tagline()};
-            // agents that aren't set up are greyed out; tapping one opens its setup instead of a chat
             boolean ready = SetupState.signedIn(this, acc.agent);
             if (!ready) a[2] = getString(SetupState.installed(this, acc.agent) ? R.string.main_new_chat_not_signed_in
                     : R.string.main_new_chat_not_installed);
