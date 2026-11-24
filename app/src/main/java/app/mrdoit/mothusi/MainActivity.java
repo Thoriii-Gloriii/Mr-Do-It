@@ -182,9 +182,10 @@ public class MainActivity extends Screen implements ChatHub.Listener, Account.Li
         LinearLayout greeting = column(this);
         greeting.setPaddingRelative(dp(this, 20), dp(this, 20), dp(this, 20), 0);
 
-        // Try to get user's name from account; fall back to app name
-        String userName = Account.CLAUDE.username;
-        if (userName == null || userName.isEmpty()) userName = Account.CODEX.username;
+        // Try to get user's name from account email; fall back to app name
+        String userName = Account.CLAUDE.email;
+        if (userName == null || userName.isEmpty()) userName = Account.CODEX.email;
+        if (userName != null && userName.contains("@")) userName = userName.substring(0, userName.indexOf('@'));
         if (userName == null || userName.isEmpty()) userName = getString(R.string.app_name);
         // Capitalize first letter only
         if (!userName.isEmpty()) userName = userName.substring(0, 1).toUpperCase(Locale.getDefault()) + userName.substring(1);

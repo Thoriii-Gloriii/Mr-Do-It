@@ -36,6 +36,10 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.media.MediaPlayer;
+import android.graphics.SurfaceTexture;
+import android.view.TextureView;
+import android.view.Surface;
 import android.os.Build;
 import android.window.BackEvent;
 import android.window.OnBackAnimationCallback;
@@ -75,6 +79,13 @@ final class Bubble implements ChatHub.Listener {
     private ValueAnimator breathing;
     private RingView ring;
     private boolean noteListening;
+    // per-minute bubble video overlay
+    private TextureView bubbleVideoView;
+    private MediaPlayer bubbleMediaPlayer;
+    private MediaPlayer readyPlayer;
+    private Runnable videoHideRunnable;
+    private Runnable videoShowRunnable;
+    private boolean prewarmedRight;
     // expanded
     private LinearLayout panel, messages, confirmCard;
     private ScrollView scroll;
@@ -137,6 +148,179 @@ final class Bubble implements ChatHub.Listener {
         this.vibrator = svc.getSystemService(Vibrator.class);
     }
 
+    // ------------------------------------------------------------- per-minute video
+
+    private static final long VIDEO_INTERVAL_MS = 60_000;
+    private static final long VIDEO_DURATION_MS = 4_000;
+
+    private void startVideoTimer() {
+        videoShowRunnable = this::playBubbleVideo;
+        prewarmNextClip();
+        root.postDelayed(videoShowRunnable, VIDEO_INTERVAL_MS);
+    }
+
+    private void stopVideoTimer() {
+        if (root != null) {
+            if (videoShowRunnable != null) root.removeCallbacks(videoShowRunnable);
+            if (videoHideRunnable != null) root.removeCallbacks(videoHideRunnable);
+        }
+        videoShowRunnable = null;
+        videoHideRunnable = null;
+        releasePlayer(bubbleMediaPlayer);
+        bubbleMediaPlayer = null;
+        releasePlayer(readyPlayer);
+        readyPlayer = null;
+    }
+
+    private boolean isBubbleRight() {
+        return Prefs.bubblePos(svc)[0] != 0;
+    }
+
+    private void prewarmNextClip() {
+        if (bubbleVideoView == null) return;
+        boolean right = isBubbleRight();
+        prewarmedRight = right;
+        int rawId = right ? R.raw.bubble_right : R.raw.bubble_left;
+        android.net.Uri uri = android.net.Uri.parse(
+                "android.resource://" + svc.getPackageName() + "/" + rawId);
+        releasePlayer(readyPlayer);
+        readyPlayer = null;
+
+        MediaPlayer mp = new MediaPlayer();
+        try {
+            mp.setDataSource(svc, uri);
+            mp.setLooping(false);
+            attachSurfaceAndPrepare(mp, false);
+        } catch (Exception e) {
+            releasePlayer(mp);
+        }
+    }
+
+    private void attachSurfaceAndPrepare(MediaPlayer mp, boolean forImmediate) {
+        if (bubbleVideoView == null) {
+            releasePlayer(mp);
+            return;
+        }
+        mp.setOnPreparedListener(prepared -> {
+            if (root == null) {
+                releasePlayer(prepared);
+                return;
+            }
+            if (forImmediate) playBubbleVideoReady(prepared);
+            else readyPlayer = prepared;
+        });
+        mp.setOnErrorListener((p, w, x) -> {
+            if (forImmediate) {
+                hideBubbleVideo();
+                scheduleNextVideo();
+            } else {
+                releasePlayer(p);
+                if (readyPlayer == p) readyPlayer = null;
+            }
+            return true;
+        });
+        if (bubbleVideoView.isAvailable()) {
+            mp.setSurface(new Surface(bubbleVideoView.getSurfaceTexture()));
+            try {
+                mp.prepareAsync();
+            } catch (Exception e) {
+                releasePlayer(mp);
+            }
+        } else {
+            bubbleVideoView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() {
+                @Override
+                public void onSurfaceTextureAvailable(SurfaceTexture st, int w, int h) {
+                    bubbleVideoView.setSurfaceTextureListener(null);
+                    mp.setSurface(new Surface(st));
+                    try {
+                        mp.prepareAsync();
+                    } catch (Exception e) {
+                        releasePlayer(mp);
+                    }
+                }
+                @Override public void onSurfaceTextureSizeChanged(SurfaceTexture s, int w, int h) {}
+                @Override public boolean onSurfaceTextureDestroyed(SurfaceTexture s) { return true; }
+                @Override public void onSurfaceTextureUpdated(SurfaceTexture s) {}
+            });
+        }
+    }
+
+    private void playBubbleVideo() {
+        if (expanded || bubbleVideoView == null || root == null || root.getVisibility() != View.VISIBLE) {
+            scheduleNextVideo();
+            return;
+        }
+        boolean right = isBubbleRight();
+        if (readyPlayer != null && prewarmedRight == right) {
+            bubbleMediaPlayer = readyPlayer;
+            readyPlayer = null;
+            playBubbleVideoReady(bubbleMediaPlayer);
+        } else {
+            releasePlayer(readyPlayer);
+            readyPlayer = null;
+            int rawId = right ? R.raw.bubble_right : R.raw.bubble_left;
+            android.net.Uri uri = android.net.Uri.parse(
+                    "android.resource://" + svc.getPackageName() + "/" + rawId);
+            MediaPlayer mp = new MediaPlayer();
+            try {
+                mp.setDataSource(svc, uri);
+                mp.setLooping(false);
+                attachSurfaceAndPrepare(mp, true);
+            } catch (Exception e) {
+                releasePlayer(mp);
+                scheduleNextVideo();
+            }
+        }
+    }
+
+    private void playBubbleVideoReady(MediaPlayer mp) {
+        if (bubbleVideoView == null || expanded || root == null || root.getVisibility() != View.VISIBLE) {
+            releasePlayer(mp);
+            if (bubbleMediaPlayer == mp) bubbleMediaPlayer = null;
+            if (readyPlayer == null) prewarmNextClip();
+            scheduleNextVideo();
+            return;
+        }
+        bubbleMediaPlayer = mp;
+
+        // Immediate swap in one layout pass: no fade, no gap
+        face.setVisibility(View.INVISIBLE);
+        bubbleVideoView.setVisibility(View.VISIBLE);
+        mp.start();
+
+        if (videoHideRunnable != null) root.removeCallbacks(videoHideRunnable);
+        videoHideRunnable = () -> {
+            hideBubbleVideo();
+            scheduleNextVideo();
+        };
+        root.postDelayed(videoHideRunnable, VIDEO_DURATION_MS);
+    }
+
+    private void hideBubbleVideo() {
+        if (root != null && videoHideRunnable != null) {
+            root.removeCallbacks(videoHideRunnable);
+            videoHideRunnable = null;
+        }
+        if (bubbleVideoView != null) bubbleVideoView.setVisibility(View.INVISIBLE);
+        if (face != null) face.setVisibility(View.VISIBLE);
+        releasePlayer(bubbleMediaPlayer);
+        bubbleMediaPlayer = null;
+        if (root != null) prewarmNextClip();
+    }
+
+    private void scheduleNextVideo() {
+        if (root != null && videoShowRunnable != null) {
+            root.removeCallbacks(videoShowRunnable);
+            root.postDelayed(videoShowRunnable, VIDEO_INTERVAL_MS);
+        }
+    }
+
+    private void releasePlayer(MediaPlayer mp) {
+        if (mp == null) return;
+        try { if (mp.isPlaying()) mp.stop(); } catch (Exception ignored) {}
+        try { mp.release(); } catch (Exception ignored) {}
+    }
+
     // ------------------------------------------------------------- layout
 
     void show() {
@@ -176,6 +360,7 @@ final class Bubble implements ChatHub.Listener {
         hub.addListener(this);
         renderCurrent();
         applyEnabled();
+        startVideoTimer();
     }
 
     void remove() {
@@ -202,6 +387,7 @@ final class Bubble implements ChatHub.Listener {
             }
         }
         if (breathing != null) breathing.cancel();
+        stopVideoTimer();
         stopTalk(); // (the waves have a window of their own)
         try {
             wm.removeView(root);
@@ -233,6 +419,12 @@ final class Bubble implements ChatHub.Listener {
         faceBox.addView(face, new FrameLayout.LayoutParams(dp(60), dp(60), Gravity.CENTER));
         holdRing = new HoldRing(svc);
         faceBox.addView(holdRing, new FrameLayout.LayoutParams(dp(74), dp(74), Gravity.CENTER));
+        // per-minute video overlay: INVISIBLE keeps SurfaceTexture alive so playback starts immediately with no gap
+        bubbleVideoView = new TextureView(svc);
+        bubbleVideoView.setVisibility(View.INVISIBLE);
+        bubbleVideoView.setClipToOutline(true);
+        bubbleVideoView.setOutlineProvider(BODY);
+        faceBox.addView(bubbleVideoView, new FrameLayout.LayoutParams(dp(60), dp(60), Gravity.CENTER));
         // 4. screen readers: "double-tap and hold for actions"
         face.setContentDescription(svc.getString(R.string.bubble_face_description));
         face.setLongClickable(true);
@@ -774,6 +966,9 @@ final class Bubble implements ChatHub.Listener {
         lp.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
                 | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
                 | (passThrough ? WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE : 0);
+        if (videoShowRunnable != null && bubbleMediaPlayer == null && (readyPlayer == null || prewarmedRight != right)) {
+            prewarmNextClip();
+        }
     }
 
     /** Called when windows change; keeps the expanded panel above the on-screen keyboard. */
@@ -1024,6 +1219,9 @@ final class Bubble implements ChatHub.Listener {
 
     void expand() {
         if (expanded) return;
+        if (bubbleMediaPlayer != null || (bubbleVideoView != null && bubbleVideoView.getVisibility() == View.VISIBLE)) {
+            hideBubbleVideo();
+        }
         Sessions.Session call = CodexLive.session(); // during a live call the bubble opens its chat (unless a chat
         if (call != null && call != sessions.current && pendingConfirm == null) hub.select(call); // asks for an OK)
         expanded = true;
@@ -1137,6 +1335,9 @@ final class Bubble implements ChatHub.Listener {
         root.setVisibility(show ? View.VISIBLE : View.GONE);
         if (show && wasHidden && !expanded) popIn();
         if (!show) {
+            if (bubbleMediaPlayer != null || (bubbleVideoView != null && bubbleVideoView.getVisibility() == View.VISIBLE)) {
+                hideBubbleVideo();
+            }
             showDismissTarget(false);
             if (locked) stopTalk(); // locked while listening: its waves stayed on screen (issue #71)
         }
