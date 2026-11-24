@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Every text Buddy shows, in Vietnamese (bạn). English source: res/values/strings.xml. -->
+<!-- Every text Mr Do It shows, in Vietnamese (bạn). English source: res/values/strings.xml. -->
 <resources>
     <string name="service_label">Trợ lý Mr Do It</string>
     <string name="service_description">Hiển thị bong bóng trò chuyện của Mr Do It và cho phép agent bạn chọn (Claude Code, Codex, OpenCode, Antigravity hoặc Grok), chạy bên trong Mr Do It trên điện thoại này, đọc màn hình, nhấn, gõ và cuộn thay bạn. Không có gì rời khỏi điện thoại, ngoại trừ những gì chính agent gửi tới dịch vụ AI của nó (Anthropic, OpenAI, Google, xAI hoặc nhà cung cấp mô hình OpenCode của bạn).</string>
@@ -10,7 +10,7 @@
     <!-- Button at the top right of every step. Keep short. -->
     <string name="onboarding_skip_setup">Bỏ qua</string>
     <string name="onboarding_skip_title">Bỏ qua hướng dẫn thiết lập?</string>
-    <!-- "Settings" = Buddy's own Settings tab. -->
+    <!-- "Settings" = Mr Do It's own Settings tab. -->
     <string name="onboarding_skip_text">Bạn có thể hoàn tất thiết lập bất cứ lúc nào trong Cài đặt. Các cuộc trò chuyện chỉ chạy khi đã thiết lập xong.</string>
     <!-- Verb. Confirm button of the "Skip the setup guide?" sheet. -->
     <string name="onboarding_skip_action">Bỏ qua</string>
@@ -37,7 +37,7 @@
 
     <!-- Guide, step: choose the agent. Agent names next to each option stay in English. -->
     <string name="onboarding_brain_title">Chọn agent của bạn</string>
-    <!-- "Settings" = Buddy's own Settings tab. -->
+    <!-- "Settings" = Mr Do It's own Settings tab. -->
     <string name="onboarding_brain_text">Agent sẽ trả lời các cuộc trò chuyện của bạn. Bạn có thể thêm agent khác sau trong Cài đặt.</string>
     <string name="onboarding_brain_claude">Dùng gói Claude của bạn (Pro hoặc Max).</string>
     <string name="onboarding_brain_codex">Dùng gói ChatGPT của bạn.</string>
@@ -59,7 +59,7 @@
     <!-- Small lowercase tag next to "Claude Code". Keep very short. -->
     <string name="onboarding_recommended">đề xuất</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">Cho Mr Do It nhìn và nhấn</string>
     <string name="onboarding_access_done">Hỗ trợ tiếp cận đã bật.</string>
     <string name="onboarding_access_text">Dịch vụ hỗ trợ tiếp cận của Mr Do It hiển thị bong bóng và cho agent đọc màn hình, nhấn và gõ, chỉ khi bạn nhờ nó làm việc gì đó.</string>
@@ -69,7 +69,7 @@
     <string name="onboarding_access_privacy_both">Không có gì rời khỏi điện thoại, ngoại trừ những gì Claude Code và Codex gửi tới Anthropic và OpenAI để trả lời bạn. Gửi, đăng, mua và xóa luôn cần bạn đồng ý trước.</string>
     <!-- Same as onboarding_access_privacy, for OpenCode. %1$s = OpenCode. The model's provider = whichever AI company runs the chosen model. -->
     <string name="onboarding_access_privacy_opencode">Không có gì rời khỏi điện thoại, ngoại trừ những gì %1$s gửi tới nhà cung cấp mô hình để trả lời bạn. Gửi, đăng, mua và xóa luôn cần bạn đồng ý trước.</string>
-    <!-- Path in Android's Accessibility settings. "Downloaded apps" = that section's name on Android (use Android's wording in your language); "Buddy assistant" = Buddy's service name (service_label). -->
+    <!-- Path in Android's Accessibility settings. "Downloaded apps" = that section's name on Android (use Android's wording in your language); "Mr Do It assistant" = Mr Do It's service name (service_label). -->
     <string name="onboarding_access_list_hint">Trong danh sách: Ứng dụng đã tải xuống → Trợ lý Mr Do It → bật lên.</string>
     <string name="onboarding_access_open">Mở cài đặt hỗ trợ tiếp cận</string>
     <!-- Android 13+ greys out the switch for apps installed from a file. Title of a help box and a help question. -->
@@ -78,10 +78,10 @@
     <string name="onboarding_access_greyed_text">Android chặn mục này với ứng dụng cài từ tệp. Nhấn Thông tin ứng dụng (bên dưới), rồi ⋮ ở góc trên bên phải → Cho phép cài đặt bị hạn chế, và thử lại.</string>
     <!-- Numbered steps, one per line. Same names as in onboarding_access_greyed_text. -->
     <string name="onboarding_access_restricted_steps">1. Nhấn Thông tin ứng dụng bên dưới.\n2. Nhấn ⋮ ở góc trên bên phải → Cho phép cài đặt bị hạn chế.\n3. Quay lại và mở lại cài đặt hỗ trợ tiếp cận.</string>
-    <!-- Button: opens Android's App info page for Buddy. Use Android's name for that page. -->
+    <!-- Button: opens Android's App info page for Mr Do It. Use Android's name for that page. -->
     <string name="onboarding_app_info">Thông tin ứng dụng</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">Cài và đăng nhập</string>
     <!-- Title once every chosen agent is installed and signed in. -->
     <string name="onboarding_agents_done_title">Sẵn sàng</string>
@@ -107,11 +107,11 @@
     <string name="onboarding_agent_sign_in_claude">Đăng nhập bằng tài khoản Claude. Trình duyệt sẽ mở; nhấn Authorize và Mr Do It tự quay lại.</string>
     <string name="onboarding_agent_checking_opencode">Đang kiểm tra OpenCode…</string>
     <string name="onboarding_agent_sign_in_codex">Đăng nhập tài khoản ChatGPT trong trình duyệt, rồi quay lại.</string>
-    <!-- Antigravity: the sign-in page shows a code that Buddy reads by itself. -->
+    <!-- Antigravity: the sign-in page shows a code that Mr Do It reads by itself. -->
     <string name="onboarding_agent_sign_in_agy">Đăng nhập bằng tài khoản Google. Trình duyệt sẽ mở; đăng nhập ở đó và Mr Do It tự lấy mã.</string>
     <!-- Grok: the browser opens with a one-time code that the user confirms on the page. -->
     <string name="onboarding_agent_sign_in_grok">Đăng nhập bằng tài khoản Grok. Trình duyệt sẽ mở; xác nhận mã ở đó và Mr Do It tự quay lại.</string>
-    <!-- "Buddy's Linux" = the small Linux system built into Buddy. -->
+    <!-- "Mr Do It's Linux" = the small Linux system built into Mr Do It. -->
     <string name="onboarding_agent_download_claude">Tải về khoảng 235 MB một lần (Linux của Mr Do It và Claude Code từ Anthropic).</string>
     <string name="onboarding_agent_download_opencode">Tải về khoảng 230 MB một lần (Linux của Mr Do It, Node.js và OpenCode). Không cần tài khoản.</string>
     <string name="onboarding_agent_download_codex">Tải về khoảng 150 MB một lần (Linux của Mr Do It, Node.js và Codex từ OpenAI).</string>
@@ -132,11 +132,11 @@
     <!-- "Install" = the Install button on the agent card (onboarding_install_agent). -->
     <string name="onboarding_stuck_install_a">Kiểm tra kết nối và nhấn Cài lại; quá trình sẽ tiếp tục từ chỗ đã dừng.</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">Giữ Mr Do It chạy</string>
     <string name="onboarding_background_done">Mr Do It có thể chạy ở chế độ nền.</string>
     <string name="onboarding_background_text">Để điện thoại không dừng Mr Do It nhằm tiết kiệm pin trong lúc agent đang làm việc.</string>
-    <!-- Button: opens Android's dialog to let Buddy run in the background. -->
+    <!-- Button: opens Android's dialog to let Mr Do It run in the background. -->
     <string name="onboarding_allow">Cho phép</string>
     <string name="onboarding_skip_for_now">Để sau</string>
 
@@ -148,7 +148,7 @@
     <string name="onboarding_safety_ask_text">Agent hỏi trước mọi việc có rủi ro, như thay đổi một cài đặt. An toàn hơn, nhưng nhiều popup hơn.</string>
     <string name="onboarding_safety_auto_title">Tự làm</string>
     <string name="onboarding_safety_auto_text">Không popup: agent cứ làm điều bạn nhờ, như bật camera hay bật đèn.</string>
-    <!-- "Settings → App permissions" = Buddy's own screens. "Trust" and "Hard" = names of approval modes; use the same translations as those mode labels. -->
+    <!-- "Settings → App permissions" = Mr Do It's own screens. "Trust" and "Hard" = names of approval modes; use the same translations as those mode labels. -->
     <string name="onboarding_safety_note">Bạn có thể đổi điều này cho từng ứng dụng bất cứ lúc nào: Cài đặt → An toàn và phê duyệt → Quyền ứng dụng. Đặt một ứng dụng là Tin cậy để agent làm việc ở đó không cần popup, hoặc Chặt để chính Mr Do It hỏi bạn.</string>
 
     <!-- Guide, last step: try a first task. -->
@@ -167,7 +167,7 @@
     <!-- Home screen: the chat list. -->
     <!-- Floating button that starts a chat, and the title of the sheet that picks its agent. Keep short. -->
     <string name="main_new_chat">Trò chuyện mới</string>
-    <!-- Small lowercase mono status under the app name when Buddy is ready. %1$s = Buddy's local server address (127.0.0.1:8765). -->
+    <!-- Small lowercase mono status under the app name when Mr Do It is ready. %1$s = Mr Do It's local server address (127.0.0.1:8765). -->
     <string name="main_status_ready">sẵn sàng · %1$s</string>
     <!-- Small lowercase mono status while setup isn't finished: %1$d steps done out of %2$d. -->
     <string name="main_status_setup">thiết lập %1$d/%2$d</string>
@@ -209,15 +209,15 @@
     </plurals>
 
     <!-- Notification shown after the bubble is dragged away to hide it. -->
-    <!-- Notification category name in Android's notification settings for Buddy. -->
+    <!-- Notification category name in Android's notification settings for Mr Do It. -->
     <string name="notice_channel_name">Bong bóng đã ẩn</string>
     <string name="notice_hidden_title">Mr Do It đang ẩn</string>
     <string name="notice_hidden_text">Nhấn để hiện lại bong bóng.</string>
-    <!-- Notification button: opens Buddy's chat list. Keep short. -->
+    <!-- Notification button: opens Mr Do It's chat list. Keep short. -->
     <string name="notice_open_chats">Mở trò chuyện</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
-    <!-- Notification category name in Android's notification settings for Buddy. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Notification category name in Android's notification settings for Mr Do It. -->
     <string name="update_channel_name">Cập nhật Mr Do It</string>
     <!-- Notification and sheet title. %1$s = the new version number, e.g. 2.1.14. -->
     <string name="update_available_title">Đã có Mr Do It %1$s</string>
@@ -227,7 +227,7 @@
     <string name="update_action">Cập nhật</string>
     <!-- Notification button: stop update notifications. Keep short. -->
     <string name="update_mute">Đừng báo nữa</string>
-    <!-- "Settings" = Buddy's own Settings tab (its Update notices switch). -->
+    <!-- "Settings" = Mr Do It's own Settings tab (its Update notices switch). -->
     <string name="update_muted">Sẽ không báo cập nhật nữa. Bật lại trong Cài đặt.</string>
     <string name="update_checking">Đang kiểm tra cập nhật…</string>
     <string name="update_check_failed">Không kết nối được GitHub. Thử lại sau.</string>
@@ -241,20 +241,20 @@
     <string name="update_downloading">Đang tải về…</string>
     <!-- "Update" = the button (update_action). -->
     <string name="update_needs_permission">Cho phép Mr Do It cài ứng dụng, rồi nhấn Cập nhật lần nữa.</string>
-    <!-- Why an update failed (%1$s of update_failed_manual). buddy.apk is a file name. -->
-    <string name="update_error_no_apk">Bản phát hành này chưa có buddy.apk.</string>
+    <!-- Why an update failed (%1$s of update_failed_manual). mrdoit.apk is a file name. -->
+    <string name="update_error_no_apk">Bản phát hành này chưa có mrdoit.apk.</string>
     <!-- %1$s = the system's technical error message (usually English). -->
     <string name="update_error_download">Tải về thất bại (%1$s).</string>
     <string name="update_error_not_newer">Tệp đã tải không phải bản Mr Do It mới hơn, nên không được mở.</string>
     <!-- Message after a failed update. %1$s = what went wrong (an update_error_ sentence); %2$s = the web address of the latest release; %3$s = the web address of the update instructions. Obtainium is an app name. -->
-    <string name="update_failed_manual">%1$s Bạn cũng có thể tải tại %2$s (buddy.apk), hoặc dùng Obtainium để tự động cập nhật (xem %3$s).</string>
+    <string name="update_failed_manual">%1$s Bạn cũng có thể tải tại %2$s (mrdoit.apk), hoặc dùng Obtainium để tự động cập nhật (xem %3$s).</string>
 
     <!-- Settings, Appearance: option names. -->
     <!-- Light/dark mode, segmented control: keep short. System = follow the phone's setting. -->
     <string name="prefs_theme_system">Hệ thống</string>
     <string name="prefs_theme_light">Sáng</string>
     <string name="prefs_theme_dark">Tối</string>
-    <!-- Surface (background) tone, segmented control: keep short. Warm = Buddy's original warm greys; Black = true black, in dark mode only. -->
+    <!-- Surface (background) tone, segmented control: keep short. Warm = Mr Do It's original warm greys; Black = true black, in dark mode only. -->
     <string name="prefs_surface_warm">Ấm</string>
     <string name="prefs_surface_neutral">Trung tính</string>
     <string name="prefs_surface_black">Đen</string>
@@ -309,7 +309,7 @@
     <!-- Dictate an extra instruction for the agent while it works. -->
     <string name="menu_add_instruction">Thêm lời dặn</string>
     <string name="menu_end_live">Kết thúc giọng nói trực tiếp</string>
-    <!-- Stops Buddy reading a reply aloud. -->
+    <!-- Stops Mr Do It reading a reply aloud. -->
     <string name="menu_stop_voice">Tắt giọng</string>
     <!-- Verb: starts voice input to the agent. A hold-menu label (keep under ~12 characters) and the chat panel's
          mic button (read by TalkBack). -->
@@ -323,7 +323,7 @@
     <string name="menu_peek_stop">Dừng</string>
     <!-- Verb. -->
     <string name="menu_peek_add">Thêm</string>
-    <!-- Noun: Buddy's spoken voice (the action silences it). -->
+    <!-- Noun: Mr Do It's spoken voice (the action silences it). -->
     <string name="menu_peek_voice">Giọng</string>
     <!-- Badge under the preview: long-press the bubble; "me" is the bubble. -->
     <string name="menu_peek_hint">Giữ tôi</string>
@@ -371,7 +371,7 @@
     <string name="bubble_paste">Dán</string>
     <!-- Verb: sends the message (read by TalkBack). -->
     <string name="bubble_send">Gửi</string>
-    <!-- A chat with no messages yet. %1$s: the agent's name (Claude Code, Codex, OpenCode, Antigravity or Grok); "me" is Buddy. -->
+    <!-- A chat with no messages yet. %1$s: the agent's name (Claude Code, Codex, OpenCode, Antigravity or Grok); "me" is Mr Do It. -->
     <string name="bubble_empty_chat">Cuộc trò chuyện %1$s mới. Hãy nhờ tôi làm gì đó trên điện thoại của bạn.</string>
     <!-- Header of a collapsible group of the agent's steps in the chat. -->
     <plurals name="bubble_tool_calls">
@@ -409,7 +409,7 @@
     <string name="card_label_approval">CẦN BẠN ĐỒNG Ý</string>
     <!-- Small all-caps label at the top of a question card. -->
     <string name="card_label_question">CÂU HỎI</string>
-    <!-- The card's label when the request comes from an agent session outside Buddy's chats (e.g. a terminal).
+    <!-- The card's label when the request comes from an agent session outside Mr Do It's chats (e.g. a terminal).
          %1$s: card_label_approval or card_label_question. All caps. -->
     <string name="card_label_other_session">%1$s · TỪ PHIÊN KHÁC</string>
     <string name="card_label_from">%1$s · TỪ %2$s</string>
@@ -466,7 +466,7 @@
     <string name="pause_call_ended_title">Cuộc gọi đã kết thúc · Mr Do It đang tạm dừng</string>
     <string name="pause_call_ended_text">Nhấn để tiếp tục việc đang làm</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <!-- Verb, go back. Read by TalkBack for the back arrow at the top of the chat and transcript screens; also a
@@ -478,16 +478,16 @@
     <string name="chat_read_aloud_off">Câu trả lời sẽ không được đọc to</string>
 
     <!-- Chat screen: Linux tools, the chip beside the model chip (also in the bubble's panel and the New chat sheets) -->
-    <!-- A chat's own switch that lets its agent work in Buddy's Linux: run commands, install packages, edit files,
+    <!-- A chat's own switch that lets its agent work in Mr Do It's Linux: run commands, install packages, edit files,
          build and install apps. The name on the small chip under the chat's title, and of the switch in the New chat
          sheets. Keep short. -->
     <string name="chat_linux_tools">Công cụ Linux</string>
-    <!-- Under the Linux tools switch in the New chat sheets. "Buddy's Linux" = the Linux system inside the app. -->
+    <!-- Under the Linux tools switch in the New chat sheets. "Mr Do It's Linux" = the Linux system inside the app. -->
     <string name="chat_linux_tools_info">Lệnh, tệp và dựng ứng dụng trong Linux của Mr Do It</string>
     <!-- Title of the sheet that opens when the user turns Linux tools on in a chat. -->
     <string name="chat_linux_tools_title">Bật công cụ Linux?</string>
-    <!-- ~/.buddy/work is a folder: keep it as is. -->
-    <string name="chat_linux_tools_what">Khi đó agent có thể chạy lệnh, cài gói và sửa tệp trong ~/.buddy/work, nên nó có thể dựng ứng dụng.</string>
+    <!-- ~/.mrdoit/work is a folder: keep it as is. -->
+    <string name="chat_linux_tools_what">Khi đó agent có thể chạy lệnh, cài gói và sửa tệp trong ~/.mrdoit/work, nên nó có thể dựng ứng dụng.</string>
     <!-- When the change applies: a task already running goes on as it was. -->
     <string name="chat_linux_tools_when">Chỉ trong cuộc trò chuyện này, từ tin nhắn tiếp theo của bạn.</string>
     <!-- "it" = the agent. -->
@@ -514,7 +514,7 @@
     <string name="chat_approvals_routine_info">Các bước thường lệ được thực hiện trong mọi ứng dụng mà không cần thẻ: gửi tin nhắn, hoặc bước mà trình kiểm duyệt sẽ hỏi. Mỗi bước đều được ghi trong cuộc trò chuyện. Thanh toán, mua, xóa, cài đặt, mật khẩu và cài đặt bảo mật vẫn hỏi bạn, cũng như mọi thứ trong ứng dụng ngân hàng và thanh toán, Cài đặt và cửa hàng ứng dụng.</string>
     <string name="chat_approvals_strict">Luôn hỏi</string>
     <string name="chat_approvals_apps">Ứng dụng trong cuộc trò chuyện này</string>
-    <!-- Under that title. "The reviewer" = Buddy's smart reviewer (App permissions). -->
+    <!-- Under that title. "The reviewer" = Mr Do It's smart reviewer (App permissions). -->
     <string name="chat_allowed_info">Cho đến khi việc của cuộc trò chuyện này kết thúc, các lần duyệt thông thường trong những ứng dụng này sẽ tự được thông qua: gửi tin nhắn, hoặc một bước mà trình kiểm duyệt sẽ hỏi. Mỗi lần đều hiện trong cuộc trò chuyện. Thanh toán, mua, xóa, cài ứng dụng, mật khẩu và cài đặt bảo mật vẫn hỏi bạn.</string>
     <!-- Under that, when the chat has a schedule: the list isn't cleared when a run ends. -->
     <string name="chat_allowed_kept">Được giữ cho lịch của cuộc trò chuyện này: các ứng dụng này vẫn được cho phép trong những lần chạy theo lịch, cho đến khi bạn gỡ chúng hoặc gỡ lịch.</string>
@@ -531,7 +531,7 @@
     <!-- As above, when it ended with an error. -->
     <string name="run_end_failed">%1$s gặp sự cố</string>
 
-    <!-- Chat options: Schedule (the chat's scheduled task: Buddy sends its message at set times) -->
+    <!-- Chat options: Schedule (the chat's scheduled task: Mr Do It sends its message at set times) -->
     <!-- Chat options: section title and the title of its sheet: the chat's scheduled task. Keep short. -->
     <string name="schedule_title">Lịch</string>
     <!-- Row in Chat options when the chat has no schedule; opens the Schedule sheet. -->
@@ -555,7 +555,7 @@
     <string name="schedule_wake">Đánh thức điện thoại cho việc này</string>
     <!-- Under that switch. -->
     <string name="schedule_wake_info">Khi cần màn hình, màn hình sẽ bật (và màn hình khóa không có mã PIN, hình mẫu hay vân tay sẽ mở). Trong lúc chạy, người ở gần có thể nhìn thấy màn hình.</string>
-    <!-- Schedule sheet, when Android doesn't let Buddy set exact alarms; then a button that opens that setting. -->
+    <!-- Schedule sheet, when Android doesn't let Mr Do It set exact alarms; then a button that opens that setting. -->
     <string name="schedule_inexact">Báo thức chính xác đang tắt với Mr Do It, nên việc có thể bắt đầu trễ vài phút.</string>
     <string name="schedule_allow_exact">Cho phép báo thức chính xác</string>
     <!-- Schedule sheet buttons. -->
@@ -573,7 +573,7 @@
     <string name="schedule_no_message">Hãy viết tin nhắn cần gửi</string>
     <!-- Notification channel name. -->
     <string name="schedule_channel">Việc theo lịch</string>
-    <!-- Notification (and the screen Buddy turns on) when a scheduled task needs the screen while the phone is locked. -->
+    <!-- Notification (and the screen Mr Do It turns on) when a scheduled task needs the screen while the phone is locked. -->
     <string name="schedule_screen_title">Việc theo lịch cần màn hình: mở khóa để tiếp tục</string>
     <!-- Its text; %1$s = the chat's title, %2$s = the time it gives up waiting. -->
     <string name="schedule_screen_text">%1$s: việc sẽ tiếp tục khi bạn mở khóa điện thoại, cho đến %2$s.</string>
@@ -584,7 +584,7 @@
     <string name="schedule_skip_running">Cuộc trò chuyện này vẫn đang làm việc trước đó.</string>
     <string name="schedule_skip_busy">Mr Do It bận suốt một giờ (việc khác, đang tạm dừng hoặc không có mạng).</string>
     <string name="schedule_skip_screen">Điện thoại bị khóa suốt một giờ.</string>
-    <!-- Small label over a message Buddy sent at its scheduled time; also read by TalkBack for the clock icon in the chat list. -->
+    <!-- Small label over a message Mr Do It sent at its scheduled time; also read by TalkBack for the clock icon in the chat list. -->
     <string name="schedule_marker">Theo lịch</string>
 
     <!-- Chat screen: the strip shown while the agent works -->
@@ -630,7 +630,7 @@
     <!-- Language sheet (long-press the mic) -->
     <!-- Title, followed by a list of languages to speak in. -->
     <string name="chat_speak_in">Nói bằng</string>
-    <!-- "Settings → Voice" = the Voice section of Buddy's Settings tab; use the same names as there. -->
+    <!-- "Settings → Voice" = the Voice section of Mr Do It's Settings tab; use the same names as there. -->
     <string name="chat_speak_in_help">Chọn ngôn ngữ của bạn trong Cài đặt → Giọng nói.</string>
     <!-- Live voice (CodexLive): a two-way ChatGPT voice call (through Codex) in any agent's chat; %1$s is the chat's agent (Claude, Codex…). live_label is the bar's short tag. -->
     <string name="live_option">Giọng nói trực tiếp</string>
@@ -722,8 +722,8 @@
         <item quantity="other">%1$d lần gọi công cụ</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
-    <!-- After "Continue in Buddy" on an earlier session. %1$s = agent name. -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
+    <!-- After "Continue in Mr Do It" on an earlier session. %1$s = agent name. -->
     <string name="hub_continuing">Đang tiếp tục một phiên %1$s trước đó. Nếu phiên đó vẫn mở trong terminal, hãy đóng nó ở đó trước.</string>
     <string name="hub_still_working_attachments">Cuộc trò chuyện này vẫn đang làm việc. Hãy gửi tệp đính kèm khi nó xong.</string>
     <string name="hub_service_off">%1$s đang tắt (Cài đặt → Tác nhân và mô hình → Khóa API). Hãy bật lại, hoặc chọn mô hình khác cho cuộc trò chuyện này.</string>
@@ -882,9 +882,9 @@
     <!-- Any other tool. %1$s = the tool's name, not translated. -->
     <string name="hub_tool_other">Đang dùng %1$s</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">Đang tải…</string>
-    <!-- Button: continue this earlier session as a Buddy chat. -->
+    <!-- Button: continue this earlier session as a Mr Do It chat. -->
     <string name="transcript_continue">Tiếp tục trong Mr Do It</string>
     <string name="transcript_empty">Phiên này không có tin nhắn nào đọc được.</string>
     <!-- Above the messages. %1$d = how many of the session's last messages are shown. -->
@@ -909,11 +909,11 @@
     <string name="ui_agree_continue">Đồng ý và tiếp tục</string>
 
     <!-- Bottom navigation of the main screens. Keep very short (about 10 characters). -->
-    <!-- Tab: the list of Buddy chats. -->
+    <!-- Tab: the list of Mr Do It chats. -->
     <string name="ui_nav_chats">Trò chuyện</string>
     <!-- Tab: every agent session on the phone (running and recent). -->
     <string name="ui_nav_sessions">Phiên</string>
-    <!-- Tab: Buddy's settings. -->
+    <!-- Tab: Mr Do It's settings. -->
     <string name="ui_nav_settings">Cài đặt</string>
 
     <!-- Accessibility service: pause from the bubble's hold menu, Stop on the control indicator -->
@@ -954,7 +954,7 @@
          (Claude, ChatGPT, Codex, OpenCode, Grok, Anthropic, OpenAI, xAI, X, Pro, Max, Plus, Business) stay as they are. -->
     <!-- Content description of the back arrow in the top bar (read by TalkBack). -->
     <string name="signin_back">Quay lại</string>
-    <!-- Subtitle while Buddy checks whether the agent is installed and signed in. -->
+    <!-- Subtitle while Mr Do It checks whether the agent is installed and signed in. -->
     <string name="signin_checking">Đang kiểm tra…</string>
 
     <!-- Sign-in screen: the agent isn't installed yet. -->
@@ -965,7 +965,7 @@
     <string name="signin_install_sub_codex">Chạy Codex bên trong Mr Do It bằng gói ChatGPT của bạn.</string>
     <string name="signin_install_sub_agy">Chạy Antigravity CLI của Google bên trong Mr Do It bằng tài khoản Google của bạn: gói miễn phí, hoặc Google AI Pro hay Ultra.</string>
     <string name="signin_install_sub_grok">Chạy Grok Build của xAI bên trong Mr Do It bằng tài khoản Grok của bạn (đăng nhập bằng Google hoặc X đều được).</string>
-    <!-- "Buddy's Linux" = the small Linux system Buddy installs inside the app. -->
+    <!-- "Mr Do It's Linux" = the small Linux system Mr Do It installs inside the app. -->
     <string name="signin_install_size_claude">Tải về khoảng 235 MB một lần: Linux của Mr Do It và Claude Code từ Anthropic. Hãy dùng Wi-Fi nếu được.</string>
     <string name="signin_install_size_opencode">Tải về khoảng 230 MB một lần: Linux của Mr Do It, Node.js và OpenCode. Hãy dùng Wi-Fi nếu được.</string>
     <string name="signin_install_size_codex">Tải về khoảng 150 MB một lần: Linux của Mr Do It, Node.js và Codex từ OpenAI. Hãy dùng Wi-Fi nếu được.</string>
@@ -1184,8 +1184,8 @@
     <string name="codex_keeps_stopping">Phiên Codex cứ bị dừng: %1$s</string>
     <!-- %1$s = the server's last message, in English. -->
     <string name="ssh_keeps_stopping">Máy chủ SSH cứ bị dừng: %1$s</string>
-    <!-- Shown in Termux after the copied command ran, and as a toast. "ssh buddy" is a command: keep it as is. -->
-    <string name="ssh_key_added">Xong. Để mở Linux của Mr Do It từ Termux, hãy gõ ssh buddy.</string>
+    <!-- Shown in Termux after the copied command ran, and as a toast. "ssh mrdoit" is a command: keep it as is. -->
+    <string name="ssh_key_added">Xong. Để mở Linux của Mr Do It từ Termux, hãy gõ ssh mrdoit.</string>
     <!-- Shown in Termux when the copied command was already used or is too old. -->
     <string name="ssh_code_expired">Lệnh này đã được dùng hoặc đã quá 10 phút. Hãy sao chép lại trong Cài đặt của Mr Do It.</string>
 
@@ -1222,7 +1222,7 @@
     <string name="setup_step_a11y_restricted">Công tắc bị mờ (“Cài đặt bị hạn chế”)? Android chặn mục này với ứng dụng cài từ tệp. Nhấn Thông tin ứng dụng, rồi ⋮ ở góc trên bên phải → Cho phép cài đặt bị hạn chế, và thử lại.</string>
     <!-- Button: opens Android's accessibility settings. -->
     <string name="setup_open_settings">Mở cài đặt</string>
-    <!-- Button: opens Android's App info page for Buddy (Android's own label). -->
+    <!-- Button: opens Android's App info page for Mr Do It (Android's own label). -->
     <string name="setup_app_info">Thông tin ứng dụng</string>
     <!-- %1$s = agent name (Claude Code, Codex, OpenCode, Antigravity or Grok). -->
     <string name="setup_step_install_title">Cài %1$s</string>
@@ -1252,12 +1252,12 @@
     <string name="setup_step_background_title">Cho Mr Do It chạy nền</string>
     <string name="setup_step_background_done">Đã cho phép.</string>
     <string name="setup_step_background_body">Để điện thoại không dừng Mr Do It nhằm tiết kiệm pin trong lúc agent đang làm việc.</string>
-    <!-- Button (verb): lets Buddy ignore battery optimization. -->
+    <!-- Button (verb): lets Mr Do It ignore battery optimization. -->
     <string name="setup_allow">Cho phép</string>
-    <!-- Name of the last setup step: try Buddy out. -->
+    <!-- Name of the last setup step: try Mr Do It out. -->
     <string name="setup_step_try_title">Dùng thử</string>
     <string name="setup_step_try_done">Mr Do It đã trả lời bạn. Nhấn bong bóng bất cứ lúc nào để nhờ thêm.</string>
-    <!-- "open Messenger" is an example of what to say to Buddy: translate it. -->
+    <!-- "open Messenger" is an example of what to say to Mr Do It: translate it. -->
     <string name="setup_step_try_body">Nhấn bong bóng ở cạnh màn hình và nói kiểu như “mở Messenger”, hoặc bắt đầu một cuộc trò chuyện tại đây.</string>
     <string name="setup_step_try_wait">Hãy hoàn tất các bước ở trên trước.</string>
     <!-- Short names of the setup steps, shown after "Next:" in the Chats header. -->
@@ -1275,10 +1275,10 @@
     <string name="setup_surface">Nền</string>
     <!-- "Warm" and "Black" are options of the Surface picker: use the same words as those options. -->
     <string name="setup_surface_note">Ấm là tông màu gốc của Mr Do It. Đen (đen tuyền) chỉ áp dụng ở chế độ tối.</string>
-    <!-- Setting: Buddy's face on the floating bubble and next to its replies. Title above two short choices. -->
+    <!-- Setting: Mr Do It's face on the floating bubble and next to its replies. Title above two short choices. -->
     <string name="setup_face">Diện mạo của Mr Do It</string>
-    <!-- Choice: Buddy's own drawn face. Keep it short. -->
-    <string name="setup_face_buddy">Gốc</string>
+    <!-- Choice: Mr Do It's own drawn face. Keep it short. -->
+    <string name="setup_face_mrdoit">Gốc</string>
     <!-- Choice: a picture the user picks from the phone. Keep it short. -->
     <string name="setup_face_picture">Ảnh của bạn</string>
     <string name="setup_face_note">Ảnh PNG hoặc WebP có nền trong suốt là đẹp nhất. Ảnh hiện trên bong bóng và cạnh câu trả lời của Mr Do It.</string>
@@ -1308,9 +1308,9 @@
     <!-- Settings screen: Agent. -->
     <!-- Which AI agent answers new chats. -->
     <string name="setup_default_brain">Agent mặc định</string>
-    <!-- "New chat" is the name of a button in Buddy. -->
+    <!-- "New chat" is the name of a button in Mr Do It. -->
     <string name="setup_default_brain_info">Agent trả lời các cuộc trò chuyện mới từ bong bóng hoặc nút Trò chuyện mới. Claude Code dùng gói Claude của bạn, Codex dùng gói ChatGPT, Antigravity dùng tài khoản Google, Grok dùng tài khoản Grok, OpenCode dùng mô hình miễn phí hoặc nhà cung cấp riêng của bạn. Chỉ chọn được những agent đã thiết lập.</string>
-    <!-- Toast. %1$s = agent name. "New chat" is the name of a button in Buddy. -->
+    <!-- Toast. %1$s = agent name. "New chat" is the name of a button in Mr Do It. -->
     <string name="setup_default_brain_set">Các cuộc trò chuyện mới sẽ dùng %1$s. Bạn có thể chọn cho từng cuộc trò chuyện bằng nút Trò chuyện mới.</string>
     <!-- Toast. %1$s = agent name. -->
     <string name="setup_set_up_first">Hãy thiết lập %1$s trước.</string>
@@ -1394,7 +1394,7 @@
     <string name="setup_codex_session">Phiên Codex</string>
     <!-- "Codex" is a section of the ChatGPT app; "Default permissions" is a permission choice in ChatGPT. -->
     <string name="setup_codex_session_info">Codex có công cụ điện thoại, chạy bên trong Mr Do It. Dùng từ ứng dụng ChatGPT (Codex) trên điện thoại này hoặc trên máy tính. Sandbox của Codex không chạy được ở đây, nên với Default permissions, nó sẽ hỏi trước mỗi lệnh.</string>
-    <!-- Status, lowercase. "localhost" is the name ChatGPT shows for Buddy: keep it as is. -->
+    <!-- Status, lowercase. "localhost" is the name ChatGPT shows for Mr Do It: keep it as is. -->
     <string name="setup_codex_active">đang chạy · “localhost” trong ChatGPT</string>
     <string name="setup_codex_pair">Ghép nối thiết bị</string>
     <!-- SSH: the standard way to sign in to a computer's terminal from another program. Termux is an Android terminal app. -->
@@ -1402,13 +1402,13 @@
     <string name="setup_ssh_info">Dùng Linux của Mr Do It từ Termux, qua SSH. Chỉ ứng dụng trên điện thoại này mới kết nối được, và chỉ khi có khóa.</string>
     <!-- Status, lowercase. %1$d = a port number. -->
     <string name="setup_ssh_active">đang chạy · cổng %1$d</string>
-    <!-- "ssh buddy" is a command: keep it as is. -->
-    <string name="setup_ssh_how">Sao chép lệnh này và chạy một lần trong Termux, trong vòng 10 phút. Sau đó, gõ ssh buddy trong Termux để mở Linux của Mr Do It.</string>
+    <!-- "ssh mrdoit" is a command: keep it as is. -->
+    <string name="setup_ssh_how">Sao chép lệnh này và chạy một lần trong Termux, trong vòng 10 phút. Sau đó, gõ ssh mrdoit trong Termux để mở Linux của Mr Do It.</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">Gỡ các cuộc trò chuyện Termux cũ</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="other">%1$d cuộc trò chuyện từ trước khi Buddy có Linux riêng. Agent không thể tiếp tục chúng.</item>
+        <item quantity="other">%1$d cuộc trò chuyện từ trước khi Mr Do It có Linux riêng. Agent không thể tiếp tục chúng.</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="other">Gỡ %1$d cuộc trò chuyện cũ?</item>
@@ -1462,7 +1462,7 @@
     <string name="setup_update_notices">Thông báo cập nhật</string>
     <string name="setup_update_notices_info">Mr Do It kiểm tra GitHub mỗi ngày một lần và báo cho bạn khi có phiên bản mới.</string>
     <string name="setup_check_updates">Kiểm tra cập nhật</string>
-    <!-- %1$s = Buddy's version number. "update yourself" is what you can say to an agent: translate it. -->
+    <!-- %1$s = Mr Do It's version number. "update yourself" is what you can say to an agent: translate it. -->
     <string name="setup_check_updates_info">Bạn đang dùng Mr Do It %1$s. Hoặc nói với bất kỳ agent nào: “tự cập nhật đi”.</string>
     <!-- Name of the App permissions screen. -->
     <string name="setup_app_permissions">Quyền ứng dụng</string>
@@ -1473,9 +1473,9 @@
     <string name="setup_rules_info">Để agent hành động khi có thông báo đến: trả lời tin nhắn, thêm một đơn giao hàng vào lịch…</string>
     <!-- Settings switch: whether new chats start with Linux tools (chat_linux_tools); each chat can change it. -->
     <string name="setup_dev_mode">Công cụ Linux trong trò chuyện mới</string>
-    <string name="setup_dev_mode_info">Công cụ Linux cho agent chạy lệnh, cài gói và sửa tệp trong ~/.buddy/work, nên nó có thể dựng ứng dụng. Các cuộc trò chuyện mới bắt đầu với cài đặt này; mỗi cuộc trò chuyện có thể đổi nó dưới tiêu đề.</string>
+    <string name="setup_dev_mode_info">Công cụ Linux cho agent chạy lệnh, cài gói và sửa tệp trong ~/.mrdoit/work, nên nó có thể dựng ứng dụng. Các cuộc trò chuyện mới bắt đầu với cài đặt này; mỗi cuộc trò chuyện có thể đổi nó dưới tiêu đề.</string>
     <string name="setup_agents_tap">Cho agent nhấn vào màn hình của Mr Do It</string>
-    <!-- "App permissions" is the name of a screen in Buddy. -->
+    <!-- "App permissions" is the name of a screen in Mr Do It. -->
     <string name="setup_agents_tap_info">Để thử Mr Do It với một tác nhân (ví dụ Claude Code trong Termux với các công cụ điện thoại). Khi đó các tác nhân có thể dùng danh sách trò chuyện, một cuộc trò chuyện và màn hình Cài đặt này. Mọi thứ quyết định chúng được làm gì vẫn là của bạn: bong bóng, thẻ phê duyệt, công cụ Linux, tùy chọn trò chuyện và lịch, cùng các màn hình quyền ứng dụng, khóa, quy tắc, kỹ năng, chế độ nền và sao lưu.</string>
     <string name="setup_ask_new_apps">Hỏi về từng ứng dụng mới</string>
     <string name="setup_ask_new_apps_info">Lần đầu một tác nhân làm việc trong ứng dụng bạn chưa đặt trong %1$s, Mr Do It hỏi nó được tự làm ở đó hay phải hỏi bạn trước, và giữ câu trả lời cho ứng dụng đó. Chỉ trong các cuộc trò chuyện ở chế độ Hỏi, và không bao giờ cho ứng dụng ngân hàng và thanh toán, Cài đặt và cửa hàng ứng dụng, vốn luôn hỏi.</string>
@@ -1490,7 +1490,7 @@
     <string name="setup_licences">Giấy phép mã nguồn mở</string>
     <string name="setup_privacy_policy">Chính sách quyền riêng tư</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <!-- %1$s = SHA-256 checksum of the download. -->
     <string name="linux_download_corrupt">Tệp Alpine tải về bị hỏng (sha256 %1$s)</string>
     <string name="linux_move_failed">Không di chuyển được Alpine vào đúng chỗ</string>
@@ -1502,8 +1502,8 @@
     <string name="linux_symlink_failed">symlink %1$s: %2$s</string>
     <string name="linux_truncated_archive">Tệp nén bị thiếu dữ liệu</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
-    <!-- Name of Buddy's built-in terminal: title of the Terminal screen and its menu, and of the Terminal card on the Sessions screen. -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
+    <!-- Name of Mr Do It's built-in terminal: title of the Terminal screen and its menu, and of the Terminal card on the Sessions screen. -->
     <string name="terminal_title">Terminal</string>
     <!-- Read by TalkBack: back button. -->
     <string name="terminal_back">Quay lại</string>
@@ -1511,9 +1511,9 @@
     <string name="terminal_hide_keyboard">Ẩn bàn phím</string>
     <!-- Read by TalkBack: button that opens the terminal menu. -->
     <string name="terminal_menu">Menu</string>
-    <!-- Status line under the title, lowercase. "buddy linux" is the name of Buddy's Linux: keep it. Only shown for 2 or more. -->
+    <!-- Status line under the title, lowercase. "mrdoit linux" is the name of Mr Do It's Linux: keep it. Only shown for 2 or more. -->
     <plurals name="terminal_sessions_count">
-        <item quantity="other">%1$d phiên · buddy linux</item>
+        <item quantity="other">%1$d phiên · mrdoit linux</item>
     </plurals>
     <!-- Status line under the title while the microphone is in use, lowercase. -->
     <string name="terminal_listening">đang nghe · micrô đang bật</string>
@@ -1563,7 +1563,7 @@
     <string name="monitor_loading">Đang tải…</string>
     <string name="monitor_service_off">Dịch vụ hỗ trợ tiếp cận của Mr Do It đang tắt, nên không kiểm tra được các phiên. Hãy bật nó trong Cài đặt.</string>
     <string name="monitor_nothing_running">Không có gì đang chạy.</string>
-    <!-- Title of a running session whose Buddy chat was deleted. -->
+    <!-- Title of a running session whose Mr Do It chat was deleted. -->
     <string name="monitor_deleted_chat">Cuộc trò chuyện Mr Do It đã xóa</string>
     <string name="monitor_background_session">Phiên chạy nền</string>
     <string name="monitor_terminal_session">Phiên terminal</string>
@@ -1628,12 +1628,12 @@
     <string name="perms_apps">Ứng dụng</string>
     <!-- Row that sets the mode of every app at once. -->
     <string name="perms_all_apps">Tất cả ứng dụng</string>
-    <!-- Link under “All apps”: puts every app back on the mode Buddy suggests for it. -->
+    <!-- Link under “All apps”: puts every app back on the mode Mr Do It suggests for it. -->
     <string name="perms_reset_suggested">Đặt lại theo đề xuất</string>
 
     <!-- Button rules screen: buttons that always or never need the user's OK. Hard and Smart are approval mode names (perms_mode_*). -->
     <string name="perms_rules_intro">Cho các ứng dụng ở chế độ Chặt hoặc Thông minh. Quy tắc chọn từ gợi ý áp dụng cho ứng dụng đó; chữ bạn tự gõ áp dụng cho mọi ứng dụng. Nhấn vào một quy tắc để gỡ.</string>
-    <!-- Switch title: Buddy's own list of risky button words. -->
+    <!-- Switch title: Mr Do It's own list of risky button words. -->
     <string name="perms_builtin_title">Từ rủi ro có sẵn</string>
     <!-- Switch description. The words are examples from the built-in list: use your language's usual button labels. -->
     <string name="perms_builtin_sub">Gửi, Đăng, Thanh toán, Mua, Đặt hàng, Xóa, Gọi, Đăng xuất… luôn hỏi, bằng mọi ngôn ngữ Mr Do It được dịch sang.</string>
@@ -1657,13 +1657,13 @@
     <string name="guard_rule_all_apps">%1$s · mọi ứng dụng</string>
     <!-- Why an app has its mode, in small text under the app's name. Here: the user picked it. -->
     <string name="guard_why_choice">Bạn đã chọn</string>
-    <!-- Buddy suggests Hard for this app because of the kind of app it is. -->
+    <!-- Mr Do It suggests Hard for this app because of the kind of app it is. -->
     <string name="guard_why_category">Đề xuất: tin nhắn, mạng xã hội, cuộc gọi hoặc tiền bạc</string>
-    <!-- Buddy suggests Hard because the app's name contains a word like bank or pay. %1$s = that word, as found (usually English). -->
+    <!-- Mr Do It suggests Hard because the app's name contains a word like bank or pay. %1$s = that word, as found (usually English). -->
     <string name="guard_why_name">Đề xuất: tên có “%1$s”</string>
-    <!-- Buddy suggests Hard because Android lists the app as a social app. -->
+    <!-- Mr Do It suggests Hard because Android lists the app as a social app. -->
     <string name="guard_why_social">Đề xuất: ứng dụng mạng xã hội</string>
-    <!-- The mode is Buddy's suggestion. -->
+    <!-- The mode is Mr Do It's suggestion. -->
     <string name="guard_why_suggested">Đề xuất</string>
     <!-- The mode comes from the first setup, where the user chose that the agent asks first. -->
     <string name="guard_why_setup">Lựa chọn khi thiết lập: hỏi trước</string>
@@ -1689,7 +1689,7 @@
     <string name="tools_card_clipboard">Cho agent đọc nội dung bạn vừa sao chép?</string>
     <string name="tools_card_location">Chia sẻ vị trí của điện thoại này với agent?</string>
     <string name="tools_photo_why">Chụp ảnh: %1$s</string>
-    <!-- %1$s = the action (e.g. Tap “Send” in WhatsApp); on the next line, %2$s = what it would send, or why Buddy asks. -->
+    <!-- %1$s = the action (e.g. Tap “Send” in WhatsApp); on the next line, %2$s = what it would send, or why Mr Do It asks. -->
     <string name="tools_card_detail">%1$s:\n%2$s</string>
     <!-- Quotation marks around text on the card (a draft message, a reason). Use your language's quotation marks. -->
     <string name="tools_card_quote">“%1$s”</string>
@@ -1709,7 +1709,7 @@
     <string name="tools_status_tap_update">Nhấn Cập nhật, rồi xác nhận</string>
     <!-- An app the agent opened the installer for is now installed (adjective). -->
     <string name="tools_status_installed">Đã cài</string>
-    <!-- Downloading Buddy's update. %1$s = version number, e.g. 2.1.13 -->
+    <!-- Downloading Mr Do It's update. %1$s = version number, e.g. 2.1.13 -->
     <string name="tools_status_downloading">Đang tải Mr Do It %1$s…</string>
 
     <!-- Smart reviewer: its reason when it fails, shown on the approval card after “Claude says ask you:”, so it starts lowercase.
@@ -1720,7 +1720,7 @@
     <!-- In the parentheses of reviewer_failed: the reviewer took too long. -->
     <string name="reviewer_timed_out">hết thời gian chờ</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">Linux của Mr Do It chưa được cài. Mở Cài đặt để thiết lập.</string>
 
     <!-- Voice input (dictation). “Claude voice” and “ChatGPT voice” are the names of two voice input options: Claude Code's
@@ -1769,14 +1769,14 @@
     <string name="dictation_no_details">không có chi tiết</string>
 
     <!-- Notification rules (Settings → Notification rules): when a notification from an app the user picks arrives
-         (optionally from someone, or containing some words), Buddy gives the user's instruction to an agent. -->
-    <!-- Name of Buddy's entry in Android's notification access settings. -->
+         (optionally from someone, or containing some words), Mr Do It gives the user's instruction to an agent. -->
+    <!-- Name of Mr Do It's entry in Android's notification access settings. -->
     <string name="rules_service_label">Quy tắc thông báo của Mr Do It</string>
     <string name="rules_title">Quy tắc thông báo</string>
     <string name="rules_intro">Khi có thông báo bạn chọn, Mr Do It chuyển lời dặn của bạn cho agent, như một tin nhắn bạn tự gõ. Thông báo không khớp quy tắc nào sẽ bị bỏ qua.</string>
     <string name="rules_access_off_title">Quyền truy cập thông báo đang tắt</string>
     <string name="rules_access_off_text">Mr Do It cần quyền này để thấy các thông báo mà quy tắc của bạn theo dõi.</string>
-    <!-- Button: opens Android's notification access setting for Buddy. -->
+    <!-- Button: opens Android's notification access setting for Mr Do It. -->
     <string name="rules_access_turn_on">Bật</string>
     <!-- Switch: off pauses every rule. -->
     <string name="rules_run">Chạy quy tắc</string>
@@ -1904,7 +1904,7 @@
     <string name="rules_chat_shown">🔔 %1$s · %2$s: %3$s\n⚡ %4$s</string>
     <!-- Status in the bubble while a second AI checks an action against the rule, before its countdown starts. -->
     <string name="rules_status_checking">Đang đối chiếu với quy tắc của bạn…</string>
-    <!-- Names of Buddy's notification categories in Android's settings (approvals_channel: cards waiting for the user). -->
+    <!-- Names of Mr Do It's notification categories in Android's settings (approvals_channel: cards waiting for the user). -->
     <string name="rules_channel_results">Quy tắc thông báo: kết quả</string>
     <string name="approvals_channel">Duyệt</string>
     <!-- Title of the notification saying what a rule's run did. %1$s = the person or conversation; %2$s = the app. -->
@@ -1919,7 +1919,7 @@
 
     <!-- ===== The background browser: its live view in a chat, its cards and Settings (Browser, BrowserTools, BrowserPanel, BrowserActivity) ===== -->
 
-    <!-- Settings screen: the background browser, a separate browser inside Buddy that agents use for web pages. Section label and switch. -->
+    <!-- Settings screen: the background browser, a separate browser inside Mr Do It that agents use for web pages. Section label and switch. -->
     <string name="browser_section">Trình duyệt nền</string>
     <string name="browser_switch">Trình duyệt nền</string>
     <!-- Chromium is the open-source browser Chrome is built on: keep the name. -->
@@ -2373,8 +2373,8 @@
     <string name="tool_install_apk_info">Mở trình cài đặt của Android cho ứng dụng do agent tạo; bạn nhấn Cài đặt</string>
     <string name="tool_wait_for_install">Chờ cài đặt</string>
     <string name="tool_wait_for_install_info">Chờ đến khi bạn đã cài hoặc cập nhật một ứng dụng</string>
-    <string name="tool_update_buddy">Cập nhật Mr Do It</string>
-    <string name="tool_update_buddy_info">Kiểm tra bản Mr Do It mới và mở bản cập nhật</string>
+    <string name="tool_update_mrdoit">Cập nhật Mr Do It</string>
+    <string name="tool_update_mrdoit_info">Kiểm tra bản Mr Do It mới và mở bản cập nhật</string>
     <string name="tool_device_status">Trạng thái điện thoại</string>
     <string name="tool_device_status_info">Pin, mạng, ngày giờ, bộ nhớ trống</string>
     <string name="tool_notifications">Đọc thông báo</string>

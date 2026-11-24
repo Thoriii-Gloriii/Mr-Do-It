@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Turkish translation of Buddy's UI. Source: res/values/strings.xml. -->
+<!-- Turkish translation of Mr Do It's UI. Source: res/values/strings.xml. -->
 <resources>
     <string name="service_label">Mr Do It asistanı</string>
     <string name="service_description">Mr Do It sohbet baloncuğunu gösterir; bu telefonda Mr Do It içinde çalışan, seçtiğiniz ajanın (Claude Code, Codex, OpenCode, Antigravity veya Grok) ekranı okumasını ve sizin yerinize dokunmasını, yazmasını ve kaydırmasını sağlar. Ajanın kendisinin yapay zeka hizmetine (Anthropic, OpenAI, Google, xAI veya OpenCode modelinizin sağlayıcısı) gönderdikleri dışında hiçbir şey telefondan çıkmaz.</string>
@@ -46,7 +46,7 @@
     <string name="onboarding_brain_both">İkisini de yükleyin, her sohbette seçin. Varsayılan Claude Code olarak kalır.</string>
     <string name="onboarding_recommended">önerilen</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">Mr Do It\'nin görmesine ve dokunmasına izin verin</string>
     <string name="onboarding_access_done">Erişilebilirlik hizmeti açık.</string>
     <string name="onboarding_access_text">Mr Do It\'nin erişilebilirlik hizmeti baloncuğu gösterir ve ajanın ekranı okumasına, dokunmasına ve yazmasına yalnızca siz bir şey istediğinizde izin verir.</string>
@@ -60,7 +60,7 @@
     <string name="onboarding_access_restricted_steps">1. Aşağıdaki Uygulama bilgileri düğmesine dokunun.\n2. Sağ üstteki ⋮ → Kısıtlanmış ayarlara izin ver seçeneğine dokunun.\n3. Geri dönüp erişilebilirlik ayarlarını yeniden açın.</string>
     <string name="onboarding_app_info">Uygulama bilgileri</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">Yükleyin ve giriş yapın</string>
     <string name="onboarding_agents_done_title">Hazır</string>
     <string name="onboarding_agents_done">%1$s yüklendi ve giriş yapıldı.</string>
@@ -99,7 +99,7 @@
     <string name="onboarding_stuck_install_q">Yükleme başarısız mı oldu?</string>
     <string name="onboarding_stuck_install_a">Bağlantınızı kontrol edip yükleme düğmesine tekrar dokunun; kaldığı yerden devam eder.</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">Arka planda çalışsın</string>
     <string name="onboarding_background_done">Mr Do It arka planda çalışabilir.</string>
     <string name="onboarding_background_text">Böylece ajan çalışırken telefonunuz pil tasarrufu için Mr Do It\'yi durdurmaz.</string>
@@ -165,7 +165,7 @@
     <string name="notice_hidden_text">Baloncuğu yeniden göstermek için dokunun.</string>
     <string name="notice_open_chats">Sohbetleri aç</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
     <string name="update_channel_name">Mr Do It güncellemeleri</string>
     <string name="update_available_title">Mr Do It %1$s kullanıma sunuldu</string>
     <string name="update_notification_text">Sizdeki sürüm: %1$s. Yenilikleri görüp güncellemek için dokunun; sohbetleriniz korunur.</string>
@@ -179,10 +179,10 @@
     <string name="update_later">Sonra</string>
     <string name="update_downloading">İndiriliyor…</string>
     <string name="update_needs_permission">Mr Do It\'nin uygulama yüklemesine izin verin, ardından Güncelle düğmesine tekrar dokunun.</string>
-    <string name="update_error_no_apk">Bu sürümde henüz buddy.apk yok.</string>
+    <string name="update_error_no_apk">Bu sürümde henüz mrdoit.apk yok.</string>
     <string name="update_error_download">İndirme başarısız oldu (%1$s).</string>
     <string name="update_error_not_newer">İndirilen dosya daha yeni bir Mr Do It sürümü değil, bu yüzden açılmadı.</string>
-    <string name="update_failed_manual">%1$s Uygulamayı %2$s adresinden (buddy.apk) de indirebilir veya otomatik güncellemeler için Obtainium\'u kullanabilirsiniz (bkz. %3$s).</string>
+    <string name="update_failed_manual">%1$s Uygulamayı %2$s adresinden (mrdoit.apk) de indirebilir veya otomatik güncellemeler için Obtainium\'u kullanabilirsiniz (bkz. %3$s).</string>
 
     <!-- Settings, Appearance: option names. -->
     <string name="prefs_theme_system">Sistem</string>
@@ -336,7 +336,7 @@
     <string name="pause_call_ended_title">Arama bitti · Mr Do It duraklatıldı</string>
     <string name="pause_call_ended_text">Göreve devam etmek için dokunun</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <string name="chat_back">Geri</string>
@@ -348,7 +348,7 @@
     <string name="chat_linux_tools">Linux araçları</string>
     <string name="chat_linux_tools_info">Mr Do It\'nin Linux\'unda komutlar, dosyalar ve uygulama derleme</string>
     <string name="chat_linux_tools_title">Linux araçları açılsın mı?</string>
-    <string name="chat_linux_tools_what">Ajan bu durumda komut çalıştırabilir, paket yükleyebilir ve ~/.buddy/work içindeki dosyaları düzenleyebilir; böylece uygulama geliştirebilir.</string>
+    <string name="chat_linux_tools_what">Ajan bu durumda komut çalıştırabilir, paket yükleyebilir ve ~/.mrdoit/work içindeki dosyaları düzenleyebilir; böylece uygulama geliştirebilir.</string>
     <string name="chat_linux_tools_when">Yalnızca bu sohbette, bir sonraki mesajınızdan itibaren.</string>
     <string name="chat_linux_tools_risk">Ekrandaki kötü amaçlı bir mesaj veya web sayfası, ajanı komut çalıştırmaya kandırmaya çalışabilir. Onay kartları gönderme, paylaşma, satın alma ve silme işlemlerini korumaya devam eder.</string>
     <string name="chat_linux_tools_turn_on">Aç</string>
@@ -516,7 +516,7 @@
         <item quantity="other">%1$d araç çağrısı</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
     <string name="hub_continuing">Daha önceki bir %1$s oturumuna devam ediliyor. Hâlâ bir terminalde açıksa önce orada kapatın.</string>
     <string name="hub_still_working_attachments">Bu sohbet hâlâ çalışıyor. Ekleri iş bitince gönderin.</string>
     <string name="hub_service_off">%1$s kapalı (Ayarlar → Ajanlar ve modeller → API anahtarları). Açın veya bu sohbet için başka bir model seçin.</string>
@@ -637,7 +637,7 @@
     <string name="hub_tool_read_file">Okunuyor: %1$s</string>
     <string name="hub_tool_other">Kullanılıyor: %1$s</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">Yükleniyor…</string>
     <string name="transcript_continue">Mr Do It\'de devam et</string>
     <string name="transcript_empty">Bu oturumda okunabilir mesaj yok.</string>
@@ -854,7 +854,7 @@
     <string name="codex_pair_failed">Eşleme kodu alınamadı: %1$s</string>
     <string name="codex_keeps_stopping">Codex oturumu sürekli duruyor: %1$s</string>
     <string name="ssh_keeps_stopping">SSH sunucusu sürekli duruyor: %1$s</string>
-    <string name="ssh_key_added">Tamam. Mr Do It\'nin Linux\'unu Termux\'tan açmak için ssh buddy yazın.</string>
+    <string name="ssh_key_added">Tamam. Mr Do It\'nin Linux\'unu Termux\'tan açmak için ssh mrdoit yazın.</string>
     <string name="ssh_code_expired">Bu komut zaten kullanıldı veya 10 dakikadan eski. Mr Do It\'nin Ayarlar bölümünden yeniden kopyalayın.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
@@ -923,7 +923,7 @@
     <string name="setup_surface">Yüzey</string>
     <string name="setup_surface_note">Sıcak, Mr Do It\'nin orijinal tonudur. Siyah (tam siyah) yalnızca koyu modda uygulanır.</string>
     <string name="setup_face">Mr Do It\'nin görünümü</string>
-    <string name="setup_face_buddy">Orijinal</string>
+    <string name="setup_face_mrdoit">Orijinal</string>
     <string name="setup_face_picture">Kendi resmin</string>
     <string name="setup_face_note">En iyi sonucu şeffaf arka planlı bir PNG veya WebP verir. Baloncukta ve Mr Do It\'nin yanıtlarının yanında görünür.</string>
     <string name="setup_face_change">Başka bir resim seç</string>
@@ -1022,13 +1022,13 @@
     <string name="setup_ssh">Termux\'tan SSH</string>
     <string name="setup_ssh_info">Mr Do It\'nin Linux\'unu Termux\'tan SSH ile kullanın. Yalnızca bu telefondaki uygulamalar, yalnızca bir anahtarla bağlanabilir.</string>
     <string name="setup_ssh_active">çalışıyor · port %1$d</string>
-    <string name="setup_ssh_how">Bu komutu kopyalayıp 10 dakika içinde Termux\'ta bir kez çalıştırın. Sonrasında Mr Do It\'nin Linux\'unu açmak için Termux\'ta ssh buddy yazın.</string>
+    <string name="setup_ssh_how">Bu komutu kopyalayıp 10 dakika içinde Termux\'ta bir kez çalıştırın. Sonrasında Mr Do It\'nin Linux\'unu açmak için Termux\'ta ssh mrdoit yazın.</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">Eski Termux sohbetlerini kaldır</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="one">Buddy\'nin kendi Linux\'u olmadan önceki %1$d sohbet. Ajanlar buna devam edemez.</item>
-        <item quantity="other">Buddy\'nin kendi Linux\'u olmadan önceki %1$d sohbet. Ajanlar bunlara devam edemez.</item>
+        <item quantity="one">Mr Do It\'nin kendi Linux\'u olmadan önceki %1$d sohbet. Ajanlar buna devam edemez.</item>
+        <item quantity="other">Mr Do It\'nin kendi Linux\'u olmadan önceki %1$d sohbet. Ajanlar bunlara devam edemez.</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="one">%1$d eski sohbet kaldırılsın mı?</item>
@@ -1074,7 +1074,7 @@
     <string name="setup_app_permissions">Uygulama izinleri</string>
     <string name="setup_app_permissions_info">Uygulama bazında seçin: Güven modunda ajan orada açılır pencere olmadan çalışır; Katı modda ise Gönder, Öde, Sil… öncesinde Mr Do It size kendisi sorar.</string>
     <string name="setup_dev_mode">Yeni sohbetlerde Linux araçları</string>
-    <string name="setup_dev_mode_info">Linux araçlarıyla ajan komut çalıştırabilir, paket yükleyebilir ve ~/.buddy/work içindeki dosyaları düzenleyebilir; böylece uygulama geliştirebilir. Yeni sohbetler bu ayarla başlar; her sohbet bunu kendi başlığının altından değiştirebilir.</string>
+    <string name="setup_dev_mode_info">Linux araçlarıyla ajan komut çalıştırabilir, paket yükleyebilir ve ~/.mrdoit/work içindeki dosyaları düzenleyebilir; böylece uygulama geliştirebilir. Yeni sohbetler bu ayarla başlar; her sohbet bunu kendi başlığının altından değiştirebilir.</string>
     <string name="setup_agents_tap">Ajanların Mr Do It ekranlarına dokunmasına izin ver</string>
     <string name="setup_agents_tap_info">Mr Do It\'yi bir ajanla test etmek için (örneğin Termux\'ta telefon araçlarıyla Claude Code). Ajanlar o zaman sohbet listesini, bir sohbeti ve bu Ayarlar ekranını kullanabilir. Neye izinli olduklarını belirleyen her şey sizde kalır: balon, onay kartları, Linux araçları, sohbet seçenekleri ve zamanlamalar ile uygulama izinleri, anahtarlar, kurallar, beceriler, arka plan modu ve yedekleme ekranları.</string>
     <string name="setup_ask_new_apps">Her yeni uygulama için sor</string>
@@ -1088,7 +1088,7 @@
     <string name="setup_licences">Açık kaynak lisansları</string>
     <string name="setup_privacy_policy">Gizlilik politikası</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <string name="linux_download_corrupt">Alpine indirmesi bozuk (sha256 %1$s)</string>
     <string name="linux_move_failed">Alpine yerine taşınamadı</string>
     <string name="linux_download_failed_http">İndirme başarısız: HTTP %1$d</string>
@@ -1096,14 +1096,14 @@
     <string name="linux_symlink_failed">symlink %1$s: %2$s</string>
     <string name="linux_truncated_archive">Arşiv eksik</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
     <string name="terminal_title">Terminal</string>
     <string name="terminal_back">Geri</string>
     <string name="terminal_hide_keyboard">Klavyeyi gizle</string>
     <string name="terminal_menu">Menü</string>
     <plurals name="terminal_sessions_count">
-        <item quantity="one">%1$d oturum · buddy linux</item>
-        <item quantity="other">%1$d oturum · buddy linux</item>
+        <item quantity="one">%1$d oturum · mrdoit linux</item>
+        <item quantity="other">%1$d oturum · mrdoit linux</item>
     </plurals>
     <string name="terminal_listening">dinleniyor · mikrofon açık</string>
     <string name="terminal_session_ended">Oturum sona erdi</string>
@@ -1228,7 +1228,7 @@
     <string name="reviewer_no_answer">yanıt yok</string>
     <string name="reviewer_timed_out">zaman aşımı</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">Mr Do It\'nin Linux\'u henüz yüklü değil. Kurmak için Ayarlar\'ı açın.</string>
 
     <!-- Voice input (dictation): "Claude sesi" and "ChatGPT sesi" are the two voice input options. -->
@@ -1800,8 +1800,8 @@
     <string name="tool_install_apk_info">Bir ajanın oluşturduğu uygulama için Android yükleyicisini açar; Yükle\'ye siz dokunursunuz</string>
     <string name="tool_wait_for_install">Yüklemeyi bekleme</string>
     <string name="tool_wait_for_install_info">Bir uygulamayı yükleyene veya güncelleyene kadar bekler</string>
-    <string name="tool_update_buddy">Mr Do It\'yi güncelleme</string>
-    <string name="tool_update_buddy_info">Yeni bir Mr Do It olup olmadığına bakar ve güncellemesini açar</string>
+    <string name="tool_update_mrdoit">Mr Do It\'yi güncelleme</string>
+    <string name="tool_update_mrdoit_info">Yeni bir Mr Do It olup olmadığına bakar ve güncellemesini açar</string>
     <string name="tool_device_status">Telefon durumu</string>
     <string name="tool_device_status_info">Pil, ağ, tarih ve saat, boş depolama alanı</string>
     <string name="tool_notifications">Bildirimleri okuma</string>

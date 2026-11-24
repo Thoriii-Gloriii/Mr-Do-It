@@ -1,0 +1,32 @@
+package app.mrdoit.mothusi;
+
+import android.app.Application;
+import android.content.Context;
+
+/** The app's context, for code with no Context at hand (static helpers) that needs a string in the user's language. */
+public class MrDoItApp extends Application {
+    private static Context ctx;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        ctx = this;
+        // Mr Do It starts (opened, or woken by the phone after a restart or an update): its accessibility service, if
+        // Android dropped it and Mr Do It may put it back
+        MrDoItService.restoreAccess(this);
+    }
+
+    static Context context() {
+        return ctx;
+    }
+
+    /** String resource id in the app's language, formatted with args if there are any. */
+    static String str(int id, Object... args) {
+        return args.length == 0 ? ctx.getString(id) : ctx.getString(id, args);
+    }
+
+    /** Plural resource id for the count n, formatted with args (usually n itself). */
+    static String plural(int id, int n, Object... args) {
+        return ctx.getResources().getQuantityString(id, n, args);
+    }
+}

@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "godo"
+rootProject.name = "mrdoit"
 include(":app")

@@ -1,10 +1,10 @@
 #!/bin/bash
-# One-time setup of the Android build tools inside Buddy's Linux (about 400 MB). Safe to run again.
+# One-time setup of the Android build tools inside Mr Do It's Linux (about 400 MB). Safe to run again.
 #   aapt2/zipalign: Alpine's android-build-tools (edge/testing, built for ARM)
 #   javac: OpenJDK 17;  d8 + apksigner: Google's build-tools jars;  android.jar: the Android 36 platform
 set -euo pipefail
 SDK=$HOME/android-sdk
-# the server apk already uses (a mirror, if one is chosen in Buddy's Settings)
+# the server apk already uses (a mirror, if one is chosen in Mr Do It's Settings)
 E=$(sed -n 's#^\(https\{0,1\}://[^ ]*\)/v[0-9.]*/main *$#\1#p' /etc/apk/repositories | sed -n 1p)
 E=${E:-https://dl-cdn.alpinelinux.org/alpine}/edge
 # Only android-build-tools (and what it needs) comes from edge; the rest of the system stays on stable.

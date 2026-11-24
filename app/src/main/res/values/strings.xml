@@ -245,13 +245,13 @@
     <string name="update_downloading">Downloading…</string>
     <!-- "Update" = the button (update_action). -->
     <string name="update_needs_permission">Allow Mr Do It to install apps, then tap Update again.</string>
-    <!-- Why an update failed (%1$s of update_failed_manual). godo.apk is a file name. -->
-    <string name="update_error_no_apk">The release has no godo.apk yet.</string>
+    <!-- Why an update failed (%1$s of update_failed_manual). mrdoit.apk is a file name. -->
+    <string name="update_error_no_apk">The release has no mrdoit.apk yet.</string>
     <!-- %1$s = the system's technical error message (usually English). -->
     <string name="update_error_download">The download failed (%1$s).</string>
     <string name="update_error_not_newer">The downloaded file isn\'t a newer Mr Do It, so it wasn\'t opened.</string>
     <!-- Message after a failed update. %1$s = what went wrong (an update_error_ sentence); %2$s = the web address of the latest release; %3$s = the web address of the update instructions. Obtainium is an app name. -->
-    <string name="update_failed_manual">%1$s You can also get it at %2$s (godo.apk), or with Obtainium for automatic updates (see %3$s).</string>
+    <string name="update_failed_manual">%1$s You can also get it at %2$s (mrdoit.apk), or with Obtainium for automatic updates (see %3$s).</string>
 
     <!-- Settings, Appearance: option names. -->
     <!-- Light/dark mode, segmented control: keep short. System = follow the phone's setting. -->
@@ -471,7 +471,7 @@
     <string name="pause_call_ended_title">Call ended · Mr Do It is paused</string>
     <string name="pause_call_ended_text">Tap to resume the task</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <!-- Verb, go back. Read by TalkBack for the back arrow at the top of the chat and transcript screens; also a
@@ -491,8 +491,8 @@
     <string name="chat_linux_tools_info">Commands, files and app builds in Mr Do It\'s Linux</string>
     <!-- Title of the sheet that opens when the user turns Linux tools on in a chat. -->
     <string name="chat_linux_tools_title">Turn on Linux tools?</string>
-    <!-- ~/.godo/work is a folder: keep it as is. -->
-    <string name="chat_linux_tools_what">The agent can then run commands, install packages and edit files in ~/.godo/work, so it can build apps.</string>
+    <!-- ~/.mrdoit/work is a folder: keep it as is. -->
+    <string name="chat_linux_tools_what">The agent can then run commands, install packages and edit files in ~/.mrdoit/work, so it can build apps.</string>
     <!-- When the change applies: a task already running goes on as it was. -->
     <string name="chat_linux_tools_when">Only in this chat, from your next message.</string>
     <!-- "it" = the agent. -->
@@ -1199,8 +1199,8 @@
     <string name="codex_keeps_stopping">The Codex session keeps stopping: %1$s</string>
     <!-- %1$s = the server's last message, in English. -->
     <string name="ssh_keeps_stopping">The SSH server keeps stopping: %1$s</string>
-    <!-- Shown in Termux after the copied command ran, and as a toast. "ssh godo" is a command: keep it as is. -->
-    <string name="ssh_key_added">Done. To open Mr Do It\'s Linux from Termux, type ssh godo.</string>
+    <!-- Shown in Termux after the copied command ran, and as a toast. "ssh mrdoit" is a command: keep it as is. -->
+    <string name="ssh_key_added">Done. To open Mr Do It\'s Linux from Termux, type ssh mrdoit.</string>
     <!-- Shown in Termux when the copied command was already used or is too old. -->
     <string name="ssh_code_expired">This command was already used or is more than 10 minutes old. Copy it again in Mr Do It\'s Settings.</string>
 
@@ -1296,7 +1296,7 @@
     <!-- Setting: Mr Do It's face on the floating bubble and next to its replies. Title above two short choices. -->
     <string name="setup_face">Mr Do It\'s look</string>
     <!-- Choice: Mr Do It's own drawn face. Keep it short. -->
-    <string name="setup_face_buddy">Original</string>
+    <string name="setup_face_mrdoit">Original</string>
     <!-- Choice: a picture the user picks from the phone. Keep it short. -->
     <string name="setup_face_picture">Your picture</string>
     <string name="setup_face_note">A PNG or WebP with a transparent background works best. It shows on the bubble and next to Mr Do It\'s replies.</string>
@@ -1365,7 +1365,7 @@
     <string name="setup_voice">Voice</string>
     <string name="setup_assist">When Mr Do It is the phone\'s assistant</string>
     <string name="setup_assist_info">Pick Mr Do It in Android\'s Settings → Apps → Default apps → Digital assistant app. Long-pressing the power button then starts Mr Do It: Talk sends one request, Live voice starts a spoken conversation (it needs Codex signed in; otherwise it\'s Talk).</string>
-    <!-- Switch under "When Buddy is the phone's assistant": the power-button gesture is ignored while the phone is locked (issue #80). -->
+    <!-- Switch under "When Mr Do It is the phone's assistant": the power-button gesture is ignored while the phone is locked (issue #80). -->
     <string name="setup_assist_unlocked">Only when the phone is unlocked</string>
     <string name="setup_assist_unlocked_info">Long-pressing the power button does nothing on the lock screen or in standby.</string>
     <string name="setup_live_agent">Live voice uses</string>
@@ -1421,8 +1421,8 @@
     <string name="setup_ssh_info">Use Mr Do It\'s Linux from Termux, over SSH. Only apps on this phone can connect, and only with a key.</string>
     <!-- Status, lowercase. %1$d = a port number. -->
     <string name="setup_ssh_active">running · port %1$d</string>
-    <!-- "ssh godo" is a command: keep it as is. -->
-    <string name="setup_ssh_how">Copy this command and run it once in Termux, within 10 minutes. After that, type ssh godo in Termux to open Mr Do It\'s Linux.</string>
+    <!-- "ssh mrdoit" is a command: keep it as is. -->
+    <string name="setup_ssh_how">Copy this command and run it once in Termux, within 10 minutes. After that, type ssh mrdoit in Termux to open Mr Do It\'s Linux.</string>
 
     <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">Remove old Termux chats</string>
@@ -1443,7 +1443,7 @@
     <string name="setup_chat_bubble">Chat bubble</string>
     <!-- ✕ is the close target that appears while dragging the bubble. -->
     <string name="setup_chat_bubble_info">Floats over other apps. Drag it onto the ✕ to hide it; approval cards still pop up when an agent needs your OK.</string>
-    <!-- Switch under "Chat bubble": the bubble doesn't show over Buddy's own screens (the app, its settings). -->
+    <!-- Switch under "Chat bubble": the bubble doesn't show over Mr Do It's own screens (the app, its settings). -->
     <string name="setup_bubble_hide_in_app">Hide while Mr Do It is open</string>
     <string name="setup_bubble_hide_in_app_info">No bubble over Mr Do It\'s own screens. It still comes up there for an approval card or a question, and it\'s back when you leave Mr Do It.</string>
     <!-- Setting: what a tap on the floating bubble does. Title above three short choices. -->
@@ -1495,7 +1495,7 @@
     <string name="setup_rules_info">Let an agent act when a notification arrives: answer a message, put a delivery in your calendar…</string>
     <!-- Settings switch: whether new chats start with Linux tools (chat_linux_tools); each chat can change it. -->
     <string name="setup_dev_mode">Linux tools in new chats</string>
-    <string name="setup_dev_mode_info">Linux tools let the agent run commands, install packages and edit files in ~/.godo/work, so it can build apps. New chats start with this setting; each chat can change it under its title.</string>
+    <string name="setup_dev_mode_info">Linux tools let the agent run commands, install packages and edit files in ~/.mrdoit/work, so it can build apps. New chats start with this setting; each chat can change it under its title.</string>
     <string name="setup_agents_tap">Let agents tap Mr Do It\'s screens</string>
     <!-- "App permissions" is the name of a screen in Mr Do It. -->
     <string name="setup_agents_tap_info">For testing Mr Do It with an agent (for example Claude Code in Termux with the phone tools). Agents can then use the Chats list, a chat and this Settings screen. Everything that decides what they may do stays yours: the bubble, approval cards, Linux tools, Chat options and schedules, and the screens for App permissions, keys, rules, skills, background mode and backup.</string>
@@ -1533,10 +1533,10 @@
     <string name="terminal_hide_keyboard">Hide keyboard</string>
     <!-- Read by TalkBack: button that opens the terminal menu. -->
     <string name="terminal_menu">Menu</string>
-    <!-- Status line under the title, lowercase. "godo linux" is the name of Mr Do It's Linux: keep it. Only shown for 2 or more. -->
+    <!-- Status line under the title, lowercase. "mrdoit linux" is the name of Mr Do It's Linux: keep it. Only shown for 2 or more. -->
     <plurals name="terminal_sessions_count">
-        <item quantity="one">%1$d session · godo linux</item>
-        <item quantity="other">%1$d sessions · godo linux</item>
+        <item quantity="one">%1$d session · mrdoit linux</item>
+        <item quantity="other">%1$d sessions · mrdoit linux</item>
     </plurals>
     <!-- Status line under the title while the microphone is in use, lowercase. -->
     <string name="terminal_listening">listening · microphone on</string>
@@ -2117,7 +2117,7 @@
     <!-- Switch on the Background mode screen. "Start now" is the button background_start_now; "Wireless debugging" is Android's own name: use the one this language's Android shows. -->
     <string name="background_restart">Start again after a restart</string>
     <string name="background_restart_info">After a restart of the phone, Mr Do It switches Wireless debugging on and starts the helper by itself, once the phone is unlocked. It needs Wi-Fi after the restart, on a network Wireless debugging is always allowed on. If it didn\'t work, tap Start now.</string>
-    <!-- Shown under that switch instead, on a phone where Buddy can't do it. -->
+    <!-- Shown under that switch instead, on a phone where Mr Do It can't do it. -->
     <string name="background_restart_cant">This phone doesn\'t let Mr Do It switch Wireless debugging on by itself, so this can\'t work here: after a restart, tap Start now.</string>
     <string name="chat_bg_connected">Connected</string>
     <string name="chat_bg_disconnected">Not connected</string>
@@ -2432,8 +2432,8 @@
     <string name="tool_install_apk_info">Opens Android\'s installer for an app an agent built; you tap Install</string>
     <string name="tool_wait_for_install">Wait for an install</string>
     <string name="tool_wait_for_install_info">Waits until you\'ve installed or updated an app</string>
-    <string name="tool_update_buddy">Update Mr Do It</string>
-    <string name="tool_update_buddy_info">Checks for a new Mr Do It and opens its update</string>
+    <string name="tool_update_mrdoit">Update Mr Do It</string>
+    <string name="tool_update_mrdoit_info">Checks for a new Mr Do It and opens its update</string>
     <string name="tool_device_status">Phone status</string>
     <string name="tool_device_status_info">Battery, network, date and time, free storage</string>
     <string name="tool_notifications">Read notifications</string>

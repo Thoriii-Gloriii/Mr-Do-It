@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Every text Buddy shows, in Dutch (je). Source and translator notes: res/values/strings.xml. -->
+<!-- Every text Mr Do It shows, in Dutch (je). Source and translator notes: res/values/strings.xml. -->
 <resources>
     <string name="service_label">Mr Do It-assistent</string>
     <string name="service_description">Toont de chatbubbel van Mr Do It en laat de door jou gekozen agent (Claude Code, Codex, OpenCode, Antigravity of Grok), die binnen Mr Do It op deze telefoon draait, het scherm lezen en voor je tikken, typen en scrollen. Niets verlaat de telefoon, behalve wat de agent zelf naar zijn AI-dienst stuurt (Anthropic, OpenAI, Google, xAI of de aanbieder van je OpenCode-model).</string>
@@ -46,7 +46,7 @@
     <string name="onboarding_brain_both">Installeer beide en kies per chat. Claude Code blijft de standaard.</string>
     <string name="onboarding_recommended">aanbevolen</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">Laat Mr Do It zien en tikken</string>
     <string name="onboarding_access_done">Toegankelijkheid staat aan.</string>
     <string name="onboarding_access_text">De toegankelijkheidsservice van Mr Do It toont de bubbel en laat de agent het scherm lezen, tikken en typen, alleen als je hem vraagt iets te doen.</string>
@@ -60,7 +60,7 @@
     <string name="onboarding_access_restricted_steps">1. Tik hieronder op App-info.\n2. Tik rechtsboven op ⋮ → Beperkte instellingen toestaan.\n3. Kom terug en open de toegankelijkheidsinstellingen opnieuw.</string>
     <string name="onboarding_app_info">App-info</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">Installeren en inloggen</string>
     <string name="onboarding_agents_done_title">Klaar</string>
     <string name="onboarding_agents_done">%1$s is geïnstalleerd en ingelogd.</string>
@@ -96,7 +96,7 @@
     <string name="onboarding_stuck_install_q">Installatie mislukt?</string>
     <string name="onboarding_stuck_install_a">Controleer je verbinding en installeer opnieuw; het gaat verder waar het gestopt is.</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">Actief houden</string>
     <string name="onboarding_background_done">Mr Do It kan op de achtergrond draaien.</string>
     <string name="onboarding_background_text">Zodat je telefoon Mr Do It niet stopt om batterij te sparen terwijl de agent bezig is.</string>
@@ -162,7 +162,7 @@
     <string name="notice_hidden_text">Tik om de bubbel weer te tonen.</string>
     <string name="notice_open_chats">Chats openen</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
     <string name="update_channel_name">Mr Do It-updates</string>
     <string name="update_available_title">Mr Do It %1$s is beschikbaar</string>
     <string name="update_notification_text">Je hebt %1$s. Tik om te zien wat er nieuw is en te updaten; je chats blijven bewaard.</string>
@@ -176,10 +176,10 @@
     <string name="update_later">Later</string>
     <string name="update_downloading">Downloaden…</string>
     <string name="update_needs_permission">Sta Mr Do It toe om apps te installeren en tik daarna opnieuw op Updaten.</string>
-    <string name="update_error_no_apk">Deze release heeft nog geen buddy.apk.</string>
+    <string name="update_error_no_apk">Deze release heeft nog geen mrdoit.apk.</string>
     <string name="update_error_download">Het downloaden is mislukt (%1$s).</string>
     <string name="update_error_not_newer">Het gedownloade bestand is geen nieuwere versie van Mr Do It en is daarom niet geopend.</string>
-    <string name="update_failed_manual">%1$s Je kunt de update ook downloaden via %2$s (buddy.apk), of Obtainium gebruiken voor automatische updates (zie %3$s).</string>
+    <string name="update_failed_manual">%1$s Je kunt de update ook downloaden via %2$s (mrdoit.apk), of Obtainium gebruiken voor automatische updates (zie %3$s).</string>
 
     <!-- Settings, Appearance: option names. -->
     <string name="prefs_theme_system">Systeem</string>
@@ -333,7 +333,7 @@
     <string name="pause_call_ended_title">Gesprek beëindigd · Mr Do It is gepauzeerd</string>
     <string name="pause_call_ended_text">Tik om de taak te hervatten</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <string name="chat_back">Terug</string>
@@ -345,7 +345,7 @@
     <string name="chat_linux_tools">Linux-tools</string>
     <string name="chat_linux_tools_info">Opdrachten, bestanden en apps bouwen in Mr Do It\'s Linux</string>
     <string name="chat_linux_tools_title">Linux-tools aanzetten?</string>
-    <string name="chat_linux_tools_what">De agent kan dan opdrachten uitvoeren, pakketten installeren en bestanden bewerken in ~/.buddy/work, zodat hij apps kan bouwen.</string>
+    <string name="chat_linux_tools_what">De agent kan dan opdrachten uitvoeren, pakketten installeren en bestanden bewerken in ~/.mrdoit/work, zodat hij apps kan bouwen.</string>
     <string name="chat_linux_tools_when">Alleen in deze chat, vanaf je volgende bericht.</string>
     <string name="chat_linux_tools_risk">Een kwaadwillend bericht of een kwaadwillende webpagina op het scherm kan proberen hem te misleiden zodat hij opdrachten uitvoert. Goedkeuringskaarten bewaken nog steeds verzenden, plaatsen, kopen en verwijderen.</string>
     <string name="chat_linux_tools_turn_on">Aanzetten</string>
@@ -513,7 +513,7 @@
         <item quantity="other">%1$d toolaanroepen</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
     <string name="hub_continuing">Een eerdere sessie van %1$s wordt voortgezet. Als die nog open is in een terminal, sluit die daar dan eerst.</string>
     <string name="hub_still_working_attachments">Deze chat is nog bezig. Stuur bijlagen als hij klaar is.</string>
     <string name="hub_service_off">%1$s staat uit (Instellingen → Agents en modellen → API-sleutels). Zet de dienst aan of kies een ander model voor deze chat.</string>
@@ -634,7 +634,7 @@
     <string name="hub_tool_read_file">Leest %1$s</string>
     <string name="hub_tool_other">Gebruikt %1$s</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">Laden…</string>
     <string name="transcript_continue">Doorgaan in Mr Do It</string>
     <string name="transcript_empty">Geen leesbare berichten in deze sessie.</string>
@@ -851,7 +851,7 @@
     <string name="codex_pair_failed">Kan geen koppelcode ophalen: %1$s</string>
     <string name="codex_keeps_stopping">De Codex-sessie stopt steeds: %1$s</string>
     <string name="ssh_keeps_stopping">De SSH-server stopt steeds: %1$s</string>
-    <string name="ssh_key_added">Klaar. Typ ssh buddy om Mr Do It\'s Linux vanuit Termux te openen.</string>
+    <string name="ssh_key_added">Klaar. Typ ssh mrdoit om Mr Do It\'s Linux vanuit Termux te openen.</string>
     <string name="ssh_code_expired">Deze opdracht is al gebruikt of is ouder dan 10 minuten. Kopieer hem opnieuw in de Instellingen van Mr Do It.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
@@ -920,7 +920,7 @@
     <string name="setup_surface">Achtergrond</string>
     <string name="setup_surface_note">Warm is de oorspronkelijke tint van Mr Do It. Zwart (echt zwart) geldt alleen in de donkere modus.</string>
     <string name="setup_face">Uiterlijk van Mr Do It</string>
-    <string name="setup_face_buddy">Origineel</string>
+    <string name="setup_face_mrdoit">Origineel</string>
     <string name="setup_face_picture">Eigen afbeelding</string>
     <string name="setup_face_note">Een PNG of WebP met een transparante achtergrond werkt het best. Hij staat op de bubbel en naast de antwoorden van Mr Do It.</string>
     <string name="setup_face_change">Andere afbeelding kiezen</string>
@@ -1019,13 +1019,13 @@
     <string name="setup_ssh">SSH vanuit Termux</string>
     <string name="setup_ssh_info">Gebruik Mr Do It\'s Linux vanuit Termux, via SSH. Alleen apps op deze telefoon kunnen verbinden, en alleen met een sleutel.</string>
     <string name="setup_ssh_active">actief · poort %1$d</string>
-    <string name="setup_ssh_how">Kopieer deze opdracht en voer hem binnen 10 minuten één keer uit in Termux. Typ daarna ssh buddy in Termux om Mr Do It\'s Linux te openen.</string>
+    <string name="setup_ssh_how">Kopieer deze opdracht en voer hem binnen 10 minuten één keer uit in Termux. Typ daarna ssh mrdoit in Termux om Mr Do It\'s Linux te openen.</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">Oude Termux-chats verwijderen</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="one">%1$d chat van voordat Buddy een eigen Linux had. Agents kunnen die niet voortzetten.</item>
-        <item quantity="other">%1$d chats van voordat Buddy een eigen Linux had. Agents kunnen ze niet voortzetten.</item>
+        <item quantity="one">%1$d chat van voordat Mr Do It een eigen Linux had. Agents kunnen die niet voortzetten.</item>
+        <item quantity="other">%1$d chats van voordat Mr Do It een eigen Linux had. Agents kunnen ze niet voortzetten.</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="one">%1$d oude chat verwijderen?</item>
@@ -1071,7 +1071,7 @@
     <string name="setup_app_permissions">App-rechten</string>
     <string name="setup_app_permissions_info">Kies per app: met Vrij werkt de agent daar zonder pop-ups; met Streng vraagt Mr Do It het je zelf vóór Verzenden, Betalen, Verwijderen…</string>
     <string name="setup_dev_mode">Linux-tools in nieuwe chats</string>
-    <string name="setup_dev_mode_info">Met Linux-tools mag de agent opdrachten uitvoeren, pakketten installeren en bestanden bewerken in ~/.buddy/work, zodat hij apps kan bouwen. Nieuwe chats beginnen met deze instelling; elke chat kan die onder zijn titel wijzigen.</string>
+    <string name="setup_dev_mode_info">Met Linux-tools mag de agent opdrachten uitvoeren, pakketten installeren en bestanden bewerken in ~/.mrdoit/work, zodat hij apps kan bouwen. Nieuwe chats beginnen met deze instelling; elke chat kan die onder zijn titel wijzigen.</string>
     <string name="setup_agents_tap">Agents laten tikken op Mr Do It\'s schermen</string>
     <string name="setup_agents_tap_info">Om Mr Do It met een agent te testen (bijvoorbeeld Claude Code in Termux met de telefoontools). Agents kunnen dan de chatlijst, een chat en dit instellingenscherm gebruiken. Alles wat bepaalt wat ze mogen, blijft van jou: de bubbel, goedkeuringskaarten, Linux-tools, chatopties en planningen, en de schermen voor app-machtigingen, sleutels, regels, skills, achtergrondmodus en back-up.</string>
     <string name="setup_ask_new_apps">Vragen bij elke nieuwe app</string>
@@ -1085,7 +1085,7 @@
     <string name="setup_licences">Open-sourcelicenties</string>
     <string name="setup_privacy_policy">Privacybeleid</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <string name="linux_download_corrupt">Alpine-download is beschadigd (sha256 %1$s)</string>
     <string name="linux_move_failed">Kan Alpine niet op zijn plaats zetten</string>
     <string name="linux_download_failed_http">Downloaden mislukt: HTTP %1$d</string>
@@ -1093,14 +1093,14 @@
     <string name="linux_symlink_failed">symlink %1$s: %2$s</string>
     <string name="linux_truncated_archive">Archief is onvolledig</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
     <string name="terminal_title">Terminal</string>
     <string name="terminal_back">Terug</string>
     <string name="terminal_hide_keyboard">Toetsenbord verbergen</string>
     <string name="terminal_menu">Menu</string>
     <plurals name="terminal_sessions_count">
-        <item quantity="one">%1$d sessie · buddy linux</item>
-        <item quantity="other">%1$d sessies · buddy linux</item>
+        <item quantity="one">%1$d sessie · mrdoit linux</item>
+        <item quantity="other">%1$d sessies · mrdoit linux</item>
     </plurals>
     <string name="terminal_listening">luistert · microfoon aan</string>
     <string name="terminal_session_ended">Sessie beëindigd</string>
@@ -1226,7 +1226,7 @@
     <string name="reviewer_no_answer">geen antwoord</string>
     <string name="reviewer_timed_out">time-out</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">Mr Do It\'s Linux is nog niet geïnstalleerd. Open Instellingen om het in te stellen.</string>
 
     <!-- Voice input (dictation): "Claude voice" and "ChatGPT voice" are the two voice input options. -->
@@ -1798,8 +1798,8 @@
     <string name="tool_install_apk_info">Opent het installatieprogramma van Android voor een app die een agent heeft gebouwd; jij tikt op Installeren</string>
     <string name="tool_wait_for_install">Wachten op installatie</string>
     <string name="tool_wait_for_install_info">Wacht tot je een app hebt geïnstalleerd of bijgewerkt</string>
-    <string name="tool_update_buddy">Mr Do It bijwerken</string>
-    <string name="tool_update_buddy_info">Zoekt naar een nieuwe Mr Do It en opent de update</string>
+    <string name="tool_update_mrdoit">Mr Do It bijwerken</string>
+    <string name="tool_update_mrdoit_info">Zoekt naar een nieuwe Mr Do It en opent de update</string>
     <string name="tool_device_status">Telefoonstatus</string>
     <string name="tool_device_status_info">Batterij, netwerk, datum en tijd, vrije opslag</string>
     <string name="tool_notifications">Meldingen lezen</string>

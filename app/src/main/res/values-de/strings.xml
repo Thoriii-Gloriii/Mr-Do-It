@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Every text Buddy shows, in German (du). Source and translator notes: res/values/strings.xml. -->
+<!-- Every text Mr Do It shows, in German (du). Source and translator notes: res/values/strings.xml. -->
 <resources>
     <string name="service_label">Mr Do It-Assistent</string>
     <string name="service_description">Zeigt die Chat-Bubble von Mr Do It an und lässt den von dir gewählten Agenten (Claude Code, Codex, OpenCode, Antigravity oder Grok), der in Mr Do It auf diesem Smartphone läuft, den Bildschirm lesen und für dich tippen, Text eingeben und scrollen. Nichts verlässt das Smartphone, außer dem, was der Agent selbst an seinen KI-Dienst sendet (Anthropic, OpenAI, Google, xAI oder den Anbieter deines OpenCode-Modells).</string>
@@ -46,7 +46,7 @@
     <string name="onboarding_brain_both">Installiere beide und wähle pro Chat. Claude Code bleibt der Standard.</string>
     <string name="onboarding_recommended">empfohlen</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">Lass Mr Do It sehen und tippen</string>
     <string name="onboarding_access_done">Die Bedienungshilfe ist aktiviert.</string>
     <string name="onboarding_access_text">Die Bedienungshilfe von Mr Do It zeigt die Bubble an und lässt den Agenten den Bildschirm lesen, tippen und Text eingeben – nur wenn du ihn um etwas bittest.</string>
@@ -60,7 +60,7 @@
     <string name="onboarding_access_restricted_steps">1. Tippe unten auf App-Info.\n2. Tippe oben rechts auf ⋮ → Eingeschränkte Einstellungen zulassen.\n3. Komm zurück und öffne die Bedienungshilfen noch einmal.</string>
     <string name="onboarding_app_info">App-Info</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">Installieren und anmelden</string>
     <string name="onboarding_agents_done_title">Bereit</string>
     <string name="onboarding_agents_done">%1$s ist installiert und angemeldet.</string>
@@ -96,7 +96,7 @@
     <string name="onboarding_stuck_install_q">Installation fehlgeschlagen?</string>
     <string name="onboarding_stuck_install_a">Prüfe deine Verbindung und starte die Installation noch einmal; sie macht dort weiter, wo sie aufgehört hat.</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">Weiterlaufen lassen</string>
     <string name="onboarding_background_done">Mr Do It darf im Hintergrund laufen.</string>
     <string name="onboarding_background_text">Damit dein Smartphone Mr Do It nicht zum Akkusparen beendet, während der Agent arbeitet.</string>
@@ -162,7 +162,7 @@
     <string name="notice_hidden_text">Tippe, um die Bubble wieder anzuzeigen.</string>
     <string name="notice_open_chats">Chats öffnen</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
     <string name="update_channel_name">Mr Do It-Updates</string>
     <string name="update_available_title">Mr Do It %1$s ist verfügbar</string>
     <string name="update_notification_text">Du hast %1$s. Tippe, um die Neuerungen zu sehen und zu aktualisieren; deine Chats bleiben erhalten.</string>
@@ -176,10 +176,10 @@
     <string name="update_later">Später</string>
     <string name="update_downloading">Lädt herunter…</string>
     <string name="update_needs_permission">Erlaube Mr Do It, Apps zu installieren, und tippe dann noch einmal auf „Aktualisieren“.</string>
-    <string name="update_error_no_apk">Das Release enthält noch keine buddy.apk.</string>
+    <string name="update_error_no_apk">Das Release enthält noch keine mrdoit.apk.</string>
     <string name="update_error_download">Der Download ist fehlgeschlagen (%1$s).</string>
     <string name="update_error_not_newer">Die heruntergeladene Datei ist keine neuere Mr Do It-Version und wurde daher nicht geöffnet.</string>
-    <string name="update_failed_manual">%1$s Du bekommst das Update auch unter %2$s (buddy.apk) oder über Obtainium mit automatischen Updates (siehe %3$s).</string>
+    <string name="update_failed_manual">%1$s Du bekommst das Update auch unter %2$s (mrdoit.apk) oder über Obtainium mit automatischen Updates (siehe %3$s).</string>
 
     <!-- Settings, Appearance: option names. -->
     <string name="prefs_theme_system">System</string>
@@ -333,7 +333,7 @@
     <string name="pause_call_ended_title">Anruf beendet · Mr Do It ist pausiert</string>
     <string name="pause_call_ended_text">Tippe, um die Aufgabe fortzusetzen</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <string name="chat_back">Zurück</string>
@@ -345,7 +345,7 @@
     <string name="chat_linux_tools">Linux-Tools</string>
     <string name="chat_linux_tools_info">Befehle, Dateien und App-Builds in Mr Do Its Linux</string>
     <string name="chat_linux_tools_title">Linux-Tools aktivieren?</string>
-    <string name="chat_linux_tools_what">Der Agent kann dann Befehle ausführen, Pakete installieren und Dateien in ~/.buddy/work bearbeiten, also Apps bauen.</string>
+    <string name="chat_linux_tools_what">Der Agent kann dann Befehle ausführen, Pakete installieren und Dateien in ~/.mrdoit/work bearbeiten, also Apps bauen.</string>
     <string name="chat_linux_tools_when">Nur in diesem Chat, ab deiner nächsten Nachricht.</string>
     <string name="chat_linux_tools_risk">Eine bösartige Nachricht oder Webseite auf dem Bildschirm könnte versuchen, ihn zum Ausführen von Befehlen zu verleiten. Freigabekarten schützen weiterhin Senden, Posten, Kaufen und Löschen.</string>
     <string name="chat_linux_tools_turn_on">Aktivieren</string>
@@ -513,7 +513,7 @@
         <item quantity="other">%1$d Tool-Aufrufe</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
     <string name="hub_continuing">Eine frühere Sitzung von %1$s wird fortgesetzt. Wenn sie noch in einem Terminal offen ist, schließe sie dort zuerst.</string>
     <string name="hub_still_working_attachments">In diesem Chat läuft noch eine Aufgabe. Sende Anhänge, wenn sie fertig ist.</string>
     <string name="hub_service_off">%1$s ist ausgeschaltet (Einstellungen → Agenten und Modelle → API-Schlüssel). Schalte den Dienst ein oder wähle ein anderes Modell für diesen Chat.</string>
@@ -634,7 +634,7 @@
     <string name="hub_tool_read_file">Liest %1$s</string>
     <string name="hub_tool_other">Nutzt %1$s</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">Wird geladen…</string>
     <string name="transcript_continue">In Mr Do It fortsetzen</string>
     <string name="transcript_empty">Keine lesbaren Nachrichten in dieser Sitzung.</string>
@@ -851,7 +851,7 @@
     <string name="codex_pair_failed">Kopplungscode nicht erhalten: %1$s</string>
     <string name="codex_keeps_stopping">Die Sitzung mit Codex bricht immer wieder ab: %1$s</string>
     <string name="ssh_keeps_stopping">Der SSH-Server stoppt immer wieder: %1$s</string>
-    <string name="ssh_key_added">Fertig. Um Mr Do Its Linux aus Termux zu öffnen, gib ssh buddy ein.</string>
+    <string name="ssh_key_added">Fertig. Um Mr Do Its Linux aus Termux zu öffnen, gib ssh mrdoit ein.</string>
     <string name="ssh_code_expired">Dieser Befehl wurde schon benutzt oder ist älter als 10 Minuten. Kopiere ihn erneut in Mr Do Its Einstellungen.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
@@ -920,7 +920,7 @@
     <string name="setup_surface">Hintergrund</string>
     <string name="setup_surface_note">Warm ist der ursprüngliche Farbton von Mr Do It. Schwarz (echtes Schwarz) gilt nur im dunklen Modus.</string>
     <string name="setup_face">Mr Do Its Aussehen</string>
-    <string name="setup_face_buddy">Original</string>
+    <string name="setup_face_mrdoit">Original</string>
     <string name="setup_face_picture">Eigenes Bild</string>
     <string name="setup_face_note">Am besten passt ein PNG oder WebP mit transparentem Hintergrund. Es erscheint auf der Bubble und neben Mr Do Its Antworten.</string>
     <string name="setup_face_change">Anderes Bild wählen</string>
@@ -1019,13 +1019,13 @@
     <string name="setup_ssh">SSH aus Termux</string>
     <string name="setup_ssh_info">Nutze Mr Do Its Linux aus Termux, über SSH. Verbinden können sich nur Apps auf diesem Smartphone, und nur mit einem Schlüssel.</string>
     <string name="setup_ssh_active">läuft · Port %1$d</string>
-    <string name="setup_ssh_how">Kopiere diesen Befehl und führe ihn einmal in Termux aus, innerhalb von 10 Minuten. Danach öffnest du Mr Do Its Linux, indem du in Termux ssh buddy eingibst.</string>
+    <string name="setup_ssh_how">Kopiere diesen Befehl und führe ihn einmal in Termux aus, innerhalb von 10 Minuten. Danach öffnest du Mr Do Its Linux, indem du in Termux ssh mrdoit eingibst.</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">Alte Termux-Chats entfernen</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="one">%1$d Chat aus der Zeit, bevor Buddy ein eigenes Linux hatte. Agenten können ihn nicht fortsetzen.</item>
-        <item quantity="other">%1$d Chats aus der Zeit, bevor Buddy ein eigenes Linux hatte. Agenten können sie nicht fortsetzen.</item>
+        <item quantity="one">%1$d Chat aus der Zeit, bevor Mr Do It ein eigenes Linux hatte. Agenten können ihn nicht fortsetzen.</item>
+        <item quantity="other">%1$d Chats aus der Zeit, bevor Mr Do It ein eigenes Linux hatte. Agenten können sie nicht fortsetzen.</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="one">%1$d alten Chat entfernen?</item>
@@ -1071,7 +1071,7 @@
     <string name="setup_app_permissions">App-Berechtigungen</string>
     <string name="setup_app_permissions_info">Wähle pro App: Bei „Frei“ arbeitet der Agent dort ohne Rückfragen; bei „Streng“ fragt Mr Do It dich selbst vor Senden, Bezahlen, Löschen …</string>
     <string name="setup_dev_mode">Linux-Tools in neuen Chats</string>
-    <string name="setup_dev_mode_info">Mit Linux-Tools darf der Agent Befehle ausführen, Pakete installieren und Dateien in ~/.buddy/work bearbeiten, also Apps bauen. Neue Chats starten mit dieser Einstellung; jeder Chat kann sie unter seinem Titel ändern.</string>
+    <string name="setup_dev_mode_info">Mit Linux-Tools darf der Agent Befehle ausführen, Pakete installieren und Dateien in ~/.mrdoit/work bearbeiten, also Apps bauen. Neue Chats starten mit dieser Einstellung; jeder Chat kann sie unter seinem Titel ändern.</string>
     <string name="setup_agents_tap">Agenten auf Mr Do Its Bildschirmen tippen lassen</string>
     <string name="setup_agents_tap_info">Zum Testen von Mr Do It mit einem Agenten (zum Beispiel Claude Code in Termux mit den Handy-Tools). Agenten können dann die Chatliste, einen Chat und diesen Einstellungsbildschirm bedienen. Alles, was bestimmt, was sie dürfen, bleibt bei dir: die Blase, Freigabekarten, Linux-Tools, Chat-Optionen und Zeitpläne sowie die Bildschirme für App-Berechtigungen, Schlüssel, Regeln, Skills, Hintergrundmodus und Backup.</string>
     <string name="setup_ask_new_apps">Bei jeder neuen App fragen</string>
@@ -1085,7 +1085,7 @@
     <string name="setup_licences">Open-Source-Lizenzen</string>
     <string name="setup_privacy_policy">Datenschutzerklärung</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <string name="linux_download_corrupt">Alpine-Download ist beschädigt (sha256 %1$s)</string>
     <string name="linux_move_failed">Alpine konnte nicht an seinen Platz verschoben werden</string>
     <string name="linux_download_failed_http">Download fehlgeschlagen: HTTP %1$d</string>
@@ -1093,14 +1093,14 @@
     <string name="linux_symlink_failed">symlink %1$s: %2$s</string>
     <string name="linux_truncated_archive">Archiv ist unvollständig</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
     <string name="terminal_title">Terminal</string>
     <string name="terminal_back">Zurück</string>
     <string name="terminal_hide_keyboard">Tastatur ausblenden</string>
     <string name="terminal_menu">Menü</string>
     <plurals name="terminal_sessions_count">
-        <item quantity="one">%1$d Sitzung · buddy linux</item>
-        <item quantity="other">%1$d Sitzungen · buddy linux</item>
+        <item quantity="one">%1$d Sitzung · mrdoit linux</item>
+        <item quantity="other">%1$d Sitzungen · mrdoit linux</item>
     </plurals>
     <string name="terminal_listening">hört zu · Mikrofon an</string>
     <string name="terminal_session_ended">Sitzung beendet</string>
@@ -1226,7 +1226,7 @@
     <string name="reviewer_no_answer">keine Antwort</string>
     <string name="reviewer_timed_out">Zeitüberschreitung</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">Mr Do Its Linux ist noch nicht installiert. Öffne die Einstellungen, um es einzurichten.</string>
 
     <!-- Voice input (dictation): "Claude voice" and "ChatGPT voice" are the two voice input options. -->
@@ -1799,8 +1799,8 @@
     <string name="tool_install_apk_info">Öffnet den Android-Installer für eine App, die ein Agent gebaut hat; du tippst auf „Installieren“</string>
     <string name="tool_wait_for_install">Auf Installation warten</string>
     <string name="tool_wait_for_install_info">Wartet, bis du eine App installiert oder aktualisiert hast</string>
-    <string name="tool_update_buddy">Mr Do It aktualisieren</string>
-    <string name="tool_update_buddy_info">Sucht nach einem neuen Mr Do It und öffnet das Update</string>
+    <string name="tool_update_mrdoit">Mr Do It aktualisieren</string>
+    <string name="tool_update_mrdoit_info">Sucht nach einem neuen Mr Do It und öffnet das Update</string>
     <string name="tool_device_status">Handy-Status</string>
     <string name="tool_device_status_info">Akku, Netzwerk, Datum und Uhrzeit, freier Speicher</string>
     <string name="tool_notifications">Benachrichtigungen lesen</string>

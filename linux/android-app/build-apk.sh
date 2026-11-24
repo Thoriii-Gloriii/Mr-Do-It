@@ -11,7 +11,7 @@
 set -euo pipefail
 P=$(cd "${1:?usage: build-apk.sh <project-dir>}" && pwd)
 SDK_JAR=${SDK_JAR:-$HOME/android-sdk/android-36/android.jar}
-KEYDIR=$HOME/.buddy/keys
+KEYDIR=$HOME/.mrdoit/keys
 OUT=$P/build
 
 prop() { [ -f "$P/app.properties" ] && sed -n "s/^$1=//p" "$P/app.properties" | head -1 || true; }
@@ -71,7 +71,7 @@ if [ ! -f "$KEYDIR/apps.jks" ]; then
   head -c 24 /dev/urandom | base64 | tr -dc 'A-Za-z0-9' | head -c 24 > "$KEYDIR/password"
   chmod 600 "$KEYDIR/password"
   keytool -genkeypair -keystore "$KEYDIR/apps.jks" -alias apps -keyalg RSA -keysize 2048 -validity 10000 \
-    -storepass "$(cat "$KEYDIR/password")" -keypass "$(cat "$KEYDIR/password")" -dname "CN=Buddy apps" >/dev/null 2>&1
+    -storepass "$(cat "$KEYDIR/password")" -keypass "$(cat "$KEYDIR/password")" -dname "CN=Mr Do It apps" >/dev/null 2>&1
 fi
 apksigner sign --ks "$KEYDIR/apps.jks" --ks-key-alias apps --ks-pass "file:$KEYDIR/password" \
   --out "$OUT/app.apk" "$OUT/aligned.apk"

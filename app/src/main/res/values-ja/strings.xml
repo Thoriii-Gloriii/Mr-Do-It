@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Every text Buddy shows, in Japanese (です/ます). Source of truth: res/values/strings.xml. -->
+<!-- Every text Mr Do It shows, in Japanese (です/ます). Source of truth: res/values/strings.xml. -->
 <resources>
     <string name="service_label">Mr Do It アシスタント</string>
     <string name="service_description">Mr Do It のチャットバブルを表示し、このスマートフォンの Mr Do It 内で動作する、選択したエージェント（Claude Code、Codex、OpenCode、Antigravity、または Grok）が、画面を読み取って、あなたの代わりにタップ、入力、スクロールできるようにします。エージェント自身がその AI サービス（Anthropic、OpenAI、Google、xAI、または OpenCode で選択したモデルのプロバイダー）に送信する内容以外は、スマートフォンの外に出ません。</string>
@@ -46,7 +46,7 @@
     <string name="onboarding_brain_both">両方をインストールして、チャットごとに選べます。デフォルトは Claude Code です。</string>
     <string name="onboarding_recommended">おすすめ</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">Mr Do It に画面の操作を許可</string>
     <string name="onboarding_access_done">ユーザー補助がオンになっています。</string>
     <string name="onboarding_access_text">Mr Do It のユーザー補助サービスはバブルを表示し、あなたが何かを頼んだときだけ、エージェントが画面を読み取ってタップや入力をできるようにします。</string>
@@ -60,7 +60,7 @@
     <string name="onboarding_access_restricted_steps">1. 下の「アプリ情報」をタップします。\n2. 右上の ⋮ →「制限付き設定を許可」をタップします。\n3. 戻って、もう一度ユーザー補助の設定を開きます。</string>
     <string name="onboarding_app_info">アプリ情報</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">インストールとログイン</string>
     <string name="onboarding_agents_done_title">準備完了</string>
     <string name="onboarding_agents_done">%1$s のインストールとログインが完了しました。</string>
@@ -96,7 +96,7 @@
     <string name="onboarding_stuck_install_q">インストールに失敗しましたか？</string>
     <string name="onboarding_stuck_install_a">接続を確認して、もう一度「インストール」をタップしてください。中断したところから再開します。</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">バックグラウンドで実行</string>
     <string name="onboarding_background_done">Mr Do It はバックグラウンドで実行できます。</string>
     <string name="onboarding_background_text">エージェントの作業中に、電池を節約するためにスマートフォンが Mr Do It を停止しないようにします。</string>
@@ -158,7 +158,7 @@
     <string name="notice_hidden_text">タップするとバブルを再表示します。</string>
     <string name="notice_open_chats">チャットを開く</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
     <string name="update_channel_name">Mr Do It のアップデート</string>
     <string name="update_available_title">Mr Do It %1$s を利用できます</string>
     <string name="update_notification_text">現在のバージョンは %1$s です。タップすると新機能を確認してアップデートできます。チャットはそのまま残ります。</string>
@@ -172,10 +172,10 @@
     <string name="update_later">後で</string>
     <string name="update_downloading">ダウンロード中…</string>
     <string name="update_needs_permission">Mr Do It に「不明なアプリのインストール」を許可してから、もう一度「アップデート」をタップしてください。</string>
-    <string name="update_error_no_apk">このリリースにはまだ buddy.apk がありません。</string>
+    <string name="update_error_no_apk">このリリースにはまだ mrdoit.apk がありません。</string>
     <string name="update_error_download">ダウンロードに失敗しました（%1$s）。</string>
     <string name="update_error_not_newer">ダウンロードしたファイルは新しいバージョンの Mr Do It ではないため、開きませんでした。</string>
-    <string name="update_failed_manual">%1$s %2$s（buddy.apk）から入手することもできます。Obtainium を使うと自動でアップデートできます（%3$s を参照）。</string>
+    <string name="update_failed_manual">%1$s %2$s（mrdoit.apk）から入手することもできます。Obtainium を使うと自動でアップデートできます（%3$s を参照）。</string>
 
     <!-- Settings, Appearance: option names. -->
     <string name="prefs_theme_system">システム</string>
@@ -328,7 +328,7 @@
     <string name="pause_call_ended_title">通話終了 · Mr Do It は一時停止中</string>
     <string name="pause_call_ended_text">タップしてタスクを再開</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <string name="chat_back">戻る</string>
@@ -340,7 +340,7 @@
     <string name="chat_linux_tools">Linux ツール</string>
     <string name="chat_linux_tools_info">Mr Do It の Linux でのコマンド実行、ファイル編集、アプリのビルド</string>
     <string name="chat_linux_tools_title">Linux ツールをオンにしますか？</string>
-    <string name="chat_linux_tools_what">エージェントがコマンドの実行、パッケージのインストール、~/.buddy/work 内のファイル編集を行えるようになり、アプリのビルドもできます。</string>
+    <string name="chat_linux_tools_what">エージェントがコマンドの実行、パッケージのインストール、~/.mrdoit/work 内のファイル編集を行えるようになり、アプリのビルドもできます。</string>
     <string name="chat_linux_tools_when">このチャットのみで、次のメッセージから有効になります。</string>
     <string name="chat_linux_tools_risk">画面上の悪意のあるメッセージやウェブページが、エージェントをだましてコマンドを実行させようとするおそれがあります。送信、投稿、購入、削除は引き続き承認カードで保護されます。</string>
     <string name="chat_linux_tools_turn_on">オンにする</string>
@@ -506,7 +506,7 @@
         <item quantity="other">ツール呼び出し %1$d 件</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
     <string name="hub_continuing">以前の %1$s セッションを続けます。ターミナルでまだ開いている場合は、先にそちらで閉じてください。</string>
     <string name="hub_still_working_attachments">このチャットはまだ実行中です。完了してから添付ファイルを送信してください。</string>
     <string name="hub_service_off">%1$s はオフになっています（設定 → エージェントとモデル → API キー）。オンにするか、このチャットで別のモデルを選んでください。</string>
@@ -626,7 +626,7 @@
     <string name="hub_tool_read_file">%1$s を読み込み中</string>
     <string name="hub_tool_other">%1$s を使用中</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">読み込み中…</string>
     <string name="transcript_continue">Mr Do It で続ける</string>
     <string name="transcript_empty">このセッションには表示できるメッセージがありません。</string>
@@ -841,7 +841,7 @@
     <string name="codex_pair_failed">ペアリングコードを取得できませんでした：%1$s</string>
     <string name="codex_keeps_stopping">Codex セッションが何度も停止します：%1$s</string>
     <string name="ssh_keeps_stopping">SSH サーバーが何度も停止します：%1$s</string>
-    <string name="ssh_key_added">完了しました。Termux から Mr Do It の Linux を開くには、ssh buddy と入力してください。</string>
+    <string name="ssh_key_added">完了しました。Termux から Mr Do It の Linux を開くには、ssh mrdoit と入力してください。</string>
     <string name="ssh_code_expired">このコマンドは使用済みか、10 分以上経過しています。Mr Do It の「設定」でもう一度コピーしてください。</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
@@ -910,7 +910,7 @@
     <string name="setup_surface">背景</string>
     <string name="setup_surface_note">「ウォーム」は Mr Do It 本来のトーンです。「ブラック」（完全な黒）はダークモードでのみ適用されます。</string>
     <string name="setup_face">Mr Do It の見た目</string>
-    <string name="setup_face_buddy">オリジナル</string>
+    <string name="setup_face_mrdoit">オリジナル</string>
     <string name="setup_face_picture">自分の画像</string>
     <string name="setup_face_note">背景が透明な PNG か WebP がおすすめです。バブルと Mr Do It の返信の横に表示されます。</string>
     <string name="setup_face_change">別の画像を選ぶ</string>
@@ -1009,12 +1009,12 @@
     <string name="setup_ssh">Termux から SSH</string>
     <string name="setup_ssh_info">SSH で Termux から Mr Do It の Linux を使えます。接続できるのはこのスマートフォンのアプリだけで、鍵が必要です。</string>
     <string name="setup_ssh_active">実行中 · ポート %1$d</string>
-    <string name="setup_ssh_how">このコマンドをコピーし、10 分以内に Termux で 1 回実行してください。その後は、Termux で ssh buddy と入力すると Mr Do It の Linux が開きます。</string>
+    <string name="setup_ssh_how">このコマンドをコピーし、10 分以内に Termux で 1 回実行してください。その後は、Termux で ssh mrdoit と入力すると Mr Do It の Linux が開きます。</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">古い Termux のチャットを削除</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="other">Buddy に専用の Linux が搭載される前のチャットが %1$d 件あります。エージェントはこれらを続行できません。</item>
+        <item quantity="other">Mr Do It に専用の Linux が搭載される前のチャットが %1$d 件あります。エージェントはこれらを続行できません。</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="other">古いチャット %1$d 件を削除しますか？</item>
@@ -1059,7 +1059,7 @@
     <string name="setup_app_permissions">アプリの権限</string>
     <string name="setup_app_permissions_info">アプリごとに選べます。「信頼」ではエージェントがポップアップなしで操作し、「厳格」では送信、支払い、削除などの前に Mr Do It 自身が確認します。</string>
     <string name="setup_dev_mode">新しいチャットの Linux ツール</string>
-    <string name="setup_dev_mode_info">Linux ツールを使うと、エージェントがコマンドの実行、パッケージのインストール、~/.buddy/work 内のファイル編集を行えるため、アプリのビルドもできます。新しいチャットはこの設定で始まり、各チャットのタイトルの下で変更できます。</string>
+    <string name="setup_dev_mode_info">Linux ツールを使うと、エージェントがコマンドの実行、パッケージのインストール、~/.mrdoit/work 内のファイル編集を行えるため、アプリのビルドもできます。新しいチャットはこの設定で始まり、各チャットのタイトルの下で変更できます。</string>
     <string name="setup_agents_tap">エージェントによる Mr Do It の画面操作を許可</string>
     <string name="setup_agents_tap_info">エージェントで Mr Do It をテストするための設定です（例：Termux の Claude Code とスマートフォン用ツール）。オンにすると、エージェントはチャット一覧、チャット、この設定画面を操作できます。エージェントに何を許すかを決める部分は、引き続きあなただけが操作できます。吹き出し、承認カード、Linux ツール、チャットのオプションとスケジュール、アプリの権限・キー・ルール・スキル・バックグラウンドモード・バックアップの各画面です。</string>
     <string name="setup_ask_new_apps">新しいアプリごとに確認する</string>
@@ -1073,7 +1073,7 @@
     <string name="setup_licences">オープンソースライセンス</string>
     <string name="setup_privacy_policy">プライバシーポリシー</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <string name="linux_download_corrupt">Alpine のダウンロードデータが破損しています（sha256 %1$s）</string>
     <string name="linux_move_failed">Alpine を所定の場所に移動できませんでした</string>
     <string name="linux_download_failed_http">ダウンロードに失敗しました：HTTP %1$d</string>
@@ -1081,13 +1081,13 @@
     <string name="linux_symlink_failed">シンボリックリンクの作成に失敗しました（%1$s）：%2$s</string>
     <string name="linux_truncated_archive">アーカイブが途中で切れています</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
     <string name="terminal_title">ターミナル</string>
     <string name="terminal_back">戻る</string>
     <string name="terminal_hide_keyboard">キーボードを非表示</string>
     <string name="terminal_menu">メニュー</string>
     <plurals name="terminal_sessions_count">
-        <item quantity="other">%1$d セッション · buddy linux</item>
+        <item quantity="other">%1$d セッション · mrdoit linux</item>
     </plurals>
     <string name="terminal_listening">聞き取り中 · マイクオン</string>
     <string name="terminal_session_ended">セッション終了</string>
@@ -1212,7 +1212,7 @@
     <string name="reviewer_no_answer">応答なし</string>
     <string name="reviewer_timed_out">タイムアウト</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">Mr Do It の Linux がまだインストールされていません。「設定」を開いてセットアップしてください。</string>
 
     <!-- Voice input (dictation): Claude voice and ChatGPT voice. Status lines show in the voice bar, errors as toasts. -->
@@ -1784,8 +1784,8 @@
     <string name="tool_install_apk_info">エージェントが作ったアプリの Android インストーラを開きます。「インストール」はあなたがタップします</string>
     <string name="tool_wait_for_install">インストールを待つ</string>
     <string name="tool_wait_for_install_info">アプリのインストールや更新が終わるまで待ちます</string>
-    <string name="tool_update_buddy">Mr Do It をアップデート</string>
-    <string name="tool_update_buddy_info">新しい Mr Do It を確認し、アップデートを開きます</string>
+    <string name="tool_update_mrdoit">Mr Do It をアップデート</string>
+    <string name="tool_update_mrdoit_info">新しい Mr Do It を確認し、アップデートを開きます</string>
     <string name="tool_device_status">スマートフォンの状態</string>
     <string name="tool_device_status_info">バッテリー、ネットワーク、日時、空き容量</string>
     <string name="tool_notifications">通知を読む</string>

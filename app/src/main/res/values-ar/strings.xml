@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Buddy's UI text in Arabic (Modern Standard Arabic). English source: res/values/strings.xml. -->
+<!-- Mr Do It's UI text in Arabic (Modern Standard Arabic). English source: res/values/strings.xml. -->
 <resources>
     <string name="service_label">مساعد Mr Do It</string>
     <string name="service_description">تعرض فقاعة المحادثة في Mr Do It، وتتيح للوكيل الذي تختاره (Claude Code أو Codex أو OpenCode أو Antigravity أو Grok)، الذي يعمل داخل Mr Do It على هذا الهاتف، قراءة الشاشة والنقر والكتابة والتمرير نيابةً عنك. لا يخرج أي شيء من الهاتف إلا ما يرسله الوكيل نفسه إلى خدمة الذكاء الاصطناعي الخاصة به (Anthropic أو OpenAI أو Google أو xAI أو مزوّد النموذج الذي تستخدمه في OpenCode).</string>
@@ -46,7 +46,7 @@
     <string name="onboarding_brain_both">ثبّت الاثنين واختر أحدهما لكل محادثة. يظل Claude Code هو الافتراضي.</string>
     <string name="onboarding_recommended">موصى به</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">اسمح لـ Mr Do It بالرؤية والنقر</string>
     <string name="onboarding_access_done">تم تفعيل خدمة سهولة الاستخدام.</string>
     <string name="onboarding_access_text">تعرض خدمة سهولة الاستخدام في Mr Do It الفقاعة، وتتيح للوكيل قراءة الشاشة والنقر والكتابة، وذلك فقط عندما تطلب منه فعل شيء.</string>
@@ -60,7 +60,7 @@
     <string name="onboarding_access_restricted_steps">1. انقر على «معلومات التطبيق» بالأسفل.\n2. انقر على ⋮ في أعلى اليسار ← «السماح بالإعدادات المحظورة».\n3. ارجع وافتح إعدادات سهولة الاستخدام مرة أخرى.</string>
     <string name="onboarding_app_info">معلومات التطبيق</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">التثبيت وتسجيل الدخول</string>
     <string name="onboarding_agents_done_title">جاهز</string>
     <string name="onboarding_agents_done">تم تثبيت %1$s وتسجيل الدخول إليه.</string>
@@ -95,7 +95,7 @@
     <string name="onboarding_stuck_install_q">فشل التثبيت؟</string>
     <string name="onboarding_stuck_install_a">تحقق من اتصالك وانقر على «تثبيت» مرة أخرى؛ سيُستأنف التثبيت من حيث توقف.</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">إبقاء Mr Do It قيد التشغيل</string>
     <string name="onboarding_background_done">يمكن لـ Mr Do It العمل في الخلفية.</string>
     <string name="onboarding_background_text">حتى لا يوقف هاتفك Mr Do It لتوفير طاقة البطارية أثناء عمل الوكيل.</string>
@@ -172,7 +172,7 @@
     <string name="notice_hidden_text">انقر لإظهار الفقاعة مرة أخرى.</string>
     <string name="notice_open_chats">فتح المحادثات</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
     <string name="update_channel_name">تحديثات Mr Do It</string>
     <string name="update_available_title">يتوفّر Mr Do It %1$s</string>
     <string name="update_notification_text">لديك الإصدار %1$s. انقر للاطّلاع على الجديد والتحديث؛ ستبقى محادثاتك كما هي.</string>
@@ -186,10 +186,10 @@
     <string name="update_later">لاحقًا</string>
     <string name="update_downloading">جارٍ التنزيل…</string>
     <string name="update_needs_permission">اسمح لـ Mr Do It بتثبيت التطبيقات، ثم انقر على «تحديث» مرة أخرى.</string>
-    <string name="update_error_no_apk">لا يتضمن هذا الإصدار ملف buddy.apk بعد.</string>
+    <string name="update_error_no_apk">لا يتضمن هذا الإصدار ملف mrdoit.apk بعد.</string>
     <string name="update_error_download">تعذّر التنزيل (%1$s).</string>
     <string name="update_error_not_newer">الملف الذي تم تنزيله ليس إصدارًا أحدث من Mr Do It، لذا لم يُفتح.</string>
-    <string name="update_failed_manual">%1$s يمكنك أيضًا تنزيله من %2$s (الملف buddy.apk)، أو باستخدام Obtainium للحصول على تحديثات تلقائية (راجع %3$s).</string>
+    <string name="update_failed_manual">%1$s يمكنك أيضًا تنزيله من %2$s (الملف mrdoit.apk)، أو باستخدام Obtainium للحصول على تحديثات تلقائية (راجع %3$s).</string>
 
     <!-- Settings, Appearance: option names. -->
     <string name="prefs_theme_system">النظام</string>
@@ -346,7 +346,7 @@
     <string name="pause_call_ended_title">انتهت المكالمة · Mr Do It متوقف مؤقتًا</string>
     <string name="pause_call_ended_text">اضغط لاستئناف المهمة</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <string name="chat_back">رجوع</string>
@@ -358,7 +358,7 @@
     <string name="chat_linux_tools">أدوات Linux</string>
     <string name="chat_linux_tools_info">الأوامر والملفات وإنشاء التطبيقات في نظام Linux في Mr Do It</string>
     <string name="chat_linux_tools_title">هل تريد تفعيل أدوات Linux؟</string>
-    <string name="chat_linux_tools_what">سيتمكن الوكيل حينها من تنفيذ الأوامر وتثبيت الحزم وتعديل الملفات في &#x200E;~/.buddy/work، وبالتالي إنشاء التطبيقات.</string>
+    <string name="chat_linux_tools_what">سيتمكن الوكيل حينها من تنفيذ الأوامر وتثبيت الحزم وتعديل الملفات في &#x200E;~/.mrdoit/work، وبالتالي إنشاء التطبيقات.</string>
     <string name="chat_linux_tools_when">في هذه المحادثة فقط، بدءًا من رسالتك التالية.</string>
     <string name="chat_linux_tools_risk">قد تحاول رسالة أو صفحة ويب ضارة على الشاشة خداع الوكيل لتنفيذ أوامر. وتظل بطاقات الموافقة تحمي عمليات الإرسال والنشر والشراء والحذف.</string>
     <string name="chat_linux_tools_turn_on">تفعيل</string>
@@ -534,7 +534,7 @@
         <item quantity="other">%1$d استدعاء للأدوات</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
     <string name="hub_continuing">جارٍ متابعة جلسة سابقة من %1$s. إذا كانت لا تزال مفتوحة في طرفية، فأغلقها هناك أولًا.</string>
     <string name="hub_still_working_attachments">لا تزال هذه المحادثة قيد العمل. أرسل المرفقات عند انتهائها.</string>
     <string name="hub_service_off">الخدمة %1$s متوقفة (الإعدادات ← الوكلاء والنماذج ← مفاتيح API). شغّلها أو اختر نموذجًا آخر لهذه المحادثة.</string>
@@ -659,7 +659,7 @@
     <string name="hub_tool_read_file">جارٍ قراءة %1$s</string>
     <string name="hub_tool_other">جارٍ استخدام %1$s</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">جارٍ التحميل…</string>
     <string name="transcript_continue">المتابعة في Mr Do It</string>
     <string name="transcript_empty">لا توجد رسائل قابلة للقراءة في هذه الجلسة.</string>
@@ -883,7 +883,7 @@
     <string name="codex_pair_failed">تعذّر الحصول على رمز إقران: %1$s</string>
     <string name="codex_keeps_stopping">تتوقف جلسة Codex باستمرار: %1$s</string>
     <string name="ssh_keeps_stopping">يتوقف خادم SSH باستمرار: %1$s</string>
-    <string name="ssh_key_added">تم. لفتح Linux الخاص بـ Mr Do It من Termux، اكتب ssh buddy.</string>
+    <string name="ssh_key_added">تم. لفتح Linux الخاص بـ Mr Do It من Termux، اكتب ssh mrdoit.</string>
     <string name="ssh_code_expired">سبق استخدام هذا الأمر أو مرّ عليه أكثر من 10 دقائق. انسخه مرة أخرى من الإعدادات في Mr Do It.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
@@ -951,7 +951,7 @@
     <string name="setup_surface">الخلفية</string>
     <string name="setup_surface_note">«دافئ» هو اللون الأصلي لـ Mr Do It. ويُطبَّق «أسود» (أسود حقيقي) في الوضع الداكن فقط.</string>
     <string name="setup_face">مظهر Mr Do It</string>
-    <string name="setup_face_buddy">الأصلي</string>
+    <string name="setup_face_mrdoit">الأصلي</string>
     <string name="setup_face_picture">صورتك</string>
     <string name="setup_face_note">يفضَّل ملف PNG أو WebP بخلفية شفافة. تظهر الصورة على الفقاعة وبجانب ردود Mr Do It.</string>
     <string name="setup_face_change">اختر صورة أخرى</string>
@@ -1049,17 +1049,17 @@
     <string name="setup_ssh">SSH من Termux</string>
     <string name="setup_ssh_info">استخدم Linux الخاص بـ Mr Do It من Termux عبر SSH. لا يمكن الاتصال إلا من تطبيقات هذا الهاتف، وبمفتاح فقط.</string>
     <string name="setup_ssh_active">يعمل · المنفذ %1$d</string>
-    <string name="setup_ssh_how">انسخ هذا الأمر وشغّله مرة واحدة في Termux خلال 10 دقائق. بعد ذلك، اكتب ssh buddy في Termux لفتح Linux الخاص بـ Mr Do It.</string>
+    <string name="setup_ssh_how">انسخ هذا الأمر وشغّله مرة واحدة في Termux خلال 10 دقائق. بعد ذلك، اكتب ssh mrdoit في Termux لفتح Linux الخاص بـ Mr Do It.</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">إزالة محادثات Termux القديمة</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="zero">%1$d محادثة من قبل أن يصبح لـ Buddy نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
-        <item quantity="one">محادثة واحدة من قبل أن يصبح لـ Buddy نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
-        <item quantity="two">محادثتان من قبل أن يصبح لـ Buddy نظام Linux خاص به. لا يمكن للوكلاء متابعتهما.</item>
-        <item quantity="few">%1$d محادثات من قبل أن يصبح لـ Buddy نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
-        <item quantity="many">%1$d محادثة من قبل أن يصبح لـ Buddy نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
-        <item quantity="other">%1$d محادثة من قبل أن يصبح لـ Buddy نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
+        <item quantity="zero">%1$d محادثة من قبل أن يصبح لـ Mr Do It نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
+        <item quantity="one">محادثة واحدة من قبل أن يصبح لـ Mr Do It نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
+        <item quantity="two">محادثتان من قبل أن يصبح لـ Mr Do It نظام Linux خاص به. لا يمكن للوكلاء متابعتهما.</item>
+        <item quantity="few">%1$d محادثات من قبل أن يصبح لـ Mr Do It نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
+        <item quantity="many">%1$d محادثة من قبل أن يصبح لـ Mr Do It نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
+        <item quantity="other">%1$d محادثة من قبل أن يصبح لـ Mr Do It نظام Linux خاص به. لا يمكن للوكلاء متابعتها.</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="zero">هل تريد إزالة %1$d محادثة قديمة؟</item>
@@ -1109,7 +1109,7 @@
     <string name="setup_app_permissions">أذونات التطبيقات</string>
     <string name="setup_app_permissions_info">اختر لكل تطبيق: «موثوق» يتيح للوكيل العمل فيه دون نوافذ منبثقة، و«صارم» يعني أن Mr Do It نفسه يسألك قبل «إرسال» و«دفع» و«حذف»…</string>
     <string name="setup_dev_mode">أدوات Linux في المحادثات الجديدة</string>
-    <string name="setup_dev_mode_info">تتيح أدوات Linux للوكيل تنفيذ الأوامر وتثبيت الحزم وتعديل الملفات في &#x200E;~/.buddy/work، ليتمكن من إنشاء التطبيقات. تبدأ المحادثات الجديدة بهذا الإعداد، ويمكن تغييره لكل محادثة أسفل عنوانها.</string>
+    <string name="setup_dev_mode_info">تتيح أدوات Linux للوكيل تنفيذ الأوامر وتثبيت الحزم وتعديل الملفات في &#x200E;~/.mrdoit/work، ليتمكن من إنشاء التطبيقات. تبدأ المحادثات الجديدة بهذا الإعداد، ويمكن تغييره لكل محادثة أسفل عنوانها.</string>
     <string name="setup_agents_tap">السماح للوكلاء بالنقر على شاشات Mr Do It</string>
     <string name="setup_agents_tap_info">لاختبار Mr Do It مع وكيل (مثل Claude Code في Termux مع أدوات الهاتف). عندها يستطيع الوكلاء استخدام قائمة المحادثات ومحادثة وشاشة الإعدادات هذه. وكل ما يحدد ما يُسمح لهم به يبقى لك: الفقاعة وبطاقات الموافقة وأدوات Linux وخيارات المحادثة والجداول، وشاشات أذونات التطبيقات والمفاتيح والقواعد والمهارات ووضع الخلفية والنسخ الاحتياطي.</string>
     <string name="setup_ask_new_apps">السؤال عن كل تطبيق جديد</string>
@@ -1123,7 +1123,7 @@
     <string name="setup_licences">تراخيص البرامج المفتوحة المصدر</string>
     <string name="setup_privacy_policy">سياسة الخصوصية</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <string name="linux_download_corrupt">ملف Alpine الذي تم تنزيله تالف (sha256 %1$s)</string>
     <string name="linux_move_failed">تعذّر نقل Alpine إلى موضعه</string>
     <string name="linux_download_failed_http">فشل التنزيل: HTTP %1$d</string>
@@ -1131,18 +1131,18 @@
     <string name="linux_symlink_failed">تعذّر إنشاء الرابط الرمزي &#x200E;%1$s: %2$s</string>
     <string name="linux_truncated_archive">الأرشيف غير مكتمل</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
     <string name="terminal_title">الطرفية</string>
     <string name="terminal_back">رجوع</string>
     <string name="terminal_hide_keyboard">إخفاء لوحة المفاتيح</string>
     <string name="terminal_menu">القائمة</string>
     <plurals name="terminal_sessions_count">
-        <item quantity="zero">%1$d جلسة · buddy linux</item>
-        <item quantity="one">جلسة واحدة · buddy linux</item>
-        <item quantity="two">جلستان · buddy linux</item>
-        <item quantity="few">%1$d جلسات · buddy linux</item>
-        <item quantity="many">%1$d جلسة · buddy linux</item>
-        <item quantity="other">%1$d جلسة · buddy linux</item>
+        <item quantity="zero">%1$d جلسة · mrdoit linux</item>
+        <item quantity="one">جلسة واحدة · mrdoit linux</item>
+        <item quantity="two">جلستان · mrdoit linux</item>
+        <item quantity="few">%1$d جلسات · mrdoit linux</item>
+        <item quantity="many">%1$d جلسة · mrdoit linux</item>
+        <item quantity="other">%1$d جلسة · mrdoit linux</item>
     </plurals>
     <string name="terminal_listening">جارٍ الاستماع · الميكروفون مفعّل</string>
     <string name="terminal_session_ended">انتهت الجلسة</string>
@@ -1267,7 +1267,7 @@
     <string name="reviewer_no_answer">لا يوجد رد</string>
     <string name="reviewer_timed_out">انتهت المهلة</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">لم يتم تثبيت نظام Linux في Mr Do It بعد. افتح الإعدادات لإعداده.</string>
 
     <!-- Voice input (dictation). Status lines show in the voice bar, errors as toasts. -->
@@ -1844,8 +1844,8 @@
     <string name="tool_install_apk_info">تفتح أداة التثبيت في Android لتطبيق بناه وكيل؛ وأنت تنقر على «تثبيت»</string>
     <string name="tool_wait_for_install">انتظار التثبيت</string>
     <string name="tool_wait_for_install_info">تنتظر حتى تثبّت تطبيقًا أو تحدّثه</string>
-    <string name="tool_update_buddy">تحديث Mr Do It</string>
-    <string name="tool_update_buddy_info">تبحث عن إصدار جديد من Mr Do It وتفتح تحديثه</string>
+    <string name="tool_update_mrdoit">تحديث Mr Do It</string>
+    <string name="tool_update_mrdoit_info">تبحث عن إصدار جديد من Mr Do It وتفتح تحديثه</string>
     <string name="tool_device_status">حالة الهاتف</string>
     <string name="tool_device_status_info">البطارية والشبكة والتاريخ والوقت والمساحة الفارغة</string>
     <string name="tool_notifications">قراءة الإشعارات</string>

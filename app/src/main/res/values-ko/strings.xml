@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Every text Buddy shows, in Korean (해요체). Source of truth: res/values/strings.xml. -->
+<!-- Every text Mr Do It shows, in Korean (해요체). Source of truth: res/values/strings.xml. -->
 <resources>
     <string name="service_label">Mr Do It 어시스턴트</string>
     <string name="service_description">Mr Do It 채팅 버블을 표시하고, 이 휴대전화의 Mr Do It 안에서 실행되는, 선택한 에이전트(Claude Code, Codex, OpenCode, Antigravity 또는 Grok)가 화면을 읽고 대신 탭, 입력, 스크롤할 수 있게 해요. 에이전트가 직접 자신의 AI 서비스(Anthropic, OpenAI, Google, xAI 또는 선택한 OpenCode 모델의 제공업체)로 보내는 내용 외에는 아무것도 휴대전화 밖으로 나가지 않아요.</string>
@@ -46,7 +46,7 @@
     <string name="onboarding_brain_both">둘 다 설치하고 채팅마다 골라요. 기본값은 Claude Code예요.</string>
     <string name="onboarding_recommended">추천</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">Mr Do It가 보고 탭할 수 있게 하기</string>
     <string name="onboarding_access_done">접근성이 켜져 있어요.</string>
     <string name="onboarding_access_text">Mr Do It의 접근성 서비스는 버블을 표시하고, 무언가를 요청했을 때만 에이전트가 화면을 읽고 탭하고 입력할 수 있게 해요.</string>
@@ -60,7 +60,7 @@
     <string name="onboarding_access_restricted_steps">1. 아래의 ‘앱 정보’를 탭하세요.\n2. 오른쪽 위 ⋮ → ‘제한된 설정 허용’을 탭하세요.\n3. 돌아와서 접근성 설정을 다시 여세요.</string>
     <string name="onboarding_app_info">앱 정보</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">설치 및 로그인</string>
     <string name="onboarding_agents_done_title">준비 완료</string>
     <string name="onboarding_agents_done">%1$s의 설치와 로그인을 마쳤어요.</string>
@@ -96,7 +96,7 @@
     <string name="onboarding_stuck_install_q">설치에 실패했나요?</string>
     <string name="onboarding_stuck_install_a">연결을 확인하고 ‘설치’를 다시 탭하세요. 멈춘 곳부터 이어서 진행해요.</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">계속 실행되게 하기</string>
     <string name="onboarding_background_done">Mr Do It가 백그라운드에서 실행될 수 있어요.</string>
     <string name="onboarding_background_text">에이전트가 작업하는 동안 휴대전화가 배터리를 아끼려고 Mr Do It를 멈추지 않게 해요.</string>
@@ -158,7 +158,7 @@
     <string name="notice_hidden_text">탭하면 버블이 다시 표시돼요.</string>
     <string name="notice_open_chats">채팅 열기</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
     <string name="update_channel_name">Mr Do It 업데이트</string>
     <string name="update_available_title">Mr Do It %1$s 버전이 나왔어요</string>
     <string name="update_notification_text">현재 버전: %1$s. 탭하면 새로운 기능을 확인하고 업데이트할 수 있어요. 채팅은 그대로 남아요.</string>
@@ -172,10 +172,10 @@
     <string name="update_later">나중에</string>
     <string name="update_downloading">다운로드 중…</string>
     <string name="update_needs_permission">Mr Do It가 앱을 설치할 수 있도록 ‘알 수 없는 앱 설치’를 허용한 다음 ‘업데이트’를 다시 탭하세요.</string>
-    <string name="update_error_no_apk">이 릴리스에는 아직 buddy.apk가 없어요.</string>
+    <string name="update_error_no_apk">이 릴리스에는 아직 mrdoit.apk가 없어요.</string>
     <string name="update_error_download">다운로드에 실패했어요(%1$s).</string>
     <string name="update_error_not_newer">다운로드한 파일이 더 새로운 Mr Do It가 아니라서 열지 않았어요.</string>
-    <string name="update_failed_manual">%1$s %2$s에서 직접 받거나(buddy.apk), Obtainium으로 자동 업데이트를 받을 수도 있어요(%3$s 참고).</string>
+    <string name="update_failed_manual">%1$s %2$s에서 직접 받거나(mrdoit.apk), Obtainium으로 자동 업데이트를 받을 수도 있어요(%3$s 참고).</string>
 
     <!-- Settings, Appearance: option names. -->
     <string name="prefs_theme_system">시스템</string>
@@ -328,7 +328,7 @@
     <string name="pause_call_ended_title">통화 종료 · Mr Do It 일시중지됨</string>
     <string name="pause_call_ended_text">탭하여 작업 재개</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <string name="chat_back">뒤로</string>
@@ -340,7 +340,7 @@
     <string name="chat_linux_tools">Linux 도구</string>
     <string name="chat_linux_tools_info">Mr Do It의 Linux에서 명령 실행, 파일 편집, 앱 빌드</string>
     <string name="chat_linux_tools_title">Linux 도구를 켤까요?</string>
-    <string name="chat_linux_tools_what">에이전트가 명령을 실행하고 패키지를 설치하고 ~/.buddy/work의 파일을 편집할 수 있게 되어, 앱을 빌드할 수 있어요.</string>
+    <string name="chat_linux_tools_what">에이전트가 명령을 실행하고 패키지를 설치하고 ~/.mrdoit/work의 파일을 편집할 수 있게 되어, 앱을 빌드할 수 있어요.</string>
     <string name="chat_linux_tools_when">이 채팅에서만, 다음 메시지부터 적용돼요.</string>
     <string name="chat_linux_tools_risk">화면에 표시된 악성 메시지나 웹페이지가 에이전트를 속여 명령을 실행하게 할 수 있어요. 보내기, 게시, 구매, 삭제는 여전히 승인 카드로 보호돼요.</string>
     <string name="chat_linux_tools_turn_on">켜기</string>
@@ -506,7 +506,7 @@
         <item quantity="other">도구 호출 %1$d회</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
     <string name="hub_continuing">이전 %1$s 세션을 이어서 진행해요. 터미널에서 아직 열려 있다면 먼저 거기서 닫으세요.</string>
     <string name="hub_still_working_attachments">이 채팅은 아직 작업 중이에요. 끝난 뒤에 첨부 파일을 보내세요.</string>
     <string name="hub_service_off">%1$s이(가) 꺼져 있습니다(설정 → 에이전트와 모델 → API 키). 켜거나 이 채팅에 다른 모델을 선택하세요.</string>
@@ -626,7 +626,7 @@
     <string name="hub_tool_read_file">%1$s 읽는 중</string>
     <string name="hub_tool_other">%1$s 사용 중</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">불러오는 중…</string>
     <string name="transcript_continue">Mr Do It에서 계속하기</string>
     <string name="transcript_empty">이 세션에는 읽을 수 있는 메시지가 없어요.</string>
@@ -841,7 +841,7 @@
     <string name="codex_pair_failed">페어링 코드를 가져오지 못했어요: %1$s</string>
     <string name="codex_keeps_stopping">Codex 세션이 계속 멈춰요: %1$s</string>
     <string name="ssh_keeps_stopping">SSH 서버가 계속 멈춰요: %1$s</string>
-    <string name="ssh_key_added">완료됐어요. Termux에서 Mr Do It의 Linux를 열려면 ssh buddy를 입력하세요.</string>
+    <string name="ssh_key_added">완료됐어요. Termux에서 Mr Do It의 Linux를 열려면 ssh mrdoit를 입력하세요.</string>
     <string name="ssh_code_expired">이 명령어는 이미 사용했거나 10분이 지났어요. Mr Do It의 ‘설정’에서 다시 복사하세요.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
@@ -910,7 +910,7 @@
     <string name="setup_surface">배경 톤</string>
     <string name="setup_surface_note">‘웜’은 Mr Do It 고유의 톤이에요. ‘블랙’(완전한 검정)은 다크 모드에서만 적용돼요.</string>
     <string name="setup_face">Mr Do It 모습</string>
-    <string name="setup_face_buddy">기본</string>
+    <string name="setup_face_mrdoit">기본</string>
     <string name="setup_face_picture">내 이미지</string>
     <string name="setup_face_note">배경이 투명한 PNG나 WebP가 가장 잘 어울려요. 버블과 Mr Do It 답장 옆에 표시돼요.</string>
     <string name="setup_face_change">다른 이미지 선택</string>
@@ -1009,12 +1009,12 @@
     <string name="setup_ssh">Termux에서 SSH</string>
     <string name="setup_ssh_info">SSH로 Termux에서 Mr Do It의 Linux를 사용해요. 이 휴대전화의 앱만, 키가 있어야 접속할 수 있어요.</string>
     <string name="setup_ssh_active">실행 중 · 포트 %1$d</string>
-    <string name="setup_ssh_how">이 명령어를 복사해서 10분 안에 Termux에서 한 번 실행하세요. 그다음부터는 Termux에서 ssh buddy를 입력하면 Mr Do It의 Linux가 열려요.</string>
+    <string name="setup_ssh_how">이 명령어를 복사해서 10분 안에 Termux에서 한 번 실행하세요. 그다음부터는 Termux에서 ssh mrdoit를 입력하면 Mr Do It의 Linux가 열려요.</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">이전 Termux 채팅 삭제</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="other">Buddy에 자체 Linux가 생기기 전의 채팅 %1$d개예요. 에이전트가 이어서 진행할 수 없어요.</item>
+        <item quantity="other">Mr Do It에 자체 Linux가 생기기 전의 채팅 %1$d개예요. 에이전트가 이어서 진행할 수 없어요.</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="other">이전 채팅 %1$d개를 삭제할까요?</item>
@@ -1059,7 +1059,7 @@
     <string name="setup_app_permissions">앱 권한</string>
     <string name="setup_app_permissions_info">앱별로 고를 수 있어요. ‘신뢰’는 에이전트가 팝업 없이 작업하고, ‘엄격’은 보내기, 결제, 삭제 등을 하기 전에 Mr Do It가 직접 물어봐요.</string>
     <string name="setup_dev_mode">새 채팅의 Linux 도구</string>
-    <string name="setup_dev_mode_info">Linux 도구를 켜면 에이전트가 명령을 실행하고 패키지를 설치하고 ~/.buddy/work의 파일을 편집할 수 있어서, 앱을 빌드할 수 있어요. 새 채팅은 이 설정으로 시작하고, 채팅마다 제목 아래에서 바꿀 수 있어요.</string>
+    <string name="setup_dev_mode_info">Linux 도구를 켜면 에이전트가 명령을 실행하고 패키지를 설치하고 ~/.mrdoit/work의 파일을 편집할 수 있어서, 앱을 빌드할 수 있어요. 새 채팅은 이 설정으로 시작하고, 채팅마다 제목 아래에서 바꿀 수 있어요.</string>
     <string name="setup_agents_tap">에이전트가 Mr Do It 화면을 탭하도록 허용</string>
     <string name="setup_agents_tap_info">에이전트로 Mr Do It를 테스트하기 위한 설정입니다(예: Termux의 Claude Code와 휴대전화 도구). 켜면 에이전트가 채팅 목록, 채팅, 이 설정 화면을 사용할 수 있습니다. 에이전트가 무엇을 할 수 있는지 정하는 부분은 계속 사용자만 조작합니다: 버블, 승인 카드, Linux 도구, 채팅 옵션과 예약, 그리고 앱 권한·키·규칙·스킬·백그라운드 모드·백업 화면입니다.</string>
     <string name="setup_ask_new_apps">새 앱마다 묻기</string>
@@ -1073,7 +1073,7 @@
     <string name="setup_licences">오픈소스 라이선스</string>
     <string name="setup_privacy_policy">개인정보처리방침</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <string name="linux_download_corrupt">Alpine 다운로드 파일이 손상됨(sha256 %1$s)</string>
     <string name="linux_move_failed">Alpine을 설치 위치로 옮기지 못함</string>
     <string name="linux_download_failed_http">다운로드 실패: HTTP %1$d</string>
@@ -1081,13 +1081,13 @@
     <string name="linux_symlink_failed">심볼릭 링크 생성 실패(%1$s): %2$s</string>
     <string name="linux_truncated_archive">압축 파일이 불완전함</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
     <string name="terminal_title">터미널</string>
     <string name="terminal_back">뒤로</string>
     <string name="terminal_hide_keyboard">키보드 숨기기</string>
     <string name="terminal_menu">메뉴</string>
     <plurals name="terminal_sessions_count">
-        <item quantity="other">세션 %1$d개 · buddy linux</item>
+        <item quantity="other">세션 %1$d개 · mrdoit linux</item>
     </plurals>
     <string name="terminal_listening">듣는 중 · 마이크 켜짐</string>
     <string name="terminal_session_ended">세션 종료됨</string>
@@ -1212,7 +1212,7 @@
     <string name="reviewer_no_answer">응답 없음</string>
     <string name="reviewer_timed_out">시간 초과</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">Mr Do It의 Linux가 아직 설치되지 않았어요. ‘설정’을 열어 설치하세요.</string>
 
     <!-- Voice input (dictation): Claude voice and ChatGPT voice. Status lines show in the voice bar, errors as toasts. -->
@@ -1783,8 +1783,8 @@
     <string name="tool_install_apk_info">에이전트가 만든 앱의 Android 설치 프로그램을 열어요. ‘설치’는 직접 탭해요</string>
     <string name="tool_wait_for_install">설치 기다리기</string>
     <string name="tool_wait_for_install_info">앱 설치나 업데이트를 마칠 때까지 기다려요</string>
-    <string name="tool_update_buddy">Mr Do It 업데이트</string>
-    <string name="tool_update_buddy_info">새 Mr Do It가 있는지 확인하고 업데이트를 열어요</string>
+    <string name="tool_update_mrdoit">Mr Do It 업데이트</string>
+    <string name="tool_update_mrdoit_info">새 Mr Do It가 있는지 확인하고 업데이트를 열어요</string>
     <string name="tool_device_status">휴대전화 상태</string>
     <string name="tool_device_status_info">배터리, 네트워크, 날짜와 시간, 남은 저장 공간</string>
     <string name="tool_notifications">알림 읽기</string>

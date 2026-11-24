@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Buddy's UI text in Hindi. English source: res/values/strings.xml. -->
+<!-- Mr Do It's UI text in Hindi. English source: res/values/strings.xml. -->
 <resources>
     <string name="service_label">Mr Do It असिस्टेंट</string>
     <string name="service_description">Mr Do It चैट बबल दिखाता है और इस फ़ोन पर Mr Do It के अंदर चल रहे आपके चुने गए एजेंट (Claude Code, Codex, OpenCode, Antigravity या Grok) को आपके लिए स्क्रीन पढ़ने, टैप करने, टाइप करने और स्क्रोल करने देता है. एजेंट खुद अपनी एआई सेवा (Anthropic, OpenAI, Google, xAI या आपके OpenCode मॉडल का प्रोवाइडर) को जो भेजता है, उसके अलावा कुछ भी फ़ोन से बाहर नहीं जाता.</string>
@@ -46,7 +46,7 @@
     <string name="onboarding_brain_both">दोनों इंस्टॉल करें और हर चैट के लिए इनमें से एक चुनें. Claude Code डिफ़ॉल्ट रहेगा.</string>
     <string name="onboarding_recommended">सुझाया गया</string>
 
-    <!-- Guide, step: turn on Buddy's accessibility service. -->
+    <!-- Guide, step: turn on Mr Do It's accessibility service. -->
     <string name="onboarding_access_title">Mr Do It को देखने और टैप करने दें</string>
     <string name="onboarding_access_done">सुलभता सेवा चालू है.</string>
     <string name="onboarding_access_text">Mr Do It की सुलभता सेवा बबल दिखाती है और एजेंट को स्क्रीन पढ़ने, टैप करने और टाइप करने देती है. ऐसा सिर्फ़ तब होता है, जब आप उससे कुछ करने को कहते हैं.</string>
@@ -60,7 +60,7 @@
     <string name="onboarding_access_restricted_steps">1. नीचे “ऐप्लिकेशन की जानकारी” पर टैप करें.\n2. सबसे ऊपर दाईं ओर ⋮ → “पाबंदी वाली सेटिंग को अनुमति दें” पर टैप करें.\n3. वापस आएं और सुलभता सेटिंग फिर से खोलें.</string>
     <string name="onboarding_app_info">ऐप्लिकेशन की जानकारी</string>
 
-    <!-- Guide, step: install the agent inside Buddy and sign in. -->
+    <!-- Guide, step: install the agent inside Mr Do It and sign in. -->
     <string name="onboarding_agents_title">इंस्टॉल करें और साइन इन करें</string>
     <string name="onboarding_agents_done_title">तैयार है</string>
     <string name="onboarding_agents_done">%1$s इंस्टॉल है और उसमें साइन इन हो चुका है.</string>
@@ -95,7 +95,7 @@
     <string name="onboarding_stuck_install_q">इंस्टॉल नहीं हुआ?</string>
     <string name="onboarding_stuck_install_a">अपना इंटरनेट कनेक्शन देखें और “इंस्टॉल करें” पर फिर से टैप करें; इंस्टॉल वहीं से आगे बढ़ेगा, जहां रुका था.</string>
 
-    <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
+    <!-- Guide, step: let Mr Do It run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">Mr Do It को चालू रखें</string>
     <string name="onboarding_background_done">Mr Do It बैकग्राउंड में चल सकता है.</string>
     <string name="onboarding_background_text">ताकि एजेंट के काम करते समय, बैटरी बचाने के लिए आपका फ़ोन Mr Do It को बंद न कर दे.</string>
@@ -160,7 +160,7 @@
     <string name="notice_hidden_text">बबल को फिर से दिखाने के लिए टैप करें.</string>
     <string name="notice_open_chats">चैट खोलें</string>
 
-    <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
+    <!-- Mr Do It's own updates (GitHub version): notification, update sheet and messages. -->
     <string name="update_channel_name">Mr Do It के अपडेट</string>
     <string name="update_available_title">Mr Do It %1$s उपलब्ध है</string>
     <string name="update_notification_text">आपके पास %1$s है. नया क्या है, यह देखने और अपडेट करने के लिए टैप करें; आपकी चैट बनी रहेंगी.</string>
@@ -174,10 +174,10 @@
     <string name="update_later">बाद में</string>
     <string name="update_downloading">डाउनलोड हो रहा है…</string>
     <string name="update_needs_permission">Mr Do It को ऐप इंस्टॉल करने की अनुमति दें, फिर “अपडेट करें” पर दोबारा टैप करें.</string>
-    <string name="update_error_no_apk">इस रिलीज़ में अभी buddy.apk नहीं है.</string>
+    <string name="update_error_no_apk">इस रिलीज़ में अभी mrdoit.apk नहीं है.</string>
     <string name="update_error_download">डाउनलोड नहीं हो सका (%1$s).</string>
     <string name="update_error_not_newer">डाउनलोड की गई फ़ाइल Mr Do It का नया वर्शन नहीं है, इसलिए उसे नहीं खोला गया.</string>
-    <string name="update_failed_manual">%1$s आप इसे %2$s (buddy.apk) से भी पा सकते हैं या अपने-आप अपडेट पाने के लिए Obtainium का इस्तेमाल कर सकते हैं (%3$s देखें).</string>
+    <string name="update_failed_manual">%1$s आप इसे %2$s (mrdoit.apk) से भी पा सकते हैं या अपने-आप अपडेट पाने के लिए Obtainium का इस्तेमाल कर सकते हैं (%3$s देखें).</string>
 
     <!-- Settings, Appearance: option names. -->
     <string name="prefs_theme_system">सिस्टम</string>
@@ -330,7 +330,7 @@
     <string name="pause_call_ended_title">कॉल खत्म · Mr Do It पॉज़ है</string>
     <string name="pause_call_ended_text">काम फिर शुरू करने के लिए टैप करें</string>
 
-    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
+    <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, MrDoItService, Voice) ===== -->
 
     <!-- Chat screen: app bar -->
     <string name="chat_back">वापस जाएं</string>
@@ -342,7 +342,7 @@
     <string name="chat_linux_tools">Linux टूल</string>
     <string name="chat_linux_tools_info">Mr Do It के Linux में कमांड, फ़ाइलें और ऐप बिल्ड</string>
     <string name="chat_linux_tools_title">Linux टूल चालू करें?</string>
-    <string name="chat_linux_tools_what">इसके बाद एजेंट कमांड चला सकेगा, पैकेज इंस्टॉल कर सकेगा और ~/.buddy/work में फ़ाइलों में बदलाव कर सकेगा, ताकि वह ऐप बना सके.</string>
+    <string name="chat_linux_tools_what">इसके बाद एजेंट कमांड चला सकेगा, पैकेज इंस्टॉल कर सकेगा और ~/.mrdoit/work में फ़ाइलों में बदलाव कर सकेगा, ताकि वह ऐप बना सके.</string>
     <string name="chat_linux_tools_when">सिर्फ़ इस चैट में, आपके अगले मैसेज से.</string>
     <string name="chat_linux_tools_risk">स्क्रीन पर दिखने वाला कोई नुकसान पहुंचाने वाला मैसेज या वेब पेज, एजेंट को धोखे से कमांड चलाने के लिए उकसा सकता है. भेजने, पोस्ट करने, खरीदने और मिटाने से पहले मंज़ूरी कार्ड तब भी दिखते हैं.</string>
     <string name="chat_linux_tools_turn_on">चालू करें</string>
@@ -510,7 +510,7 @@
         <item quantity="other">%1$d टूल कॉल</item>
     </plurals>
 
-    <!-- Notes Buddy posts into a chat, and the chat's status line -->
+    <!-- Notes Mr Do It posts into a chat, and the chat's status line -->
     <string name="hub_continuing">पिछला %1$s सेशन जारी रखा जा रहा है. अगर यह अब भी किसी टर्मिनल में खुला है, तो पहले उसे वहां बंद करें.</string>
     <string name="hub_still_working_attachments">यह चैट अभी काम कर रही है. काम पूरा होने पर अटैचमेंट भेजें.</string>
     <string name="hub_service_off">%1$s बंद है (सेटिंग → एजेंट और मॉडल → API कुंजियाँ)। इसे चालू करें, या इस चैट के लिए कोई दूसरा मॉडल चुनें।</string>
@@ -631,7 +631,7 @@
     <string name="hub_tool_read_file">%1$s पढ़ रहा है</string>
     <string name="hub_tool_other">%1$s इस्तेमाल कर रहा है</string>
 
-    <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
+    <!-- Transcript of an earlier agent session that isn't a Mr Do It chat (read-only) -->
     <string name="transcript_loading">लोड हो रहा है…</string>
     <string name="transcript_continue">Mr Do It में जारी रखें</string>
     <string name="transcript_empty">इस सेशन में पढ़ने लायक कोई मैसेज नहीं है.</string>
@@ -847,7 +847,7 @@
     <string name="codex_pair_failed">पेयरिंग कोड नहीं मिल सका: %1$s</string>
     <string name="codex_keeps_stopping">Codex सेशन बार-बार रुक रहा है: %1$s</string>
     <string name="ssh_keeps_stopping">SSH सर्वर बार-बार रुक रहा है: %1$s</string>
-    <string name="ssh_key_added">हो गया. Termux से Mr Do It का Linux खोलने के लिए ssh buddy टाइप करें.</string>
+    <string name="ssh_key_added">हो गया. Termux से Mr Do It का Linux खोलने के लिए ssh mrdoit टाइप करें.</string>
     <string name="ssh_code_expired">यह कमांड पहले ही इस्तेमाल हो चुका है या 10 मिनट से पुराना है. इसे Mr Do It की सेटिंग में फिर से कॉपी करें.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
@@ -915,7 +915,7 @@
     <string name="setup_surface">बैकग्राउंड</string>
     <string name="setup_surface_note">“गर्म”, Mr Do It का ओरिजनल टोन है. “काला” (बिल्कुल काला) सिर्फ़ डार्क मोड में लागू होता है.</string>
     <string name="setup_face">Mr Do It का रूप</string>
-    <string name="setup_face_buddy">मूल</string>
+    <string name="setup_face_mrdoit">मूल</string>
     <string name="setup_face_picture">आपकी तस्वीर</string>
     <string name="setup_face_note">पारदर्शी बैकग्राउंड वाली PNG या WebP सबसे अच्छी लगती है। यह बबल पर और Mr Do It के जवाबों के पास दिखती है।</string>
     <string name="setup_face_change">दूसरी तस्वीर चुनें</string>
@@ -1013,13 +1013,13 @@
     <string name="setup_ssh">Termux से SSH</string>
     <string name="setup_ssh_info">SSH के ज़रिए Termux से Mr Do It का Linux इस्तेमाल करें. सिर्फ़ इस फ़ोन के ऐप ही कनेक्ट कर सकते हैं, और वह भी सिर्फ़ कुंजी से.</string>
     <string name="setup_ssh_active">चल रहा है · पोर्ट %1$d</string>
-    <string name="setup_ssh_how">यह कमांड कॉपी करें और 10 मिनट के अंदर Termux में एक बार चलाएं. उसके बाद, Mr Do It का Linux खोलने के लिए Termux में ssh buddy टाइप करें.</string>
+    <string name="setup_ssh_how">यह कमांड कॉपी करें और 10 मिनट के अंदर Termux में एक बार चलाएं. उसके बाद, Mr Do It का Linux खोलने के लिए Termux में ssh mrdoit टाइप करें.</string>
 
-    <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
+    <!-- Settings screen: chats left over from when Mr Do It ran its agents in Termux. -->
     <string name="setup_old_chats_title">Termux की पुरानी चैट हटाएं</string>
     <plurals name="setup_old_chats_body">
-        <item quantity="one">Buddy का अपना Linux आने से पहले की %1$d चैट. एजेंट इसे जारी नहीं रख सकते.</item>
-        <item quantity="other">Buddy का अपना Linux आने से पहले की %1$d चैट. एजेंट इन्हें जारी नहीं रख सकते.</item>
+        <item quantity="one">Mr Do It का अपना Linux आने से पहले की %1$d चैट. एजेंट इसे जारी नहीं रख सकते.</item>
+        <item quantity="other">Mr Do It का अपना Linux आने से पहले की %1$d चैट. एजेंट इन्हें जारी नहीं रख सकते.</item>
     </plurals>
     <plurals name="setup_old_chats_remove">
         <item quantity="one">%1$d पुरानी चैट हटाएं?</item>
@@ -1065,7 +1065,7 @@
     <string name="setup_app_permissions">ऐप अनुमतियां</string>
     <string name="setup_app_permissions_info">हर ऐप के लिए चुनें: “भरोसा” से एजेंट वहां बिना पॉप-अप के काम कर सकता है; “सख़्त” का मतलब है कि Send, Pay, Delete… से पहले Mr Do It खुद आपसे पूछेगा.</string>
     <string name="setup_dev_mode">नई चैट में Linux टूल</string>
-    <string name="setup_dev_mode_info">Linux टूल से एजेंट कमांड चला सकता है, पैकेज इंस्टॉल कर सकता है और ~/.buddy/work में फ़ाइलों में बदलाव कर सकता है, ताकि वह ऐप बना सके. नई चैट इसी सेटिंग के साथ शुरू होती हैं; हर चैट में इसे उसके टाइटल के नीचे बदला जा सकता है.</string>
+    <string name="setup_dev_mode_info">Linux टूल से एजेंट कमांड चला सकता है, पैकेज इंस्टॉल कर सकता है और ~/.mrdoit/work में फ़ाइलों में बदलाव कर सकता है, ताकि वह ऐप बना सके. नई चैट इसी सेटिंग के साथ शुरू होती हैं; हर चैट में इसे उसके टाइटल के नीचे बदला जा सकता है.</string>
     <string name="setup_agents_tap">एजेंट को Mr Do It की स्क्रीन पर टैप करने दें</string>
     <string name="setup_agents_tap_info">किसी एजेंट के साथ Mr Do It को परखने के लिए (उदाहरण के लिए Termux में फ़ोन टूल के साथ Claude Code)। तब एजेंट चैट सूची, कोई चैट और यह सेटिंग स्क्रीन इस्तेमाल कर सकते हैं। जो कुछ भी तय करता है कि वे क्या कर सकते हैं, वह आपका ही रहता है: बबल, स्वीकृति कार्ड, Linux टूल, चैट विकल्प और शेड्यूल, और ऐप अनुमतियों, कुंजियों, नियमों, स्किल, बैकग्राउंड मोड और बैकअप की स्क्रीन।</string>
     <string name="setup_ask_new_apps">हर नए ऐप के बारे में पूछें</string>
@@ -1079,7 +1079,7 @@
     <string name="setup_licences">ओपन-सोर्स लाइसेंस</string>
     <string name="setup_privacy_policy">निजता नीति</string>
 
-    <!-- Errors while installing Buddy's built-in Linux (Alpine). Shown after "Install failed:". -->
+    <!-- Errors while installing Mr Do It's built-in Linux (Alpine). Shown after "Install failed:". -->
     <string name="linux_download_corrupt">Alpine का डाउनलोड खराब है (sha256 %1$s)</string>
     <string name="linux_move_failed">Alpine को सही जगह पर नहीं ले जाया जा सका</string>
     <string name="linux_download_failed_http">डाउनलोड नहीं हो सका: HTTP %1$d</string>
@@ -1087,14 +1087,14 @@
     <string name="linux_symlink_failed">%1$s का सिमलिंक नहीं बन सका: %2$s</string>
     <string name="linux_truncated_archive">आर्काइव अधूरा है</string>
 
-    <!-- Terminal screen (a shell in Buddy's Linux, in tabs). -->
+    <!-- Terminal screen (a shell in Mr Do It's Linux, in tabs). -->
     <string name="terminal_title">टर्मिनल</string>
     <string name="terminal_back">वापस जाएं</string>
     <string name="terminal_hide_keyboard">कीबोर्ड छिपाएं</string>
     <string name="terminal_menu">मेन्यू</string>
     <plurals name="terminal_sessions_count">
-        <item quantity="one">%1$d सेशन · buddy linux</item>
-        <item quantity="other">%1$d सेशन · buddy linux</item>
+        <item quantity="one">%1$d सेशन · mrdoit linux</item>
+        <item quantity="other">%1$d सेशन · mrdoit linux</item>
     </plurals>
     <string name="terminal_listening">सुन रहा है · माइक्रोफ़ोन चालू है</string>
     <string name="terminal_session_ended">सेशन खत्म हुआ</string>
@@ -1219,7 +1219,7 @@
     <string name="reviewer_no_answer">कोई जवाब नहीं</string>
     <string name="reviewer_timed_out">समय खत्म हो गया</string>
 
-    <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
+    <!-- Error when a chat can't start because Mr Do It's built-in Linux isn't set up yet. -->
     <string name="helper_linux_missing">Mr Do It का Linux अभी इंस्टॉल नहीं है. इसे सेट अप करने के लिए सेटिंग खोलें.</string>
 
     <!-- Voice input (dictation). Status lines show in the voice bar, errors as toasts. -->
@@ -1792,8 +1792,8 @@
     <string name="tool_install_apk_info">एजेंट के बनाए ऐप के लिए Android का इंस्टॉलर खोलता है; “इंस्टॉल करें” आप टैप करते हैं</string>
     <string name="tool_wait_for_install">इंस्टॉल का इंतज़ार</string>
     <string name="tool_wait_for_install_info">आपके ऐप इंस्टॉल या अपडेट करने तक इंतज़ार करता है</string>
-    <string name="tool_update_buddy">Mr Do It अपडेट करें</string>
-    <string name="tool_update_buddy_info">Mr Do It का नया वर्शन देखता है और उसका अपडेट खोलता है</string>
+    <string name="tool_update_mrdoit">Mr Do It अपडेट करें</string>
+    <string name="tool_update_mrdoit_info">Mr Do It का नया वर्शन देखता है और उसका अपडेट खोलता है</string>
     <string name="tool_device_status">फ़ोन की स्थिति</string>
     <string name="tool_device_status_info">बैटरी, नेटवर्क, तारीख और समय, खाली स्टोरेज</string>
     <string name="tool_notifications">सूचनाएं पढ़ें</string>

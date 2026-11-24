@@ -1,26 +1,26 @@
 <p align="center">
-  <img src="docs/banner.png" alt="Buddy: Claude Code, Codex, OpenCode, Antigravity and Grok in a bubble on your Android phone" width="100%">
+  <img src="docs/banner.png" alt="Mr Do It: Claude Code, Codex, OpenCode, Antigravity and Grok in a bubble on your Android phone" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/ghorbelhamdi/buddy-android/releases/latest"><img src="https://img.shields.io/github/v/release/ghorbelhamdi/buddy-android?style=for-the-badge&label=release" alt="Latest release"></a>
-  <a href="https://github.com/ghorbelhamdi/buddy-android/releases"><img src="https://img.shields.io/github/downloads/ghorbelhamdi/buddy-android/total?style=for-the-badge" alt="Downloads"></a>
-  <a href="https://f-droid.org/packages/app.buddy.assistant/"><img src="https://img.shields.io/f-droid/v/app.buddy.assistant?style=for-the-badge&logo=fdroid&logoColor=white" alt="Buddy on F-Droid"></a>
+  <a href="https://github.com/Thoriii-Gloriii/Mr-Do-It/releases/latest"><img src="https://img.shields.io/github/v/release/Thoriii-Gloriii/Mr-Do-It?style=for-the-badge&label=release" alt="Latest release"></a>
+  <a href="https://github.com/Thoriii-Gloriii/Mr-Do-It/releases"><img src="https://img.shields.io/github/downloads/Thoriii-Gloriii/Mr-Do-It/total?style=for-the-badge" alt="Downloads"></a>
+  <a href="https://f-droid.org/packages/app.mrdoit.mothusi/"><img src="https://img.shields.io/f-droid/v/app.mrdoit.mothusi?style=for-the-badge&logo=fdroid&logoColor=white" alt="Mr Do It on F-Droid"></a>
   <img src="https://img.shields.io/badge/Android-11%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android 11+">
-  <a href="https://www.producthunt.com/products/buddy-20"><img src="https://img.shields.io/badge/Product_Hunt-Buddy-DA552F?style=for-the-badge&logo=producthunt&logoColor=white" alt="Buddy on Product Hunt"></a>
-  <a href="https://glama.ai/mcp/servers/ghorbelhamdi/buddy-android"><img src="https://glama.ai/mcp/servers/ghorbelhamdi/buddy-android/badges/score.svg" alt="Buddy MCP server on Glama" height="28"></a>
+  <a href="https://www.producthunt.com/products/mrdoit-20"><img src="https://img.shields.io/badge/Product_Hunt-Mr Do It-DA552F?style=for-the-badge&logo=producthunt&logoColor=white" alt="Mr Do It on Product Hunt"></a>
+  <a href="https://glama.ai/mcp/servers/Thoriii-Gloriii/Mr-Do-It"><img src="https://glama.ai/mcp/servers/Thoriii-Gloriii/Mr-Do-It/badges/score.svg" alt="Mr Do It MCP server on Glama" height="28"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache_2.0-blue?style=for-the-badge" alt="License: Apache-2.0"></a>
 </p>
 
-# Buddy
+# Mr Do It
 
 **A floating chat bubble that lets Claude Code, Codex, OpenCode, Antigravity or Grok use your Android phone.**
 
-Type or say what you want, like "reply to Sam that I'm running late" or "add a Switch 2 to my Amazon cart". Buddy reads the screen, taps and types to get it done, and asks you before anything is sent, posted, bought or deleted.
+Type or say what you want, like "reply to Sam that I'm running late" or "add a Switch 2 to my Amazon cart". Mr Do It reads the screen, taps and types to get it done, and asks you before anything is sent, posted, bought or deleted.
 
 It runs inside the app, on your own plan: [Claude Code](https://docs.claude.com/en/docs/claude-code) with your Claude plan, Codex with your ChatGPT plan, Google's [Antigravity CLI](https://antigravity.google) with your Google account, xAI's [Grok Build](https://x.ai/build) with your Google or X account, or [OpenCode](https://opencode.ai) with its free models and no account at all. No PC, no adb, no root, and no API key needed (you can add keys for other services, such as DeepSeek or OpenRouter, and use them with Claude Code, Codex or OpenCode).
 
-<p align="center"><a href="https://github.com/ghorbelhamdi/buddy-android/releases/latest/download/buddy.apk"><b>Download the APK</b></a> · <a href="https://f-droid.org/packages/app.buddy.assistant/">F-Droid</a> · <a href="https://ghorbelhamdi.github.io/buddy-android/">Website</a> · Android 11+, 64-bit</p>
+<p align="center"><a href="https://github.com/Thoriii-Gloriii/Mr-Do-It/releases/latest/download/mrdoit.apk"><b>Download the APK</b></a> · <a href="https://f-droid.org/packages/app.mrdoit.mothusi/">F-Droid</a> · <a href="https://thoriii-gloriii.github.io/Mr-Do-It/">Website</a> · Android 11+, 64-bit</p>
 
 <div align="center">
 
@@ -48,7 +48,7 @@ https://github.com/user-attachments/assets/d07936fc-4788-4ab5-a105-31b3e9aeba4f
 | **Voice** | Talk to it and have replies read aloud. |
 | **Background mode** | The agent works in your apps on a screen of its own that you don't see, while you keep using your phone. Set up once with the phone's own Wireless debugging, no computer; watch it live in the chat. Optional: let it run `adb shell` commands on the phone, each one approved by you. |
 | **Sub-agents** | "Compare this on eBay, Amazon and AliExpress": the agent starts sub-agents that each work in an app on a hidden screen of their own, at the same time, and report back. They only look things up; you see every screen in the chat. |
-| **Background browser** | Web pages in a browser inside Buddy, without taking over your screen, even while the phone is locked. Watch and use it live in the chat; it marks what you need to do (sign in, a captcha) and never types your passwords. |
+| **Background browser** | Web pages in a browser inside Mr Do It, without taking over your screen, even while the phone is locked. Watch and use it live in the chat; it marks what you need to do (sign in, a captcha) and never types your passwords. |
 | **Builds apps** | Turn on Linux tools in a chat and "make me a calculator app" builds a real APK on the phone; the GitHub version also installs it for you. |
 | **Phone tools anywhere** | The same tools as a local MCP server for your own Claude Code, Codex, OpenCode, Antigravity or Grok sessions, or over stdio with [mcp-bridge](mcp-bridge) for clients that start servers as commands. |
 
@@ -57,60 +57,60 @@ https://github.com/user-attachments/assets/d07936fc-4788-4ab5-a105-31b3e9aeba4f
   <sub>Three sub-agents, three shops, at the same time (<a href="https://youtube.com/shorts/wPZvwy08BTE">30 s video</a>)</sub>
 </p>
 
-> **Status: 2.3, early.** It works well day to day but has rough edges. Tested most on a OnePlus 12 (Android 16). Buddy is an independent project, not made by or affiliated with Anthropic, OpenAI, Google or xAI.
+> **Status: 2.3, early.** It works well day to day but has rough edges. Tested most on a OnePlus 12 (Android 16). Mr Do It is an independent project, not made by or affiliated with Anthropic, OpenAI, Google or xAI.
 
 ## How it works
 
 ```
-Buddy app / bubble ──► Buddy's Linux (Alpine via proot): claude, codex, opencode, agy or grok
+Mr Do It app / bubble ──► Mr Do It's Linux (Alpine via proot): claude, codex, opencode, agy or grok
         ▲                                                     │
         └──────────── streamed replies ◄──────────────────────┤
                                                               ▼
-Buddy accessibility service ◄──── MCP on 127.0.0.1 (phone tools)
+Mr Do It accessibility service ◄──── MCP on 127.0.0.1 (phone tools)
 ```
 
-Buddy is a normal Android app with an accessibility service, the kind of permission screen readers use. The agent runs in a small Linux inside the app and uses Buddy's phone tools (read the screen, tap, type, scroll, open apps) over a local MCP server. No adb or Wireless debugging, and it works without Wi-Fi.
+Mr Do It is a normal Android app with an accessibility service, the kind of permission screen readers use. The agent runs in a small Linux inside the app and uses Mr Do It's phone tools (read the screen, tap, type, scroll, open apps) over a local MCP server. No adb or Wireless debugging, and it works without Wi-Fi.
 
 ## Setup
 
 You need a 64-bit Android 11+ phone, plus a Claude, ChatGPT or Google account for those agents (Grok: a Google or X account). OpenCode's free models need no account.
 
-1. **Install Buddy:** [download buddy.apk](https://github.com/ghorbelhamdi/buddy-android/releases/latest/download/buddy.apk) and open it, or get it from [F-Droid](https://f-droid.org/packages/app.buddy.assistant/). The APK updates itself; on F-Droid each version arrives a few days later, and F-Droid updates it for you. Both are the same app with the same signature, so you can switch between them without reinstalling. Buddy also installs the apps it builds for you. (Google Play turned Buddy down for production: its policy doesn't allow apps that use accessibility to carry out tasks.)
+1. **Install Mr Do It:** [download mrdoit.apk](https://github.com/Thoriii-Gloriii/Mr-Do-It/releases/latest/download/mrdoit.apk) and open it, or get it from [F-Droid](https://f-droid.org/packages/app.mrdoit.mothusi/). The APK updates itself; on F-Droid each version arrives a few days later, and F-Droid updates it for you. Both are the same app with the same signature, so you can switch between them without reinstalling. Mr Do It also installs the apps it builds for you. (Google Play turned Mr Do It down for production: its policy doesn't allow apps that use accessibility to carry out tasks.)
 2. **Follow the setup guide** that opens on first launch: pick your agent, turn on the accessibility service, install and sign in, and try a first task.
 
 **Install blocked or "Restricted setting"?** See [Setup in detail](docs/GUIDE.md#setup-in-detail).
 
 ## Local models
 
-**On the phone itself:** Settings → Agents and models → **Models on this phone**. Download Gemma 4 or Qwen3.5 (1.2–5.2 GB) and Buddy runs it with llama.cpp on the phone's NPU (Snapdragon 8 Gen 2 and newer), GPU or CPU, offline. Chats with it use lite mode: a short prompt and a dozen phone tools, more when needed. On a OnePlus 12, Gemma 4 E2B on the NPU reads about 2,000 tokens/s and writes about 24/s: fine for simple requests like the battery or a timer, not reliable for long tasks.
+**On the phone itself:** Settings → Agents and models → **Models on this phone**. Download Gemma 4 or Qwen3.5 (1.2–5.2 GB) and Mr Do It runs it with llama.cpp on the phone's NPU (Snapdragon 8 Gen 2 and newer), GPU or CPU, offline. Chats with it use lite mode: a short prompt and a dozen phone tools, more when needed. On a OnePlus 12, Gemma 4 E2B on the NPU reads about 2,000 tokens/s and writes about 24/s: fine for simple requests like the battery or a timer, not reliable for long tasks.
 
-**On your computer:** Run the model on your own computer and nothing goes to an AI company. Start [Ollama](https://ollama.com), LM Studio or llama.cpp's server on a PC (for Ollama, set `OLLAMA_HOST=0.0.0.0` and a context of at least 48k tokens, e.g. `OLLAMA_CONTEXT_LENGTH=49152`; OpenCode keeps a big part of the context free for the answer, and with less it fails before the first one). In Buddy, pick **Local model** in the setup guide (Settings → the setup card → *Open the step-by-step guide* opens it again later): it sets up OpenCode, asks for your server and makes it the default for OpenCode's chats. Or add it by hand: Settings → Agents and models → API keys → Add API key → **Ollama** (or LM Studio, llama.cpp). Either way, put the PC's address on your Wi-Fi instead of `localhost` and leave the key empty. Plain `http://` works on your own network and over Tailscale.
+**On your computer:** Run the model on your own computer and nothing goes to an AI company. Start [Ollama](https://ollama.com), LM Studio or llama.cpp's server on a PC (for Ollama, set `OLLAMA_HOST=0.0.0.0` and a context of at least 48k tokens, e.g. `OLLAMA_CONTEXT_LENGTH=49152`; OpenCode keeps a big part of the context free for the answer, and with less it fails before the first one). In Mr Do It, pick **Local model** in the setup guide (Settings → the setup card → *Open the step-by-step guide* opens it again later): it sets up OpenCode, asks for your server and makes it the default for OpenCode's chats. Or add it by hand: Settings → Agents and models → API keys → Add API key → **Ollama** (or LM Studio, llama.cpp). Either way, put the PC's address on your Wi-Fi instead of `localhost` and leave the key empty. Plain `http://` works on your own network and over Tailscale.
 
 What to expect, from tests on an RTX 2060 Super (8 GB): Qwen3 8B and Qwen3 4B handle simple one-step requests, like the battery level or the phone's status. Multi-step tasks on the screen are another matter: in a calculator test the 4B tapped the wrong buttons and then said it had worked. For real tasks, use a bigger model that's good at tool calling. The first answer of a chat takes longest, since the model first reads about 13k tokens of instructions and tool descriptions.
 
 ## Updating
 
-Install the new APK over the old one: chats, settings and sign-ins stay (don't uninstall first). You can also ask Buddy to *"update yourself"*, or let [Obtainium](https://obtainium.imranr.dev) or F-Droid do it ([how](docs/GUIDE.md#updating)).
+Install the new APK over the old one: chats, settings and sign-ins stay (don't uninstall first). You can also ask Mr Do It to *"update yourself"*, or let [Obtainium](https://obtainium.imranr.dev) or F-Droid do it ([how](docs/GUIDE.md#updating)).
 
 ## Security
 
 An accessibility service is powerful, so please read this.
 
 - **Local only.** The phone tools listen on `127.0.0.1` with a random per-install token.
-- **Buddy enforces the approvals, not the agent.** Messaging, shopping and money apps start on a hard limit: Buddy itself stops on buttons like Send, Pay and Delete until you OK them.
+- **Mr Do It enforces the approvals, not the agent.** Messaging, shopping and money apps start on a hard limit: Mr Do It itself stops on buttons like Send, Pay and Delete until you OK them.
 - **Prompt injection is the main risk.** A message or web page could try to give the agent orders. On-screen text is treated as content, and the approval card is the backstop, so read it.
-- **No passwords.** Buddy never types passwords, codes or payment details; it hands those to you.
+- **No passwords.** Mr Do It never types passwords, codes or payment details; it hands those to you.
 - **What leaves the phone:** only what the agent sends to its provider (Anthropic, OpenAI, Google, xAI, OpenCode's service or the provider you connected) to answer you.
 
 More in [Security in detail](docs/GUIDE.md#security-in-detail). Found a problem? Please open a private security advisory instead of a public issue.
 
 ## FAQ
 
-**What does it cost?** Buddy is free. The agent uses your plan's limits, or nothing at all with OpenCode's free models (no account) or Antigravity's free plan (Google account).
+**What does it cost?** Mr Do It is free. The agent uses your plan's limits, or nothing at all with OpenCode's free models (no account) or Antigravity's free plan (Google account).
 
 **iPhone?** No. iOS doesn't let apps operate other apps.
 
-**Which phones?** 64-bit Android 11 or newer. On some brands, set Buddy's battery use to *Unrestricted*.
+**Which phones?** 64-bit Android 11 or newer. On some brands, set Mr Do It's battery use to *Unrestricted*.
 
 **Does it need a computer, adb or root?** No.
 
@@ -124,17 +124,17 @@ More in [Security in detail](docs/GUIDE.md#security-in-detail). Found a problem?
 
 ## Contributing
 
-Bug reports, ideas and translation fixes are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). If Buddy is useful to you, a ⭐ helps other people find it.
+Bug reports, ideas and translation fixes are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). If Mr Do It is useful to you, a ⭐ helps other people find it.
 
 ## For developers
 
 ```
-git clone --recurse-submodules https://github.com/ghorbelhamdi/buddy-android.git
+git clone --recurse-submodules https://github.com/Thoriii-Gloriii/Mr-Do-It.git
 ./gradlew assembleRelease     # Android Studio / Gradle
-./build.sh                    # on the phone in Termux, no Gradle → build/buddy-release.apk
+./build.sh                    # on the phone in Termux, no Gradle → build/mrdoit-release.apk
 ```
 
-proot and libandroid-shmem are git submodules in `third_party/` (`git submodule update --init` in an existing clone). `build.sh` needs `pkg install openjdk-17 aapt2 d8 apksigner python clang make` and android.jar from platform-36 at `~/android-sdk/android-36/android.jar`. It creates a signing key at `~/.buddy-keys/release.jks` on first run: back it up, since updates must be signed with the same key. Gradle release signing reads `BUDDY_KEYSTORE` and `BUDDY_KEYSTORE_PASSWORD` (optionally `BUDDY_KEY_ALIAS`, `BUDDY_KEY_PASSWORD`). The version lives in `BuildInfo.java`, and the project layout is in [CONTRIBUTING.md](CONTRIBUTING.md#project-layout).
+proot and libandroid-shmem are git submodules in `third_party/` (`git submodule update --init` in an existing clone). `build.sh` needs `pkg install openjdk-17 aapt2 d8 apksigner python clang make` and android.jar from platform-36 at `~/android-sdk/android-36/android.jar`. It creates a signing key at `~/.mrdoit-keys/release.jks` on first run: back it up, since updates must be signed with the same key. Gradle release signing reads `MRDOIT_KEYSTORE` and `MRDOIT_KEYSTORE_PASSWORD` (optionally `MRDOIT_KEY_ALIAS`, `MRDOIT_KEY_PASSWORD`). The version lives in `BuildInfo.java`, and the project layout is in [CONTRIBUTING.md](CONTRIBUTING.md#project-layout).
 
 ## License
 

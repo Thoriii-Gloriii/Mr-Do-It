@@ -1,5 +1,5 @@
 • Phone actions per task: 60, 200 or no limit (Settings → Experience)
-• Pick Buddy as your phone's assistant app: long-press power to talk
+• Pick Mr Do It as your phone's assistant app: long-press power to talk
 • Codex with Ollama and other non-OpenAI services now sees the phone tools
 • Models you add in Ollama, LM Studio or llama.cpp show up in the pickers by themselves
 • Local models get up to 15 minutes, with a clearer note while they read

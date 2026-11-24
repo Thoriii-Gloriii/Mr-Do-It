@@ -1,10 +1,10 @@
 #!/bin/bash
-# Models on this phone (Buddy's OnPhone): fetches llama.cpp's engine and the models, checked against their SHA-256.
+# Models on this phone (Mr Do It's OnPhone): fetches llama.cpp's engine and the models, checked against their SHA-256.
 #   onphone-get engine <url> <sha256>     llama.cpp's official Android build → $D/engine/{bin,lib}
 #   onphone-get model <url> <sha256> <file>   a model → $D/models/<file>
 # A download that stopped goes on where it left off. Prints the reason on failure.
 set -u
-D=/root/.buddy/onphone
+D=/root/.mrdoit/onphone
 mkdir -p "$D/models" "$D/tmp"
 
 fetch() { # url sha256 target

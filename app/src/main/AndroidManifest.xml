@@ -2,19 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Background mode only: never asked of the user; Buddy's own adb grants it when they pair it with Wireless
-         debugging, so Buddy can switch Wireless debugging on again after a restart of the phone. -->
+    <!-- Background mode only: never asked of the user; Mr Do It's own adb grants it when they pair it with Wireless
+         debugging, so Mr Do It can switch Wireless debugging on again after a restart of the phone. -->
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- Android 16 Live Updates: the "Buddy is using your phone" chip in the status bar -->
+    <!-- Android 16 Live Updates: the "Mr Do It is using your phone" chip in the status bar -->
     <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <!-- Developer mode: open the installer for apps the agent builds (install_apk) -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <!-- Lets the setup screen ask Android to stop battery optimization for Buddy -->
+    <!-- Lets the setup screen ask Android to stop battery optimization for Mr Do It -->
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <!-- Notification rules: the agent keeps working (and an approval countdown keeps running) with the screen off -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -49,7 +49,7 @@
     </queries>
 
     <application
-        android:name=".BuddyApp"
+        android:name=".MrDoItApp"
         android:localeConfig="@xml/locales_config"
         android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
@@ -77,8 +77,8 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Buddy as the digital assistant app (long-press power, corner swipe): starts listening, no wake word.
-             A task of its own: in Buddy's, the system would bring Buddy's main screen to the front with it. -->
+        <!-- Mr Do It as the digital assistant app (long-press power, corner swipe): starts listening, no wake word.
+             A task of its own: in Mr Do It's, the system would bring Mr Do It's main screen to the front with it. -->
         <activity
             android:name=".AssistActivity"
             android:exported="true"
@@ -92,7 +92,7 @@
             </intent-filter>
         </activity>
 
-        <!-- "Share to Buddy": photos, files, links and text from any app, into a new or recent chat -->
+        <!-- "Share to Mr Do It": photos, files, links and text from any app, into a new or recent chat -->
         <activity
             android:name=".ShareActivity"
             android:exported="true"
@@ -215,7 +215,7 @@
 
         <provider
             android:name=".FilesProvider"
-            android:authorities="app.godo.assistant.files"
+            android:authorities="app.mrdoit.mothusi.files"
             android:exported="false"
             android:grantUriPermissions="true" />
 
@@ -227,12 +227,12 @@
             android:name=".Updates"
             android:exported="false" />
 
-        <!-- Scheduled tasks: their alarms (only Buddy's own) -->
+        <!-- Scheduled tasks: their alarms (only Mr Do It's own) -->
         <receiver
             android:name=".Schedules"
             android:exported="false" />
 
-        <!-- Sets the scheduled tasks' alarms again; from the system, so exported (it only re-reads Buddy's own schedules) -->
+        <!-- Sets the scheduled tasks' alarms again; from the system, so exported (it only re-reads Mr Do It's own schedules) -->
         <receiver
             android:name=".Schedules$Boot"
             android:exported="true">
@@ -256,7 +256,7 @@
             android:taskAffinity="" />
 
         <service
-            android:name=".BuddyService"
+            android:name=".MrDoItService"
             android:exported="true"
             android:label="@string/service_label"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
