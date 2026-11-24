@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Every text Buddy shows, in Dutch (je). Source and translator notes: res/values/strings.xml. -->
 <resources>
-    <string name="service_label">Buddy-assistent</string>
-    <string name="service_description">Toont de chatbubbel van Buddy en laat de door jou gekozen agent (Claude Code, Codex, OpenCode, Antigravity of Grok), die binnen Buddy op deze telefoon draait, het scherm lezen en voor je tikken, typen en scrollen. Niets verlaat de telefoon, behalve wat de agent zelf naar zijn AI-dienst stuurt (Anthropic, OpenAI, Google, xAI of de aanbieder van je OpenCode-model).</string>
+    <string name="service_label">Mr Do It-assistent</string>
+    <string name="service_description">Toont de chatbubbel van Mr Do It en laat de door jou gekozen agent (Claude Code, Codex, OpenCode, Antigravity of Grok), die binnen Mr Do It op deze telefoon draait, het scherm lezen en voor je tikken, typen en scrollen. Niets verlaat de telefoon, behalve wat de agent zelf naar zijn AI-dienst stuurt (Anthropic, OpenAI, Google, xAI of de aanbieder van je OpenCode-model).</string>
 
     <!-- ===== First run (OnboardingActivity), the Chats home screen (MainActivity), updates, appearance ===== -->
 
@@ -16,7 +16,7 @@
     <string name="onboarding_stuck">Vastgelopen?</string>
 
     <!-- Guide, welcome screen. -->
-    <string name="onboarding_welcome_title">Maak kennis met Buddy</string>
+    <string name="onboarding_welcome_title">Maak kennis met Mr Do It</string>
     <string name="onboarding_welcome_text">Een chatbubbel die je telefoon voor je kan bedienen.</string>
     <string name="onboarding_welcome_ask_title">Vraag het in gewone taal</string>
     <string name="onboarding_welcome_ask_text">“Antwoord Sam dat ik later kom”, “zet melk in mijn winkelmandje”.</string>
@@ -47,13 +47,13 @@
     <string name="onboarding_recommended">aanbevolen</string>
 
     <!-- Guide, step: turn on Buddy's accessibility service. -->
-    <string name="onboarding_access_title">Laat Buddy zien en tikken</string>
+    <string name="onboarding_access_title">Laat Mr Do It zien en tikken</string>
     <string name="onboarding_access_done">Toegankelijkheid staat aan.</string>
-    <string name="onboarding_access_text">De toegankelijkheidsservice van Buddy toont de bubbel en laat de agent het scherm lezen, tikken en typen, alleen als je hem vraagt iets te doen.</string>
+    <string name="onboarding_access_text">De toegankelijkheidsservice van Mr Do It toont de bubbel en laat de agent het scherm lezen, tikken en typen, alleen als je hem vraagt iets te doen.</string>
     <string name="onboarding_access_privacy">Niets verlaat de telefoon, behalve wat %1$s naar %2$s stuurt om je te antwoorden. Voor verzenden, plaatsen, kopen en verwijderen wordt altijd eerst om je akkoord gevraagd.</string>
     <string name="onboarding_access_privacy_both">Niets verlaat de telefoon, behalve wat Claude Code en Codex naar Anthropic en OpenAI sturen om je te antwoorden. Voor verzenden, plaatsen, kopen en verwijderen wordt altijd eerst om je akkoord gevraagd.</string>
     <string name="onboarding_access_privacy_opencode">Niets verlaat de telefoon, behalve wat %1$s naar de aanbieder van het model stuurt om je te antwoorden. Voor verzenden, plaatsen, kopen en verwijderen wordt altijd eerst om je akkoord gevraagd.</string>
-    <string name="onboarding_access_list_hint">In de lijst: Gedownloade apps → Buddy-assistent → zet hem aan.</string>
+    <string name="onboarding_access_list_hint">In de lijst: Gedownloade apps → Mr Do It-assistent → zet hem aan.</string>
     <string name="onboarding_access_open">Toegankelijkheid openen</string>
     <string name="onboarding_access_greyed_title">Is de schakelaar grijs?</string>
     <string name="onboarding_access_greyed_text">Android blokkeert dit voor apps die vanuit een bestand zijn geïnstalleerd. Tik op App-info (hieronder), dan rechtsboven op ⋮ → Beperkte instellingen toestaan, en probeer het opnieuw.</string>
@@ -65,7 +65,7 @@
     <string name="onboarding_agents_done_title">Klaar</string>
     <string name="onboarding_agents_done">%1$s is geïnstalleerd en ingelogd.</string>
     <string name="onboarding_agents_done_both">Claude Code en Codex zijn geïnstalleerd en ingelogd.</string>
-    <string name="onboarding_agents_text">Buddy installeert %1$s in de app, daarna log je één keer in. Termux is niet nodig.</string>
+    <string name="onboarding_agents_text">Mr Do It installeert %1$s in de app, daarna log je één keer in. Termux is niet nodig.</string>
     <string name="onboarding_agent_names_both">Claude Code en Codex</string>
     <!-- Agent card status lines: small lowercase mono text, one line. -->
     <string name="onboarding_agent_ready">klaar · %1$s</string>
@@ -75,16 +75,16 @@
     <string name="onboarding_agent_installing">installeren…</string>
     <string name="onboarding_agent_installed">geïnstalleerd · niet ingelogd</string>
     <string name="onboarding_agent_not_installed">niet geïnstalleerd</string>
-    <string name="onboarding_agent_sign_in_claude">Log in met je Claude-account. Je browser wordt geopend; tik op Autoriseren en Buddy komt vanzelf terug.</string>
+    <string name="onboarding_agent_sign_in_claude">Log in met je Claude-account. Je browser wordt geopend; tik op Autoriseren en Mr Do It komt vanzelf terug.</string>
     <string name="onboarding_agent_checking_opencode">OpenCode controleren…</string>
     <string name="onboarding_agent_sign_in_codex">Log in met je ChatGPT-account in de browser en kom daarna terug.</string>
-    <string name="onboarding_agent_sign_in_agy">Log in met je Google-account. Je browser wordt geopend; log daar in en Buddy pakt de code vanzelf op.</string>
-    <string name="onboarding_agent_sign_in_grok">Log in met je Grok-account. Je browser wordt geopend; bevestig daar de code en Buddy komt vanzelf terug.</string>
-    <string name="onboarding_agent_download_claude">Downloadt eenmalig ongeveer 235 MB (Buddy\'s Linux en Claude Code van Anthropic).</string>
-    <string name="onboarding_agent_download_opencode">Downloadt eenmalig ongeveer 230 MB (Buddy\'s Linux, Node.js en OpenCode). Geen account nodig.</string>
-    <string name="onboarding_agent_download_codex">Downloadt eenmalig ongeveer 150 MB (Buddy\'s Linux, Node.js en Codex van OpenAI).</string>
-    <string name="onboarding_agent_download_agy">Downloadt eenmalig ongeveer 200 MB (Buddy\'s Linux en de Antigravity CLI van Google).</string>
-    <string name="onboarding_agent_download_grok">Downloadt eenmalig ongeveer 170 MB (Buddy\'s Linux en Grok Build van xAI).</string>
+    <string name="onboarding_agent_sign_in_agy">Log in met je Google-account. Je browser wordt geopend; log daar in en Mr Do It pakt de code vanzelf op.</string>
+    <string name="onboarding_agent_sign_in_grok">Log in met je Grok-account. Je browser wordt geopend; bevestig daar de code en Mr Do It komt vanzelf terug.</string>
+    <string name="onboarding_agent_download_claude">Downloadt eenmalig ongeveer 235 MB (Mr Do It\'s Linux en Claude Code van Anthropic).</string>
+    <string name="onboarding_agent_download_opencode">Downloadt eenmalig ongeveer 230 MB (Mr Do It\'s Linux, Node.js en OpenCode). Geen account nodig.</string>
+    <string name="onboarding_agent_download_codex">Downloadt eenmalig ongeveer 150 MB (Mr Do It\'s Linux, Node.js en Codex van OpenAI).</string>
+    <string name="onboarding_agent_download_agy">Downloadt eenmalig ongeveer 200 MB (Mr Do It\'s Linux en de Antigravity CLI van Google).</string>
+    <string name="onboarding_agent_download_grok">Downloadt eenmalig ongeveer 170 MB (Mr Do It\'s Linux en Grok Build van xAI).</string>
     <string name="onboarding_sign_in_claude">Inloggen met Claude</string>
     <string name="onboarding_sign_in_chatgpt">Inloggen met ChatGPT</string>
     <string name="onboarding_sign_in_google">Inloggen met Google</string>
@@ -92,29 +92,29 @@
     <string name="onboarding_install_agent">%1$s installeren</string>
     <string name="onboarding_agents_wifi">Gebruik wifi als dat kan. Je kunt dit scherm verlaten tijdens de installatie.</string>
     <string name="onboarding_stuck_sign_in_q">Kom je na het inloggen niet terug?</string>
-    <string name="onboarding_stuck_sign_in_a">Claude: tik op de Claude-pagina op “Code kopiëren” en ga dan terug naar Buddy; Buddy haalt de code van het klembord.</string>
+    <string name="onboarding_stuck_sign_in_a">Claude: tik op de Claude-pagina op “Code kopiëren” en ga dan terug naar Mr Do It; Mr Do It haalt de code van het klembord.</string>
     <string name="onboarding_stuck_install_q">Installatie mislukt?</string>
     <string name="onboarding_stuck_install_a">Controleer je verbinding en installeer opnieuw; het gaat verder waar het gestopt is.</string>
 
     <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">Actief houden</string>
-    <string name="onboarding_background_done">Buddy kan op de achtergrond draaien.</string>
-    <string name="onboarding_background_text">Zodat je telefoon Buddy niet stopt om batterij te sparen terwijl de agent bezig is.</string>
+    <string name="onboarding_background_done">Mr Do It kan op de achtergrond draaien.</string>
+    <string name="onboarding_background_text">Zodat je telefoon Mr Do It niet stopt om batterij te sparen terwijl de agent bezig is.</string>
     <string name="onboarding_allow">Toestaan</string>
     <string name="onboarding_skip_for_now">Nu overslaan</string>
 
     <!-- Guide, step: how much the agent asks before acting. -->
     <string name="onboarding_safety_title">Hoe vaak moet de agent het vragen?</string>
-    <string name="onboarding_safety_text">Apps voor berichten, sociale media, winkelen, betalen en bankieren hebben altijd je akkoord nodig voordat Buddy iets verzendt, plaatst, koopt of verwijdert. Voor je andere apps:</string>
+    <string name="onboarding_safety_text">Apps voor berichten, sociale media, winkelen, betalen en bankieren hebben altijd je akkoord nodig voordat Mr Do It iets verzendt, plaatst, koopt of verwijdert. Voor je andere apps:</string>
     <string name="onboarding_safety_ask_title">Vraag het me eerst</string>
     <string name="onboarding_safety_ask_text">De agent vraagt het vóór alles wat riskant is, zoals een instelling wijzigen. Veiliger, maar meer pop-ups.</string>
     <string name="onboarding_safety_auto_title">Zelfstandig werken</string>
     <string name="onboarding_safety_auto_text">Geen pop-ups: de agent doet gewoon wat je vroeg, zoals een camera of een lamp aanzetten.</string>
-    <string name="onboarding_safety_note">Je kunt dit altijd per app wijzigen: Instellingen → Veiligheid en goedkeuringen → App-rechten. Zet een app op Vrij om de agent daar zonder pop-ups te laten werken, of op Streng zodat Buddy het je zelf vraagt.</string>
+    <string name="onboarding_safety_note">Je kunt dit altijd per app wijzigen: Instellingen → Veiligheid en goedkeuringen → App-rechten. Zet een app op Vrij om de agent daar zonder pop-ups te laten werken, of op Streng zodat Mr Do It het je zelf vraagt.</string>
 
     <!-- Guide, last step: try a first task. -->
     <string name="onboarding_try_title">Alles staat klaar</string>
-    <string name="onboarding_try_text">Probeer een eerste taak. Buddy opent Instellingen en zoekt het voor je op.</string>
+    <string name="onboarding_try_text">Probeer een eerste taak. Mr Do It opent Instellingen en zoekt het voor je op.</string>
     <string name="onboarding_try_prompt">Open Instellingen en vertel me mijn Android-versie</string>
     <string name="onboarding_try_prompt_quoted">“%1$s”</string>
     <string name="onboarding_try_tip">Tip: de bubbel zweeft boven andere apps. Sleep hem naar het ✕ om hem te verbergen.</string>
@@ -127,7 +127,7 @@
     <string name="main_status_setup">instellen %1$d/%2$d</string>
     <string name="main_setup_title">Rond het instellen af om chats te gebruiken</string>
     <string name="main_setup_next">Volgende stap: %1$s</string>
-    <string name="main_setup_next_accessibility">Volgende stap: open de toegankelijkheidsservice van Buddy</string>
+    <string name="main_setup_next_accessibility">Volgende stap: open de toegankelijkheidsservice van Mr Do It</string>
     <string name="main_section_working">Bezig</string>
     <string name="main_section_recent">Recent</string>
     <string name="main_empty_title">Nog geen chats</string>
@@ -158,27 +158,27 @@
 
     <!-- Notification shown after the bubble is dragged away to hide it. -->
     <string name="notice_channel_name">Verborgen bubbel</string>
-    <string name="notice_hidden_title">Buddy is verborgen</string>
+    <string name="notice_hidden_title">Mr Do It is verborgen</string>
     <string name="notice_hidden_text">Tik om de bubbel weer te tonen.</string>
     <string name="notice_open_chats">Chats openen</string>
 
     <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
-    <string name="update_channel_name">Buddy-updates</string>
-    <string name="update_available_title">Buddy %1$s is beschikbaar</string>
+    <string name="update_channel_name">Mr Do It-updates</string>
+    <string name="update_available_title">Mr Do It %1$s is beschikbaar</string>
     <string name="update_notification_text">Je hebt %1$s. Tik om te zien wat er nieuw is en te updaten; je chats blijven bewaard.</string>
     <string name="update_action">Updaten</string>
     <string name="update_mute">Niet meer melden</string>
     <string name="update_muted">Geen updatemeldingen meer. Zet ze weer aan in Instellingen.</string>
     <string name="update_checking">Controleren op updates…</string>
     <string name="update_check_failed">Kan GitHub niet bereiken. Probeer het later opnieuw.</string>
-    <string name="update_up_to_date">Buddy %1$s is up-to-date.</string>
+    <string name="update_up_to_date">Mr Do It %1$s is up-to-date.</string>
     <string name="update_sheet_text">Je hebt %1$s. Bij het updaten blijven je chats, instellingen en inloggegevens bewaard.</string>
     <string name="update_later">Later</string>
     <string name="update_downloading">Downloaden…</string>
-    <string name="update_needs_permission">Sta Buddy toe om apps te installeren en tik daarna opnieuw op Updaten.</string>
+    <string name="update_needs_permission">Sta Mr Do It toe om apps te installeren en tik daarna opnieuw op Updaten.</string>
     <string name="update_error_no_apk">Deze release heeft nog geen buddy.apk.</string>
     <string name="update_error_download">Het downloaden is mislukt (%1$s).</string>
-    <string name="update_error_not_newer">Het gedownloade bestand is geen nieuwere versie van Buddy en is daarom niet geopend.</string>
+    <string name="update_error_not_newer">Het gedownloade bestand is geen nieuwere versie van Mr Do It en is daarom niet geopend.</string>
     <string name="update_failed_manual">%1$s Je kunt de update ook downloaden via %2$s (buddy.apk), of Obtainium gebruiken voor automatische updates (zie %3$s).</string>
 
     <!-- Settings, Appearance: option names. -->
@@ -199,7 +199,7 @@
     <!-- ===== The bubble, its hold menu, chat panel and approval cards (Bubble, RadialMenu, ControlIndicator) ===== -->
 
     <!-- Floating bubble, read by TalkBack. -->
-    <string name="bubble_face_description">Buddy. Tik om te openen, houd ingedrukt voor acties</string>
+    <string name="bubble_face_description">Mr Do It. Tik om te openen, houd ingedrukt voor acties</string>
     <string name="bubble_show_actions">acties tonen</string>
 
     <!-- Status pill beside the bubble: at most two lines, about 250dp wide. -->
@@ -244,10 +244,10 @@
     <string name="bubble_tip_stop_voice">Tip: houd de bubbel ingedrukt om de stem te stoppen</string>
     <string name="bubble_tip_hold_menu">Tip: houd de bubbel ingedrukt om te pauzeren, te stoppen of iets aan te vullen</string>
     <string name="bubble_stopping">Stoppen…</string>
-    <string name="bubble_nothing_running">Er loopt nu niets in Buddy\'s chats.</string>
+    <string name="bubble_nothing_running">Er loopt nu niets in Mr Do It\'s chats.</string>
     <string name="bubble_nothing_running_chat">Er loopt nu niets in deze chat.</string>
-    <string name="bubble_allow_mic_tap_mic">Geef Buddy toegang tot de microfoon en tik daarna opnieuw op de microfoon.</string>
-    <string name="bubble_allow_mic_tap_bubble">Geef Buddy toegang tot de microfoon en tik daarna opnieuw op de bubbel.</string>
+    <string name="bubble_allow_mic_tap_mic">Geef Mr Do It toegang tot de microfoon en tik daarna opnieuw op de microfoon.</string>
+    <string name="bubble_allow_mic_tap_bubble">Geef Mr Do It toegang tot de microfoon en tik daarna opnieuw op de bubbel.</string>
     <string name="bubble_note_added">Begrepen: %1$s houdt er rekening mee</string>
     <string name="bubble_copied">Gekopieerd</string>
 
@@ -299,6 +299,14 @@
     <string name="card_label_approval">AKKOORD NODIG</string>
     <string name="card_label_question">VRAAG</string>
     <string name="card_label_other_session">%1$s · UIT EEN ANDERE SESSIE</string>
+    <string name="card_label_from">%1$s · VAN %2$s</string>
+    <string name="outside_terminal">Terminal van deze telefoon</string>
+    <string name="outside_computer">Een computer</string>
+    <string name="monitor_outside">Buiten Mr Do It</string>
+    <string name="monitor_outside_hidden">Op zijn eigen verborgen scherm · laatste stap %1$s</string>
+    <string name="monitor_outside_screen">Op je scherm · laatste stap %1$s</string>
+    <string name="monitor_outside_bring">Naar mijn scherm halen</string>
+    <string name="monitor_outside_stopped">Gestopt. Zijn telefoontools worden een minuut geweigerd, en zijn wachtende kaarten zijn geweigerd.</string>
     <string name="card_label_queue">%1$s · 1 VAN %2$d</string>
     <string name="card_deny">Afwijzen</string>
     <string name="card_change">Wijzigen</string>
@@ -316,13 +324,13 @@
     <string name="card_note_skipped">Vraag overgeslagen</string>
 
     <!-- Notification while an agent operates the phone; on Android 16 also a chip in the status bar. -->
-    <string name="control_channel_name">Buddy bedient je telefoon</string>
+    <string name="control_channel_name">Mr Do It bedient je telefoon</string>
     <string name="control_channel_description">Wordt in de statusbalk getoond terwijl een agent de telefoon bedient.</string>
-    <string name="control_title">Buddy bedient je telefoon</string>
-    <string name="control_text">Raak het scherm niet aan tot Buddy klaar is, of tik op Stoppen om het over te nemen.</string>
+    <string name="control_title">Mr Do It bedient je telefoon</string>
+    <string name="control_text">Raak het scherm niet aan tot Mr Do It klaar is, of tik op Stoppen om het over te nemen.</string>
     <string name="control_stop">Stoppen</string>
-    <string name="work_title">Buddy werkt op de achtergrond</string>
-    <string name="pause_call_ended_title">Gesprek beëindigd · Buddy is gepauzeerd</string>
+    <string name="work_title">Mr Do It werkt op de achtergrond</string>
+    <string name="pause_call_ended_title">Gesprek beëindigd · Mr Do It is gepauzeerd</string>
     <string name="pause_call_ended_text">Tik om de taak te hervatten</string>
 
     <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
@@ -335,7 +343,7 @@
 
     <!-- Chat screen: Linux tools, the chip beside the model chip (also in the bubble's panel and the New chat sheets) -->
     <string name="chat_linux_tools">Linux-tools</string>
-    <string name="chat_linux_tools_info">Opdrachten, bestanden en apps bouwen in Buddy\'s Linux</string>
+    <string name="chat_linux_tools_info">Opdrachten, bestanden en apps bouwen in Mr Do It\'s Linux</string>
     <string name="chat_linux_tools_title">Linux-tools aanzetten?</string>
     <string name="chat_linux_tools_what">De agent kan dan opdrachten uitvoeren, pakketten installeren en bestanden bewerken in ~/.buddy/work, zodat hij apps kan bouwen.</string>
     <string name="chat_linux_tools_when">Alleen in deze chat, vanaf je volgende bericht.</string>
@@ -350,7 +358,7 @@
     <string name="chat_approvals_info">Hoe deze chat het je vraagt voordat de agent iets doet. Het blijft zo tot je het wijzigt; nieuwe chats beginnen op Vragen.</string>
     <string name="chat_approvals_ask">Vragen</string>
     <string name="chat_approvals_ask_info">Elke app volgt wat bij %1$s ervoor is ingesteld.</string>
-    <string name="chat_approvals_strict_info">Ook in apps die op %1$s staan, vraagt Buddy het voordat er iets wordt verzonden, gepost, gekocht of verwijderd.</string>
+    <string name="chat_approvals_strict_info">Ook in apps die op %1$s staan, vraagt Mr Do It het voordat er iets wordt verzonden, gepost, gekocht of verwijderd.</string>
     <string name="chat_approvals_apps_set">Waar de agent iets heeft gedaan, met de instelling van elke app bij %1$s. Een wijziging hier geldt in elke chat.</string>
     <string name="chat_approvals_routine">Routine toegestaan</string>
     <string name="chat_approvals_routine_info">Routinestappen gaan in elke app door zonder kaart: een bericht sturen, of een stap waarover de controleur zou vragen. Elke stap wordt in de chat genoteerd. Betalen, kopen, verwijderen, installeren, wachtwoorden en beveiligingsinstellingen vragen het je nog steeds, net als alles in bank- en betaalapps, Instellingen en appwinkels.</string>
@@ -367,7 +375,7 @@
     <string name="schedule_title">Planning</string>
     <string name="schedule_set">Planning instellen</string>
     <string name="schedule_set_info">Stuur deze chat op vaste tijden vanzelf een bericht, bijv. elke dag om 14:00.</string>
-    <string name="schedule_info">Op de ingestelde tijd stuurt Buddy dit bericht in de chat alsof je het zelf typte, met de agent en opties van deze chat. Goedkeuringskaarten wachten nog steeds op je. Heeft het het scherm nodig terwijl de telefoon vergrendeld is, dan vraagt het je te ontgrendelen.</string>
+    <string name="schedule_info">Op de ingestelde tijd stuurt Mr Do It dit bericht in de chat alsof je het zelf typte, met de agent en opties van deze chat. Goedkeuringskaarten wachten nog steeds op je. Heeft het het scherm nodig terwijl de telefoon vergrendeld is, dan vraagt het je te ontgrendelen.</string>
     <string name="schedule_time">Tijd</string>
     <string name="schedule_add_time">Tijd toevoegen</string>
     <string name="schedule_remove_time">%1$s verwijderen</string>
@@ -379,7 +387,7 @@
     <string name="schedule_message_hint">Wat te sturen, bijv. Open de app en doe de check-in van vandaag</string>
     <string name="schedule_wake">Telefoon wekken voor deze taak</string>
     <string name="schedule_wake_info">Als het het scherm nodig heeft, gaat het scherm aan (en een vergrendelscherm zonder pincode, patroon of vingerafdruk gaat open). Zolang het loopt, kan iedereen in de buurt het scherm zien.</string>
-    <string name="schedule_inexact">Exacte wekkers staan uit voor Buddy, dus het kan een paar minuten later beginnen.</string>
+    <string name="schedule_inexact">Exacte wekkers staan uit voor Mr Do It, dus het kan een paar minuten later beginnen.</string>
     <string name="schedule_allow_exact">Exacte wekkers toestaan</string>
     <string name="schedule_save">Opslaan</string>
     <string name="schedule_remove">Verwijderen</string>
@@ -395,7 +403,7 @@
     <string name="schedule_skipped_title">Geplande taak overgeslagen: %1$s</string>
     <string name="schedule_stopped_title">Geplande taak gestopt: %1$s</string>
     <string name="schedule_skip_running">Deze chat was nog bezig met zijn vorige taak.</string>
-    <string name="schedule_skip_busy">Buddy was een uur bezig (een andere taak, een pauze of geen internet).</string>
+    <string name="schedule_skip_busy">Mr Do It was een uur bezig (een andere taak, een pauze of geen internet).</string>
     <string name="schedule_skip_screen">De telefoon bleef een uur vergrendeld.</string>
     <string name="schedule_marker">Gepland</string>
 
@@ -436,7 +444,7 @@
     <string name="live_ended">Live stem beëindigd.</string>
     <string name="live_ended_why">Live stem beëindigd: %1$s</string>
     <string name="live_ended_screen_off">het scherm ging uit</string>
-    <string name="live_ended_paused">Buddy is gepauzeerd</string>
+    <string name="live_ended_paused">Mr Do It is gepauzeerd</string>
     <string name="live_ended_idle">er is 5 minuten niets gezegd</string>
     <string name="live_notification_title">Live stem met %1$s</string>
     <string name="live_mic_busy">De live stem gebruikt de microfoon. Beëindig die eerst.</string>
@@ -479,6 +487,26 @@
 
     <!-- Chat messages -->
     <string name="chat_copied">Gekopieerd</string>
+    <string name="chat_copy">Kopiëren</string>
+    <string name="chat_quote">Citeren</string>
+    <string name="chat_quote_remove">Citaat verwijderen</string>
+    <string name="chat_edit">Bewerken</string>
+    <string name="chat_fork">Vanaf hier afsplitsen</string>
+    <string name="chat_fork_title">%1$s · afsplitsing</string>
+    <string name="chat_forked_from">Afgesplitst van „%1$s”</string>
+    <string name="chat_forked">Afgesplitst: een nieuwe chat vanaf hier</string>
+    <string name="chat_before_edit_title">%1$s (voor bewerking)</string>
+    <string name="chat_edit_running">Wacht tot deze chat klaar is en bewerk dan.</string>
+    <string name="chat_edit_failed">Het bericht kon niet worden bewerkt.</string>
+    <string name="chat_edit_title">Je bericht bewerken</string>
+    <string name="chat_edit_info">De agent antwoordt vanaf hier opnieuw en begint fris met de chat vóór dit bericht. Alles daarna verdwijnt uit deze chat; de chat zoals hij was blijft in Gearchiveerd.</string>
+    <string name="chat_edit_send">Versturen</string>
+    <string name="chat_edited">bewerkt</string>
+    <string name="setup_voice_pause">Stoppen met luisteren na een pauze van</string>
+    <string name="setup_voice_auto">Auto</string>
+    <string name="setup_voice_pause_info">Mr Do It stopt en verstuurt als de gehoorde woorden zo lang niet veranderd zijn, ook met muziek of verkeer in de buurt. Auto: de spraakengine beslist, en die wacht op stilte.</string>
+    <string name="setup_voice_max">Langste opname</string>
+    <string name="setup_voice_no_limit">Geen limiet</string>
     <string name="chat_copy_whole_reply">Hele antwoord kopiëren</string>
     <plurals name="chat_tool_calls">
         <item quantity="one">%1$d toolaanroep</item>
@@ -489,23 +517,23 @@
     <string name="hub_continuing">Een eerdere sessie van %1$s wordt voortgezet. Als die nog open is in een terminal, sluit die daar dan eerst.</string>
     <string name="hub_still_working_attachments">Deze chat is nog bezig. Stuur bijlagen als hij klaar is.</string>
     <string name="hub_service_off">%1$s staat uit (Instellingen → Agents en modellen → API-sleutels). Zet de dienst aan of kies een ander model voor deze chat.</string>
-    <string name="hub_accessibility_dead">De toegankelijkheidsservice van Buddy draait niet, hoewel hij aanstaat: Android heeft Buddy gestopt en de service niet opnieuw gestart, dus agents kunnen de telefoon niet bereiken. Zet Buddy uit en weer aan in Android-instellingen → Toegankelijkheid. Zodat het niet weer gebeurt: sta automatisch starten voor Buddy toe in de app-instellingen van de telefoon, als die dat heeft, en geef de microfoon „Tijdens gebruik van de app”, niet „Alleen deze keer”.</string>
-    <string name="hub_accessibility_off">De toegankelijkheidsservice van Buddy staat uit, dus agents kunnen de telefoon niet bereiken. Zet Buddy aan in Android-instellingen → Toegankelijkheid.</string>
-    <string name="voice_mic_while_using">Kies „Tijdens gebruik van de app”: bij „Alleen deze keer” stopt Android Buddy een minuut nadat je het verlaat, ook midden in een taak.</string>
+    <string name="hub_accessibility_dead">De toegankelijkheidsservice van Mr Do It draait niet, hoewel hij aanstaat: Android heeft Mr Do It gestopt en de service niet opnieuw gestart, dus agents kunnen de telefoon niet bereiken. Zet Mr Do It uit en weer aan in Android-instellingen → Toegankelijkheid. Zodat het niet weer gebeurt: sta automatisch starten voor Mr Do It toe in de app-instellingen van de telefoon, als die dat heeft, en geef de microfoon „Tijdens gebruik van de app”, niet „Alleen deze keer”.</string>
+    <string name="hub_accessibility_off">De toegankelijkheidsservice van Mr Do It staat uit, dus agents kunnen de telefoon niet bereiken. Zet Mr Do It aan in Android-instellingen → Toegankelijkheid.</string>
+    <string name="voice_mic_while_using">Kies „Tijdens gebruik van de app”: bij „Alleen deze keer” stopt Android Mr Do It een minuut nadat je het verlaat, ook midden in een taak.</string>
     <string name="hub_thinking">Denkt na…</string>
     <string name="hub_still_waiting">Wacht nog op antwoord van het model…</string>
     <string name="hub_still_reading_local">Nog aan het lezen… Een model op je eigen computer kan een paar minuten nodig hebben, vooral voor het eerste antwoord.</string>
     <string name="hub_no_answer">Het model heeft niet geantwoord. Misschien is het overbelast: probeer het opnieuw of kies bovenaan de chat een ander model.</string>
-    <string name="hub_helper_gone">Deze run is afgebroken: de helper die de agent in Buddy\'s Linux uitvoert, is gestopt. Stuur je bericht opnieuw.</string>
+    <string name="hub_helper_gone">Deze run is afgebroken: de helper die de agent in Mr Do It\'s Linux uitvoert, is gestopt. Stuur je bericht opnieuw.</string>
     <string name="hub_helper_killed">Android heeft de processen van de agent beëindigd. Sommige telefoons stoppen achtergrondprocessen van een app als het er veel zijn, bijvoorbeeld met meerdere sub-agents. Om ze te laten werken: Instellingen → Systeem → Ontwikkelaarsopties → Beperkingen voor onderliggende processen uitzetten.</string>
     <string name="hub_model_set">Model: %1$s</string>
     <string name="hub_effort_set">Inspanning: %1$s</string>
     <string name="hub_effort_default">Inspanning: standaard</string>
     <string name="hub_stopping">Stoppen…</string>
     <string name="hub_stopped">Gestopt.</string>
-    <string name="hub_interrupted">Android sloot Buddy terwijl de agent bezig was, dus hij is gestopt.</string>
+    <string name="hub_interrupted">Android sloot Mr Do It terwijl de agent bezig was, dus hij is gestopt.</string>
     <string name="hub_resume_message">Ga verder waar je gebleven was</string>
-    <string name="chat_interrupted">Android sloot Buddy terwijl %1$s hieraan werkte. Doorgaan kijkt wat al gedaan is en gaat vanaf daar verder.</string>
+    <string name="chat_interrupted">Android sloot Mr Do It terwijl %1$s hieraan werkte. Doorgaan kijkt wat al gedaan is en gaat vanaf daar verder.</string>
     <string name="chat_interrupted_continue">Doorgaan</string>
     <string name="chat_interrupted_dismiss">Sluiten</string>
     <string name="hub_agent_stopped">%1$s is gestopt.</string>
@@ -595,8 +623,8 @@
     <string name="hub_tool_asking">Vraagt: %1$s</string>
     <string name="hub_tool_point_out">Wijst aan: %1$s</string>
     <string name="hub_tool_point_out_any">Wijst iets aan op het scherm</string>
-    <string name="hub_tool_update_download">Downloadt de Buddy-update</string>
-    <string name="hub_tool_update_check">Zoekt naar een Buddy-update</string>
+    <string name="hub_tool_update_download">Downloadt de Mr Do It-update</string>
+    <string name="hub_tool_update_check">Zoekt naar een Mr Do It-update</string>
     <string name="hub_tool_web_search">Zoekt op het web: %1$s</string>
     <string name="hub_tool_web_fetch">Leest %1$s</string>
     <string name="hub_tool_command">Voert uit: %1$s</string>
@@ -608,7 +636,7 @@
 
     <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
     <string name="transcript_loading">Laden…</string>
-    <string name="transcript_continue">Doorgaan in Buddy</string>
+    <string name="transcript_continue">Doorgaan in Mr Do It</string>
     <string name="transcript_empty">Geen leesbare berichten in deze sessie.</string>
     <plurals name="transcript_last_messages">
         <item quantity="one">laatste bericht · alleen-lezen</item>
@@ -619,11 +647,11 @@
     <string name="ui_no_app_for_link">Er is geen app die deze link kan openen</string>
 
     <!-- Accessibility disclosure, shown before Android's accessibility settings open (required by Google Play) -->
-    <string name="ui_a11y_title">Hoe Buddy toegankelijkheid gebruikt</string>
-    <string name="ui_a11y_what">Buddy gebruikt de toegankelijkheidsservice van Android om in andere apps te doen wat je vraagt: Buddy leest wat er op het scherm staat en tikt, typt en scrolt voor je. Buddy toont ook de zwevende bubbel.</string>
+    <string name="ui_a11y_title">Hoe Mr Do It toegankelijkheid gebruikt</string>
+    <string name="ui_a11y_what">Mr Do It gebruikt de toegankelijkheidsservice van Android om in andere apps te doen wat je vraagt: Mr Do It leest wat er op het scherm staat en tikt, typt en scrolt voor je. Mr Do It toont ook de zwevende bubbel.</string>
     <string name="ui_a11y_data">Terwijl een taak loopt, wordt de scherminhoud, die persoonlijke gegevens kan bevatten zoals berichten, namen of adressen, naar de AI-dienst van de door jou gekozen agent gestuurd (Anthropic voor Claude Code, OpenAI voor Codex, Google voor Antigravity, xAI voor Grok of de aanbieder van je OpenCode-model), uitsluitend om je verzoek uit te voeren.</string>
-    <string name="ui_a11y_no_servers">Buddy heeft geen eigen servers. Buddy verzamelt, verkoopt of deelt deze gegevens niet en gebruikt ze niet voor advertenties.</string>
-    <string name="ui_a11y_asks">Voordat er iets wordt verzonden, geplaatst, gekocht of verwijderd, vraagt Buddy om je akkoord. Je kunt de service altijd uitzetten in de toegankelijkheidsinstellingen van Android.</string>
+    <string name="ui_a11y_no_servers">Mr Do It heeft geen eigen servers. Mr Do It verzamelt, verkoopt of deelt deze gegevens niet en gebruikt ze niet voor advertenties.</string>
+    <string name="ui_a11y_asks">Voordat er iets wordt verzonden, geplaatst, gekocht of verwijderd, vraagt Mr Do It om je akkoord. Je kunt de service altijd uitzetten in de toegankelijkheidsinstellingen van Android.</string>
     <string name="ui_privacy_policy">Privacybeleid</string>
     <string name="ui_no_thanks">Nee, bedankt</string>
     <string name="ui_agree_continue">Akkoord en doorgaan</string>
@@ -634,7 +662,7 @@
     <string name="ui_nav_settings">Instellingen</string>
 
     <!-- Accessibility service: pause from the bubble's hold menu, Stop on the control indicator -->
-    <string name="service_pause_expired">Na 5 minuten pauze heeft Buddy de taak gestopt.</string>
+    <string name="service_pause_expired">Na 5 minuten pauze heeft Mr Do It de taak gestopt.</string>
     <string name="service_stopped_toast">Gestopt. Je telefoon is weer van jou.</string>
     <string name="service_paused_note">Gepauzeerd: de telefoon is van jou tot je hervat</string>
     <string name="service_paused_toast">Gepauzeerd. Gebruik je telefoon en tik daarna op ‘Gepauzeerd’ naast de bubbel om te hervatten.</string>
@@ -643,7 +671,7 @@
     <string name="service_autopaused_call">Gepauzeerd vanwege een oproep. Tik op ‘Gepauzeerd’ naast de bubbel om te hervatten.</string>
 
     <!-- Voice input and output -->
-    <string name="voice_mic_needed">Buddy heeft de microfoon nodig. Open de Buddy-app en tik één keer op 🎙 om toegang te geven.</string>
+    <string name="voice_mic_needed">Mr Do It heeft de microfoon nodig. Open de Mr Do It-app en tik één keer op 🎙 om toegang te geven.</string>
     <string name="voice_no_recognizer">Deze telefoon heeft geen spraakherkenningsservice.</string>
     <string name="voice_starting">Starten…</string>
     <string name="voice_finishing">Bijna klaar…</string>
@@ -661,16 +689,16 @@
 
     <!-- Sign-in screen: the agent isn't installed yet. -->
     <string name="signin_install">%1$s installeren</string>
-    <string name="signin_install_sub_claude">Draait Claude Code binnen Buddy met je Claude-abonnement.</string>
-    <string name="signin_install_sub_opencode">Draait OpenCode binnen Buddy. De gratis modellen werken meteen, zonder account; koppel je eigen aanbieders (Anthropic, OpenAI, GitHub Copilot…) wanneer je wilt.</string>
-    <string name="signin_install_sub_codex">Draait Codex binnen Buddy met je ChatGPT-abonnement.</string>
-    <string name="signin_install_sub_agy">Draait Googles Antigravity CLI binnen Buddy met je Google-account: gratis abonnement, Google AI Pro of Ultra.</string>
-    <string name="signin_install_sub_grok">Draait Grok Build van xAI binnen Buddy met je Grok-account (inloggen met Google of X kan ook).</string>
-    <string name="signin_install_size_claude">Downloadt eenmalig ongeveer 235 MB: Buddy\'s Linux en Claude Code van Anthropic. Gebruik wifi als dat kan.</string>
-    <string name="signin_install_size_opencode">Downloadt eenmalig ongeveer 230 MB: Buddy\'s Linux, Node.js en OpenCode. Gebruik wifi als dat kan.</string>
-    <string name="signin_install_size_codex">Downloadt eenmalig ongeveer 150 MB: Buddy\'s Linux, Node.js en Codex van OpenAI. Gebruik wifi als dat kan.</string>
-    <string name="signin_install_size_agy">Downloadt eenmalig ongeveer 200 MB: Buddy\'s Linux en de Antigravity CLI van Google. Gebruik wifi als dat kan.</string>
-    <string name="signin_install_size_grok">Downloadt eenmalig ongeveer 170 MB: Buddy\'s Linux en Grok Build van xAI. Gebruik wifi als dat kan.</string>
+    <string name="signin_install_sub_claude">Draait Claude Code binnen Mr Do It met je Claude-abonnement.</string>
+    <string name="signin_install_sub_opencode">Draait OpenCode binnen Mr Do It. De gratis modellen werken meteen, zonder account; koppel je eigen aanbieders (Anthropic, OpenAI, GitHub Copilot…) wanneer je wilt.</string>
+    <string name="signin_install_sub_codex">Draait Codex binnen Mr Do It met je ChatGPT-abonnement.</string>
+    <string name="signin_install_sub_agy">Draait Googles Antigravity CLI binnen Mr Do It met je Google-account: gratis abonnement, Google AI Pro of Ultra.</string>
+    <string name="signin_install_sub_grok">Draait Grok Build van xAI binnen Mr Do It met je Grok-account (inloggen met Google of X kan ook).</string>
+    <string name="signin_install_size_claude">Downloadt eenmalig ongeveer 235 MB: Mr Do It\'s Linux en Claude Code van Anthropic. Gebruik wifi als dat kan.</string>
+    <string name="signin_install_size_opencode">Downloadt eenmalig ongeveer 230 MB: Mr Do It\'s Linux, Node.js en OpenCode. Gebruik wifi als dat kan.</string>
+    <string name="signin_install_size_codex">Downloadt eenmalig ongeveer 150 MB: Mr Do It\'s Linux, Node.js en Codex van OpenAI. Gebruik wifi als dat kan.</string>
+    <string name="signin_install_size_agy">Downloadt eenmalig ongeveer 200 MB: Mr Do It\'s Linux en de Antigravity CLI van Google. Gebruik wifi als dat kan.</string>
+    <string name="signin_install_size_grok">Downloadt eenmalig ongeveer 170 MB: Mr Do It\'s Linux en Grok Build van xAI. Gebruik wifi als dat kan.</string>
 
     <!-- Sign-in screen: install or update in progress (screen titles). -->
     <string name="signin_installing">Installeren</string>
@@ -682,10 +710,10 @@
     <string name="signin_title_chatgpt">Inloggen bij ChatGPT</string>
     <string name="signin_title_google">Inloggen bij Google</string>
     <string name="signin_title_grok">Inloggen bij Grok</string>
-    <string name="signin_sub_claude">Gebruik je Claude-account (Pro of Max). Je browser wordt geopend; keur het daar goed en Buddy komt vanzelf terug.</string>
-    <string name="signin_sub_chatgpt">Gebruik je ChatGPT-account (Plus, Pro of Business). Je browser wordt geopend; keur het daar goed en Buddy komt vanzelf terug.</string>
-    <string name="signin_sub_agy">Gebruik je Google-account. Je browser wordt geopend; log daar in en Buddy pakt de code vanzelf op. Antigravity wacht ongeveer een minuut.</string>
-    <string name="signin_sub_grok">Gebruik je Grok-account; inloggen met Google of X kan ook. Je browser wordt geopend met een code; bevestig die daar en Buddy komt vanzelf terug.</string>
+    <string name="signin_sub_claude">Gebruik je Claude-account (Pro of Max). Je browser wordt geopend; keur het daar goed en Mr Do It komt vanzelf terug.</string>
+    <string name="signin_sub_chatgpt">Gebruik je ChatGPT-account (Plus, Pro of Business). Je browser wordt geopend; keur het daar goed en Mr Do It komt vanzelf terug.</string>
+    <string name="signin_sub_agy">Gebruik je Google-account. Je browser wordt geopend; log daar in en Mr Do It pakt de code vanzelf op. Antigravity wacht ongeveer een minuut.</string>
+    <string name="signin_sub_grok">Gebruik je Grok-account; inloggen met Google of X kan ook. Je browser wordt geopend met een code; bevestig die daar en Mr Do It komt vanzelf terug.</string>
     <string name="signin_with_claude">Inloggen met Claude</string>
     <string name="signin_with_chatgpt">Inloggen met ChatGPT</string>
     <string name="signin_with_google">Inloggen met Google</string>
@@ -702,10 +730,10 @@
     <string name="signin_sign_in">Inloggen</string>
     <string name="signin_starting">Inloggen wordt gestart…</string>
     <string name="signin_approve_title">Goedkeuren in je browser</string>
-    <string name="signin_approve_claude">Tik op de Claude-pagina op Autoriseren. Buddy pakt de code op en komt vanzelf terug.</string>
-    <string name="signin_approve_codex">Log in en geef Codex toegang. Kom daarna terug naar Buddy; de rest gaat vanzelf.</string>
-    <string name="signin_approve_agy">Log in en geef Antigravity toegang. Buddy pakt de code op die de pagina toont en komt vanzelf terug. Duurt het langer dan een minuut, start het inloggen dan opnieuw.</string>
-    <string name="signin_approve_grok">Controleer of de pagina %1$s toont, bevestig dan en log in. Buddy komt vanzelf terug.</string>
+    <string name="signin_approve_claude">Tik op de Claude-pagina op Autoriseren. Mr Do It pakt de code op en komt vanzelf terug.</string>
+    <string name="signin_approve_codex">Log in en geef Codex toegang. Kom daarna terug naar Mr Do It; de rest gaat vanzelf.</string>
+    <string name="signin_approve_agy">Log in en geef Antigravity toegang. Mr Do It pakt de code op die de pagina toont en komt vanzelf terug. Duurt het langer dan een minuut, start het inloggen dan opnieuw.</string>
+    <string name="signin_approve_grok">Controleer of de pagina %1$s toont, bevestig dan en log in. Mr Do It komt vanzelf terug.</string>
     <string name="signin_open_again">Inlogpagina opnieuw openen</string>
     <string name="signin_signing_in">Bezig met inloggen</string>
     <string name="signin_finishing">Inloggen afronden…</string>
@@ -714,9 +742,9 @@
     <!-- Sign-in screen: signing in from another device. -->
     <string name="signin_remote_claude">Open deze link op een willekeurig apparaat en keur het goed. Kopieer daarna de code die de pagina toont en plak die hieronder.</string>
     <string name="signin_enter_code">Voer deze code in</string>
-    <string name="signin_remote_codex">Open op een willekeurig apparaat de link hieronder, log in bij ChatGPT en voer de code in. Buddy rondt het vanzelf af.</string>
+    <string name="signin_remote_codex">Open op een willekeurig apparaat de link hieronder, log in bij ChatGPT en voer de code in. Mr Do It rondt het vanzelf af.</string>
     <string name="signin_remote_agy">Open deze link op een willekeurig apparaat en log in. Kopieer daarna de code die de pagina toont en plak die hieronder, binnen ongeveer een minuut.</string>
-    <string name="signin_remote_grok">Open op een willekeurig apparaat de link hieronder, log in bij Grok en bevestig de code. Buddy rondt het vanzelf af.</string>
+    <string name="signin_remote_grok">Open op een willekeurig apparaat de link hieronder, log in bij Grok en bevestig de code. Mr Do It rondt het vanzelf af.</string>
     <string name="signin_copy_code">Code kopiëren</string>
     <string name="signin_code_copied">Code gekopieerd</string>
     <string name="signin_code_expiry">De code is 15 minuten geldig.</string>
@@ -730,8 +758,8 @@
 
     <!-- Sign-in screen: fold-out box for pasting Claude's sign-in code by hand. -->
     <string name="signin_paste_instead">Code handmatig plakken</string>
-    <string name="signin_paste_help">Komt Buddy niet vanzelf terug? Tik op de Claude-pagina op “Code kopiëren” en plak de code hier.</string>
-    <string name="signin_paste_help_agy">Komt Buddy niet vanzelf terug? Tik op de Antigravity-pagina op “Copy to Clipboard” en plak de code hier.</string>
+    <string name="signin_paste_help">Komt Mr Do It niet vanzelf terug? Tik op de Claude-pagina op “Code kopiëren” en plak de code hier.</string>
+    <string name="signin_paste_help_agy">Komt Mr Do It niet vanzelf terug? Tik op de Antigravity-pagina op “Copy to Clipboard” en plak de code hier.</string>
     <string name="signin_code_hint">code</string>
     <string name="signin_use_code">Gebruiken</string>
     <string name="signin_start_again">Start eerst het inloggen opnieuw.</string>
@@ -742,11 +770,11 @@
     <string name="signin_done">Klaar</string>
     <string name="signin_sign_out">Uitloggen</string>
     <string name="signin_sign_out_title">Uitloggen bij %1$s?</string>
-    <string name="signin_sign_out_text">%1$s werkt in Buddy pas weer als je opnieuw inlogt.</string>
+    <string name="signin_sign_out_text">%1$s werkt in Mr Do It pas weer als je opnieuw inlogt.</string>
     <string name="signin_opencode_ready">OpenCode is klaar voor gebruik</string>
     <string name="signin_opencode_free">Gebruikt de gratis modellen van OpenCode. Kies per chat bovenaan een model, of koppel je eigen aanbieder.</string>
     <string name="signin_opencode_connected">Gekoppeld: %1$s. De gratis modellen van OpenCode blijven ook beschikbaar.</string>
-    <string name="signin_opencode_connect_note">Een aanbieder koppelen opent Buddy\'s terminal met %1$s: kies een aanbieder en volg de stappen. Voer daar later %2$s uit om er een te verwijderen.</string>
+    <string name="signin_opencode_connect_note">Een aanbieder koppelen opent Mr Do It\'s terminal met %1$s: kies een aanbieder en volg de stappen. Voer daar later %2$s uit om er een te verwijderen.</string>
     <string name="signin_connect_provider">Aanbieder koppelen</string>
     <string name="signin_version">%1$s %2$s.</string>
     <string name="signin_version_old_opencode">OpenCode %1$s. OpenCode 2 is uit: update om nieuwe versies te blijven krijgen. Je gekoppelde aanbieders blijven behouden.</string>
@@ -764,14 +792,14 @@
     <string name="account_tagline_agy">Gebruikt je Google-account</string>
     <string name="account_tagline_grok">Gebruikt je Grok-account</string>
     <string name="agent_tag_free">gratis · beperkt</string>
-    <string name="account_setting_up_linux">Buddy\'s Linux instellen…</string>
+    <string name="account_setting_up_linux">Mr Do It\'s Linux instellen…</string>
     <string name="account_installing_tools">Tools installeren…</string>
     <string name="account_downloading_claude">Claude Code downloaden (ongeveer 230 MB)…</string>
     <string name="account_downloading">%1$s downloaden…</string>
     <string name="account_check_failed">Kan %1$s niet controleren: %2$s</string>
     <string name="account_install_failed">Installatie mislukt: %1$s</string>
     <string name="account_install_no_space">Er is niet genoeg vrije ruimte op de telefoon. Maak ongeveer 1 GB vrij en probeer het opnieuw.</string>
-    <string name="account_install_network">Buddy kon de downloadserver niet bereiken. Controleer wifi of mobiele data (of een vpn of privé-dns die hem blokkeert) en probeer het opnieuw.</string>
+    <string name="account_install_network">Mr Do It kon de downloadserver niet bereiken. Controleer wifi of mobiele data (of een vpn of privé-dns die hem blokkeert) en probeer het opnieuw.</string>
     <string name="account_install_refused">De downloadserver weigerde het verzoek of vroeg om het rustiger aan te doen. Probeer het over een paar minuten opnieuw.</string>
     <string name="account_install_space_needed">Maar %1$s vrij. Een agent installeren vraagt ongeveer 1 GB: maak ruimte vrij en probeer het opnieuw.</string>
     <string name="signin_details">Details</string>
@@ -819,65 +847,65 @@
     <string name="remote_start_failed">Kan niet starten: %1$s</string>
     <string name="remote_keeps_stopping">De sessie stopt steeds. Zet hem uit en weer aan, of controleer of je bij Claude Code bent ingelogd.</string>
     <string name="codex_pair_getting">Code ophalen…</string>
-    <string name="codex_pair_text">Voer deze code in ChatGPT in: in Codex op een telefoon, of via Instellingen → Verbindingen → Andere apparaten bedienen op een computer. Hij werkt één keer, tot %1$s. Buddy staat daar als “localhost”.</string>
+    <string name="codex_pair_text">Voer deze code in ChatGPT in: in Codex op een telefoon, of via Instellingen → Verbindingen → Andere apparaten bedienen op een computer. Hij werkt één keer, tot %1$s. Mr Do It staat daar als “localhost”.</string>
     <string name="codex_pair_failed">Kan geen koppelcode ophalen: %1$s</string>
     <string name="codex_keeps_stopping">De Codex-sessie stopt steeds: %1$s</string>
     <string name="ssh_keeps_stopping">De SSH-server stopt steeds: %1$s</string>
-    <string name="ssh_key_added">Klaar. Typ ssh buddy om Buddy\'s Linux vanuit Termux te openen.</string>
-    <string name="ssh_code_expired">Deze opdracht is al gebruikt of is ouder dan 10 minuten. Kopieer hem opnieuw in de Instellingen van Buddy.</string>
+    <string name="ssh_key_added">Klaar. Typ ssh buddy om Mr Do It\'s Linux vanuit Termux te openen.</string>
+    <string name="ssh_code_expired">Deze opdracht is al gebruikt of is ouder dan 10 minuten. Kopieer hem opnieuw in de Instellingen van Mr Do It.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
 
     <!-- Settings screen: header. -->
     <string name="setup_settings_title">Instellingen</string>
-    <string name="setup_settings_subtitle">Buddy draait Claude Code, Codex, OpenCode, Antigravity of Grok in de app, met je eigen abonnement (of de gratis modellen van OpenCode en het gratis abonnement van Antigravity).</string>
+    <string name="setup_settings_subtitle">Mr Do It draait Claude Code, Codex, OpenCode, Antigravity of Grok in de app, met je eigen abonnement (of de gratis modellen van OpenCode en het gratis abonnement van Antigravity).</string>
     <string name="settings_agents">Agents en modellen</string>
     <string name="settings_agents_sub">Standaardagent, inloggen, API-sleutels, standaardmodellen, GitHub, downloadserver</string>
     <string name="settings_bubble">Bubbel en chat</string>
     <string name="settings_bubble_sub">Bubbel tonen, wat een tik doet, grootte van het paneel</string>
     <string name="settings_voice_sub">Spraakinvoer en -uitvoer, talen, live stem, antwoorden voorlezen</string>
     <string name="settings_safety">Veiligheid en goedkeuringen</string>
-    <string name="settings_safety_sub">App-rechten, meldingsregels, Linux-tools, Buddy\'s eigen schermen</string>
+    <string name="settings_safety_sub">App-rechten, meldingsregels, Linux-tools, Mr Do It\'s eigen schermen</string>
     <string name="settings_background">Achtergrond en automatisering</string>
     <string name="settings_background_sub">Achtergrondmodus, geplande taken, achtergrondbrowser</string>
     <string name="settings_tools">Tools en verbindingen</string>
     <string name="settings_tools_sub">MCP-servers, skills, telefoontools voor andere terminals, Remote Control, SSH</string>
-    <string name="settings_appearance_sub">Licht of donker, accentkleur, oppervlak, Buddy\'s uiterlijk</string>
+    <string name="settings_appearance_sub">Licht of donker, accentkleur, oppervlak, Mr Do It\'s uiterlijk</string>
     <string name="settings_about">Back-up en over</string>
-    <string name="settings_about_sub">Back-up en verhuizen, updates, de handleiding, de installatiecontrole</string>
+    <string name="settings_about_sub">Back-up en verhuizen, updates, de handleiding, Mr Do It controleren</string>
 
     <!-- Settings screen: the setup checklist card (5 steps). -->
     <string name="setup_card_title">Instellen</string>
     <string name="setup_open_guide">Stapsgewijze uitleg openen</string>
-    <string name="setup_all_set">Alles is ingesteld. Buddy is klaar voor gebruik.</string>
+    <string name="setup_all_set">Alles is ingesteld. Mr Do It is klaar voor gebruik.</string>
     <string name="setup_next_step">Volgende stap: %1$s</string>
-    <string name="setup_step_a11y_title">Toegankelijkheidsservice van Buddy aanzetten</string>
-    <string name="setup_step_a11y_body">Hiermee verschijnt de bubbel en kan Buddy het scherm lezen en voor je tikken en typen.</string>
+    <string name="setup_step_a11y_title">Toegankelijkheidsservice van Mr Do It aanzetten</string>
+    <string name="setup_step_a11y_body">Hiermee verschijnt de bubbel en kan Mr Do It het scherm lezen en voor je tikken en typen.</string>
     <string name="setup_step_a11y_restricted">Schakelaar grijs (“Beperkte instelling”)? Android blokkeert dit voor apps die vanuit een bestand zijn geïnstalleerd. Tik op App-info, dan rechtsboven op ⋮ → Beperkte instellingen toestaan, en probeer het opnieuw.</string>
     <string name="setup_open_settings">Instellingen openen</string>
     <string name="setup_app_info">App-info</string>
     <string name="setup_step_install_title">%1$s installeren</string>
-    <string name="setup_step_install_done">%1$s is geïnstalleerd in Buddy.</string>
-    <string name="setup_step_install_claude">Buddy downloadt zijn eigen kleine Linux en %1$s van Anthropic (ongeveer 235 MB).</string>
-    <string name="setup_step_install_opencode">Buddy downloadt zijn eigen kleine Linux en %1$s (ongeveer 230 MB met Node.js).</string>
-    <string name="setup_step_install_codex">Buddy downloadt zijn eigen kleine Linux en %1$s van OpenAI (ongeveer 150 MB).</string>
-    <string name="setup_step_install_grok">Buddy downloadt zijn eigen kleine Linux en %1$s van xAI (ongeveer 170 MB).</string>
+    <string name="setup_step_install_done">%1$s is geïnstalleerd in Mr Do It.</string>
+    <string name="setup_step_install_claude">Mr Do It downloadt zijn eigen kleine Linux en %1$s van Anthropic (ongeveer 235 MB).</string>
+    <string name="setup_step_install_opencode">Mr Do It downloadt zijn eigen kleine Linux en %1$s (ongeveer 230 MB met Node.js).</string>
+    <string name="setup_step_install_codex">Mr Do It downloadt zijn eigen kleine Linux en %1$s van OpenAI (ongeveer 150 MB).</string>
+    <string name="setup_step_install_grok">Mr Do It downloadt zijn eigen kleine Linux en %1$s van xAI (ongeveer 170 MB).</string>
     <string name="setup_install">Installeren</string>
     <string name="setup_step_signin_title">Inloggen</string>
     <string name="setup_step_signin_opencode_done">Inloggen is niet nodig: de gratis modellen van OpenCode werken meteen. Koppel je eigen aanbieders wanneer je wilt.</string>
     <string name="setup_step_signin_opencode">Voor de gratis modellen van OpenCode hoef je niet in te loggen.</string>
     <string name="setup_step_signin_done">Ingelogd.</string>
     <string name="setup_step_signin_done_email">Ingelogd als %1$s.</string>
-    <string name="setup_step_signin_claude">Met je Claude-account (Pro of Max). Je browser wordt geopend; keur het daar goed en Buddy komt vanzelf terug.</string>
-    <string name="setup_step_signin_codex">Met je ChatGPT-account. Je browser wordt geopend; keur het daar goed en Buddy komt vanzelf terug.</string>
-    <string name="setup_step_signin_grok">Met je Grok-account. Je browser wordt geopend; bevestig daar de code en Buddy komt vanzelf terug.</string>
+    <string name="setup_step_signin_claude">Met je Claude-account (Pro of Max). Je browser wordt geopend; keur het daar goed en Mr Do It komt vanzelf terug.</string>
+    <string name="setup_step_signin_codex">Met je ChatGPT-account. Je browser wordt geopend; keur het daar goed en Mr Do It komt vanzelf terug.</string>
+    <string name="setup_step_signin_grok">Met je Grok-account. Je browser wordt geopend; bevestig daar de code en Mr Do It komt vanzelf terug.</string>
     <string name="setup_sign_in">Inloggen</string>
-    <string name="setup_step_background_title">Buddy op de achtergrond laten draaien</string>
+    <string name="setup_step_background_title">Mr Do It op de achtergrond laten draaien</string>
     <string name="setup_step_background_done">Toegestaan.</string>
-    <string name="setup_step_background_body">Zodat je telefoon Buddy niet stopt om batterij te sparen terwijl de agent bezig is.</string>
+    <string name="setup_step_background_body">Zodat je telefoon Mr Do It niet stopt om batterij te sparen terwijl de agent bezig is.</string>
     <string name="setup_allow">Toestaan</string>
     <string name="setup_step_try_title">Uitproberen</string>
-    <string name="setup_step_try_done">Buddy heeft je geantwoord. Tik wanneer je wilt op de bubbel om meer te vragen.</string>
+    <string name="setup_step_try_done">Mr Do It heeft je geantwoord. Tik wanneer je wilt op de bubbel om meer te vragen.</string>
     <string name="setup_step_try_body">Tik op de bubbel aan de rand van je scherm en vraag bijvoorbeeld “open Messenger”, of start hier een chat.</string>
     <string name="setup_step_try_wait">Rond eerst de stappen hierboven af.</string>
     <!-- Short names of the setup steps, shown after "Next:" in the Chats header. -->
@@ -890,17 +918,17 @@
     <string name="setup_theme_mode">Modus</string>
     <string name="setup_accent">Accentkleur</string>
     <string name="setup_surface">Achtergrond</string>
-    <string name="setup_surface_note">Warm is de oorspronkelijke tint van Buddy. Zwart (echt zwart) geldt alleen in de donkere modus.</string>
-    <string name="setup_face">Uiterlijk van Buddy</string>
+    <string name="setup_surface_note">Warm is de oorspronkelijke tint van Mr Do It. Zwart (echt zwart) geldt alleen in de donkere modus.</string>
+    <string name="setup_face">Uiterlijk van Mr Do It</string>
     <string name="setup_face_buddy">Origineel</string>
     <string name="setup_face_picture">Eigen afbeelding</string>
-    <string name="setup_face_note">Een PNG of WebP met een transparante achtergrond werkt het best. Hij staat op de bubbel en naast de antwoorden van Buddy.</string>
+    <string name="setup_face_note">Een PNG of WebP met een transparante achtergrond werkt het best. Hij staat op de bubbel en naast de antwoorden van Mr Do It.</string>
     <string name="setup_face_change">Andere afbeelding kiezen</string>
     <string name="setup_face_unreadable">Die afbeelding kan niet worden gelezen. Probeer een PNG of WebP.</string>
     <string name="setup_custom_colour">Eigen kleur</string>
     <string name="setup_mirror">Downloadserver</string>
     <string name="setup_mirror_default">Standaard</string>
-    <string name="setup_mirror_info">Waar Buddy\'s Linux, de pakketten en de agents die met npm worden geïnstalleerd (Codex, OpenCode) vandaan komen. Laat dit op Standaard, tenzij installaties bij jou mislukken of erg traag zijn. Met een andere server gebruikt Buddy\'s Linux ook de DNS-servers van je eigen netwerk.</string>
+    <string name="setup_mirror_info">Waar Mr Do It\'s Linux, de pakketten en de agents die met npm worden geïnstalleerd (Codex, OpenCode) vandaan komen. Laat dit op Standaard, tenzij installaties bij jou mislukken of erg traag zijn. Met een andere server gebruikt Mr Do It\'s Linux ook de DNS-servers van je eigen netwerk.</string>
     <string name="setup_mirror_default_sub">De eigen servers van Alpine en npm</string>
     <string name="setup_mirror_china">Chinees vasteland</string>
     <string name="setup_mirror_russia">Rusland</string>
@@ -934,7 +962,7 @@
 
     <!-- Settings screen: Phone tools in your own sessions (MCP server). -->
     <string name="setup_phone_tools">Telefoontools in je eigen sessies</string>
-    <string name="setup_phone_tools_info">De telefoontools van Buddy zijn een gewone MCP-server op deze telefoon. Voer deze opdracht één keer uit in een terminal op de telefoon (bijvoorbeeld in Termux), dan krijgt de agent daar de telefoontools in elke sessie, ook zonder de bubbel.</string>
+    <string name="setup_phone_tools_info">De telefoontools van Mr Do It zijn een gewone MCP-server op deze telefoon. Voer deze opdracht één keer uit in een terminal op de telefoon (bijvoorbeeld in Termux), dan krijgt de agent daar de telefoontools in elke sessie, ook zonder de bubbel.</string>
     <string name="setup_copy_command">Opdracht kopiëren</string>
     <string name="setup_command_copied">Gekopieerd. Plak het in je terminal.</string>
     <string name="setup_outside_background">Op de achtergrond werken</string>
@@ -945,12 +973,14 @@
     <string name="setup_tailnet_no_address">Tailscale is niet verbonden op deze telefoon, dus computers bereiken hem nu niet.</string>
     <string name="setup_tailnet_computer">Computer %1$d</string>
     <string name="setup_tailnet_pair_info">Voer dit op de computer, met Tailscale aan, uit in een terminal. Deze telefoon vraagt je dan om goedkeuring, en Claude Code op de computer krijgt de telefoontools met een eigen sleutel.</string>
-    <string name="tools_card_pair">De computer ‘%1$s’ (Tailscale %2$s) koppelen? Hij krijgt Buddy\'s telefoontools met een eigen sleutel, die je in Instellingen kunt verwijderen.</string>
+    <string name="tools_card_pair">De computer ‘%1$s’ (Tailscale %2$s) koppelen? Hij krijgt Mr Do It\'s telefoontools met een eigen sleutel, die je in Instellingen kunt verwijderen.</string>
 
     <!-- Settings screen: Voice. -->
     <string name="setup_voice">Spraak</string>
-    <string name="setup_assist">Als Buddy de assistent van je telefoon is</string>
-    <string name="setup_assist_info">Kies Buddy in Androids Instellingen → Apps → Standaard-apps → App voor digitale assistent. Lang op de aan/uit-knop drukken start dan Buddy: Spreken stuurt één verzoek, Live stem start een gesproken gesprek (Codex moet ingelogd zijn, anders is het Spreken).</string>
+    <string name="setup_assist">Als Mr Do It de assistent van je telefoon is</string>
+    <string name="setup_assist_info">Kies Mr Do It in Androids Instellingen → Apps → Standaard-apps → App voor digitale assistent. Lang op de aan/uit-knop drukken start dan Mr Do It: Spreken stuurt één verzoek, Live stem start een gesproken gesprek (Codex moet ingelogd zijn, anders is het Spreken).</string>
+    <string name="setup_assist_unlocked">Alleen als de telefoon ontgrendeld is</string>
+    <string name="setup_assist_unlocked_info">De aan/uit-knop lang indrukken doet niets op het vergrendelscherm of in stand-by.</string>
     <string name="setup_live_agent">Live stem gebruikt</string>
     <string name="setup_live_agent_default">Standaard</string>
     <string name="setup_live_agent_info">Live stem via de vastgehouden bubbel of de aan/uit-knop start een nieuwe chat met deze agent. Standaard is je standaardagent (nu %1$s).</string>
@@ -958,13 +988,13 @@
     <string name="setup_live_continue_info">Aan: live stem gaat verder in je laatste chat met die agent. Uit: elke keer een nieuwe chat.</string>
     <string name="setup_voice_input">Spraakinvoer</string>
     <string name="setup_voice_phone">Telefoon</string>
-    <string name="setup_voice_input_claude">De dicteerfunctie van Claude Code via je Claude-abonnement: zeer nauwkeurig. Ondersteunt Engels, Frans, Duits, Spaans, Italiaans, Portugees, Nederlands, Turks, Russisch, Japans en meer, maar geen Arabisch: daarvoor gebruikt Buddy de spraakherkenning van de telefoon. De woorden verschijnen als je even pauzeert.</string>
+    <string name="setup_voice_input_claude">De dicteerfunctie van Claude Code via je Claude-abonnement: zeer nauwkeurig. Ondersteunt Engels, Frans, Duits, Spaans, Italiaans, Portugees, Nederlands, Turks, Russisch, Japans en meer, maar geen Arabisch: daarvoor gebruikt Mr Do It de spraakherkenning van de telefoon. De woorden verschijnen als je even pauzeert.</string>
     <string name="setup_voice_input_chatgpt">De stem van ChatGPT via Codex, met je ChatGPT-abonnement. Begrijpt elke taal, zelfs gemengd in één zin. Alleen je woorden worden gebruikt: de gesproken antwoorden van ChatGPT zijn gedempt en het kan niets uitvoeren.</string>
     <string name="setup_voice_input_phone">De spraakherkenning van je telefoon (op de meeste telefoons die van Google). Live tekst terwijl je praat; herkent welke van je talen je spreekt.</string>
     <string name="setup_voice_output">Spraakuitvoer</string>
     <string name="setup_voice_output_chatgpt">Antwoorden worden voorgelezen met de natuurlijke stem van ChatGPT (je ChatGPT-abonnement, via Codex). Dit telt mee voor je ChatGPT-spraakgebruik; als die stem niet beschikbaar is, leest de stem van de telefoon voor.</string>
     <string name="setup_voice_output_phone">De tekst-naar-spraakstemmen van je telefoon, in de taal van het antwoord.</string>
-    <string name="setup_voice_sample">Bonjour ! Hoi, ik ben Buddy. Zo klink ik.</string>
+    <string name="setup_voice_sample">Bonjour ! Hoi, ik ben Mr Do It. Zo klink ik.</string>
     <string name="setup_languages">Talen</string>
     <string name="setup_languages_hint">Tik om de talen te kiezen die je spreekt. Houd er een ingedrukt om die als standaard in te stellen. Houd in een chat de microfoon ingedrukt om van taal te wisselen.</string>
     <string name="setup_sign_in_first">Log eerst in bij %1$s</string>
@@ -975,7 +1005,7 @@
     <!-- Settings screen: Remote Control (a Claude Code session you continue from the Claude app). -->
     <string name="setup_remote_control">Remote Control</string>
     <string name="setup_remote_session">Claude Code-sessie</string>
-    <string name="setup_remote_session_info">Een Claude Code-sessie die binnen Buddy draait, met de telefoontools. Ga ermee verder vanuit de Claude-app (Code) op deze telefoon of waar dan ook.</string>
+    <string name="setup_remote_session_info">Een Claude Code-sessie die binnen Mr Do It draait, met de telefoontools. Ga ermee verder vanuit de Claude-app (Code) op deze telefoon of waar dan ook.</string>
     <string name="setup_remote_sign_in_first">Log eerst in bij Claude Code.</string>
     <string name="setup_remote_active">actief · “%1$s” in de Claude-app</string>
     <string name="setup_remote_starting">starten…</string>
@@ -983,13 +1013,13 @@
     <string name="setup_remote_open">Openen in de Claude-app</string>
     <string name="setup_remote_open_failed">Openen is mislukt.</string>
     <string name="setup_codex_session">Codex-sessie</string>
-    <string name="setup_codex_session_info">Codex met de telefoontools, binnen Buddy. Gebruik het vanuit de ChatGPT-app (Codex) op deze telefoon of op een computer. De sandbox van Codex werkt hier niet, dus met standaardrechten vraagt het voor elke opdracht toestemming.</string>
+    <string name="setup_codex_session_info">Codex met de telefoontools, binnen Mr Do It. Gebruik het vanuit de ChatGPT-app (Codex) op deze telefoon of op een computer. De sandbox van Codex werkt hier niet, dus met standaardrechten vraagt het voor elke opdracht toestemming.</string>
     <string name="setup_codex_active">actief · “localhost” in ChatGPT</string>
     <string name="setup_codex_pair">Apparaat koppelen</string>
     <string name="setup_ssh">SSH vanuit Termux</string>
-    <string name="setup_ssh_info">Gebruik Buddy\'s Linux vanuit Termux, via SSH. Alleen apps op deze telefoon kunnen verbinden, en alleen met een sleutel.</string>
+    <string name="setup_ssh_info">Gebruik Mr Do It\'s Linux vanuit Termux, via SSH. Alleen apps op deze telefoon kunnen verbinden, en alleen met een sleutel.</string>
     <string name="setup_ssh_active">actief · poort %1$d</string>
-    <string name="setup_ssh_how">Kopieer deze opdracht en voer hem binnen 10 minuten één keer uit in Termux. Typ daarna ssh buddy in Termux om Buddy\'s Linux te openen.</string>
+    <string name="setup_ssh_how">Kopieer deze opdracht en voer hem binnen 10 minuten één keer uit in Termux. Typ daarna ssh buddy in Termux om Mr Do It\'s Linux te openen.</string>
 
     <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
     <string name="setup_old_chats_title">Oude Termux-chats verwijderen</string>
@@ -1001,49 +1031,51 @@
         <item quantity="one">%1$d oude chat verwijderen?</item>
         <item quantity="other">%1$d oude chats verwijderen?</item>
     </plurals>
-    <string name="setup_old_chats_remove_body">Hiermee verdwijnen ze uit de chatlijst van Buddy. Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="setup_old_chats_remove_body">Hiermee verdwijnen ze uit de chatlijst van Mr Do It. Dit kan niet ongedaan worden gemaakt.</string>
     <string name="setup_remove">Verwijderen</string>
     <string name="setup_removed">Verwijderd.</string>
 
     <!-- Settings screen: Experience. -->
     <string name="setup_chat_bubble">Chatbubbel</string>
     <string name="setup_chat_bubble_info">Zweeft boven andere apps. Sleep hem naar het ✕ om hem te verbergen; goedkeuringskaarten verschijnen nog steeds als een agent je akkoord nodig heeft.</string>
+    <string name="setup_bubble_hide_in_app">Verbergen terwijl Mr Do It open is</string>
+    <string name="setup_bubble_hide_in_app_info">Geen bubbel boven Mr Do It\'s eigen schermen. Voor een goedkeuringskaart of een vraag verschijnt hij daar toch, en hij is terug zodra je Mr Do It verlaat.</string>
     <string name="setup_tap_action">Tikken op de bubbel</string>
     <string name="setup_tap_panel">Chatpaneel</string>
     <string name="setup_tap_talk">Spreken</string>
     <string name="setup_tap_app">Hele app</string>
     <string name="setup_tap_panel_info">Opent de zwevende chat boven de app die je gebruikt. Houd de bubbel ingedrukt voor meer.</string>
-    <string name="setup_tap_app_info">Opent de chat op volledig scherm in Buddy. Houd de bubbel ingedrukt voor meer.</string>
+    <string name="setup_tap_app_info">Opent de chat op volledig scherm in Mr Do It. Houd de bubbel ingedrukt voor meer.</string>
     <string name="setup_panel_size">Grootte van het chatpaneel</string>
     <string name="setup_panel_full">Volledig</string>
     <string name="setup_panel_compact">Compact</string>
     <string name="setup_panel_size_info">Volledig loopt van rand tot rand. Compact is kleiner en blijft uit de buurt van de schermranden, zodat veeggebaren vanaf de zijkant blijven werken.</string>
     <string name="setup_tap_to_talk_info">Eén tik opent de microfoon: zeg wat je wilt en het wordt verzonden zodra je pauzeert. Houd de bubbel ingedrukt voor de chat en meer.</string>
     <string name="setup_read_aloud">Antwoorden voorlezen</string>
-    <string name="setup_read_aloud_info">Buddy leest de antwoorden van de agents voor, met de stem die je kiest onder Spraak.</string>
+    <string name="setup_read_aloud_info">Mr Do It leest de antwoorden van de agents voor, met de stem die je kiest onder Spraak.</string>
     <string name="setup_pause_media">Media pauzeren tijdens het voorlezen</string>
-    <string name="setup_pause_media_info">Muziek of een video die speelt, wordt gepauzeerd terwijl Buddy een antwoord voorleest en gaat daarna verder. Buddy hervat alleen wat het zelf heeft gepauzeerd, en niet als je het afspelen intussen hebt gewijzigd. Vereist ‘Antwoorden voorlezen’ en toegang tot meldingen.</string>
+    <string name="setup_pause_media_info">Muziek of een video die speelt, wordt gepauzeerd terwijl Mr Do It een antwoord voorleest en gaat daarna verder. Mr Do It hervat alleen wat het zelf heeft gepauzeerd, en niet als je het afspelen intussen hebt gewijzigd. Vereist ‘Antwoorden voorlezen’ en toegang tot meldingen.</string>
     <string name="setup_pause_listening">Media pauzeren tijdens luisteren</string>
-    <string name="setup_pause_listening_info">Muziek of een video die speelt, wordt gepauzeerd terwijl Buddy naar je luistert, zodat het je stem hoort en niet de video, en speelt daarna verder. Staat ook „Media pauzeren tijdens het voorlezen” aan, dan blijft het gepauzeerd tot het antwoord is voorgelezen. Buddy hervat alleen wat het zelf pauzeerde, en niet als je het afspelen intussen hebt veranderd. Vereist toegang tot meldingen.</string>
+    <string name="setup_pause_listening_info">Muziek of een video die speelt, wordt gepauzeerd terwijl Mr Do It naar je luistert, zodat het je stem hoort en niet de video, en speelt daarna verder. Staat ook „Media pauzeren tijdens het voorlezen” aan, dan blijft het gepauzeerd tot het antwoord is voorgelezen. Mr Do It hervat alleen wat het zelf pauzeerde, en niet als je het afspelen intussen hebt veranderd. Vereist toegang tot meldingen.</string>
     <string name="setup_voice_cards">Kaarten met je stem beantwoorden</string>
-    <string name="setup_voice_cards_info">Nadat een kaart is voorgelezen, luistert Buddy: zeg ‘goedkeuren’ of ‘weigeren’, of de optie die je wilt. Vereist ‘Antwoorden voorlezen’. Niet als de telefoon vergrendeld is. Iedereen binnen gehoorsafstand kan antwoorden.</string>
-    <string name="voice_card_approval">Buddy heeft je OK nodig. %1$s</string>
-    <string name="voice_card_question">Buddy vraagt: %1$s Opties: %2$s</string>
+    <string name="setup_voice_cards_info">Nadat een kaart is voorgelezen, luistert Mr Do It: zeg ‘goedkeuren’ of ‘weigeren’, of de optie die je wilt. Vereist ‘Antwoorden voorlezen’. Niet als de telefoon vergrendeld is. Iedereen binnen gehoorsafstand kan antwoorden.</string>
+    <string name="voice_card_approval">Mr Do It heeft je OK nodig. %1$s</string>
+    <string name="voice_card_question">Mr Do It vraagt: %1$s Opties: %2$s</string>
     <string name="voice_card_hint">Zeg goedkeuren of weigeren.</string>
     <string name="voice_card_yes">goedkeuren,goedgekeurd,ja,oké,ok,ga door,doe maar</string>
     <string name="voice_card_no">weigeren,geweigerd,nee,stop,annuleren,niet doen</string>
     <string name="setup_update_notices">Updatemeldingen</string>
-    <string name="setup_update_notices_info">Buddy controleert GitHub één keer per dag en laat het je weten als er een nieuwe versie is.</string>
+    <string name="setup_update_notices_info">Mr Do It controleert GitHub één keer per dag en laat het je weten als er een nieuwe versie is.</string>
     <string name="setup_check_updates">Controleren op updates</string>
-    <string name="setup_check_updates_info">Je hebt Buddy %1$s. Of vraag een willekeurige agent: “update jezelf”.</string>
+    <string name="setup_check_updates_info">Je hebt Mr Do It %1$s. Of vraag een willekeurige agent: “update jezelf”.</string>
     <string name="setup_app_permissions">App-rechten</string>
-    <string name="setup_app_permissions_info">Kies per app: met Vrij werkt de agent daar zonder pop-ups; met Streng vraagt Buddy het je zelf vóór Verzenden, Betalen, Verwijderen…</string>
+    <string name="setup_app_permissions_info">Kies per app: met Vrij werkt de agent daar zonder pop-ups; met Streng vraagt Mr Do It het je zelf vóór Verzenden, Betalen, Verwijderen…</string>
     <string name="setup_dev_mode">Linux-tools in nieuwe chats</string>
     <string name="setup_dev_mode_info">Met Linux-tools mag de agent opdrachten uitvoeren, pakketten installeren en bestanden bewerken in ~/.buddy/work, zodat hij apps kan bouwen. Nieuwe chats beginnen met deze instelling; elke chat kan die onder zijn titel wijzigen.</string>
-    <string name="setup_agents_tap">Agents laten tikken op Buddy\'s schermen</string>
-    <string name="setup_agents_tap_info">Om Buddy met een agent te testen (bijvoorbeeld Claude Code in Termux met de telefoontools). Agents kunnen dan de chatlijst, een chat en dit instellingenscherm gebruiken. Alles wat bepaalt wat ze mogen, blijft van jou: de bubbel, goedkeuringskaarten, Linux-tools, chatopties en planningen, en de schermen voor app-machtigingen, sleutels, regels, skills, achtergrondmodus en back-up.</string>
+    <string name="setup_agents_tap">Agents laten tikken op Mr Do It\'s schermen</string>
+    <string name="setup_agents_tap_info">Om Mr Do It met een agent te testen (bijvoorbeeld Claude Code in Termux met de telefoontools). Agents kunnen dan de chatlijst, een chat en dit instellingenscherm gebruiken. Alles wat bepaalt wat ze mogen, blijft van jou: de bubbel, goedkeuringskaarten, Linux-tools, chatopties en planningen, en de schermen voor app-machtigingen, sleutels, regels, skills, achtergrondmodus en back-up.</string>
     <string name="setup_ask_new_apps">Vragen bij elke nieuwe app</string>
-    <string name="setup_ask_new_apps_info">De eerste keer dat een agent werkt in een app die je niet hebt ingesteld bij %1$s, vraagt Buddy of hij daar zelfstandig mag werken of het eerst moet vragen, en onthoudt je antwoord voor die app. Alleen in chats op Vragen, en nooit voor bank- en betaalapps, Instellingen en appwinkels, die altijd vragen.</string>
+    <string name="setup_ask_new_apps_info">De eerste keer dat een agent werkt in een app die je niet hebt ingesteld bij %1$s, vraagt Mr Do It of hij daar zelfstandig mag werken of het eerst moet vragen, en onthoudt je antwoord voor die app. Alleen in chats op Vragen, en nooit voor bank- en betaalapps, Instellingen en appwinkels, die altijd vragen.</string>
     <string name="first_app_question">Voor het eerst werkt een agent in %1$s. Mag hij daar zelfstandig werken, of moet hij het eerst vragen? Je kunt dit later wijzigen bij %2$s.</string>
     <string name="first_app_trust">%1$s: werkt zelfstandig</string>
     <string name="first_app_hard">%1$s: vraagt het eerst</string>
@@ -1075,7 +1107,7 @@
     <string name="terminal_session_ended_code">Sessie beëindigd · exitcode %1$d</string>
     <string name="terminal_close">Sluiten</string>
     <string name="terminal_restart">Opnieuw starten</string>
-    <string name="terminal_needs_linux">Installeer eerst Claude Code, Codex, OpenCode, Antigravity of Grok via Instellingen: daarmee wordt Buddy\'s Linux ingesteld.</string>
+    <string name="terminal_needs_linux">Installeer eerst Claude Code, Codex, OpenCode, Antigravity of Grok via Instellingen: daarmee wordt Mr Do It\'s Linux ingesteld.</string>
     <string name="terminal_start_failed">Kan de terminal niet starten: %1$s</string>
     <string name="terminal_close_title">%1$s sluiten?</string>
     <string name="terminal_close_running">Er draait nog iets. Sluiten stopt het, samen met alles wat het heeft gestart.</string>
@@ -1099,15 +1131,15 @@
     <string name="monitor_title">Sessies</string>
     <string name="monitor_subtitle">Alle sessies van Claude Code, Codex, OpenCode, Antigravity en Grok op deze telefoon.</string>
     <string name="monitor_terminal_running">Er draait een shell · tik om terug te gaan</string>
-    <string name="monitor_terminal_idle">Een shell in Buddy\'s Linux</string>
+    <string name="monitor_terminal_idle">Een shell in Mr Do It\'s Linux</string>
     <string name="monitor_running_now">Nu actief</string>
     <string name="monitor_refresh">ververst elke 3 s</string>
     <string name="monitor_checking">Controleren…</string>
     <string name="monitor_recent">Recent</string>
     <string name="monitor_loading">Laden…</string>
-    <string name="monitor_service_off">De toegankelijkheidsservice van Buddy staat uit, dus sessies kunnen niet worden gecontroleerd. Zet hem aan in Instellingen.</string>
+    <string name="monitor_service_off">De toegankelijkheidsservice van Mr Do It staat uit, dus sessies kunnen niet worden gecontroleerd. Zet hem aan in Instellingen.</string>
     <string name="monitor_nothing_running">Niets actief.</string>
-    <string name="monitor_deleted_chat">Verwijderde Buddy-chat</string>
+    <string name="monitor_deleted_chat">Verwijderde Mr Do It-chat</string>
     <string name="monitor_background_session">Achtergrondsessie</string>
     <string name="monitor_terminal_session">Terminalsessie</string>
     <string name="monitor_tag_background">achtergrond</string>
@@ -1117,8 +1149,8 @@
     <string name="monitor_open_chat">Chat openen</string>
     <string name="monitor_stop">Stoppen</string>
     <string name="monitor_stop_title">Deze sessie van %1$s stoppen?</string>
-    <string name="monitor_stop_background_body">Deze draait op de achtergrond, bijvoorbeeld een chat die je voortzet vanuit de Claude-app. Het kan zelfs de sessie zijn die Buddy bestuurt. Stoppen beëindigt het huidige werk van dat gesprek.</string>
-    <string name="monitor_stop_terminal_body">Misschien gebruik je deze sessie nu in een terminal. Het kan zelfs de sessie zijn die Buddy bestuurt. Stoppen beëindigt het huidige werk van dat gesprek.</string>
+    <string name="monitor_stop_background_body">Deze draait op de achtergrond, bijvoorbeeld een chat die je voortzet vanuit de Claude-app. Het kan zelfs de sessie zijn die Mr Do It bestuurt. Stoppen beëindigt het huidige werk van dat gesprek.</string>
+    <string name="monitor_stop_terminal_body">Misschien gebruik je deze sessie nu in een terminal. Het kan zelfs de sessie zijn die Mr Do It bestuurt. Stoppen beëindigt het huidige werk van dat gesprek.</string>
     <string name="monitor_stopping">Stoppen…</string>
     <string name="monitor_service_title">Achtergrondservice van Claude Code</string>
     <string name="monitor_service_meta">pid %1$d · looptijd %2$s · voor achtergrondsessies</string>
@@ -1134,7 +1166,7 @@
     <string name="perms_mode_trust">Vrij</string>
     <string name="perms_mode_hard">Streng</string>
     <string name="perms_mode_smart">Slim</string>
-    <string name="perms_modes_intro">Vrij: de agent werkt hier zelfstandig, zonder om goedkeuring te vragen.\nStreng: je knopregels beslissen. Verzenden, Betalen, Verwijderen… hebben je akkoord nodig op een kaart.\nSlim: eerst de regels, daarna controleert een aparte AI-beoordelaar elke andere tik aan de hand van je verzoek.\nDe agent kan nooit tikken op Buddy\'s eigen bubbel, kaarten of instellingen.</string>
+    <string name="perms_modes_intro">Vrij: de agent werkt hier zelfstandig, zonder om goedkeuring te vragen.\nStreng: je knopregels beslissen. Verzenden, Betalen, Verwijderen… hebben je akkoord nodig op een kaart.\nSlim: eerst de regels, daarna controleert een aparte AI-beoordelaar elke andere tik aan de hand van je verzoek.\nDe agent kan nooit tikken op Mr Do It\'s eigen bubbel, kaarten of instellingen.</string>
     <string name="perms_smart_reviewer">Beoordelaar voor Slim</string>
     <string name="perms_reviewer_same">Als de chat</string>
     <string name="perms_reviewer_sign_in">Log eerst in bij %1$s (Instellingen).</string>
@@ -1151,7 +1183,7 @@
     <!-- Button rules screen: buttons that always or never need the user's OK. -->
     <string name="perms_rules_intro">Voor apps op Streng of Slim. Een regel uit de suggesties geldt voor die app; getypte tekst geldt voor alle apps. Tik op een regel om hem te verwijderen.</string>
     <string name="perms_builtin_title">Ingebouwde risicowoorden</string>
-    <string name="perms_builtin_sub">Bij knoppen als Verzenden, Plaatsen, Betalen, Kopen, Bestellen, Verwijderen, Bellen, Uitloggen… wordt altijd eerst gevraagd, in elke taal van Buddy.</string>
+    <string name="perms_builtin_sub">Bij knoppen als Verzenden, Plaatsen, Betalen, Kopen, Bestellen, Verwijderen, Bellen, Uitloggen… wordt altijd eerst gevraagd, in elke taal van Mr Do It.</string>
     <string name="perms_always_ask">Altijd vragen</string>
     <string name="perms_never_ask">Nooit vragen</string>
     <string name="perms_ask">Vragen</string>
@@ -1178,7 +1210,7 @@
     <string name="tools_card_enter_in">In %1$s op Enter drukken om te verzenden</string>
     <string name="tools_card_detail">%1$s:\n%2$s</string>
     <string name="tools_card_quote">“%1$s”</string>
-    <string name="tools_card_no_reviewer">Er is geen beoordelaar ingelogd, dus Buddy vraagt het jou.</string>
+    <string name="tools_card_no_reviewer">Er is geen beoordelaar ingelogd, dus Mr Do It vraagt het jou.</string>
     <string name="tools_card_reviewer_block">%1$s raadt het af: %2$s</string>
     <string name="tools_card_reviewer_ask">%1$s raadt aan het jou te vragen: %2$s</string>
 
@@ -1187,7 +1219,7 @@
     <string name="tools_status_tap_install">Tik op Installeren en bevestig daarna</string>
     <string name="tools_status_tap_update">Tik op Updaten en bevestig daarna</string>
     <string name="tools_status_installed">Geïnstalleerd</string>
-    <string name="tools_status_downloading">Buddy %1$s downloaden…</string>
+    <string name="tools_status_downloading">Mr Do It %1$s downloaden…</string>
 
     <!-- Smart reviewer: its reason when it fails, shown on the approval card after "Claude says ask you:", so lowercase. -->
     <string name="reviewer_failed">de beoordelaar kon niet antwoorden (%1$s)</string>
@@ -1195,7 +1227,7 @@
     <string name="reviewer_timed_out">time-out</string>
 
     <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
-    <string name="helper_linux_missing">Buddy\'s Linux is nog niet geïnstalleerd. Open Instellingen om het in te stellen.</string>
+    <string name="helper_linux_missing">Mr Do It\'s Linux is nog niet geïnstalleerd. Open Instellingen om het in te stellen.</string>
 
     <!-- Voice input (dictation): "Claude voice" and "ChatGPT voice" are the two voice input options. -->
     <string name="dictation_claude_sign_in">Log via Instellingen in bij Claude Code om Claude-spraak te gebruiken.</string>
@@ -1236,11 +1268,11 @@
     <string name="tools_card_clipboard">Mag de agent lezen wat je het laatst hebt gekopieerd?</string>
     <string name="tools_card_location">De locatie van deze telefoon met de agent delen?</string>
     <string name="tools_photo_why">Maak een foto: %1$s</string>
-    <string name="rules_service_label">Buddy-meldingsregels</string>
+    <string name="rules_service_label">Mr Do It-meldingsregels</string>
     <string name="rules_title">Meldingsregels</string>
-    <string name="rules_intro">Als er een melding binnenkomt die je hebt gekozen, geeft Buddy je instructie door aan een agent, net als een bericht dat je zelf zou typen. Meldingen waarop geen enkele regel van toepassing is, worden genegeerd.</string>
+    <string name="rules_intro">Als er een melding binnenkomt die je hebt gekozen, geeft Mr Do It je instructie door aan een agent, net als een bericht dat je zelf zou typen. Meldingen waarop geen enkele regel van toepassing is, worden genegeerd.</string>
     <string name="rules_access_off_title">Toegang tot meldingen staat uit</string>
-    <string name="rules_access_off_text">Buddy heeft dit nodig om de meldingen te zien waar je regels op letten.</string>
+    <string name="rules_access_off_text">Mr Do It heeft dit nodig om de meldingen te zien waar je regels op letten.</string>
     <string name="rules_access_turn_on">Aanzetten</string>
     <string name="rules_run">Regels uitvoeren</string>
     <string name="rules_run_info">Zet uit om alle regels te pauzeren.</string>
@@ -1286,12 +1318,12 @@
     <string name="waiting_open_chat">Chat openen</string>
     <string name="waiting_state_wrote_again">%1$s heeft sindsdien weer geschreven: dit antwoord is misschien verouderd.</string>
     <string name="waiting_state_answered">Je hebt al geantwoord in %1$s.</string>
-    <string name="waiting_state_gone">De melding is weg: Buddy kopieert het antwoord en opent %1$s om het te plakken.</string>
+    <string name="waiting_state_gone">De melding is weg: Mr Do It kopieert het antwoord en opent %1$s om het te plakken.</string>
     <string name="waiting_sent">Verstuurd naar %1$s</string>
     <string name="waiting_copied">Gekopieerd. Plak het in %1$s.</string>
     <string name="waiting_note_sent">✓ Verstuurd vanuit “Wacht op jou”: %1$s</string>
     <string name="rules_log_error">Niet uitgevoerd: %1$s</string>
-    <string name="rules_log_no_service">de toegankelijkheidsservice van Buddy staat uit</string>
+    <string name="rules_log_no_service">de toegankelijkheidsservice van Mr Do It staat uit</string>
     <string name="rules_log_not_signed_in">%1$s is niet ingelogd</string>
     <string name="rules_new">Nieuwe regel</string>
     <string name="rules_edit">Regel bewerken</string>
@@ -1302,7 +1334,7 @@
     <string name="rules_from_hint">Iedereen, of namen gescheiden door komma\'s</string>
     <string name="rules_words">Bevat (optioneel)</string>
     <string name="rules_words_hint">Alles, of woorden gescheiden door komma\'s</string>
-    <string name="rules_instruction">Wat moet Buddy doen?</string>
+    <string name="rules_instruction">Wat moet Mr Do It doen?</string>
     <string name="rules_instruction_hint">Bijvoorbeeld: Antwoord in mijn stijl. We zijn open van 8 tot 18 uur, op zondag gesloten.</string>
     <string name="rules_example_reply">Voor mij antwoorden</string>
     <string name="rules_example_reply_text">Antwoord in mijn stijl, kort en vriendelijk.</string>
@@ -1325,11 +1357,11 @@
     <string name="rules_delete">Verwijderen</string>
     <string name="rules_delete_title">Deze regel verwijderen?</string>
     <string name="rules_need_app">Kies eerst een app.</string>
-    <string name="rules_need_instruction">Schrijf op wat Buddy moet doen.</string>
+    <string name="rules_need_instruction">Schrijf op wat Mr Do It moet doen.</string>
     <string name="rules_access_title">Toegang tot meldingen toestaan?</string>
-    <string name="rules_access_what">Buddy vergelijkt elke melding met je regels. Meldingen waarop geen enkele regel van toepassing is, worden meteen genegeerd: niet opgeslagen en nergens heen gestuurd.</string>
+    <string name="rules_access_what">Mr Do It vergelijkt elke melding met je regels. Meldingen waarop geen enkele regel van toepassing is, worden meteen genegeerd: niet opgeslagen en nergens heen gestuurd.</string>
     <string name="rules_access_data">Als er één overeenkomt, gaan de app, de afzender en de tekst ervan samen met je instructie naar de agent van de regel (Claude Code, Codex of OpenCode).</string>
-    <string name="rules_access_reply">Buddy kan antwoorden via de knop Beantwoorden van een melding. Buddy vraagt het je eerst, tenzij je voor de regel Aftellen kiest.</string>
+    <string name="rules_access_reply">Mr Do It kan antwoorden via de knop Beantwoorden van een melding. Mr Do It vraagt het je eerst, tenzij je voor de regel Aftellen kiest.</string>
     <string name="rules_chat_shown">🔔 %1$s · %2$s: %3$s\n⚡ %4$s</string>
     <string name="rules_status_checking">Toetst het aan je regel…</string>
     <string name="rules_channel_results">Meldingsregels: resultaten</string>
@@ -1341,7 +1373,7 @@
     <!-- Background browser -->
     <string name="browser_section">Achtergrondbrowser</string>
     <string name="browser_switch">Achtergrondbrowser</string>
-    <string name="browser_switch_info">Een browser in Buddy waarmee agents webpagina\'s gebruiken zonder je telefoon over te nemen. Je kunt hem in de chat bekijken en gebruiken. De eerste keer downloadt Buddy Chromium (ongeveer 300 MB).</string>
+    <string name="browser_switch_info">Een browser in Mr Do It waarmee agents webpagina\'s gebruiken zonder je telefoon over te nemen. Je kunt hem in de chat bekijken en gebruiken. De eerste keer downloadt Mr Do It Chromium (ongeveer 300 MB).</string>
     <string name="browser_state_installing">Chromium installeren…</string>
     <string name="browser_state_starting">starten…</string>
     <string name="browser_state_running">actief</string>
@@ -1394,8 +1426,8 @@
     <string name="hub_tool_cancel_scheduled">Annuleert een gepland bericht</string>
     <string name="later_title">Bericht van de agent voor %1$s</string>
     <string name="later_cancel">Bericht annuleren</string>
-    <string name="share_label">Vraag Buddy</string>
-    <string name="share_title">Delen met Buddy</string>
+    <string name="share_label">Vraag Mr Do It</string>
+    <string name="share_title">Delen met Mr Do It</string>
     <string name="share_new_chat">Nieuwe chat met %1$s</string>
     <string name="usage_five">5 uur %1$d%% · reset %2$s</string>
     <string name="usage_week">week %1$d%% · reset %2$s</string>
@@ -1403,24 +1435,24 @@
     <string name="usage_week_short">week %1$d%%</string>
     <string name="usage_warn_five">Je hebt %1$d%% van de 5-uurslimiet van je abonnement gebruikt. Die wordt om %2$s gereset.</string>
     <string name="usage_warn_week">Je hebt %1$d%% van de weeklimiet van je abonnement gebruikt. Die wordt %2$s gereset.</string>
-    <string name="check_title">Buddy controleren</string>
-    <string name="check_info">Test nu elk onderdeel van Buddy en zegt hoe je oplost wat er mis is</string>
+    <string name="check_title">Mr Do It controleren</string>
+    <string name="check_info">Test nu elk onderdeel van Mr Do It en zegt hoe je oplost wat er mis is</string>
     <string name="check_running">Controleren…</string>
     <string name="check_all_ok">Alles werkt</string>
     <string name="check_a11y">Toegankelijkheidsservice</string>
-    <string name="check_a11y_bad">Draait niet, dus Buddy kan het scherm niet zien of bedienen. Zet Buddy aan in de toegankelijkheidsinstellingen.</string>
+    <string name="check_a11y_bad">Draait niet, dus Mr Do It kan het scherm niet zien of bedienen. Zet Mr Do It aan in de toegankelijkheidsinstellingen.</string>
     <string name="check_notifications">Meldingstoegang</string>
     <string name="check_notifications_bad">Je meldingsregels hebben het nodig, en het staat uit.</string>
     <string name="check_battery">Batterijoptimalisatie</string>
-    <string name="check_battery_bad">Aan voor Buddy: Android kan het op de achtergrond stoppen, en geplande taken lopen misschien niet.</string>
-    <string name="check_linux">Linux van Buddy</string>
+    <string name="check_battery_bad">Aan voor Mr Do It: Android kan het op de achtergrond stoppen, en geplande taken lopen misschien niet.</string>
+    <string name="check_linux">Linux van Mr Do It</string>
     <string name="check_linux_ok">Start in %1$.1f s</string>
     <string name="check_linux_bad">Start niet: %1$s</string>
     <string name="check_linux_missing">Nog niet geïnstalleerd. Stel het in bij Instellingen.</string>
-    <string name="check_helper">Helper van Buddy</string>
-    <string name="check_helper_bad">Linux heeft een oudere kopie dan deze versie van Buddy.</string>
+    <string name="check_helper">Helper van Mr Do It</string>
+    <string name="check_helper_bad">Linux heeft een oudere kopie dan deze versie van Mr Do It.</string>
     <string name="check_server">Server voor de telefoontools</string>
-    <string name="check_server_bad">Antwoordt niet op 127.0.0.1:%1$d. Zet Buddy uit en weer aan in de toegankelijkheidsinstellingen.</string>
+    <string name="check_server_bad">Antwoordt niet op 127.0.0.1:%1$d. Zet Mr Do It uit en weer aan in de toegankelijkheidsinstellingen.</string>
     <string name="check_agent_version">Versie %1$s</string>
     <string name="check_network">Internet</string>
     <string name="check_network_bad">Kan %1$s niet vinden. Controleer wifi of mobiele data, of een vpn of privé-dns die het blokkeert.</string>
@@ -1444,30 +1476,33 @@
     <string name="background_title">Achtergrondmodus</string>
     <string name="background_row">Agents werken op een eigen scherm terwijl jij je telefoon gebruikt</string>
     <string name="background_intro">In de achtergrondmodus werkt een agent op een eigen scherm dat jij niet ziet. Jij houdt je scherm, je toetsenbord en je terugknop, en het werk gaat door terwijl de telefoon vergrendeld is.</string>
-    <string name="background_how">Android laat alleen Draadloze foutopsporing zo\'n scherm maken, dus Buddy koppelt er één keer mee, hier op deze telefoon. Geen computer nodig.</string>
-    <string name="background_step1">1. Tik op Instellen. Buddy opent Ontwikkelaarsopties en zoekt Draadloze foutopsporing voor je op.</string>
-    <string name="background_step2">2. Buddy zet Draadloze foutopsporing aan (wifi moet verbonden zijn) en opent “Apparaat koppelen met koppelingscode”.</string>
-    <string name="background_step3">3. Buddy leest de code, koppelt en brengt je hier terug. Stopt het ergens, doe die stap dan zelf en Buddy gaat verder.</string>
+    <string name="background_how">Android laat alleen Draadloze foutopsporing zo\'n scherm maken, dus Mr Do It koppelt er één keer mee, hier op deze telefoon. Geen computer nodig.</string>
+    <string name="background_step1">1. Tik op Instellen. Mr Do It opent Ontwikkelaarsopties en zoekt Draadloze foutopsporing voor je op.</string>
+    <string name="background_step2">2. Mr Do It zet Draadloze foutopsporing aan (wifi moet verbonden zijn) en opent “Apparaat koppelen met koppelingscode”.</string>
+    <string name="background_step3">3. Mr Do It leest de code, koppelt en brengt je hier terug. Stopt het ergens, doe die stap dan zelf en Mr Do It gaat verder.</string>
     <string name="background_setup">Instellen</string>
     <string name="background_open_options">Ontwikkelaarsopties openen</string>
-    <string name="background_installing">adb ophalen voor Buddy\'s Linux…</string>
+    <string name="background_installing">adb ophalen voor Mr Do It\'s Linux…</string>
     <string name="background_waiting">Wachten op “Apparaat koppelen met koppelingscode” in Draadloze foutopsporing…</string>
     <string name="background_pairing">Koppelen…</string>
     <string name="background_starting">Helper starten…</string>
     <string name="background_ready">Klaar</string>
     <string name="background_ready_info">Zet het per chat aan: Chatopties → Op de achtergrond werken.</string>
     <string name="background_paired">Gekoppeld</string>
-    <string name="background_asleep">De helper draait niet. Hij start bij de eerste achtergrondtaak, of nu. Tik na een herstart van de telefoon op Nu starten: Buddy zet daarvoor Draadloze foutopsporing aan (wifi moet verbonden zijn).</string>
+    <string name="background_asleep">De helper draait niet. Hij start bij de eerste achtergrondtaak, of nu. Tik na een herstart van de telefoon op Nu starten: Mr Do It zet daarvoor Draadloze foutopsporing aan (wifi moet verbonden zijn).</string>
     <string name="background_start_now">Nu starten</string>
     <string name="background_failed">Het is niet gelukt: %1$s</string>
-    <string name="background_needs_linux">De achtergrondmodus heeft Buddy\'s Linux nodig. Installeer eerst een agent.</string>
+    <string name="background_needs_linux">De achtergrondmodus heeft Mr Do It\'s Linux nodig. Installeer eerst een agent.</string>
     <string name="background_needs_dev">Zet eerst Ontwikkelaarsopties aan: Instellingen → Over de telefoon → tik 7 keer op Buildnummer.</string>
-    <string name="background_needs_service">Zet eerst de toegankelijkheidsservice van Buddy aan.</string>
-    <string name="background_no_dialog">Buddy zag het koppelvenster niet op tijd. Probeer het opnieuw.</string>
+    <string name="background_needs_service">Zet eerst de toegankelijkheidsservice van Mr Do It aan.</string>
+    <string name="background_no_dialog">Mr Do It zag het koppelvenster niet op tijd. Probeer het opnieuw.</string>
     <string name="background_remove">Verwijderen</string>
-    <string name="background_remove_text">Buddy vergeet de koppeling en stopt de helper. Chats werken weer op het echte scherm.</string>
+    <string name="background_remove_text">Mr Do It vergeet de koppeling en stopt de helper. Chats werken weer op het echte scherm.</string>
     <string name="background_default">Nieuwe chats werken op de achtergrond</string>
     <string name="background_default_info">Elke chat heeft nog steeds een eigen schakelaar in Chatopties.</string>
+    <string name="background_restart">Opnieuw starten na een herstart</string>
+    <string name="background_restart_info">Na een herstart van de telefoon zet Mr Do It zelf Draadloze foutopsporing aan en start de helper, zodra de telefoon ontgrendeld is. Daarvoor is na de herstart wifi nodig, op een netwerk waar Draadloze foutopsporing altijd is toegestaan. Is het niet gelukt, tik dan op Nu starten.</string>
+    <string name="background_restart_cant">Deze telefoon laat Mr Do It Draadloze foutopsporing niet zelf aanzetten, dus dit kan hier niet werken: tik na een herstart op Nu starten.</string>
     <string name="chat_bg_connected">Verbonden</string>
     <string name="chat_bg_disconnected">Niet verbonden</string>
     <string name="chat_bg_not_set_up">Niet ingesteld</string>
@@ -1485,13 +1520,13 @@
     <string name="helper_stopped">Gestopt</string>
     <string name="helper_of">Subagent van “%1$s”</string>
     <string name="helper_this_chat">Deze chat</string>
-    <string name="background_security">Met Draadloze foutopsporing kunnen gekoppelde apparaten deze telefoon bedienen. Buddy koppelt alleen zichzelf, op deze telefoon, en de helper luistert alleen hier.</string>
+    <string name="background_security">Met Draadloze foutopsporing kunnen gekoppelde apparaten deze telefoon bedienen. Mr Do It koppelt alleen zichzelf, op deze telefoon, en de helper luistert alleen hier.</string>
     <string name="background_brought">Naar je scherm verplaatst: deze stap heeft jou nodig. De achtergrondmodus staat nu uit voor deze chat.</string>
     <string name="chat_background">Op de achtergrond werken</string>
     <string name="chat_background_info">De agent gebruikt een eigen scherm en jij blijft je telefoon gebruiken. Een stap waarvoor jij nodig bent, zoals inloggen, komt op jouw scherm.</string>
     <string name="background_preview">Achtergrondscherm</string>
     <string name="background_show">Op mijn scherm tonen</string>
-    <string name="background_usb_note">Buddy zet ook USB-foutopsporing aan. Daarmee blijft de helper draaien als de wifi wegvalt en Android Draadloze foutopsporing uitzet. Laat het aanstaan.</string>
+    <string name="background_usb_note">Mr Do It zet ook USB-foutopsporing aan. Daarmee blijft de helper draaien als de wifi wegvalt en Android Draadloze foutopsporing uitzet. Laat het aanstaan.</string>
     <string name="background_shell">Telefoonopdrachten</string>
     <string name="background_shell_switch">Agents mogen opdrachten op de telefoon uitvoeren</string>
     <string name="background_shell_info">In chats met Linux-tools kan de agent opdrachten op de telefoon zelf uitvoeren, zoals “adb shell” dat doet: apps installeren en starten, instellingen wijzigen, logs en bestanden lezen. Een bericht of webpagina die hij leest, kan proberen hem te misleiden zodat hij er een uitvoert.</string>
@@ -1506,7 +1541,7 @@
     <string name="chat_earlier_gone">Eerdere berichten worden niet meer bewaard: een chat houdt de laatste %1$d.</string>
     <string name="rules_recheck">Opnieuw controleren</string>
     <string name="setup_help">Hulp</string>
-    <string name="setup_help_info">De handleiding van Buddy, op GitHub. Je kunt ook elke agent vragen hoe Buddy werkt.</string>
+    <string name="setup_help_info">De handleiding van Mr Do It, op GitHub. Je kunt ook elke agent vragen hoe Mr Do It werkt.</string>
     <string name="signin_api_key">Gebruik een API-sleutel</string>
     <string name="signin_api_base_bad">Vul een adres in dat begint met https:// (of http:// op deze telefoon of je eigen netwerk)</string>
     <string name="account_plan_api_key_at">API-sleutel · %1$s</string>
@@ -1519,7 +1554,7 @@
     <string name="skills_title">Skills</string>
     <string name="skills_row_none">Instructies die de agents delen</string>
     <string name="skills_intro">Skills zijn instructies die een agent volgt voor een soort taak: een schrijfstijl, een checklist, stappen in een app. Claude Code, Codex en OpenCode gebruiken er een als die bij een taak past, of als je / in het berichtveld typt en hem kiest. Ze gebruiken het SKILL.md-formaat, dus skills uit Claude of ChatGPT werken hier ook.</string>
-    <string name="skills_need_linux">Skills staan in Buddy\'s Linux: stel eerst een agent in.</string>
+    <string name="skills_need_linux">Skills staan in Mr Do It\'s Linux: stel eerst een agent in.</string>
     <string name="skills_none">Nog geen skills.</string>
     <string name="skills_import">Importeren</string>
     <string name="skills_write">Zelf schrijven</string>
@@ -1538,7 +1573,7 @@
     <string name="skills_bad_file">Dat is geen skill: er moet een SKILL.md met een naam in zitten.</string>
     <string name="skills_slash_none">Geen skill met die naam. Tik om skills toe te voegen.</string>
     <string name="github_row_none">Laat agents naar je repository\'s pushen</string>
-    <string name="github_intro">Log in bij GitHub voor de Linux-tools: Buddy installeert git en de GitHub CLI in zijn Linux, logt ze in op je account en stelt git in op je naam en je privé-noreply-e-mailadres.</string>
+    <string name="github_intro">Log in bij GitHub voor de Linux-tools: Mr Do It installeert git en de GitHub CLI in zijn Linux, logt ze in op je account en stelt git in op je naam en je privé-noreply-e-mailadres.</string>
     <string name="github_risk">Agents in chats met Linux-tools kunnen dan met je account clonen, committen en pushen, en issues en pull requests openen. Ze krijgen de opdracht het je eerst te vragen voordat ze iets pushen of plaatsen.</string>
     <string name="github_sign_in">Inloggen met GitHub</string>
     <string name="github_installing">git en de GitHub CLI installeren…</string>
@@ -1550,24 +1585,26 @@
     <string name="github_signed_in">Ingelogd als @%1$s</string>
     <string name="github_signed_in_info">Agents in chats met Linux-tools kunnen git en gh met dit account gebruiken.</string>
     <string name="github_sign_out_title">Uitloggen bij GitHub?</string>
-    <string name="github_sign_out_text">git en de GitHub CLI in Buddy\'s Linux verliezen toegang tot je account.</string>
+    <string name="github_sign_out_text">git en de GitHub CLI in Mr Do It\'s Linux verliezen toegang tot je account.</string>
     <string name="backup_title">Back-up en overzetten</string>
     <string name="backup_row">Je chats en instellingen in één bestand</string>
-    <string name="backup_intro">Slaat je chats, instellingen, regels, afbeeldingen, skills, de projecten van de agents en wat ze van elk gesprek bewaren op in één bestand in Downloads/Buddy. Zet het hier of op een andere telefoon terug.</string>
+    <string name="backup_intro">Slaat je chats, instellingen, regels, afbeeldingen, skills, de projecten van de agents en wat ze van elk gesprek bewaren op in één bestand in Downloads/Mr Do It. Zet het hier of op een andere telefoon terug.</string>
     <string name="backup_left_out">Aanmeldingen en API-sleutels zitten er niet in: log na het terugzetten opnieuw in en voeg je sleutels weer toe. Projecten laten hun buildmappen weg.</string>
     <string name="backup_now">Nu back-up maken</string>
     <string name="backup_restore">Terugzetten vanaf een back-up</string>
     <string name="backup_restore_title">Deze back-up terugzetten?</string>
-    <string name="backup_restore_text">Je chats en instellingen op deze telefoon worden vervangen door die uit de back-up. Buddy herstart als het klaar is.</string>
+    <string name="backup_restore_text">Je chats en instellingen op deze telefoon worden vervangen door die uit de back-up. Mr Do It herstart als het klaar is.</string>
     <string name="backup_making">Back-up maken… (projecten kunnen even duren)</string>
     <string name="backup_restoring">Terugzetten…</string>
-    <string name="backup_made">Opgeslagen in Downloads/Buddy/%1$s.</string>
-    <string name="backup_restored">Teruggezet. Buddy herstart nu.</string>
-    <string name="backup_restored_no_linux">Je chats en instellingen zijn teruggezet. Het Linux-deel (skills, projecten, wat de agents bijhouden) heeft Buddy\'s Linux nodig: stel een agent in en zet daarna opnieuw terug. Buddy herstart nu.</string>
+    <string name="backup_made">Opgeslagen in Downloads/Mr Do It/%1$s.</string>
+    <string name="backup_restored">Teruggezet. Mr Do It herstart nu.</string>
+    <string name="backup_restored_no_linux">Je chats en instellingen zijn teruggezet. Het Linux-deel (skills, projecten, wat de agents bijhouden) heeft Mr Do It\'s Linux nodig: stel een agent in en zet daarna opnieuw terug. Mr Do It herstart nu.</string>
     <string name="backup_failed">Dat lukte niet: %1$s</string>
-    <string name="backup_not_one">Dat bestand is geen Buddy-back-up.</string>
+    <string name="backup_not_one">Dat bestand is geen Mr Do It-back-up.</string>
     <string name="chat_incognito">Incognito</string>
-    <string name="chat_incognito_info">Deze chat wordt verwijderd als Buddy herstart, samen met wat de agent ervan heeft bewaard.</string>
+    <string name="chat_incognito_info">Deze chat wordt verwijderd als Mr Do It herstart, samen met wat de agent ervan heeft bewaard.</string>
+    <string name="chat_lite">Lichte modus</string>
+    <string name="chat_lite_info">Voor kleine modellen: een korte start met een dozijn telefoontools, de agent laadt er meer als het nodig is. Vanzelf aan voor een model op deze telefoon. Geen Linux-tools zolang hij aan staat.</string>
     <string name="api_keys_remove_title">%1$s verwijderen?</string>
     <string name="api_keys_remove">Verwijderen</string>
     <string name="api_keys_failed">Kon de modellen van deze dienst niet ophalen met deze sleutel: %1$s</string>
@@ -1609,13 +1646,13 @@
     <string name="search_messages">Berichten: %1$d</string>
     <string name="mcp_title">MCP-servers</string>
     <string name="mcp_row_none">Tools van je eigen servers</string>
-    <string name="mcp_intro">Verbind je eigen MCP-servers en elke agent krijgt hun tools naast die van de telefoon. Een server wordt bereikt via zijn adres, over internet of je eigen netwerk. Sleutels worden versleuteld op deze telefoon bewaard en bereiken de agents nooit: Buddy voegt ze aan elke aanroep toe.</string>
+    <string name="mcp_intro">Verbind je eigen MCP-servers en elke agent krijgt hun tools naast die van de telefoon. Een server wordt bereikt via zijn adres, over internet of je eigen netwerk. Sleutels worden versleuteld op deze telefoon bewaard en bereiken de agents nooit: Mr Do It voegt ze aan elke aanroep toe.</string>
     <string name="mcp_none">Nog geen servers.</string>
     <string name="mcp_add">Server toevoegen</string>
     <string name="mcp_import">Lijst importeren</string>
     <string name="mcp_export">Lijst kopiëren</string>
     <string name="mcp_exported">Gekopieerd, zonder de sleutels.</string>
-    <string name="mcp_note">Deze tools draaien buiten je telefoon, dus de goedkeuringskaarten van Buddy gelden er niet voor: voeg alleen servers toe die je vertrouwt. Ze worden niet gebruikt wanneer een meldingsregel draait.</string>
+    <string name="mcp_note">Deze tools draaien buiten je telefoon, dus de goedkeuringskaarten van Mr Do It gelden er niet voor: voeg alleen servers toe die je vertrouwt. Ze worden niet gebruikt wanneer een meldingsregel draait.</string>
     <string name="mcp_name_hint">Naam (letters en cijfers)</string>
     <string name="mcp_url_hint">Adres (https://…/mcp)</string>
     <string name="mcp_key_hint">Sleutel of token (optioneel)</string>
@@ -1634,7 +1671,7 @@
     <string name="api_keys_models">%1$s · %2$d modellen</string>
     <string name="api_keys_add">API-sleutel toevoegen</string>
     <string name="api_keys_none">Nog geen API-sleutels.</string>
-    <string name="api_keys_intro">Gebruik modellen van andere diensten met Claude Code, Codex en OpenCode, naast je abonnementen of in plaats daarvan. Elke chat kiest zijn model in het modelmenu. Gebruik met een sleutel wordt gefactureerd aan het account van die sleutel. Sleutels worden versleuteld op deze telefoon bewaard en bereiken de agents nooit: Buddy voegt ze aan elk verzoek toe.</string>
+    <string name="api_keys_intro">Gebruik modellen van andere diensten met Claude Code, Codex en OpenCode, naast je abonnementen of in plaats daarvan. Elke chat kiest zijn model in het modelmenu. Gebruik met een sleutel wordt gefactureerd aan het account van die sleutel. Sleutels worden versleuteld op deze telefoon bewaard en bereiken de agents nooit: Mr Do It voegt ze aan elk verzoek toe.</string>
     <string name="api_keys_row_none">Modellen van andere diensten, met je sleutel</string>
     <string name="api_keys_title">API-sleutels</string>
     <string name="signin_api_keys">API-sleutels</string>
@@ -1648,7 +1685,7 @@
     <string name="hub_compacted">Gesprek gecomprimeerd: %1$s → %2$s tokens</string>
     <string name="signin_api_models_none">De dienst gaf geen modellen.</string>
     <string name="setup_step_signin_api_key">Of gebruik een API-sleutel: Instellingen → Agents en modellen → API-sleutels.</string>
-    <string name="setup_step_signin_others">%1$s is je standaardbrein, maar deze zijn klaar: %2$s. Maak er een de standaard en Buddy werkt meteen.</string>
+    <string name="setup_step_signin_others">%1$s is je standaardbrein, maar deze zijn klaar: %2$s. Maak er een de standaard en Mr Do It werkt meteen.</string>
     <string name="setup_switch_default">Standaard wisselen</string>
     <string name="setup_switch_default_title">Standaardbrein</string>
     <string name="signin_api_key_on">%1$s draait op je API-sleutels: kies een model in het modelmenu van een chat, of de standaard onder API-sleutels.</string>
@@ -1657,6 +1694,9 @@
     <string name="api_keys_local_info">Voor een eigen server (Ollama, LM Studio, llama.cpp): laat de API-sleutel leeg. Op een pc vul je het adres op je wifi in plaats van localhost in, bijvoorbeeld http://192.168.1.20:11434/v1.</string>
     <string name="main_section_pinned">Vastgezet</string>
     <string name="main_section_archived">Gearchiveerd (%1$d)</string>
+    <string name="main_archived_title">Gearchiveerd</string>
+    <string name="main_archived_open">Gearchiveerde chats</string>
+    <string name="main_archived_back">Terug naar chats</string>
     <string name="chat_pinned_marker">Vastgezet</string>
     <string name="chat_menu_rename">Naam wijzigen</string>
     <string name="chat_menu_pin">Bovenaan vastzetten</string>
@@ -1668,4 +1708,176 @@
     <string name="chat_rename_title">Chat hernoemen</string>
     <string name="chat_rename_hint">Leeg: het eerste bericht</string>
     <string name="chat_rename_save">Opslaan</string>
+    <string name="onphone_title">Modellen op deze telefoon</string>
+    <string name="onphone_row_none">Een model op de telefoon zelf draaien, offline</string>
+    <string name="onphone_intro">Download een model en Mr Do It draait het op de telefoon zelf: niets verlaat de telefoon en het werkt zonder internet. Kleine modellen kunnen eenvoudige verzoeken aan (de batterij, een timer, even in een app kijken) en maken fouten bij langere taken. Kies er een in het modelmenu van een OpenCode-chat, onder ‘Op deze telefoon’; die chats gebruiken de lichte modus.</string>
+    <string name="onphone_runs_on">Draait op</string>
+    <string name="onphone_dev_auto">Auto</string>
+    <string name="onphone_dev_npu">NPU</string>
+    <string name="onphone_dev_gpu">GPU</string>
+    <string name="onphone_dev_cpu">CPU</string>
+    <string name="onphone_runs_on_info">Auto neemt de snelste die start: de NPU, dan de GPU, dan de CPU.</string>
+    <string name="onphone_ran_on">Laatst: de %s.</string>
+    <string name="onphone_not_snapdragon">Op deze telefoon draaien modellen op de CPU: de NPU- en GPU-engine is voor Snapdragon-telefoons.</string>
+    <string name="onphone_models">Modellen</string>
+    <string name="onphone_download">Downloaden</string>
+    <string name="onphone_delete">Verwijderen</string>
+    <string name="onphone_cancel">Annuleren</string>
+    <string name="onphone_size_license">%1$s · %2$s</string>
+    <string name="onphone_downloaded">Op de telefoon</string>
+    <string name="onphone_downloading">Downloaden… %1$d%%</string>
+    <string name="onphone_engine_downloading">Engine ophalen… %1$d%%</string>
+    <string name="onphone_failed">Mislukt: %s</string>
+    <string name="onphone_metered_title">Downloaden via mobiele data?</string>
+    <string name="onphone_metered_text">%1$s is %2$s. Via mobiele data kan dat geld kosten.</string>
+    <string name="onphone_no_space">Niet genoeg ruimte: nodig %1$s, vrij %2$s.</string>
+    <string name="onphone_delete_title">%s verwijderen?</string>
+    <string name="onphone_delete_text">Het wordt van de telefoon gewist. Je kunt het altijd opnieuw downloaden.</string>
+    <string name="onphone_source">De engine is de officiële Android-build van llama.cpp (%s) van GitHub; de modellen komen van Hugging Face. Mr Do It controleert elke download met zijn checksum.</string>
+    <string name="onphone_service">Op deze telefoon</string>
+    <string name="onphone_note_gemma_e2b">Van Google. Snel op een Snapdragon-NPU: voor eenvoudige verzoeken in één stap.</string>
+    <string name="onphone_note_gemma_e4b">Van Google. Groter en ongeveer half zo snel als E2B. Heeft veel vrij geheugen nodig.</string>
+    <string name="onphone_note_qwen_2b">Van Alibaba. De kleinste download en het snelst met antwoorden.</string>
+    <string name="onphone_note_qwen_4b">Van Alibaba. Groter en ongeveer half zo snel als de 2B.</string>
+    <string name="hub_still_reading_phone">Nog bezig… Het model op deze telefoon heeft even nodig, vooral voor het eerste antwoord.</string>
+    <string name="onphone_too_hot">De telefoon is nu te warm om een model te draaien. Laat hem een paar minuten afkoelen en probeer het dan opnieuw.</string>
+    <string name="onphone_think">Nadenken voor het antwoord</string>
+    <string name="onphone_think_info">Trager: elke stap kan 20 seconden of langer duren. Zonder zijn kleine modellen snel en kiezen ze meestal dezelfde tools.</string>
+    <string name="tools_title">Tools</string>
+    <string name="tools_row">%1$d van %2$d aan</string>
+    <string name="tools_intro">Wat agents op je telefoon kunnen gebruiken. Een tool die uit staat, wordt aan geen enkele agent aangeboden, en een aanroep ervan wordt geweigerd. Een wijziging geldt vanaf het volgende bericht.</string>
+    <string name="tools_always_on">Altijd aan: hiermee vragen agents om je akkoord</string>
+    <string name="tools_browser_off">De achtergrondbrowser staat uit, dus deze tools worden pas aangeboden als je hem aanzet in Instellingen → Achtergrondbrowser.</string>
+    <string name="tools_group_screen">Scherm</string>
+    <string name="tools_group_apps">Apps, links en bestanden</string>
+    <string name="tools_group_info">Telefooninfo</string>
+    <string name="tools_group_quick">Snelle acties</string>
+    <string name="tools_group_talk">Jou iets vragen</string>
+    <string name="tools_group_browser">Achtergrondbrowser</string>
+    <string name="tools_group_schedule">Planningen en regels</string>
+    <string name="tools_group_advanced">Geavanceerd</string>
+    <string name="tool_read_screen">Scherm lezen</string>
+    <string name="tool_read_screen_info">Leest wat er op het scherm staat: teksten, knoppen en velden</string>
+    <string name="tool_screenshot">Screenshot</string>
+    <string name="tool_screenshot_info">Maakt een foto van het scherm, voor afbeeldingen, kaarten en games</string>
+    <string name="tool_tap">Tikken</string>
+    <string name="tool_tap_info">Tikt op een knop, een veld of een plek op het scherm</string>
+    <string name="tool_long_press">Lang indrukken</string>
+    <string name="tool_long_press_info">Houdt ingedrukt, bijv. om een menu te openen</string>
+    <string name="tool_type_text">Typen</string>
+    <string name="tool_type_text_info">Typt tekst in een veld</string>
+    <string name="tool_scroll">Scrollen</string>
+    <string name="tool_scroll_info">Scrolt door een lijst of een pagina</string>
+    <string name="tool_swipe">Vegen</string>
+    <string name="tool_swipe_info">Sleept een vinger over het scherm</string>
+    <string name="tool_press">Systeemknoppen</string>
+    <string name="tool_press_info">Terug, Home, recente apps en Enter op het toetsenbord</string>
+    <string name="tool_find">Zoeken op het scherm</string>
+    <string name="tool_find_info">Scrolt tot er een bepaalde tekst verschijnt</string>
+    <string name="tool_collect">Lange lijst lezen</string>
+    <string name="tool_collect_info">Scrolt door een lijst of gesprek en verzamelt de tekst</string>
+    <string name="tool_do_steps">Meerdere stappen tegelijk</string>
+    <string name="tool_do_steps_info">Tikken, typen en scrollen in één keer, bijv. om een formulier in te vullen</string>
+    <string name="tool_wait">Wachten</string>
+    <string name="tool_wait_info">Wacht even tot het scherm tot rust komt</string>
+    <string name="tool_wait_for">Wachten op iets</string>
+    <string name="tool_wait_for_info">Wacht tot een tekst of scherm verschijnt</string>
+    <string name="tool_point_out">Iets aanwijzen</string>
+    <string name="tool_point_out_info">Markeert een plek op het scherm voor je, met een kader, cirkel of pijl</string>
+    <string name="tool_open_app">App openen</string>
+    <string name="tool_open_app_info">Opent een geïnstalleerde app op naam</string>
+    <string name="tool_list_apps">Apps opsommen</string>
+    <string name="tool_list_apps_info">Somt de apps op die op de telefoon staan</string>
+    <string name="tool_open_url">Link openen</string>
+    <string name="tool_open_url_info">Opent een link zoals tikken erop zou doen</string>
+    <string name="tool_share">Delen</string>
+    <string name="tool_share_info">Opent het deelmenu van Android met een tekst of bestand</string>
+    <string name="tool_save_to_downloads">Opslaan in Downloads</string>
+    <string name="tool_save_to_downloads_info">Kopieert een bestand uit Mr Do It\'s Linux naar je map Downloads</string>
+    <string name="tool_install_apk">App installeren</string>
+    <string name="tool_install_apk_info">Opent het installatieprogramma van Android voor een app die een agent heeft gebouwd; jij tikt op Installeren</string>
+    <string name="tool_wait_for_install">Wachten op installatie</string>
+    <string name="tool_wait_for_install_info">Wacht tot je een app hebt geïnstalleerd of bijgewerkt</string>
+    <string name="tool_update_buddy">Mr Do It bijwerken</string>
+    <string name="tool_update_buddy_info">Zoekt naar een nieuwe Mr Do It en opent de update</string>
+    <string name="tool_device_status">Telefoonstatus</string>
+    <string name="tool_device_status_info">Batterij, netwerk, datum en tijd, vrije opslag</string>
+    <string name="tool_notifications">Meldingen lezen</string>
+    <string name="tool_notifications_info">Leest de meldingen die nu op de telefoon staan</string>
+    <string name="tool_reply_notification">Op een melding antwoorden</string>
+    <string name="tool_reply_notification_info">Beantwoordt een bericht vanuit de melding</string>
+    <string name="tool_location">Locatie</string>
+    <string name="tool_location_info">Waar de telefoon nu is; Android vraagt het je eerst</string>
+    <string name="tool_calendar_events">Agenda lezen</string>
+    <string name="tool_calendar_events_info">Leest de afspraken in je agenda; Android vraagt het je eerst</string>
+    <string name="tool_add_calendar_event">Afspraak toevoegen</string>
+    <string name="tool_add_calendar_event_info">Opent de Agenda-app met een ingevulde nieuwe afspraak; jij tikt op Opslaan</string>
+    <string name="tool_media">Mediabediening</string>
+    <string name="tool_media_info">Speelt muziek en video\'s af, pauzeert of slaat over</string>
+    <string name="tool_clipboard_read">Klembord lezen</string>
+    <string name="tool_clipboard_read_info">Leest wat je het laatst hebt gekopieerd; Mr Do It vraagt het je elke keer</string>
+    <string name="tool_clipboard_write">Naar het klembord kopiëren</string>
+    <string name="tool_clipboard_write_info">Zet een tekst op het klembord zodat je hem kunt plakken</string>
+    <string name="tool_set_alarm">Wekker zetten</string>
+    <string name="tool_set_alarm_info">Zet een wekker in de Klok-app</string>
+    <string name="tool_set_timer">Timer zetten</string>
+    <string name="tool_set_timer_info">Start een timer in de Klok-app</string>
+    <string name="tool_take_photo">Foto maken</string>
+    <string name="tool_take_photo_info">Opent de camera; jij maakt de foto</string>
+    <string name="tool_notify">Statusregel</string>
+    <string name="tool_notify_info">Toont een korte regel bij de bubbel terwijl een agent bezig is</string>
+    <string name="tool_confirm">Om je akkoord vragen</string>
+    <string name="tool_confirm_info">De goedkeuringskaart vóór versturen, kopen, verwijderen of wijzigen</string>
+    <string name="tool_ask">Je een vraag stellen</string>
+    <string name="tool_ask_info">Een kaart met antwoorden om uit te kiezen</string>
+    <string name="tool_browser_open">Pagina openen</string>
+    <string name="tool_browser_open_info">Opent een webpagina in de achtergrondbrowser</string>
+    <string name="tool_browser_read">Pagina lezen</string>
+    <string name="tool_browser_read_info">Leest de pagina als tekst</string>
+    <string name="tool_browser_click">Klikken op een pagina</string>
+    <string name="tool_browser_click_info">Klikt op een link of knop</string>
+    <string name="tool_browser_type">Typen op een pagina</string>
+    <string name="tool_browser_type_info">Typt in een veld op de pagina</string>
+    <string name="tool_browser_scroll">Pagina scrollen</string>
+    <string name="tool_browser_scroll_info">Scrolt door de pagina</string>
+    <string name="tool_browser_back">Terug</string>
+    <string name="tool_browser_back_info">Gaat terug naar de vorige pagina</string>
+    <string name="tool_browser_screenshot">Foto van de pagina</string>
+    <string name="tool_browser_screenshot_info">Maakt een foto van de pagina</string>
+    <string name="tool_browser_tabs">Tabbladen</string>
+    <string name="tool_browser_tabs_info">Opent, wisselt en sluit de tabbladen van de browser</string>
+    <string name="tool_schedule_message">Bericht plannen</string>
+    <string name="tool_schedule_message_info">Laat de agent later terugkomen in de chat, bijv. om iets te controleren</string>
+    <string name="tool_list_scheduled">Geplande berichten bekijken</string>
+    <string name="tool_list_scheduled_info">Toont de geplande berichten van de chat</string>
+    <string name="tool_cancel_scheduled">Gepland bericht annuleren</string>
+    <string name="tool_cancel_scheduled_info">Annuleert een van de geplande berichten van de chat</string>
+    <string name="tool_add_notification_rule">Meldingsregel toevoegen</string>
+    <string name="tool_add_notification_rule_info">Brengt passende meldingen naar de chat, met een instructie</string>
+    <string name="tool_delegate">Subagents</string>
+    <string name="tool_delegate_info">Geeft delen van een taak aan helpers die tegelijk werken</string>
+    <string name="tool_subagents">Verslagen van subagents</string>
+    <string name="tool_subagents_info">Wacht op de helpers en verzamelt hun verslagen</string>
+    <string name="tool_phone_shell">Telefoonopdrachten</string>
+    <string name="tool_phone_shell_info">Voert opdrachten uit op de telefoon; daarvoor moet ook de schakelaar Telefoonopdrachten in Achtergrondmodus aan staan</string>
+    <string name="tools_chat_title">Tools in deze chat</string>
+    <string name="tools_chat_intro">Welke tools de agent van deze chat krijgt. Een schakelaar hier geldt alleen voor deze chat; de rest volgt Instellingen. Een wijziging geldt vanaf het volgende bericht.</string>
+    <string name="tools_chat_own">alleen deze chat</string>
+    <string name="tools_chat_reset">Zoals in Instellingen</string>
+    <string name="setup_face_gif">Een GIF of geanimeerde WebP beweegt in de bubbel.</string>
+    <string name="setup_face_anim">Animatie</string>
+    <string name="setup_face_anim_once">Bij ontgrendelen</string>
+    <string name="setup_face_anim_loop">Altijd</string>
+    <string name="setup_face_anim_off">Uit</string>
+    <string name="setup_face_anim_note">Speelt één keer bij elke ontgrendeling, de hele tijd of helemaal niet. De hele tijd kost meer batterij.</string>
+    <string name="tool_call_log">Belgeschiedenis lezen</string>
+    <string name="tool_call_log_info">Recente oproepen: wie, wanneer, hoe lang; heeft de achtergrondmodus nodig</string>
+    <string name="tool_sms_list">Sms\'jes lezen</string>
+    <string name="tool_sms_list_info">Recente sms\'jes; heeft de achtergrondmodus nodig</string>
+    <string name="tools_sms_codes">Codes in sms tonen</string>
+    <string name="tools_sms_codes_info">Eenmalige codes en pincodes in berichten staan er als [code hidden], tenzij dit aan staat</string>
+    <string name="hub_tool_call_log">Leest de belgeschiedenis</string>
+    <string name="hub_tool_sms_list">Leest sms\'jes</string>
+    <string name="setup_face_too_big">Die animatie is groter dan 16 MB, dus de bubbel toont hem als stilstaand beeld.</string>
+    <string name="background_older">De helper van vóór de update draait nog, dus achtergrondchats kunnen nog werken. Om de nieuwe te starten heeft Mr Do It één keer Draadloze foutopsporing nodig: tik op Nu starten.</string>
 </resources>

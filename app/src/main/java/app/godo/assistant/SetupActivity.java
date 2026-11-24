@@ -150,19 +150,20 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
         if (code != REQ_FACE || result != RESULT_OK || data == null || data.getData() == null) return;
         Uri uri = data.getData();
         new Thread(() -> {
-            boolean ok;
+            boolean ok, big = false;
             try {
-                Face.save(this, uri);
+                big = Face.save(this, uri);
                 ok = true;
             } catch (Exception e) {
                 ok = false;
             }
-            final boolean saved = ok;
+            final boolean saved = ok, tooBig = big;
             runOnUiThread(() -> {
                 if (!saved) {
                     Toast.makeText(this, R.string.setup_face_unreadable, Toast.LENGTH_LONG).show();
                     return;
                 }
+                if (tooBig) Toast.makeText(this, R.string.setup_face_too_big, Toast.LENGTH_LONG).show();
                 Prefs.setFace(this, "picture");
                 faceChanged();
             });
@@ -324,7 +325,7 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
         java.util.List<String> keyAgents = new java.util.ArrayList<>();
         if (misfit != null) {
             java.util.List<String> keys = new java.util.ArrayList<>(), fit = new java.util.ArrayList<>();
-            for (Providers.P k : Providers.all()) keys.add(k.name);
+            for (Providers.P k : Providers.all()) if (!OnPhone.ID.equals(k.id)) keys.add(k.name);
             for (Account a : Account.ALL) {
                 if (!Providers.forAgent(a.agent).isEmpty()) {
                     keyAgents.add(a.agent);
@@ -371,7 +372,7 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
         boolean offerOther = !installed && misfit != null && !keyAgents.isEmpty() && acc.step != Account.Step.INSTALLING;
         if (offerOther) {
             java.util.List<String> keys = new java.util.ArrayList<>(), fit = new java.util.ArrayList<>();
-            for (Providers.P k : Providers.all()) keys.add(k.name);
+            for (Providers.P k : Providers.all()) if (!OnPhone.ID.equals(k.id)) keys.add(k.name);
             for (String a : keyAgents) fit.add(Account.nameOf(a));
             installText += "\n\n" + getString(R.string.setup_step_signin_key_mismatch, acc.name(),
                     android.text.TextUtils.join(", ", keys), android.text.TextUtils.join(", ", fit));
@@ -450,12 +451,23 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
             }
         }), fp);
         ap.addView(fr, topGap(10));
-        ap.addView(text(this, getString(R.string.setup_face_note), 13, MUTED), topGap(8));
+        ap.addView(text(this, getString(R.string.setup_face_note) + " " + getString(R.string.setup_face_gif), 13, MUTED),
+                topGap(8));
         if (own) {
             TextView change = text(this, getString(R.string.setup_face_change), 14, ACCENT_TEXT);
             change.setPaddingRelative(0, dp(this, 4), 0, dp(this, 4));
             change.setOnClickListener(v -> pickFace());
             ap.addView(change, topGap(6));
+        }
+        if (own && Face.animated(this)) { // how an animated picture plays on the bubble (issue #68)
+            ap.addView(fieldLabel(getString(R.string.setup_face_anim), null), topGap(14));
+            ap.addView(segmented(this, new String[][]{{"loop", getString(R.string.setup_face_anim_loop)},
+                    {"once", getString(R.string.setup_face_anim_once)}, {"off", getString(R.string.setup_face_anim_off)}},
+                    Prefs.faceAnim(this), false, v -> {
+                        Prefs.setFaceAnim(this, v);
+                        faceChanged();
+                    }), topGap(8));
+            ap.addView(text(this, getString(R.string.setup_face_anim_note), 13, MUTED), topGap(8));
         }
         addCard(ap);
 
@@ -483,6 +495,7 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
                 }), topGap(12));
         for (Account a : Account.ALL) ag.addView(agentRow(a.agent), topGap(a == Account.CLAUDE ? 12 : 4));
         ag.addView(apiKeysRow(), topGap(4));
+        ag.addView(onPhoneRow(), topGap(4));
         // what a chat on Default uses, per agent (issue #20; API keys has the same rows for its services)
         List<String> defaults = new ArrayList<>();
         for (Account one : Account.ALL) {
@@ -653,6 +666,24 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
         String engineNote = getString("claude".equals(engine) ? R.string.setup_voice_input_claude
                 : "chatgpt".equals(engine) ? R.string.setup_voice_input_chatgpt : R.string.setup_voice_input_phone);
         vc.addView(text(this, engineNote, 13, MUTED), topGap(8));
+        // when listening ends: the engine waits for quiet, which noise around never gives (#60)
+        vc.addView(fieldLabel(getString(R.string.setup_voice_pause), null), topGap(16));
+        vc.addView(segmented(this, new String[][]{{"0", getString(R.string.setup_voice_auto)},
+                        {"1000", getString(R.string.rules_seconds, 1)}, {"2000", getString(R.string.rules_seconds, 2)},
+                        {"3000", getString(R.string.rules_seconds, 3)}},
+                String.valueOf(Prefs.voicePauseMs(this)), false, v -> {
+                    Prefs.setVoicePauseMs(this, Long.parseLong(v));
+                    render();
+                }), topGap(8));
+        vc.addView(text(this, getString(R.string.setup_voice_pause_info), 13, MUTED), topGap(8));
+        vc.addView(fieldLabel(getString(R.string.setup_voice_max), null), topGap(16));
+        vc.addView(segmented(this, new String[][]{{"0", getString(R.string.setup_voice_no_limit)},
+                        {"60000", getString(R.string.rules_minutes, 1)}, {"120000", getString(R.string.rules_minutes, 2)},
+                        {"300000", getString(R.string.rules_minutes, 5)}},
+                String.valueOf(Prefs.voiceMaxMs(this)), false, v -> {
+                    Prefs.setVoiceMaxMs(this, Long.parseLong(v));
+                    render();
+                }), topGap(8));
         vc.addView(fieldLabel(getString(R.string.setup_voice_output), null), topGap(16));
         String speech = Prefs.speechEngine(this);
         vc.addView(segmented(this, new String[][]{{"phone", getString(R.string.setup_voice_phone)}, {"chatgpt", "ChatGPT"}},
@@ -726,6 +757,8 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
             render();
         }), topGap(10));
         vc.addView(text(this, getString(R.string.setup_assist_info), 13, MUTED), topGap(8));
+        vc.addView(switchRow(this, getString(R.string.setup_assist_unlocked), getString(R.string.setup_assist_unlocked_info),
+                Prefs.assistUnlockedOnly(this), on -> Prefs.setAssistUnlockedOnly(this, on)), topGap(8));
         // the agent of the new chat that live voice starts from the hold menu or the power button
         vc.addView(fieldLabel(getString(R.string.setup_live_agent), null), topGap(16));
         vc.addView(segmented(this, new String[][]{{"", getString(R.string.setup_live_agent_default)},
@@ -907,6 +940,14 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
             if (svc != null) svc.applyBubbleSetting();
         }), full());
         ex.addView(divider(), lineParams());
+        // not over Buddy's own screens (issue #73); this screen is one of them, so the change shows at once
+        ex.addView(switchRow(this, getString(R.string.setup_bubble_hide_in_app), getString(R.string.setup_bubble_hide_in_app_info),
+                Prefs.bubbleHideInApp(this), on -> {
+            Prefs.setBubbleHideInApp(this, on);
+            BuddyService svc = BuddyService.get();
+            if (svc != null) svc.applyBubbleSetting();
+        }), full());
+        ex.addView(divider(), lineParams());
         // what a tap on the bubble does, and how big the chat panel is (issue #3)
         LinearLayout tap = column(this);
         tap.setPaddingRelative(dp(this, 16), dp(this, 14), dp(this, 16), dp(this, 14));
@@ -1047,6 +1088,10 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
     /** MCP servers and skills: what agents get on top of the phone tools. */
     private void connectionsSection() {
         LinearLayout ex = card();
+        View tl = toolsRow();
+        tl.setPaddingRelative(dp(this, 16), dp(this, 10), dp(this, 16), dp(this, 10));
+        ex.addView(tl, full());
+        ex.addView(divider(), lineParams());
         View ms = mcpRow();
         ms.setPaddingRelative(dp(this, 16), dp(this, 10), dp(this, 16), dp(this, 10));
         ex.addView(ms, full());
@@ -1765,10 +1810,32 @@ public class SetupActivity extends Screen implements Account.Listener, RemoteSes
     /** Settings → API keys: other services' models for Claude Code, Codex and OpenCode. */
     private View apiKeysRow() {
         List<String> names = new ArrayList<>();
-        for (Providers.P p : Providers.all()) names.add(p.name);
+        for (Providers.P p : Providers.all()) if (!OnPhone.ID.equals(p.id)) names.add(p.name);
         return navRow(R.drawable.ms_key, getString(R.string.api_keys_title), names.isEmpty()
                 ? getString(R.string.api_keys_row_none) : android.text.TextUtils.join(", ", names), !names.isEmpty(),
                 ApiKeysActivity.class);
+    }
+
+    /** Settings → Models on this phone: a model Buddy runs itself, offline (see OnPhone). */
+    private View onPhoneRow() {
+        List<String> names = new ArrayList<>();
+        for (OnPhone.Model m : OnPhone.downloaded(this)) names.add(m.name);
+        return navRow(R.drawable.ms_memory, getString(R.string.onphone_title), names.isEmpty()
+                ? getString(R.string.onphone_row_none) : android.text.TextUtils.join(", ", names), !names.isEmpty(),
+                OnPhoneActivity.class);
+    }
+
+    /** Settings → Tools: every phone tool, each with a switch (ToolsActivity). */
+    private View toolsRow() {
+        int on = 0, all = 0;
+        for (String[] g : ToolSwitch.GROUPS) {
+            for (int i = 1; i < g.length; i++) {
+                all++;
+                if (ToolSwitch.on(this, g[i])) on++;
+            }
+        }
+        return navRow(R.drawable.ms_tune, getString(R.string.tools_title), getString(R.string.tools_row, on, all),
+                on == all, ToolsActivity.class);
     }
 
     /** Settings → Skills: instructions the agents share. */

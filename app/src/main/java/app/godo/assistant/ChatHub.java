@@ -224,6 +224,7 @@ final class ChatHub {
     }
 
     void delete(Sessions.Session s) {
+        savedFiles.remove(s.id);
         if (CodexLive.on(s)) CodexLive.end(null);
         StepLog.deleteChat(app, s.id);
         try {
@@ -307,13 +308,15 @@ final class ChatHub {
         // the phone tools live in Buddy's accessibility service: without it the agent can't reach them and its run
         // ends a few seconds in, which looked like Buddy's Linux had failed. Said as what it is (issue #54)
         if (BuddyService.get() == null) {
+            BuddyService.restoreAccess(app); // dropped by Android: back on for the next message, where Buddy may
             return app.getString(SetupState.accessibilityEnabled(app) ? R.string.hub_accessibility_dead
                     : R.string.hub_accessibility_off);
         }
         String forAgent = prompt != null ? prompt : text.isEmpty() && hasFiles ? "Have a look at what I attached." : text;
         // the chat was switched to this agent: it begins anew, with the chat so far (before this message is added)
-        final boolean fresh = ses.handover != null;
-        if (fresh) forAgent = handover(ses) + forAgent;
+        // or it's a fork, or the user edited a message (issue #44): the agent starts fresh with the chat up to here
+        final boolean fresh = ses.handover != null || ses.reseed;
+        if (fresh) forAgent = (ses.handover != null ? handover(ses) : reseedText(ses)) + forAgent;
         BuddyService svc = BuddyService.get();
         // only the user's own message lifts a Stop: a queued rule run must not undo it
         if (svc != null && prompt == null) svc.allowControl();
@@ -322,7 +325,8 @@ final class ChatHub {
             // a rule's run works for someone else's message: no shell, files or web, even with Linux tools on
             Helper.runFor(app, ses.id, code -> main.postDelayed(() -> helperGone(ses, run[0], code), HELPER_GONE_MS),
                     "ask", ses.id, ses.backend, rule ? "rule" : devArg(ses), forAgent,
-                    model(ses), hasFiles ? android.text.TextUtils.join(",", files) : "", ses.effort, fresh ? "fresh" : "");
+                    model(ses), hasFiles ? android.text.TextUtils.join(",", files) : "", ses.effort, fresh ? "fresh" : "",
+                    Lite.on(ses) ? "lite" : "");
         } catch (Exception e) {
             return e.getMessage();
         }
@@ -344,12 +348,13 @@ final class ChatHub {
         final int id = ses.runId;
         run[0] = id;
         Providers.P lp = Providers.of(Models.effective(ses));
-        final boolean local = lp != null && lp.local();
+        final boolean local = lp != null && lp.local(), onPhone = lp != null && OnPhone.ID.equals(lp.id);
         final long giveUp = local ? LOCAL_GIVE_UP_MS : GIVE_UP_MS;
         // the agent is running but its model can be slow (free models especially): say so, keep waiting
         main.postDelayed(() -> {
             if (ses.running && id == ses.runId && SystemClock.elapsedRealtime() - ses.lastEventAt >= NO_RESPONSE_MS - 100) {
-                add(ses, Bubble.Kind.STEP, app.getString(local ? R.string.hub_still_reading_local : R.string.hub_still_waiting));
+                add(ses, Bubble.Kind.STEP, app.getString(onPhone ? R.string.hub_still_reading_phone
+                        : local ? R.string.hub_still_reading_local : R.string.hub_still_waiting));
                 changed();
             }
         }, NO_RESPONSE_MS);
@@ -497,19 +502,103 @@ final class ChatHub {
         return s.substring(i);
     }
 
-    /** The chat so far, for the agent that takes it over: who said what, oldest first, marked as context. */
-    private static String handover(Sessions.Session ses) {
+    /** Who said what in the chat so far, oldest first, its end within HANDOVER_MAX; {text, "cut" or ""}. */
+    private static String[] transcript(Sessions.Session ses) {
         StringBuilder b = new StringBuilder();
         for (Sessions.Msg m : new ArrayList<>(ses.messages)) {
             if (m.kind != Bubble.Kind.USER && m.kind != Bubble.Kind.BUDDY) continue;
             if (m.text == null || m.text.trim().isEmpty()) continue;
             b.append(m.kind == Bubble.Kind.USER ? "User: " : "Assistant: ").append(m.text.trim()).append("\n\n");
         }
-        if (b.length() == 0) return "";
-        String all = b.toString();
-        String end = tail(all, HANDOVER_MAX);
-        boolean cutOff = end.length() < all.length();
-        all = end;
+        String all = b.toString(), end = tail(all, HANDOVER_MAX);
+        return new String[]{end, end.length() < all.length() ? "cut" : ""};
+    }
+
+    /** A fork's chat so far, or the chat before an edited message, for its agent that starts anew (issue #44). */
+    private static String reseedText(Sessions.Session ses) {
+        String[] t = transcript(ses);
+        if (t[0].isEmpty()) return "";
+        return "[This chat starts from an earlier conversation: the user forked it here, or edited their message and "
+                + "is asking again from this point. Below is the conversation so far" + (t[1].isEmpty() ? "" : " (its "
+                + "earlier part is left out)") + ", oldest first. It is context: what was asked and answered. You don't "
+                + "have the steps, files or tool results from then, so look again at anything you need (read the "
+                + "screen, open the file) rather than assuming. Don't redo actions it reports as done.]\n\n" + t[0]
+                + "[End of the earlier conversation. The user's message to you now:]\n\n";
+    }
+
+    /**
+     * Fork from here (issue #44): a new chat with this one's messages up to and including index, the same agent,
+     * model and Linux tools, and nothing approved or pending. Null when it can't be made.
+     */
+    Sessions.Session fork(Sessions.Session ses, int index) {
+        if (!ses.parent.isEmpty() || index < 0 || index >= ses.messages.size()) return null;
+        Sessions.Session f = sessions.copy(ses, index + 1, app.getString(R.string.chat_fork_title, ses.label()));
+        if (f == null) return null;
+        sessions.add(f, Bubble.Kind.NOTE, app.getString(R.string.chat_forked_from, ses.label()), null);
+        sessions.select(f);
+        changed();
+        return f;
+    }
+
+    /**
+     * The user edited their message at index (issue #44): it and everything after it go, and the edited text is sent
+     * from there, to an agent that starts fresh with the chat before it. The chat as it was is kept, archived, as
+     * "… (before edit)". Returns an error to show, or null.
+     */
+    String edit(Sessions.Session ses, int index, String text) {
+        if (ses.running) return app.getString(R.string.chat_edit_running);
+        if (!ses.parent.isEmpty() || index < 0 || index >= ses.messages.size()
+                || ses.messages.get(index).kind != Bubble.Kind.USER || text.trim().isEmpty()) {
+            return app.getString(R.string.chat_edit_failed); // (the message isn't there any more): said, not dropped
+        }
+        Sessions.Session before = sessions.copy(ses, ses.messages.size(),
+                app.getString(R.string.chat_before_edit_title, ses.label()));
+        if (before == null) return app.getString(R.string.chat_edit_failed);
+        before.archived = true;
+        sessions.save(before);
+        java.util.List<String> files = new ArrayList<>(ses.messages.get(index).files);
+        java.util.List<Sessions.Msg> cut = new ArrayList<>(ses.messages.subList(index, ses.messages.size()));
+        boolean wasReseed = ses.reseed, wasInterrupted = ses.interrupted;
+        String wasHandover = ses.handover;
+        while (ses.messages.size() > index) ses.messages.remove(ses.messages.size() - 1);
+        BuddyService svc = BuddyService.get();
+        if (svc != null && svc.bubble() != null) svc.bubble().redrawLater(ses); // the bubble's panel shows it whole again
+        String wasTitle = ses.title;
+        // the first message edited: a chat named after it (not by the user) is named after the new one
+        if (index == 0 && ses.title.equals(Sessions.autoTitle(cut.get(0).text, cut.get(0).files))) ses.title = "";
+        ses.reseed = true;
+        ses.handover = null;
+        ses.interrupted = false;
+        sessions.save(ses);
+        String err = send(ses, text.trim(), files.isEmpty() ? null : files);
+        if (err != null && !ses.running) { // it didn't go: the chat as it was, and no copy of it in Archived
+            while (ses.messages.size() > index) ses.messages.remove(ses.messages.size() - 1);
+            ses.messages.addAll(cut);
+            ses.reseed = wasReseed;
+            ses.title = wasTitle;
+            ses.handover = wasHandover;
+            ses.interrupted = wasInterrupted;
+            sessions.save(ses);
+            sessions.remove(before);
+        } else if (err == null) {
+            for (int i = ses.messages.size() - 1; i >= 0; i--) {
+                Sessions.Msg m = ses.messages.get(i);
+                if (m.kind != Bubble.Kind.USER) continue;
+                m.edited = true;
+                break;
+            }
+            sessions.save(ses);
+        }
+        changed();
+        return err;
+    }
+
+    /** The chat so far, for the agent that takes it over: who said what, oldest first, marked as context. */
+    private static String handover(Sessions.Session ses) {
+        String[] t = transcript(ses);
+        if (t[0].isEmpty()) return "";
+        String all = t[0];
+        boolean cutOff = !t[1].isEmpty();
         return "[This chat was with another agent (" + Account.nameOf(ses.handover) + ") until now, and the user switched it to you. "
                 + "Below is the conversation so far" + (cutOff ? " (its earlier part is left out)" : "") + ", oldest "
                 + "first. It is context: what was asked and answered. You don't have that agent's steps, files or tool "
@@ -548,6 +637,28 @@ final class ChatHub {
     /** Long-task mode for a chat: the screen stays on while it works (see KeepAwake); a running one gets it at once. */
     void setIncognito(Sessions.Session ses, boolean on) {
         ses.incognito = on;
+        sessions.save(ses);
+        changed();
+    }
+
+    /** Chat options → Tools: this chat's own on or off for a tool (null: as in Settings again). */
+    void setTool(Sessions.Session ses, String tool, Boolean on) {
+        if (on == null) ses.tools.remove(tool);
+        else ses.tools.put(tool, on);
+        sessions.save(ses);
+        changed();
+    }
+
+    /** Chat options → Tools → Same as Settings. */
+    void clearTools(Sessions.Session ses) {
+        ses.tools.clear();
+        sessions.save(ses);
+        changed();
+    }
+
+    /** Lite mode (see Lite): the user's pick for this chat, from its next message on. */
+    void setLite(Sessions.Session ses, boolean on) {
+        ses.lite = on;
         sessions.save(ses);
         changed();
     }
@@ -810,12 +921,17 @@ final class ChatHub {
                             t = t.replace(QUIET, "").trim();
                         }
                         if (!t.isEmpty()) {
-                            add(ses, Bubble.Kind.BUDDY, t, pictures(t));
+                            add(ses, Bubble.Kind.BUDDY, t, replyFiles(ses, t));
                             ses.lastReply = t;
                             ses.gotText = true;
                             CodexLive.agentSaid(ses, t); // a live voice call in this chat tells the user
                         }
                     } else if ("tool_use".equals(c.optString("type"))) {
+                        // a step that isn't the phone's (a Linux command, a file edit): the screen is the user's again
+                        String tn = c.optString("name");
+                        if (tn.startsWith(TOOL_PREFIX)) ses.phoneToolAt = SystemClock.elapsedRealtime();
+                        else if (!BOOKKEEPING.contains(tn)) ses.otherToolAt = SystemClock.elapsedRealtime();
+                        ses.reseed = false; // its agent got the conversation and is at work on it
                         String step = describeTool(c.optString("name"), c.optJSONObject("input"));
                         if (step != null) {
                             add(ses, Bubble.Kind.STEP, describeTool(c.optString("name"), c.optJSONObject("input"), true));
@@ -852,11 +968,11 @@ final class ChatHub {
                     ses.quietSaid = true;
                     r = r.replace(QUIET, "").trim();
                     if (!ses.gotText && !r.isEmpty()) {
-                        add(ses, Bubble.Kind.BUDDY, r, pictures(r));
+                        add(ses, Bubble.Kind.BUDDY, r, replyFiles(ses, r));
                         ses.lastReply = r;
                     }
                 } else if (!ses.gotText && !r.isEmpty()) {
-                    add(ses, Bubble.Kind.BUDDY, r, pictures(r));
+                    add(ses, Bubble.Kind.BUDDY, r, replyFiles(ses, r));
                     ses.lastReply = r;
                     CodexLive.agentSaid(ses, r);
                 }
@@ -868,7 +984,8 @@ final class ChatHub {
                 for (int i = ses.messages.size() - 1; i >= 0 && !shown; i--) {
                     Sessions.Msg m = ses.messages.get(i);
                     if (m.kind == Bubble.Kind.USER) break;
-                    shown = m.kind == Bubble.Kind.BUDDY && !m.files.isEmpty();
+                    if (m.kind != Bubble.Kind.BUDDY) continue;
+                    for (String f : m.files) if (Attachments.isImage(f)) shown = true; // (a saved PDF's chip isn't one)
                 }
                 if (shown) break;
                 JSONArray paths = ev.optJSONArray("paths");
@@ -910,6 +1027,8 @@ final class ChatHub {
                 if (ses.running) {
                     ses.running = false;
                     ses.status = "";
+                    List<String> left0 = savedFiles.remove(ses.id); // saved, but no reply came to show them under
+                    if (left0 != null && !left0.isEmpty()) add(ses, Bubble.Kind.BUDDY, "", left0);
                     runEnded(ses);
                     if (!ses.lastReply.isEmpty()) {
                         Prefs.setHadReply(app);
@@ -1009,7 +1128,8 @@ final class ChatHub {
         try {
             Helper.runFor(app, ses.id, code -> main.postDelayed(() -> helperGone(ses, run[0], code), HELPER_GONE_MS),
                     "ask", ses.id, ses.backend, devArg(ses),
-                    "(Added while you were working; if it asks something, answer it:) " + text, model(ses), "", ses.effort);
+                    "(Added while you were working; if it asks something, answer it:) " + text, model(ses), "", ses.effort,
+                    "", Lite.on(ses) ? "lite" : "");
         } catch (Exception e) {
             add(ses, Bubble.Kind.ERROR, e.getMessage());
             return;
@@ -1121,6 +1241,8 @@ final class ChatHub {
 
     private void startRun(Sessions.Session ses) {
         ses.running = true;
+        ses.phoneToolAt = 0; // (what its earlier run did says nothing about this one)
+        ses.otherToolAt = 0;
         ses.outcome = null;
         ses.gotText = false;
         ses.lastReply = "";
@@ -1175,6 +1297,7 @@ final class ChatHub {
         if (text == null) return;
         // the agent a chat was switched to has answered: the conversation is its own from here on
         if (kind == Bubble.Kind.BUDDY && ses.handover != null) ses.handover = null;
+        if (kind == Bubble.Kind.BUDDY) ses.reseed = false; // (a fork's agent has the conversation now too)
         sessions.add(ses, kind, text, files);
         if (kind == Bubble.Kind.BUDDY && !viewing.contains(ses) && ses.parent.isEmpty()) ses.unread = true;
         // not during a live voice call: the voice tells the user itself (nor a helper's report, which is for its parent)
@@ -1182,6 +1305,30 @@ final class ChatHub {
             Voice.speak(app, text);
         Sessions.Msg m = ses.messages.get(ses.messages.size() - 1);
         for (Listener l : new ArrayList<>(listeners)) l.onMessage(ses, m);
+    }
+
+    /** Files a chat's agent saved to Downloads (save_to_downloads), as attachments: its next reply shows them. */
+    private final java.util.Map<String, List<String>> savedFiles = new java.util.concurrent.ConcurrentHashMap<>();
+
+    /** An agent saved a file to Downloads in this chat (any thread): it comes as a chip under the chat's next reply. */
+    void fileSaved(String chat, String attachment) {
+        savedFiles.computeIfAbsent(chat, k -> java.util.Collections.synchronizedList(new ArrayList<>())).add(attachment);
+    }
+
+    /** What a reply shows under it: the pictures it names, and the files saved to Downloads since the last reply. */
+    private List<String> replyFiles(Sessions.Session ses, String text) {
+        List<String> out = pictures(text);
+        List<String> saved = savedFiles.remove(ses.id);
+        if (saved == null) return out;
+        java.util.Set<String> named = new java.util.HashSet<>(); // (the same file has a new id each copy: by its name)
+        for (String id : out) named.add(stem(Attachments.name(id)));
+        for (String id : saved) if (named.add(stem(Attachments.name(id)))) out.add(id);
+        return out;
+    }
+
+    /** "chart.png" → "chart": a photo saved as a copy becomes .jpg, so names are compared without it. */
+    private static String stem(String name) {
+        return name.replaceAll("\\.[A-Za-z0-9]{1,5}$", "").toLowerCase(java.util.Locale.ROOT);
     }
 
     /** A picture's path in Buddy's Linux, as agents write it: /root/.buddy/work/chart.png, ~/out/photo.jpg. */
@@ -1223,6 +1370,29 @@ final class ChatHub {
 
     private boolean wasRunning;
     private long lastRunEndedAt;
+
+    /**
+     * An agent's own bookkeeping between phone steps (loading a tool, its to-do list): not work elsewhere, so it doesn't
+     * end "Using your phone". Every other step that isn't a phone tool does (a Linux command, a file, another server).
+     */
+    private static final java.util.Set<String> BOOKKEEPING = new java.util.HashSet<>(java.util.Arrays.asList(
+            "ToolSearch", "TodoWrite", "TodoRead", "EnterPlanMode", "ExitPlanMode", "update_plan", "todowrite", "todoread",
+            "Task", "Agent", "TaskOutput")); // (a sub-agent may be the one using the phone next)
+
+    /**
+     * Every running chat's agent went on to a Linux or file step after since (elapsedRealtime): none of them is using
+     * the phone now. False with none running.
+     */
+    boolean allMovedOn(long since) {
+        boolean any = false;
+        for (Sessions.Session s : new ArrayList<>(sessions.all)) {
+            // only the chats that used the real screen in this run (a background chat works on a screen of its own)
+            if (!s.running || s.phoneToolAt == 0 || Background.on(app, s.id)) continue;
+            if (s.otherToolAt <= since || s.otherToolAt <= s.phoneToolAt) return false;
+            any = true;
+        }
+        return any;
+    }
 
     /** When the last running chat finished (elapsedRealtime). */
     long lastRunEndedAt() {
@@ -1363,6 +1533,8 @@ final class ChatHub {
             case "notifications": return BuddyApp.str(R.string.hub_tool_notifications);
             case "media": return BuddyApp.str(R.string.hub_tool_media);
             case "calendar_events": return BuddyApp.str(R.string.hub_tool_calendar_events);
+            case "call_log": return BuddyApp.str(R.string.hub_tool_call_log);
+            case "sms_list": return BuddyApp.str(R.string.hub_tool_sms_list);
             case "add_calendar_event": return BuddyApp.str(R.string.hub_tool_add_event, said(full, in.optString("title"), 40));
             case "wait_for": return BuddyApp.str(R.string.hub_tool_wait_for);
             case "do_steps": {

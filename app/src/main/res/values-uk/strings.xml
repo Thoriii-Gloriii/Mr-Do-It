@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Ukrainian translation of Buddy's UI. Source: res/values/strings.xml. -->
 <resources>
-    <string name="service_label">Помічник Buddy</string>
-    <string name="service_description">Показує бульбашку чату Buddy і дає змогу вибраному вами агенту (Claude Code, Codex, OpenCode, Antigravity або Grok), що працює в Buddy на цьому телефоні, читати екран, а також натискати, вводити текст і прокручувати за вас. Ніщо не покидає телефон, окрім того, що сам агент надсилає своєму ШІ-сервісу (Anthropic, OpenAI, Google, xAI або провайдеру вашої моделі в OpenCode).</string>
+    <string name="service_label">Помічник Mr Do It</string>
+    <string name="service_description">Показує бульбашку чату Mr Do It і дає змогу вибраному вами агенту (Claude Code, Codex, OpenCode, Antigravity або Grok), що працює в Mr Do It на цьому телефоні, читати екран, а також натискати, вводити текст і прокручувати за вас. Ніщо не покидає телефон, окрім того, що сам агент надсилає своєму ШІ-сервісу (Anthropic, OpenAI, Google, xAI або провайдеру вашої моделі в OpenCode).</string>
 
     <!-- ===== First run (OnboardingActivity), the Chats home screen (MainActivity), updates, appearance ===== -->
 
@@ -22,7 +22,7 @@
     <string name="onboarding_stuck">Не виходить?</string>
 
     <!-- Guide, welcome screen. -->
-    <string name="onboarding_welcome_title">Знайомтеся: Buddy</string>
+    <string name="onboarding_welcome_title">Знайомтеся: Mr Do It</string>
     <string name="onboarding_welcome_text">Бульбашка чату, яка вміє користуватися телефоном за вас.</string>
     <string name="onboarding_welcome_ask_title">Просіть звичайними словами</string>
     <!-- Two example requests a user could type. Translate them naturally and use your language's quotation marks. -->
@@ -30,7 +30,7 @@
     <string name="onboarding_welcome_plan_title">Ваша підписка, без API-ключа</string>
     <string name="onboarding_welcome_plan_text">Claude Code працює за вашою підпискою Claude. Підійдуть і Codex із підпискою ChatGPT, Antigravity з обліковим записом Google, Grok з обліковим записом Google чи X та безкоштовні моделі OpenCode.</string>
     <string name="onboarding_welcome_control_title">Контроль залишається за вами</string>
-    <string name="onboarding_welcome_control_text">Перед надсиланням, публікацією, покупкою чи видаленням Buddy завжди питає.</string>
+    <string name="onboarding_welcome_control_text">Перед надсиланням, публікацією, покупкою чи видаленням Mr Do It завжди питає.</string>
     <!-- Small lowercase mono line under the list. -->
     <string name="onboarding_welcome_time">налаштування займе близько 5 хвилин</string>
     <string name="onboarding_get_started">Почати</string>
@@ -58,9 +58,9 @@
     <string name="onboarding_recommended">рекомендуємо</string>
 
     <!-- Guide, step: turn on Buddy's accessibility service. -->
-    <string name="onboarding_access_title">Дозвольте Buddy бачити й натискати</string>
+    <string name="onboarding_access_title">Дозвольте Mr Do It бачити й натискати</string>
     <string name="onboarding_access_done">Сервіс спеціальних можливостей увімкнено.</string>
-    <string name="onboarding_access_text">Сервіс спеціальних можливостей Buddy показує бульбашку й дає агенту змогу читати екран, натискати й вводити текст — лише тоді, коли ви про щось просите.</string>
+    <string name="onboarding_access_text">Сервіс спеціальних можливостей Mr Do It показує бульбашку й дає агенту змогу читати екран, натискати й вводити текст — лише тоді, коли ви про щось просите.</string>
     <!-- %1$s = the agent's name (Claude Code or Codex); %2$s = the company it sends to (Anthropic or OpenAI). -->
     <string name="onboarding_access_privacy">Ніщо не покидає телефон, окрім того, що %1$s надсилає до %2$s, щоб вам відповісти. Для надсилання, публікації, покупок і видалення завжди спершу потрібен ваш дозвіл.</string>
     <!-- Same as onboarding_access_privacy, when both Claude Code and Codex are set up. -->
@@ -68,7 +68,7 @@
     <!-- Same as onboarding_access_privacy, for OpenCode. %1$s = OpenCode. The model's provider = whichever AI company runs the chosen model. -->
     <string name="onboarding_access_privacy_opencode">Ніщо не покидає телефон, окрім того, що %1$s надсилає провайдеру моделі, щоб вам відповісти. Для надсилання, публікації, покупок і видалення завжди спершу потрібен ваш дозвіл.</string>
     <!-- Path in Android's Accessibility settings. "Downloaded apps" = that section's name on Android (use Android's wording in your language); "Buddy assistant" = Buddy's service name (service_label). -->
-    <string name="onboarding_access_list_hint">У списку: Завантажені додатки → Помічник Buddy → увімкніть.</string>
+    <string name="onboarding_access_list_hint">У списку: Завантажені додатки → Помічник Mr Do It → увімкніть.</string>
     <string name="onboarding_access_open">Відкрити спеціальні можливості</string>
     <!-- Android 13+ greys out the switch for apps installed from a file. Title of a help box and a help question. -->
     <string name="onboarding_access_greyed_title">Перемикач неактивний?</string>
@@ -88,7 +88,7 @@
     <!-- Same as onboarding_agents_done, when both Claude Code and Codex are set up. -->
     <string name="onboarding_agents_done_both">Claude Code і Codex установлено, вхід виконано.</string>
     <!-- %1$s = the agent's name (Claude Code, Codex, OpenCode) or onboarding_agent_names_both. -->
-    <string name="onboarding_agents_text">Buddy встановлює %1$s у самому додатку, а ви один раз входите в обліковий запис. Termux не потрібен.</string>
+    <string name="onboarding_agents_text">Mr Do It встановлює %1$s у самому додатку, а ви один раз входите в обліковий запис. Termux не потрібен.</string>
     <!-- Both agents together, inserted as %1$s into onboarding_agents_text. -->
     <string name="onboarding_agent_names_both">Claude Code і Codex</string>
     <!-- Agent card status lines: small lowercase mono text, one line. -->
@@ -102,11 +102,11 @@
     <string name="onboarding_agent_installed">установлено · вхід не виконано</string>
     <string name="onboarding_agent_not_installed">не встановлено</string>
     <!-- Agent card help text. "Authorize" = the button on Claude's sign-in web page (the page may be in English). -->
-    <string name="onboarding_agent_sign_in_claude">Увійдіть в обліковий запис Claude. Відкриється браузер: натисніть «Authorize», і Buddy повернеться сам.</string>
+    <string name="onboarding_agent_sign_in_claude">Увійдіть в обліковий запис Claude. Відкриється браузер: натисніть «Authorize», і Mr Do It повернеться сам.</string>
     <string name="onboarding_agent_checking_opencode">Перевірка OpenCode…</string>
     <string name="onboarding_agent_sign_in_codex">Увійдіть в обліковий запис ChatGPT у браузері, а потім поверніться.</string>
-    <string name="onboarding_agent_sign_in_agy">Увійдіть в обліковий запис Google. Відкриється браузер: увійдіть там, і Buddy сам отримає код.</string>
-    <string name="onboarding_agent_sign_in_grok">Увійдіть в обліковий запис Grok. Відкриється браузер: підтвердьте там код, і Buddy повернеться сам.</string>
+    <string name="onboarding_agent_sign_in_agy">Увійдіть в обліковий запис Google. Відкриється браузер: увійдіть там, і Mr Do It сам отримає код.</string>
+    <string name="onboarding_agent_sign_in_grok">Увійдіть в обліковий запис Grok. Відкриється браузер: підтвердьте там код, і Mr Do It повернеться сам.</string>
     <!-- "Buddy's Linux" = the small Linux system built into Buddy. -->
     <string name="onboarding_agent_download_claude">Одноразово завантажується близько 235 МБ (вбудований Linux і Claude Code від Anthropic).</string>
     <string name="onboarding_agent_download_opencode">Одноразово завантажується близько 230 МБ (вбудований Linux, Node.js і OpenCode). Обліковий запис не потрібен.</string>
@@ -122,16 +122,16 @@
     <string name="onboarding_install_agent">Установити %1$s</string>
     <string name="onboarding_agents_wifi">За можливості використовуйте Wi-Fi. Під час установлення можна вийти з цього екрана.</string>
     <!-- Help questions and answers under "Stuck?". "Copy Code" = a button on Claude's web page. -->
-    <string name="onboarding_stuck_sign_in_q">Buddy не відкрився після входу?</string>
-    <string name="onboarding_stuck_sign_in_a">Claude: на сторінці Claude натисніть «Copy Code» і поверніться в Buddy — він сам візьме код із буфера обміну.</string>
+    <string name="onboarding_stuck_sign_in_q">Mr Do It не відкрився після входу?</string>
+    <string name="onboarding_stuck_sign_in_a">Claude: на сторінці Claude натисніть «Copy Code» і поверніться в Mr Do It — він сам візьме код із буфера обміну.</string>
     <string name="onboarding_stuck_install_q">Не вдалося встановити?</string>
     <!-- "Install" = the Install button on the agent card (onboarding_install_agent). -->
     <string name="onboarding_stuck_install_a">Перевірте з\'єднання й знову натисніть «Установити» — установлення продовжиться з місця зупинки.</string>
 
     <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">Нехай працює у фоні</string>
-    <string name="onboarding_background_done">Buddy може працювати у фоновому режимі.</string>
-    <string name="onboarding_background_text">Щоб телефон не зупиняв Buddy для економії заряду, поки агент працює.</string>
+    <string name="onboarding_background_done">Mr Do It може працювати у фоновому режимі.</string>
+    <string name="onboarding_background_text">Щоб телефон не зупиняв Mr Do It для економії заряду, поки агент працює.</string>
     <!-- Button: opens Android's dialog to let Buddy run in the background. -->
     <string name="onboarding_allow">Дозволити</string>
     <string name="onboarding_skip_for_now">Поки що пропустити</string>
@@ -139,18 +139,18 @@
     <!-- Guide, step: how much the agent asks before acting. -->
     <string name="onboarding_safety_title">Як часто питати вас?</string>
     <!-- Ends with a colon: the two options follow. -->
-    <string name="onboarding_safety_text">У месенджерах, соцмережах, додатках для покупок, платежів і банкінгу Buddy завжди питає вашого дозволу, перш ніж щось надіслати, опублікувати, купити чи видалити. Для інших додатків:</string>
+    <string name="onboarding_safety_text">У месенджерах, соцмережах, додатках для покупок, платежів і банкінгу Mr Do It завжди питає вашого дозволу, перш ніж щось надіслати, опублікувати, купити чи видалити. Для інших додатків:</string>
     <string name="onboarding_safety_ask_title">Спершу питати мене</string>
     <string name="onboarding_safety_ask_text">Агент питає перед будь-якою ризикованою дією, як-от зміною налаштування. Безпечніше, але запитів більше.</string>
     <string name="onboarding_safety_auto_title">Працювати самостійно</string>
     <string name="onboarding_safety_auto_text">Без запитів: агент просто робить те, що ви попросили, як-от вмикає камеру чи світло.</string>
     <!-- "Settings → App permissions" = Buddy's own screens. "Trust" and "Hard" = names of approval modes; use the same translations as those mode labels. -->
-    <string name="onboarding_safety_note">Це можна будь-коли змінити для кожного додатка: Налаштування → Безпека й підтвердження → Дозволи додатків. У режимі «Довіра» агент працює в додатку без запитів, а в режимі «Суворий» Buddy сам питає вас.</string>
+    <string name="onboarding_safety_note">Це можна будь-коли змінити для кожного додатка: Налаштування → Безпека й підтвердження → Дозволи додатків. У режимі «Довіра» агент працює в додатку без запитів, а в режимі «Суворий» Mr Do It сам питає вас.</string>
 
     <!-- Guide, last step: try a first task. -->
     <string name="onboarding_try_title">Усе готово</string>
     <!-- "Settings" = Android's Settings app. -->
-    <string name="onboarding_try_text">Спробуйте перше завдання: Buddy відкриє Налаштування й прочитає потрібне за вас.</string>
+    <string name="onboarding_try_text">Спробуйте перше завдання: Mr Do It відкриє Налаштування й прочитає потрібне за вас.</string>
     <!-- Example request: shown on this screen and put in the chat's input box, ready to send to the agent. "Settings" = Android's Settings app. -->
     <string name="onboarding_try_prompt">Відкрий Налаштування й скажи, яка в мене версія Android</string>
     <!-- onboarding_try_prompt in quotation marks (%1$s). Use your language's quotation marks. -->
@@ -170,7 +170,7 @@
     <string name="main_setup_title">Завершіть налаштування, щоб запускати чати</string>
     <!-- %1$s = the name of the next setup step, e.g. Turn on the accessibility service. -->
     <string name="main_setup_next">Далі: %1$s</string>
-    <string name="main_setup_next_accessibility">Далі: увімкніть сервіс спеціальних можливостей Buddy</string>
+    <string name="main_setup_next_accessibility">Далі: увімкніть сервіс спеціальних можливостей Mr Do It</string>
     <!-- Section header, shown in capitals: chats whose task is running now. The count follows it. -->
     <string name="main_section_working">У роботі</string>
     <!-- Section header, shown in capitals. -->
@@ -216,16 +216,16 @@
     <!-- Notification shown after the bubble is dragged away to hide it. -->
     <!-- Notification category name in Android's notification settings for Buddy. -->
     <string name="notice_channel_name">Прихована бульбашка</string>
-    <string name="notice_hidden_title">Buddy приховано</string>
+    <string name="notice_hidden_title">Mr Do It приховано</string>
     <string name="notice_hidden_text">Натисніть, щоб знову показати бульбашку.</string>
     <!-- Notification button: opens Buddy's chat list. Keep short. -->
     <string name="notice_open_chats">Відкрити чати</string>
 
     <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
     <!-- Notification category name in Android's notification settings for Buddy. -->
-    <string name="update_channel_name">Оновлення Buddy</string>
+    <string name="update_channel_name">Оновлення Mr Do It</string>
     <!-- Notification and sheet title. %1$s = the new version number, e.g. 2.1.14. -->
-    <string name="update_available_title">Доступна версія Buddy %1$s</string>
+    <string name="update_available_title">Доступна версія Mr Do It %1$s</string>
     <!-- %1$s = the installed version number. -->
     <string name="update_notification_text">У вас версія %1$s. Натисніть, щоб дізнатися, що нового, і оновити; чати збережуться.</string>
     <!-- Verb: download and install the new version. Notification button and sheet button (half width). Keep short. -->
@@ -237,7 +237,7 @@
     <string name="update_checking">Перевірка оновлень…</string>
     <string name="update_check_failed">Не вдалося з\'єднатися з GitHub. Спробуйте пізніше.</string>
     <!-- %1$s = the installed version number. -->
-    <string name="update_up_to_date">У вас найновіша версія Buddy (%1$s).</string>
+    <string name="update_up_to_date">У вас найновіша версія Mr Do It (%1$s).</string>
     <!-- Under the sheet title. %1$s = the installed version number. -->
     <string name="update_sheet_text">У вас версія %1$s. Оновлення збереже ваші чати, налаштування та входи в облікові записи.</string>
     <!-- Sheet button (half width): close without updating. -->
@@ -245,12 +245,12 @@
     <!-- On the Update button while the new version downloads. -->
     <string name="update_downloading">Завантаження…</string>
     <!-- "Update" = the button (update_action). -->
-    <string name="update_needs_permission">Дозвольте Buddy встановлювати додатки, а потім знову натисніть «Оновити».</string>
+    <string name="update_needs_permission">Дозвольте Mr Do It встановлювати додатки, а потім знову натисніть «Оновити».</string>
     <!-- Why an update failed (%1$s of update_failed_manual). buddy.apk is a file name. -->
     <string name="update_error_no_apk">У релізі ще немає buddy.apk.</string>
     <!-- %1$s = the system's technical error message (usually English). -->
     <string name="update_error_download">Не вдалося завантажити файл (%1$s).</string>
-    <string name="update_error_not_newer">Завантажений файл не є новішою версією Buddy, тому його не відкрито.</string>
+    <string name="update_error_not_newer">Завантажений файл не є новішою версією Mr Do It, тому його не відкрито.</string>
     <!-- Message after a failed update. %1$s = what went wrong (an update_error_ sentence); %2$s = the web address of the latest release; %3$s = the web address of the update instructions. Obtainium is an app name. -->
     <string name="update_failed_manual">%1$s Оновлення також можна завантажити з %2$s (buddy.apk) або отримувати автоматично через Obtainium (див. %3$s).</string>
 
@@ -274,7 +274,7 @@
     <!-- ===== The bubble, its hold menu, chat panel and approval cards (Bubble, RadialMenu, ControlIndicator) ===== -->
 
     <!-- Floating bubble, read by TalkBack. -->
-    <string name="bubble_face_description">Buddy. Натисніть, щоб відкрити, або утримуйте, щоб побачити дії</string>
+    <string name="bubble_face_description">Mr Do It. Натисніть, щоб відкрити, або утримуйте, щоб побачити дії</string>
     <!-- TalkBack action on the bubble, read as "Double-tap and hold to show actions". Lowercase. -->
     <string name="bubble_show_actions">показати дії</string>
 
@@ -336,10 +336,10 @@
     <string name="bubble_tip_stop_voice">Порада: утримуйте бульбашку, щоб вимкнути голос</string>
     <string name="bubble_tip_hold_menu">Порада: утримуйте бульбашку, щоб поставити на паузу, зупинити або уточнити завдання</string>
     <string name="bubble_stopping">Зупиняю…</string>
-    <string name="bubble_nothing_running">У чатах Buddy нічого не виконується.</string>
+    <string name="bubble_nothing_running">У чатах Mr Do It нічого не виконується.</string>
     <string name="bubble_nothing_running_chat">У цьому чаті нічого не виконується.</string>
-    <string name="bubble_allow_mic_tap_mic">Дозвольте Buddy доступ до мікрофона, а потім знову натисніть мікрофон.</string>
-    <string name="bubble_allow_mic_tap_bubble">Дозвольте Buddy доступ до мікрофона, а потім знову натисніть бульбашку.</string>
+    <string name="bubble_allow_mic_tap_mic">Дозвольте Mr Do It доступ до мікрофона, а потім знову натисніть мікрофон.</string>
+    <string name="bubble_allow_mic_tap_bubble">Дозвольте Mr Do It доступ до мікрофона, а потім знову натисніть бульбашку.</string>
     <!-- After dictating an instruction while the agent works. %1$s: the agent's name (Claude Code, Codex or OpenCode). -->
     <string name="bubble_note_added">Зрозуміло: %1$s це врахує</string>
     <!-- A message was copied to the clipboard. -->
@@ -419,6 +419,14 @@
     <!-- The card's label when the request comes from an agent session outside Buddy's chats (e.g. a terminal).
          %1$s: card_label_approval or card_label_question. All caps. -->
     <string name="card_label_other_session">%1$s · З ІНШОГО СЕАНСУ</string>
+    <string name="card_label_from">%1$s · ВІД %2$s</string>
+    <string name="outside_terminal">Термінал цього телефона</string>
+    <string name="outside_computer">Комп\'ютер</string>
+    <string name="monitor_outside">Поза Mr Do It</string>
+    <string name="monitor_outside_hidden">На власному прихованому екрані · останній крок %1$s</string>
+    <string name="monitor_outside_screen">На вашому екрані · останній крок %1$s</string>
+    <string name="monitor_outside_bring">Перенести на мій екран</string>
+    <string name="monitor_outside_stopped">Зупинено. Його інструменти телефона відхиляються протягом хвилини, а картки, що чекали, відхилено.</string>
     <string name="card_label_queue">%1$s · 1 З %2$d</string>
     <!-- Buttons side by side at the bottom of the card: keep them short. -->
     <string name="card_deny">Відхилити</string>
@@ -444,15 +452,15 @@
 
     <!-- Notification while an agent operates the phone; on Android 16 also a chip in the status bar. -->
     <!-- Name of this notification category in Android's notification settings. -->
-    <string name="control_channel_name">Buddy керує вашим телефоном</string>
+    <string name="control_channel_name">Mr Do It керує вашим телефоном</string>
     <string name="control_channel_description">Показується в рядку стану, поки агент керує телефоном.</string>
-    <string name="control_title">Buddy керує вашим телефоном</string>
+    <string name="control_title">Mr Do It керує вашим телефоном</string>
     <!-- "Stop" is the notification's button (control_stop): use the same word. -->
     <string name="control_text">Не торкайтеся екрана, доки все не завершиться, або натисніть «Зупинити», щоб узяти керування на себе.</string>
     <!-- Notification button, verb: stops the agent and gives the phone back to the user. -->
     <string name="control_stop">Зупинити</string>
-    <string name="work_title">Buddy працює у фоні</string>
-    <string name="pause_call_ended_title">Дзвінок завершено · Buddy на паузі</string>
+    <string name="work_title">Mr Do It працює у фоні</string>
+    <string name="pause_call_ended_title">Дзвінок завершено · Mr Do It на паузі</string>
     <string name="pause_call_ended_text">Торкніться, щоб продовжити завдання</string>
 
     <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
@@ -492,7 +500,7 @@
     <string name="chat_approvals_info">Як цей чат питає вас, перш ніж його агент щось зробить. Вибір зберігається, доки ви його не зміните; нові чати починають із «Питати».</string>
     <string name="chat_approvals_ask">Питати</string>
     <string name="chat_approvals_ask_info">Кожен застосунок діє так, як задано для нього в розділі «%1$s».</string>
-    <string name="chat_approvals_strict_info">Навіть у застосунках із режимом «%1$s» Buddy питає перед надсиланням, публікацією, купівлею чи видаленням.</string>
+    <string name="chat_approvals_strict_info">Навіть у застосунках із режимом «%1$s» Mr Do It питає перед надсиланням, публікацією, купівлею чи видаленням.</string>
     <string name="chat_approvals_apps_set">Де діяв агент і налаштування кожного застосунку в розділі «%1$s». Зміна тут діє в усіх чатах.</string>
     <string name="chat_approvals_routine">Рутинне дозволено</string>
     <string name="chat_approvals_routine_info">Рутинні кроки виконуються в будь-якому застосунку без картки: надсилання повідомлення або крок, про який запитав би перевіряльник. Кожен позначається в чаті. Оплата, покупки, видалення, встановлення, паролі та налаштування безпеки й далі питають вас, як і все в банківських і платіжних застосунках, Налаштуваннях і магазинах застосунків.</string>
@@ -509,7 +517,7 @@
     <string name="schedule_title">Розклад</string>
     <string name="schedule_set">Задати розклад</string>
     <string name="schedule_set_info">Сам надсилає повідомлення в цей чат у заданий час, наприклад щодня о 14:00.</string>
-    <string name="schedule_info">У заданий час Buddy надсилає це повідомлення в чат, ніби ви його набрали, з агентом і налаштуваннями цього чату. Картки підтвердження й далі чекають на вас. Якщо йому потрібен екран, коли телефон заблоковано, він попросить розблокувати.</string>
+    <string name="schedule_info">У заданий час Mr Do It надсилає це повідомлення в чат, ніби ви його набрали, з агентом і налаштуваннями цього чату. Картки підтвердження й далі чекають на вас. Якщо йому потрібен екран, коли телефон заблоковано, він попросить розблокувати.</string>
     <string name="schedule_time">Час</string>
     <string name="schedule_add_time">Додати час</string>
     <string name="schedule_remove_time">Вилучити %1$s</string>
@@ -521,7 +529,7 @@
     <string name="schedule_message_hint">Що надіслати, наприклад: Відкрий застосунок і відмітися за сьогодні</string>
     <string name="schedule_wake">Будити телефон для цього завдання</string>
     <string name="schedule_wake_info">Коли потрібен екран, він вмикається (а екран блокування без PIN-коду, графічного ключа чи відбитка відкривається). Поки завдання триває, екран бачать усі поруч.</string>
-    <string name="schedule_inexact">Точні будильники для Buddy вимкнено, тому він може почати на кілька хвилин пізніше.</string>
+    <string name="schedule_inexact">Точні будильники для Mr Do It вимкнено, тому він може почати на кілька хвилин пізніше.</string>
     <string name="schedule_allow_exact">Дозволити точні будильники</string>
     <string name="schedule_save">Зберегти</string>
     <string name="schedule_remove">Видалити</string>
@@ -537,7 +545,7 @@
     <string name="schedule_skipped_title">Завдання за розкладом пропущено: %1$s</string>
     <string name="schedule_stopped_title">Завдання за розкладом зупинено: %1$s</string>
     <string name="schedule_skip_running">Цей чат ще виконував попереднє завдання.</string>
-    <string name="schedule_skip_busy">Buddy був зайнятий цілу годину (інше завдання, пауза або немає інтернету).</string>
+    <string name="schedule_skip_busy">Mr Do It був зайнятий цілу годину (інше завдання, пауза або немає інтернету).</string>
     <string name="schedule_skip_screen">Телефон залишався заблокованим цілу годину.</string>
     <string name="schedule_marker">За розкладом</string>
 
@@ -595,7 +603,7 @@
     <string name="live_ended">Живий голос завершено.</string>
     <string name="live_ended_why">Живий голос завершено: %1$s</string>
     <string name="live_ended_screen_off">екран вимкнувся</string>
-    <string name="live_ended_paused">Buddy призупинено</string>
+    <string name="live_ended_paused">Mr Do It призупинено</string>
     <string name="live_ended_idle">5 хвилин нічого не було сказано</string>
     <string name="live_notification_title">Живий голос із %1$s</string>
     <string name="live_mic_busy">Живий голос використовує мікрофон. Спершу завершіть його.</string>
@@ -652,6 +660,26 @@
     <!-- Chat messages -->
     <!-- Toast after a long press copies a message. -->
     <string name="chat_copied">Скопійовано</string>
+    <string name="chat_copy">Копіювати</string>
+    <string name="chat_quote">Цитувати</string>
+    <string name="chat_quote_remove">Прибрати цитату</string>
+    <string name="chat_edit">Змінити</string>
+    <string name="chat_fork">Відгалузити звідси</string>
+    <string name="chat_fork_title">%1$s · відгалуження</string>
+    <string name="chat_forked_from">Відгалужено від «%1$s»</string>
+    <string name="chat_forked">Відгалужено: новий чат звідси</string>
+    <string name="chat_before_edit_title">%1$s (до зміни)</string>
+    <string name="chat_edit_running">Зачекайте, доки цей чат закінчить, а тоді змінюйте.</string>
+    <string name="chat_edit_failed">Не вдалося змінити повідомлення.</string>
+    <string name="chat_edit_title">Змінити повідомлення</string>
+    <string name="chat_edit_info">Агент відповість заново з цього місця, почавши з чистого аркуша з чатом до цього повідомлення. Усе після нього зникне з цього чату; чат у попередньому вигляді залишиться в архіві.</string>
+    <string name="chat_edit_send">Надіслати</string>
+    <string name="chat_edited">змінено</string>
+    <string name="setup_voice_pause">Припиняти слухати після паузи</string>
+    <string name="setup_voice_auto">Авто</string>
+    <string name="setup_voice_pause_info">Mr Do It зупиняється й надсилає, коли почуті слова не змінюються стільки часу, навіть якщо довкола музика чи шум. Авто: вирішує голосовий рушій, а він чекає тиші.</string>
+    <string name="setup_voice_max">Найдовший запис</string>
+    <string name="setup_voice_no_limit">Без обмеження</string>
     <string name="chat_copy_whole_reply">Копіювати всю відповідь</string>
     <!-- Header of a collapsible group of the agent's steps in the chat. -->
     <plurals name="chat_tool_calls">
@@ -666,16 +694,16 @@
     <string name="hub_continuing">Продовження попереднього сеансу %1$s. Якщо він ще відкритий у терміналі, спершу закрийте його там.</string>
     <string name="hub_still_working_attachments">Цей чат ще працює. Надішліть вкладення, коли завдання буде виконано.</string>
     <string name="hub_service_off">Сервіс %1$s вимкнено (Налаштування → Агенти й моделі → Ключі API). Увімкніть його або виберіть іншу модель для цього чату.</string>
-    <string name="hub_accessibility_dead">Служба спеціальних можливостей Buddy не працює, хоча ввімкнена: Android зупинив Buddy і не запустив службу знову, тож агенти не можуть керувати телефоном. Вимкніть і знову ввімкніть Buddy у Налаштуваннях Android → Спеціальні можливості. Щоб це не повторилося: дозвольте Buddy автозапуск у налаштуваннях застосунків телефона, якщо вони є, і дайте мікрофону «Лише під час використання застосунку», а не «Лише цього разу».</string>
-    <string name="hub_accessibility_off">Служба спеціальних можливостей Buddy вимкнена, тож агенти не можуть керувати телефоном. Увімкніть Buddy у Налаштуваннях Android → Спеціальні можливості.</string>
-    <string name="voice_mic_while_using">Виберіть «Лише під час використання застосунку»: з «Лише цього разу» Android зупиняє Buddy через хвилину після того, як ви з нього вийшли, навіть посеред завдання.</string>
+    <string name="hub_accessibility_dead">Служба спеціальних можливостей Mr Do It не працює, хоча ввімкнена: Android зупинив Mr Do It і не запустив службу знову, тож агенти не можуть керувати телефоном. Вимкніть і знову ввімкніть Mr Do It у Налаштуваннях Android → Спеціальні можливості. Щоб це не повторилося: дозвольте Mr Do It автозапуск у налаштуваннях застосунків телефона, якщо вони є, і дайте мікрофону «Лише під час використання застосунку», а не «Лише цього разу».</string>
+    <string name="hub_accessibility_off">Служба спеціальних можливостей Mr Do It вимкнена, тож агенти не можуть керувати телефоном. Увімкніть Mr Do It у Налаштуваннях Android → Спеціальні можливості.</string>
+    <string name="voice_mic_while_using">Виберіть «Лише під час використання застосунку»: з «Лише цього разу» Android зупиняє Mr Do It через хвилину після того, як ви з нього вийшли, навіть посеред завдання.</string>
     <!-- Status right after a message is sent, until the agent's first step. -->
     <string name="hub_thinking">Думаю…</string>
     <string name="hub_still_waiting">Досі чекаю на відповідь моделі…</string>
     <string name="hub_still_reading_local">Ще читає… Моделі на вашому комп\'ютері може знадобитися кілька хвилин, особливо для першої відповіді.</string>
     <!-- "the top of the chat" = the model chip under the chat title. -->
     <string name="hub_no_answer">Модель не відповіла. Можливо, вона зайнята: спробуйте ще раз або виберіть іншу модель угорі чату.</string>
-    <string name="hub_helper_gone">Цей запуск перервався: помічник, який запускає агента в Linux Buddy, зупинився. Надішліть повідомлення ще раз.</string>
+    <string name="hub_helper_gone">Цей запуск перервався: помічник, який запускає агента в Linux Mr Do It, зупинився. Надішліть повідомлення ще раз.</string>
     <string name="hub_helper_killed">Android завершив процеси агента. Деякі телефони зупиняють фонові процеси застосунку, коли їх багато, наприклад із кількома субагентами. Щоб вони працювали: Налаштування → Система → Параметри розробника → Вимкнути обмеження дочірніх процесів.</string>
     <!-- After picking a model for the chat. %1$s = model name. -->
     <string name="hub_model_set">Модель: %1$s</string>
@@ -687,9 +715,9 @@
     <string name="hub_stopping">Зупиняю…</string>
     <!-- Note after the task was stopped. -->
     <string name="hub_stopped">Зупинено.</string>
-    <string name="hub_interrupted">Android закрив Buddy, поки агент працював, тому він зупинився.</string>
+    <string name="hub_interrupted">Android закрив Mr Do It, поки агент працював, тому він зупинився.</string>
     <string name="hub_resume_message">Продовж з того місця, де зупинився</string>
-    <string name="chat_interrupted">Android закрив Buddy, поки %1$s працював над цим. «Продовжити» перевірить, що вже зроблено, і продовжить звідти.</string>
+    <string name="chat_interrupted">Android закрив Mr Do It, поки %1$s працював над цим. «Продовжити» перевірить, що вже зроблено, і продовжить звідти.</string>
     <string name="chat_interrupted_continue">Продовжити</string>
     <string name="chat_interrupted_dismiss">Сховати</string>
     <!-- The agent ended with an error and gave no message. %1$s = agent name. -->
@@ -805,8 +833,8 @@
     <string name="hub_tool_asking">Запитую: %1$s</string>
     <string name="hub_tool_point_out">Позначає: %1$s</string>
     <string name="hub_tool_point_out_any">Позначає щось на екрані</string>
-    <string name="hub_tool_update_download">Завантажую оновлення Buddy</string>
-    <string name="hub_tool_update_check">Перевіряю оновлення Buddy</string>
+    <string name="hub_tool_update_download">Завантажую оновлення Mr Do It</string>
+    <string name="hub_tool_update_check">Перевіряю оновлення Mr Do It</string>
     <!-- %1$s = what is searched for. -->
     <string name="hub_tool_web_search">Шукаю в інтернеті: %1$s</string>
     <!-- Reading a web page. %1$s = web address. -->
@@ -825,7 +853,7 @@
     <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
     <string name="transcript_loading">Завантаження…</string>
     <!-- Button: continue this earlier session as a Buddy chat. -->
-    <string name="transcript_continue">Продовжити в Buddy</string>
+    <string name="transcript_continue">Продовжити в Mr Do It</string>
     <string name="transcript_empty">У цьому сеансі немає повідомлень, які можна прочитати.</string>
     <!-- Above the messages. %1$d = how many of the session's last messages are shown. -->
     <plurals name="transcript_last_messages">
@@ -840,11 +868,11 @@
     <string name="ui_no_app_for_link">Немає додатка, який може відкрити це посилання</string>
 
     <!-- Accessibility disclosure, shown before Android's accessibility settings open (required by Google Play) -->
-    <string name="ui_a11y_title">Як Buddy використовує спеціальні можливості</string>
-    <string name="ui_a11y_what">Buddy використовує сервіс спеціальних можливостей Android, щоб виконувати ваші прохання в інших додатках: він читає вміст екрана, а також натискає, вводить текст і прокручує за вас. Ще він показує плаваючу бульбашку.</string>
+    <string name="ui_a11y_title">Як Mr Do It використовує спеціальні можливості</string>
+    <string name="ui_a11y_what">Mr Do It використовує сервіс спеціальних можливостей Android, щоб виконувати ваші прохання в інших додатках: він читає вміст екрана, а також натискає, вводить текст і прокручує за вас. Ще він показує плаваючу бульбашку.</string>
     <string name="ui_a11y_data">Поки виконується завдання, вміст екрана, який може містити особисту інформацію, як-от повідомлення, імена чи адреси, надсилається ШІ-сервісу вибраного вами агента (Anthropic для Claude Code, OpenAI для Codex, Google для Antigravity, xAI для Grok або провайдеру вашої моделі в OpenCode) лише для виконання вашого запиту.</string>
-    <string name="ui_a11y_no_servers">Buddy не має власних серверів. Він не збирає, не продає й не передає ці дані та не використовує їх для реклами.</string>
-    <string name="ui_a11y_asks">Перед будь-якою дією, що надсилає, публікує, купує чи видаляє, Buddy просить вашого дозволу. Сервіс можна будь-коли вимкнути в налаштуваннях спеціальних можливостей Android.</string>
+    <string name="ui_a11y_no_servers">Mr Do It не має власних серверів. Він не збирає, не продає й не передає ці дані та не використовує їх для реклами.</string>
+    <string name="ui_a11y_asks">Перед будь-якою дією, що надсилає, публікує, купує чи видаляє, Mr Do It просить вашого дозволу. Сервіс можна будь-коли вимкнути в налаштуваннях спеціальних можливостей Android.</string>
     <string name="ui_privacy_policy">Політика конфіденційності</string>
     <!-- Button: close the disclosure without opening the settings. -->
     <string name="ui_no_thanks">Ні, дякую</string>
@@ -861,7 +889,7 @@
 
     <!-- Accessibility service: pause from the bubble's hold menu, Stop on the control indicator -->
     <!-- Toast when a pause runs out after 5 minutes. -->
-    <string name="service_pause_expired">Пауза тривала 5 хвилин, тому Buddy зупинив завдання.</string>
+    <string name="service_pause_expired">Пауза тривала 5 хвилин, тому Mr Do It зупинив завдання.</string>
     <!-- Toast after the user stops the task to use the phone. -->
     <string name="service_stopped_toast">Зупинено. Телефон знову ваш.</string>
     <!-- Note in the chat when the user pauses the agent. -->
@@ -874,7 +902,7 @@
 
     <!-- Voice input and output -->
     <!-- 🎙 = the mic button. -->
-    <string name="voice_mic_needed">Buddy потрібен доступ до мікрофона. Відкрийте додаток Buddy і один раз натисніть 🎙, щоб його надати.</string>
+    <string name="voice_mic_needed">Mr Do It потрібен доступ до мікрофона. Відкрийте додаток Mr Do It і один раз натисніть 🎙, щоб його надати.</string>
     <string name="voice_no_recognizer">На цьому телефоні немає сервісу розпізнавання мовлення.</string>
     <!-- Status in the recording bar while speech recognition starts. Keep short. -->
     <string name="voice_starting">Запуск…</string>
@@ -903,11 +931,11 @@
     <!-- Sign-in screen: the agent isn't installed yet. -->
     <!-- Screen title and the button that starts the install. %1$s = agent name (Claude Code, Codex or OpenCode). -->
     <string name="signin_install">Установити %1$s</string>
-    <string name="signin_install_sub_claude">Claude Code працюватиме в Buddy за вашою підпискою Claude.</string>
-    <string name="signin_install_sub_opencode">OpenCode працюватиме в Buddy. Його безкоштовні моделі доступні одразу, без облікового запису; власних провайдерів (Anthropic, OpenAI, GitHub Copilot…) можна підключити будь-коли.</string>
-    <string name="signin_install_sub_codex">Codex працюватиме в Buddy за вашою підпискою ChatGPT.</string>
-    <string name="signin_install_sub_agy">Antigravity CLI від Google працюватиме в Buddy з вашим обліковим записом Google: безкоштовний тариф, Google AI Pro або Ultra.</string>
-    <string name="signin_install_sub_grok">Grok Build від xAI працюватиме в Buddy з вашим обліковим записом Grok (можна увійти через Google або X).</string>
+    <string name="signin_install_sub_claude">Claude Code працюватиме в Mr Do It за вашою підпискою Claude.</string>
+    <string name="signin_install_sub_opencode">OpenCode працюватиме в Mr Do It. Його безкоштовні моделі доступні одразу, без облікового запису; власних провайдерів (Anthropic, OpenAI, GitHub Copilot…) можна підключити будь-коли.</string>
+    <string name="signin_install_sub_codex">Codex працюватиме в Mr Do It за вашою підпискою ChatGPT.</string>
+    <string name="signin_install_sub_agy">Antigravity CLI від Google працюватиме в Mr Do It з вашим обліковим записом Google: безкоштовний тариф, Google AI Pro або Ultra.</string>
+    <string name="signin_install_sub_grok">Grok Build від xAI працюватиме в Mr Do It з вашим обліковим записом Grok (можна увійти через Google або X).</string>
     <!-- "Buddy's Linux" = the small Linux system Buddy installs inside the app. -->
     <string name="signin_install_size_claude">Одноразово завантажується близько 235 МБ: вбудований Linux і Claude Code від Anthropic. За можливості використовуйте Wi-Fi.</string>
     <string name="signin_install_size_opencode">Одноразово завантажується близько 230 МБ: вбудований Linux, Node.js і OpenCode. За можливості використовуйте Wi-Fi.</string>
@@ -925,10 +953,10 @@
     <string name="signin_title_chatgpt">Вхід у ChatGPT</string>
     <string name="signin_title_google">Вхід у Google</string>
     <string name="signin_title_grok">Вхід у Grok</string>
-    <string name="signin_sub_claude">Використовуйте обліковий запис Claude (Pro або Max). Відкриється браузер: підтвердьте вхід там, і Buddy повернеться сам.</string>
-    <string name="signin_sub_chatgpt">Використовуйте обліковий запис ChatGPT (Plus, Pro або Business). Відкриється браузер: підтвердьте вхід там, і Buddy повернеться сам.</string>
-    <string name="signin_sub_agy">Використовуйте обліковий запис Google. Відкриється браузер: увійдіть там, і Buddy сам отримає код. Antigravity чекає близько хвилини.</string>
-    <string name="signin_sub_grok">Використовуйте обліковий запис Grok; увійти через Google або X теж можна. Відкриється браузер із кодом: підтвердьте його там, і Buddy повернеться сам.</string>
+    <string name="signin_sub_claude">Використовуйте обліковий запис Claude (Pro або Max). Відкриється браузер: підтвердьте вхід там, і Mr Do It повернеться сам.</string>
+    <string name="signin_sub_chatgpt">Використовуйте обліковий запис ChatGPT (Plus, Pro або Business). Відкриється браузер: підтвердьте вхід там, і Mr Do It повернеться сам.</string>
+    <string name="signin_sub_agy">Використовуйте обліковий запис Google. Відкриється браузер: увійдіть там, і Mr Do It сам отримає код. Antigravity чекає близько хвилини.</string>
+    <string name="signin_sub_grok">Використовуйте обліковий запис Grok; увійти через Google або X теж можна. Відкриється браузер із кодом: підтвердьте його там, і Mr Do It повернеться сам.</string>
     <!-- Main button. -->
     <string name="signin_with_claude">Увійти через Claude</string>
     <string name="signin_with_chatgpt">Увійти через ChatGPT</string>
@@ -951,10 +979,10 @@
     <string name="signin_starting">Починаю вхід…</string>
     <string name="signin_approve_title">Підтвердьте в браузері</string>
     <!-- "Authorize" is the button on Claude's sign-in web page; use the label that page shows in your language. -->
-    <string name="signin_approve_claude">Натисніть «Authorize» на сторінці Claude. Buddy сам отримає код і повернеться.</string>
-    <string name="signin_approve_codex">Увійдіть і надайте доступ Codex. Потім поверніться в Buddy — він завершить усе сам.</string>
-    <string name="signin_approve_agy">Увійдіть і надайте доступ Antigravity. Buddy сам отримає код, який покаже сторінка, і повернеться. Якщо це займе понад хвилину, почніть вхід заново.</string>
-    <string name="signin_approve_grok">Перевірте, що на сторінці показано код %1$s, потім підтвердьте й увійдіть. Buddy повернеться сам.</string>
+    <string name="signin_approve_claude">Натисніть «Authorize» на сторінці Claude. Mr Do It сам отримає код і повернеться.</string>
+    <string name="signin_approve_codex">Увійдіть і надайте доступ Codex. Потім поверніться в Mr Do It — він завершить усе сам.</string>
+    <string name="signin_approve_agy">Увійдіть і надайте доступ Antigravity. Mr Do It сам отримає код, який покаже сторінка, і повернеться. Якщо це займе понад хвилину, почніть вхід заново.</string>
+    <string name="signin_approve_grok">Перевірте, що на сторінці показано код %1$s, потім підтвердьте й увійдіть. Mr Do It повернеться сам.</string>
     <!-- Button. -->
     <string name="signin_open_again">Знову відкрити сторінку входу</string>
     <!-- Screen title after the code was handed over. -->
@@ -968,9 +996,9 @@
     <string name="signin_remote_claude">Відкрийте це посилання на будь-якому пристрої й підтвердьте вхід. Потім скопіюйте код зі сторінки та вставте його нижче.</string>
     <!-- Screen title (ChatGPT): a one-time code is shown below it. -->
     <string name="signin_enter_code">Введіть цей код</string>
-    <string name="signin_remote_codex">На будь-якому пристрої відкрийте посилання нижче, увійдіть у ChatGPT і введіть код. Buddy завершить усе сам.</string>
+    <string name="signin_remote_codex">На будь-якому пристрої відкрийте посилання нижче, увійдіть у ChatGPT і введіть код. Mr Do It завершить усе сам.</string>
     <string name="signin_remote_agy">Відкрийте це посилання на будь-якому пристрої й увійдіть. Потім скопіюйте код зі сторінки та вставте його нижче — у вас є близько хвилини.</string>
-    <string name="signin_remote_grok">На будь-якому пристрої відкрийте посилання нижче, увійдіть у Grok і підтвердьте код. Buddy завершить усе сам.</string>
+    <string name="signin_remote_grok">На будь-якому пристрої відкрийте посилання нижче, увійдіть у Grok і підтвердьте код. Mr Do It завершить усе сам.</string>
     <!-- Buttons and the toasts after them. -->
     <string name="signin_copy_code">Копіювати код</string>
     <string name="signin_code_copied">Код скопійовано</string>
@@ -990,8 +1018,8 @@
     <!-- Sign-in screen: fold-out box for pasting Claude's sign-in code by hand. -->
     <string name="signin_paste_instead">Вставити код вручну</string>
     <!-- "Copy Code" is the button on Claude's sign-in web page; use the label that page shows in your language. -->
-    <string name="signin_paste_help">Якщо Buddy не повертається сам, натисніть «Copy Code» на сторінці Claude і вставте код сюди.</string>
-    <string name="signin_paste_help_agy">Якщо Buddy не повертається сам, натисніть «Copy to Clipboard» на сторінці Antigravity і вставте код сюди.</string>
+    <string name="signin_paste_help">Якщо Mr Do It не повертається сам, натисніть «Copy Code» на сторінці Claude і вставте код сюди.</string>
+    <string name="signin_paste_help_agy">Якщо Mr Do It не повертається сам, натисніть «Copy to Clipboard» на сторінці Antigravity і вставте код сюди.</string>
     <!-- Hint inside the empty text box for the code. Lowercase in English. -->
     <string name="signin_code_hint">код</string>
     <!-- Short button next to the text box: use the pasted code. Verb. -->
@@ -1009,14 +1037,14 @@
     <string name="signin_sign_out">Вийти</string>
     <!-- Confirmation sheet. %1$s = agent name. -->
     <string name="signin_sign_out_title">Вийти з %1$s?</string>
-    <string name="signin_sign_out_text">%1$s у Buddy не працюватиме, доки ви знову не ввійдете.</string>
+    <string name="signin_sign_out_text">%1$s у Mr Do It не працюватиме, доки ви знову не ввійдете.</string>
     <string name="signin_opencode_ready">OpenCode готовий до роботи</string>
     <!-- "model chip" = the button at the top of a chat that shows the agent and model. -->
     <string name="signin_opencode_free">Використовуються безкоштовні моделі OpenCode. Вибирайте модель для кожного чату кнопкою моделі вгорі або підключіть власного провайдера.</string>
     <!-- %1$s = connected providers, comma-separated (e.g. "anthropic, openai"). -->
     <string name="signin_opencode_connected">Підключено: %1$s. Безкоштовні моделі OpenCode теж залишаються доступними.</string>
     <!-- %1$s = the command "opencode auth login", %2$s = the command "opencode auth logout" (both stay as they are). -->
-    <string name="signin_opencode_connect_note">Щоб підключити провайдера, Buddy відкриє свій термінал із командою %1$s: виберіть провайдера й виконайте вказані кроки. Щоб пізніше вилучити провайдера, виконайте там %2$s.</string>
+    <string name="signin_opencode_connect_note">Щоб підключити провайдера, Mr Do It відкриє свій термінал із командою %1$s: виберіть провайдера й виконайте вказані кроки. Щоб пізніше вилучити провайдера, виконайте там %2$s.</string>
     <!-- Button. -->
     <string name="signin_connect_provider">Підключити провайдера</string>
     <!-- Installed version. %1$s = agent name, %2$s = version number (e.g. "Claude Code 2.1.40."). -->
@@ -1051,7 +1079,7 @@
     <!-- Error. %1$s = technical detail in English. -->
     <string name="account_install_failed">Не вдалося встановити: %1$s</string>
     <string name="account_install_no_space">На телефоні недостатньо вільного місця. Звільніть близько 1 ГБ і спробуйте ще раз.</string>
-    <string name="account_install_network">Buddy не зміг зв’язатися із сервером завантаження. Перевірте Wi-Fi або мобільні дані (або VPN чи приватний DNS, що його блокує) і спробуйте ще раз.</string>
+    <string name="account_install_network">Mr Do It не зміг зв’язатися із сервером завантаження. Перевірте Wi-Fi або мобільні дані (або VPN чи приватний DNS, що його блокує) і спробуйте ще раз.</string>
     <string name="account_install_refused">Сервер завантаження відхилив запит або попросив зачекати. Спробуйте ще раз за кілька хвилин.</string>
     <string name="account_install_space_needed">Вільно лише %1$s. Для встановлення агента потрібно близько 1 ГБ: звільніть місце і спробуйте ще раз.</string>
     <string name="signin_details">Подробиці</string>
@@ -1120,42 +1148,42 @@
     <string name="remote_start_failed">Не вдалося запустити: %1$s</string>
     <string name="remote_keeps_stopping">Сеанс постійно зупиняється. Вимкніть і знову ввімкніть його або перевірте вхід у Claude Code.</string>
     <string name="codex_pair_getting">Отримання коду…</string>
-    <string name="codex_pair_text">Введіть цей код у ChatGPT: на телефоні — у розділі Codex, на комп’ютері — у «Налаштування → Підключення → Керувати іншими пристроями». Він спрацьовує один раз, до %1$s. Buddy відображається там як «localhost».</string>
+    <string name="codex_pair_text">Введіть цей код у ChatGPT: на телефоні — у розділі Codex, на комп’ютері — у «Налаштування → Підключення → Керувати іншими пристроями». Він спрацьовує один раз, до %1$s. Mr Do It відображається там як «localhost».</string>
     <string name="codex_pair_failed">Не вдалося отримати код під’єднання: %1$s</string>
     <string name="codex_keeps_stopping">Сеанс Codex постійно зупиняється: %1$s</string>
     <string name="ssh_keeps_stopping">SSH-сервер постійно зупиняється: %1$s</string>
     <string name="ssh_key_added">Готово. Щоб відкрити вбудований Linux з Termux, введіть ssh buddy.</string>
-    <string name="ssh_code_expired">Цю команду вже використано, або їй понад 10 хвилин. Скопіюйте її знову в «Налаштуваннях» Buddy.</string>
+    <string name="ssh_code_expired">Цю команду вже використано, або їй понад 10 хвилин. Скопіюйте її знову в «Налаштуваннях» Mr Do It.</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
 
     <!-- Settings screen: header. -->
     <string name="setup_settings_title">Налаштування</string>
-    <string name="setup_settings_subtitle">Buddy запускає Claude Code, Codex, OpenCode, Antigravity або Grok в самому додатку за вашою підпискою (або на безкоштовних моделях OpenCode і безкоштовному тарифі Antigravity).</string>
+    <string name="setup_settings_subtitle">Mr Do It запускає Claude Code, Codex, OpenCode, Antigravity або Grok в самому додатку за вашою підпискою (або на безкоштовних моделях OpenCode і безкоштовному тарифі Antigravity).</string>
     <string name="settings_agents">Агенти й моделі</string>
     <string name="settings_agents_sub">Типовий агент, вхід, ключі API, типові моделі, GitHub, сервер завантаження</string>
     <string name="settings_bubble">Бульбашка й чат</string>
     <string name="settings_bubble_sub">Показ бульбашки, дія за дотиком, розмір панелі</string>
     <string name="settings_voice_sub">Голосове введення й виведення, мови, живий голос, читання відповідей уголос</string>
     <string name="settings_safety">Безпека й підтвердження</string>
-    <string name="settings_safety_sub">Дозволи застосунків, правила сповіщень, інструменти Linux, екрани самого Buddy</string>
+    <string name="settings_safety_sub">Дозволи застосунків, правила сповіщень, інструменти Linux, екрани самого Mr Do It</string>
     <string name="settings_background">Фон і автоматизація</string>
     <string name="settings_background_sub">Фоновий режим, заплановані завдання, фоновий браузер</string>
     <string name="settings_tools">Інструменти й підключення</string>
     <string name="settings_tools_sub">Сервери MCP, навички, інструменти телефона для інших терміналів, Remote Control, SSH</string>
-    <string name="settings_appearance_sub">Світла чи темна тема, колір акценту, поверхня, вигляд Buddy</string>
+    <string name="settings_appearance_sub">Світла чи темна тема, колір акценту, поверхня, вигляд Mr Do It</string>
     <string name="settings_about">Резервна копія та про застосунок</string>
-    <string name="settings_about_sub">Резервна копія й перенесення, оновлення, посібник, перевірка налаштування</string>
+    <string name="settings_about_sub">Резервна копія й перенесення, оновлення, посібник, Перевірити Mr Do It</string>
 
     <!-- Settings screen: the setup checklist card (5 steps). -->
     <!-- Title of the setup checklist card (noun). -->
     <string name="setup_card_title">Початкове налаштування</string>
     <string name="setup_open_guide">Відкрити покроковий майстер</string>
-    <string name="setup_all_set">Усе налаштовано. Buddy готовий до роботи.</string>
+    <string name="setup_all_set">Усе налаштовано. Mr Do It готовий до роботи.</string>
     <!-- %1$s = name of the next unfinished setup step, e.g. "Install Claude Code". -->
     <string name="setup_next_step">Далі: %1$s</string>
-    <string name="setup_step_a11y_title">Увімкніть сервіс спеціальних можливостей Buddy</string>
-    <string name="setup_step_a11y_body">Сервіс показує бульбашку й дає Buddy змогу читати екран, натискати й вводити текст за вас.</string>
+    <string name="setup_step_a11y_title">Увімкніть сервіс спеціальних можливостей Mr Do It</string>
+    <string name="setup_step_a11y_body">Сервіс показує бульбашку й дає Mr Do It змогу читати екран, натискати й вводити текст за вас.</string>
     <!-- Second paragraph of the accessibility step on Android 13+. "Restricted setting", "App info" and "Allow restricted settings" are Android's own labels: use the wording Android uses in your language. ⋮ is the three-dot menu icon. -->
     <string name="setup_step_a11y_restricted">Перемикач неактивний («Обмежене налаштування»)? Android блокує це для додатків, установлених із файлу. Натисніть «Про додаток», потім ⋮ угорі праворуч → «Дозволити обмежені налаштування» і спробуйте ще раз.</string>
     <!-- Button: opens Android's accessibility settings. -->
@@ -1165,14 +1193,14 @@
     <!-- %1$s = agent name (Claude Code, Codex or OpenCode). -->
     <string name="setup_step_install_title">Установіть %1$s</string>
     <!-- %1$s = agent name. -->
-    <string name="setup_step_install_done">%1$s установлено в Buddy.</string>
+    <string name="setup_step_install_done">%1$s установлено в Mr Do It.</string>
     <!-- %1$s = Claude Code. -->
-    <string name="setup_step_install_claude">Buddy завантажує власний невеликий Linux і %1$s від Anthropic (близько 235 МБ).</string>
+    <string name="setup_step_install_claude">Mr Do It завантажує власний невеликий Linux і %1$s від Anthropic (близько 235 МБ).</string>
     <!-- %1$s = OpenCode. -->
-    <string name="setup_step_install_opencode">Buddy завантажує власний невеликий Linux і %1$s (близько 230 МБ разом із Node.js).</string>
+    <string name="setup_step_install_opencode">Mr Do It завантажує власний невеликий Linux і %1$s (близько 230 МБ разом із Node.js).</string>
     <!-- %1$s = Codex. -->
-    <string name="setup_step_install_codex">Buddy завантажує власний невеликий Linux і %1$s від OpenAI (близько 150 МБ).</string>
-    <string name="setup_step_install_grok">Buddy завантажує власний невеликий Linux і %1$s від xAI (близько 170 МБ).</string>
+    <string name="setup_step_install_codex">Mr Do It завантажує власний невеликий Linux і %1$s від OpenAI (близько 150 МБ).</string>
+    <string name="setup_step_install_grok">Mr Do It завантажує власний невеликий Linux і %1$s від xAI (близько 170 МБ).</string>
     <!-- Button (verb). -->
     <string name="setup_install">Установити</string>
     <!-- Name of the sign-in setup step. -->
@@ -1182,19 +1210,19 @@
     <string name="setup_step_signin_done">Вхід виконано.</string>
     <!-- %1$s = the account's email address. -->
     <string name="setup_step_signin_done_email">Ви ввійшли як %1$s.</string>
-    <string name="setup_step_signin_claude">Через обліковий запис Claude (Pro або Max). Відкриється браузер: підтвердьте вхід там, і Buddy повернеться сам.</string>
-    <string name="setup_step_signin_codex">Через обліковий запис ChatGPT. Відкриється браузер: підтвердьте вхід там, і Buddy повернеться сам.</string>
-    <string name="setup_step_signin_grok">Через обліковий запис Grok. Відкриється браузер: підтвердьте там код, і Buddy повернеться сам.</string>
+    <string name="setup_step_signin_claude">Через обліковий запис Claude (Pro або Max). Відкриється браузер: підтвердьте вхід там, і Mr Do It повернеться сам.</string>
+    <string name="setup_step_signin_codex">Через обліковий запис ChatGPT. Відкриється браузер: підтвердьте вхід там, і Mr Do It повернеться сам.</string>
+    <string name="setup_step_signin_grok">Через обліковий запис Grok. Відкриється браузер: підтвердьте там код, і Mr Do It повернеться сам.</string>
     <!-- Button (verb). -->
     <string name="setup_sign_in">Увійти</string>
-    <string name="setup_step_background_title">Дозвольте Buddy працювати у фоні</string>
+    <string name="setup_step_background_title">Дозвольте Mr Do It працювати у фоні</string>
     <string name="setup_step_background_done">Дозволено.</string>
-    <string name="setup_step_background_body">Щоб телефон не зупиняв Buddy для економії заряду, поки агент працює.</string>
+    <string name="setup_step_background_body">Щоб телефон не зупиняв Mr Do It для економії заряду, поки агент працює.</string>
     <!-- Button (verb): lets Buddy ignore battery optimization. -->
     <string name="setup_allow">Дозволити</string>
     <!-- Name of the last setup step: try Buddy out. -->
     <string name="setup_step_try_title">Спробуйте</string>
-    <string name="setup_step_try_done">Buddy вам відповів. Натискайте бульбашку будь-коли, щоб попросити ще щось.</string>
+    <string name="setup_step_try_done">Mr Do It вам відповів. Натискайте бульбашку будь-коли, щоб попросити ще щось.</string>
     <!-- "open Messenger" is an example of what to say to Buddy: translate it. -->
     <string name="setup_step_try_body">Натисніть бульбашку біля краю екрана й попросіть щось на кшталт «відкрий Messenger» або почніть чат тут.</string>
     <string name="setup_step_try_wait">Спершу виконайте кроки вище.</string>
@@ -1212,18 +1240,18 @@
     <!-- Label of the background tone picker. -->
     <string name="setup_surface">Фон</string>
     <!-- "Warm" and "Black" are options of the Surface picker: use the same words as those options. -->
-    <string name="setup_surface_note">«Теплий» — оригінальний тон Buddy. «Чорний» (справжній чорний) діє лише в темній темі.</string>
-    <string name="setup_face">Вигляд Buddy</string>
+    <string name="setup_surface_note">«Теплий» — оригінальний тон Mr Do It. «Чорний» (справжній чорний) діє лише в темній темі.</string>
+    <string name="setup_face">Вигляд Mr Do It</string>
     <string name="setup_face_buddy">Оригінал</string>
     <string name="setup_face_picture">Своє зображення</string>
-    <string name="setup_face_note">Найкраще підійде PNG або WebP із прозорим фоном. Воно з\'явиться на бульбашці та поруч із відповідями Buddy.</string>
+    <string name="setup_face_note">Найкраще підійде PNG або WebP із прозорим фоном. Воно з\'явиться на бульбашці та поруч із відповідями Mr Do It.</string>
     <string name="setup_face_change">Вибрати інше зображення</string>
     <string name="setup_face_unreadable">Не вдалося прочитати зображення. Спробуйте PNG або WebP.</string>
     <!-- Read by TalkBack: the swatch that opens the custom colour sheet. -->
     <string name="setup_custom_colour">Власний колір</string>
     <string name="setup_mirror">Сервер завантаження</string>
     <string name="setup_mirror_default">Типовий</string>
-    <string name="setup_mirror_info">Звідки завантажуються Linux Buddy, його пакунки та агенти, які встановлюються через npm (Codex, OpenCode). Залиште «Типовий», якщо тільки встановлення у вас не зривається або не йде дуже повільно. З іншим сервером Linux Buddy також звертається до DNS-серверів вашої мережі.</string>
+    <string name="setup_mirror_info">Звідки завантажуються Linux Mr Do It, його пакунки та агенти, які встановлюються через npm (Codex, OpenCode). Залиште «Типовий», якщо тільки встановлення у вас не зривається або не йде дуже повільно. З іншим сервером Linux Mr Do It також звертається до DNS-серверів вашої мережі.</string>
     <string name="setup_mirror_default_sub">Власні сервери Alpine і npm</string>
     <string name="setup_mirror_china">Материковий Китай</string>
     <string name="setup_mirror_russia">Росія</string>
@@ -1264,7 +1292,7 @@
 
     <!-- Settings screen: Phone tools in your own sessions (MCP server). -->
     <string name="setup_phone_tools">Інструменти телефона у ваших сеансах</string>
-    <string name="setup_phone_tools_info">Інструменти телефона в Buddy — це звичайний MCP-сервер на цьому телефоні. Один раз виконайте цю команду в терміналі на телефоні (наприклад, у Termux), і відповідний агент отримає інструменти телефона в кожному сеансі, навіть без бульбашки.</string>
+    <string name="setup_phone_tools_info">Інструменти телефона в Mr Do It — це звичайний MCP-сервер на цьому телефоні. Один раз виконайте цю команду в терміналі на телефоні (наприклад, у Termux), і відповідний агент отримає інструменти телефона в кожному сеансі, навіть без бульбашки.</string>
     <!-- Button. -->
     <string name="setup_copy_command">Копіювати команду</string>
     <string name="setup_command_copied">Скопійовано. Вставте її в термінал.</string>
@@ -1276,12 +1304,14 @@
     <string name="setup_tailnet_no_address">Tailscale на цьому телефоні не підключений, тож комп’ютери зараз до нього не дістануться.</string>
     <string name="setup_tailnet_computer">Комп’ютер %1$d</string>
     <string name="setup_tailnet_pair_info">На комп’ютері з увімкненим Tailscale виконайте це в терміналі. Телефон попросить вас підтвердити, і Claude Code на комп’ютері отримає інструменти телефона з власним ключем.</string>
-    <string name="tools_card_pair">Під’єднати комп’ютер «%1$s» (Tailscale %2$s)? Він отримає інструменти телефона Buddy з власним ключем, який можна вилучити в налаштуваннях.</string>
+    <string name="tools_card_pair">Під’єднати комп’ютер «%1$s» (Tailscale %2$s)? Він отримає інструменти телефона Mr Do It з власним ключем, який можна вилучити в налаштуваннях.</string>
 
     <!-- Settings screen: Voice. -->
     <string name="setup_voice">Голос</string>
-    <string name="setup_assist">Коли Buddy — асистент телефона</string>
-    <string name="setup_assist_info">Виберіть Buddy в Налаштуваннях Android → Додатки → Додатки за умовчанням → Цифровий помічник. Довге натискання кнопки живлення запустить Buddy: «Говорити» надсилає один запит, «Живий голос» починає розмову голосом (потрібен вхід у Codex, інакше «Говорити»).</string>
+    <string name="setup_assist">Коли Mr Do It — асистент телефона</string>
+    <string name="setup_assist_info">Виберіть Mr Do It в Налаштуваннях Android → Додатки → Додатки за умовчанням → Цифровий помічник. Довге натискання кнопки живлення запустить Mr Do It: «Говорити» надсилає один запит, «Живий голос» починає розмову голосом (потрібен вхід у Codex, інакше «Говорити»).</string>
+    <string name="setup_assist_unlocked">Лише коли телефон розблоковано</string>
+    <string name="setup_assist_unlocked_info">Довге натискання кнопки живлення нічого не робить на екрані блокування та в режимі очікування.</string>
     <string name="setup_live_agent">Живий голос використовує</string>
     <string name="setup_live_agent_default">За замовчуванням</string>
     <string name="setup_live_agent_info">Живий голос, запущений утриманням бульбашки чи кнопки живлення, відкриває новий чат із цим агентом. «За замовчуванням» — ваш агент за замовчуванням (зараз %1$s).</string>
@@ -1290,14 +1320,14 @@
     <string name="setup_voice_input">Голосове введення</string>
     <!-- Option next to Claude and ChatGPT: the phone's own speech engine. Keep short. -->
     <string name="setup_voice_phone">Телефон</string>
-    <string name="setup_voice_input_claude">Диктування Claude Code за вашою підпискою Claude: дуже точне. Підтримує англійську, французьку, німецьку, іспанську, італійську, португальську, нідерландську, турецьку, російську, японську та інші мови, але не арабську: для арабської Buddy використовує розпізнавання мовлення телефона. Слова з\'являються, коли ви робите паузу.</string>
+    <string name="setup_voice_input_claude">Диктування Claude Code за вашою підпискою Claude: дуже точне. Підтримує англійську, французьку, німецьку, іспанську, італійську, португальську, нідерландську, турецьку, російську, японську та інші мови, але не арабську: для арабської Mr Do It використовує розпізнавання мовлення телефона. Слова з\'являються, коли ви робите паузу.</string>
     <string name="setup_voice_input_chatgpt">Голос ChatGPT через Codex за вашою підпискою ChatGPT. Розуміє будь-яку мову, навіть кілька мов в одному реченні. Використовуються лише ваші слова: голосові відповіді ChatGPT вимкнено, і він не може нічого запускати.</string>
     <string name="setup_voice_input_phone">Розпізнавання мовлення вашого телефона (на більшості телефонів — Google). Текст з\'являється, поки ви говорите; визначає, якою з ваших мов ви говорите.</string>
     <string name="setup_voice_output">Озвучення</string>
     <string name="setup_voice_output_chatgpt">Відповіді читає природний голос ChatGPT (за вашою підпискою ChatGPT, через Codex). Це зараховується до ліміту голосових функцій ChatGPT; якщо він недоступний, читає голос телефона.</string>
     <string name="setup_voice_output_phone">Голоси синтезу мовлення вашого телефона, мовою відповіді.</string>
     <!-- Spoken aloud to preview the chosen ChatGPT voice. Mixing two languages is on purpose (it shows the voice switches languages): keep a greeting in another language. -->
-    <string name="setup_voice_sample">Bonjour ! Привіт, я Buddy. Ось так я звучу.</string>
+    <string name="setup_voice_sample">Bonjour ! Привіт, я Mr Do It. Ось так я звучу.</string>
     <string name="setup_languages">Мови</string>
     <string name="setup_languages_hint">Натисніть, щоб вибрати мови, якими ви говорите. Натисніть і утримуйте мову, щоб зробити її основною. У чаті натисніть і утримуйте мікрофон, щоб змінити мову.</string>
     <!-- Sheet title. %1$s = agent name (Claude Code or Codex). -->
@@ -1314,7 +1344,7 @@
     <string name="setup_remote_control">Remote Control</string>
     <string name="setup_remote_session">Сеанс Claude Code</string>
     <!-- "Code" is the name of a section of the Claude app. -->
-    <string name="setup_remote_session_info">Сеанс Claude Code, що працює в Buddy з інструментами телефона. Продовжуйте його в додатку Claude (розділ Code) на цьому телефоні чи будь-де.</string>
+    <string name="setup_remote_session_info">Сеанс Claude Code, що працює в Mr Do It з інструментами телефона. Продовжуйте його в додатку Claude (розділ Code) на цьому телефоні чи будь-де.</string>
     <string name="setup_remote_sign_in_first">Спершу увійдіть у Claude Code.</string>
     <!-- Status, lowercase. %1$s = the session's name as shown in the Claude app. -->
     <string name="setup_remote_active">активний · «%1$s» у додатку Claude</string>
@@ -1325,7 +1355,7 @@
     <string name="setup_remote_open">Відкрити в додатку Claude</string>
     <string name="setup_remote_open_failed">Не вдалося відкрити.</string>
     <string name="setup_codex_session">Сеанс Codex</string>
-    <string name="setup_codex_session_info">Codex з інструментами телефона, що працює в Buddy. Користуйтеся ним у додатку ChatGPT (розділ Codex) на цьому телефоні чи на комп’ютері. Пісочниця Codex тут не працює, тож із типовими дозволами він питає перед кожною командою.</string>
+    <string name="setup_codex_session_info">Codex з інструментами телефона, що працює в Mr Do It. Користуйтеся ним у додатку ChatGPT (розділ Codex) на цьому телефоні чи на комп’ютері. Пісочниця Codex тут не працює, тож із типовими дозволами він питає перед кожною командою.</string>
     <string name="setup_codex_active">працює · «localhost» у ChatGPT</string>
     <string name="setup_codex_pair">Під’єднати пристрій</string>
     <string name="setup_ssh">SSH з Termux</string>
@@ -1347,7 +1377,7 @@
         <item quantity="many">Вилучити %1$d старих чатів?</item>
         <item quantity="other">Вилучити %1$d старого чату?</item>
     </plurals>
-    <string name="setup_old_chats_remove_body">Їх буде вилучено зі списку чатів Buddy. Цю дію не можна скасувати.</string>
+    <string name="setup_old_chats_remove_body">Їх буде вилучено зі списку чатів Mr Do It. Цю дію не можна скасувати.</string>
     <!-- Button (verb). -->
     <string name="setup_remove">Вилучити</string>
     <string name="setup_removed">Вилучено.</string>
@@ -1356,6 +1386,8 @@
     <string name="setup_chat_bubble">Бульбашка чату</string>
     <!-- ✕ is the close target that appears while dragging the bubble. -->
     <string name="setup_chat_bubble_info">Показується поверх інших додатків. Перетягніть її на ✕, щоб сховати; картки схвалення все одно з\'являтимуться, коли агентові потрібен ваш дозвіл.</string>
+    <string name="setup_bubble_hide_in_app">Ховати, поки відкрито Mr Do It</string>
+    <string name="setup_bubble_hide_in_app_info">Бульбашка не показується поверх екранів самого Mr Do It. Для картки схвалення чи запитання вона все одно з\'явиться й там, а коли ви вийдете з Mr Do It, повернеться.</string>
     <!-- Setting: what a tap on the floating bubble does. Title above three short choices. -->
     <string name="setup_tap_action">Натискання бульбашки</string>
     <!-- Choice: a tap opens the floating chat panel. Keep it short (it shares a row with two more). -->
@@ -1367,7 +1399,7 @@
     <!-- Explains the "Chat panel" choice. -->
     <string name="setup_tap_panel_info">Відкриває плаваючий чат поверх поточного додатка. Утримуйте бульбашку, щоб відкрити інші дії.</string>
     <!-- Explains the "Full app" choice. -->
-    <string name="setup_tap_app_info">Відкриває чат на весь екран у Buddy. Утримуйте бульбашку, щоб відкрити інші дії.</string>
+    <string name="setup_tap_app_info">Відкриває чат на весь екран у Mr Do It. Утримуйте бульбашку, щоб відкрити інші дії.</string>
     <!-- Setting: the size of the floating chat panel. Title above two short choices. -->
     <string name="setup_panel_size">Розмір панелі чату</string>
     <!-- Choice: the panel fills the screen. Keep it short. -->
@@ -1379,35 +1411,35 @@
     <string name="setup_tap_to_talk_info">Одне натискання вмикає мікрофон: скажіть, що потрібно, і повідомлення надішлеться, коли ви зробите паузу. Утримуйте бульбашку, щоб відкрити чат та інші дії.</string>
     <string name="setup_read_aloud">Читати відповіді вголос</string>
     <!-- "Voice" = the Settings section of that name (setup_voice). -->
-    <string name="setup_read_aloud_info">Buddy читає відповіді агентів вголос — тим голосом, який ви вибрали в розділі «Голос».</string>
+    <string name="setup_read_aloud_info">Mr Do It читає відповіді агентів вголос — тим голосом, який ви вибрали в розділі «Голос».</string>
     <string name="setup_pause_media">Ставити медіа на паузу під час читання вголос</string>
-    <string name="setup_pause_media_info">Музика або відео ставляться на паузу, поки Buddy читає відповідь, і потім продовжуються. Buddy відновлює лише те, що призупинив сам, і не робить цього, якщо ви тим часом змінили відтворення. Потрібні налаштування «Читати відповіді вголос» і доступ до сповіщень.</string>
+    <string name="setup_pause_media_info">Музика або відео ставляться на паузу, поки Mr Do It читає відповідь, і потім продовжуються. Mr Do It відновлює лише те, що призупинив сам, і не робить цього, якщо ви тим часом змінили відтворення. Потрібні налаштування «Читати відповіді вголос» і доступ до сповіщень.</string>
     <string name="setup_pause_listening">Пауза медіа під час прослуховування</string>
-    <string name="setup_pause_listening_info">Музика чи відео ставляться на паузу, поки Buddy слухає вас, щоб він чув ваш голос, а не відео, і потім грають далі. Якщо ввімкнено й «Ставити медіа на паузу під час читання вголос», пауза триває, доки відповідь не буде прочитано. Buddy відновлює лише те, що сам зупинив, і не робить цього, якщо ви тим часом змінили відтворення. Потрібен доступ до сповіщень.</string>
+    <string name="setup_pause_listening_info">Музика чи відео ставляться на паузу, поки Mr Do It слухає вас, щоб він чув ваш голос, а не відео, і потім грають далі. Якщо ввімкнено й «Ставити медіа на паузу під час читання вголос», пауза триває, доки відповідь не буде прочитано. Mr Do It відновлює лише те, що сам зупинив, і не робить цього, якщо ви тим часом змінили відтворення. Потрібен доступ до сповіщень.</string>
     <string name="setup_voice_cards">Відповідати на картки голосом</string>
-    <string name="setup_voice_cards_info">Після того як картку прочитано вголос, Buddy слухає: скажіть «схвалити» або «відхилити» чи потрібний варіант. Потрібно ввімкнути «Читати відповіді вголос». Не працює на заблокованому телефоні. Відповісти може будь-хто поруч.</string>
-    <string name="voice_card_approval">Buddy потрібне ваше підтвердження. %1$s</string>
-    <string name="voice_card_question">Buddy запитує: %1$s Варіанти: %2$s</string>
+    <string name="setup_voice_cards_info">Після того як картку прочитано вголос, Mr Do It слухає: скажіть «схвалити» або «відхилити» чи потрібний варіант. Потрібно ввімкнути «Читати відповіді вголос». Не працює на заблокованому телефоні. Відповісти може будь-хто поруч.</string>
+    <string name="voice_card_approval">Mr Do It потрібне ваше підтвердження. %1$s</string>
+    <string name="voice_card_question">Mr Do It запитує: %1$s Варіанти: %2$s</string>
     <string name="voice_card_hint">Скажіть схвалити або відхилити.</string>
     <string name="voice_card_yes">схвалити,схвалюю,так,окей,ок,добре,давай</string>
     <string name="voice_card_no">відхилити,відхиляю,ні,стоп,скасувати</string>
     <string name="setup_update_notices">Сповіщення про оновлення</string>
-    <string name="setup_update_notices_info">Buddy раз на день перевіряє GitHub і сповіщає вас про вихід нової версії.</string>
+    <string name="setup_update_notices_info">Mr Do It раз на день перевіряє GitHub і сповіщає вас про вихід нової версії.</string>
     <string name="setup_check_updates">Перевірити оновлення</string>
     <!-- %1$s = Buddy's version number. "update yourself" is what you can say to an agent: translate it. -->
-    <string name="setup_check_updates_info">У вас Buddy %1$s. Або попросіть будь-якого агента: «оновися».</string>
+    <string name="setup_check_updates_info">У вас Mr Do It %1$s. Або попросіть будь-якого агента: «оновися».</string>
     <!-- Name of the App permissions screen. -->
     <string name="setup_app_permissions">Дозволи додатків</string>
     <!-- "Trust" and "Hard" are names of approval modes on the App permissions screen: use the same words. Send, Pay, Delete are example buttons in other apps. -->
-    <string name="setup_app_permissions_info">Вибирайте для кожного додатка: у режимі «Довіра» агент працює там без запитів; у режимі «Суворий» Buddy сам питає вас перед «Надіслати», «Оплатити», «Видалити»…</string>
+    <string name="setup_app_permissions_info">Вибирайте для кожного додатка: у режимі «Довіра» агент працює там без запитів; у режимі «Суворий» Mr Do It сам питає вас перед «Надіслати», «Оплатити», «Видалити»…</string>
     <!-- Settings switch: whether new chats start with Linux tools (chat_linux_tools); each chat can change it. -->
     <string name="setup_dev_mode">Інструменти Linux у нових чатах</string>
     <string name="setup_dev_mode_info">З інструментами Linux агент може виконувати команди, встановлювати пакети й редагувати файли в ~/.buddy/work, щоб створювати додатки. Нові чати отримують це значення; у кожному чаті його можна змінити під назвою чату.</string>
-    <string name="setup_agents_tap">Дозволити агентам натискати на екранах Buddy</string>
+    <string name="setup_agents_tap">Дозволити агентам натискати на екранах Mr Do It</string>
     <!-- "App permissions" is the name of a screen in Buddy. -->
-    <string name="setup_agents_tap_info">Для тестування Buddy з агентом (наприклад, Claude Code у Termux з інструментами телефона). Тоді агенти можуть користуватися списком чатів, чатом і цим екраном налаштувань. Усе, що визначає, що їм дозволено, залишається за вами: бульбашка, картки підтвердження, інструменти Linux, параметри чату й розклади, а також екрани дозволів застосунків, ключів, правил, навичок, фонового режиму та резервної копії.</string>
+    <string name="setup_agents_tap_info">Для тестування Mr Do It з агентом (наприклад, Claude Code у Termux з інструментами телефона). Тоді агенти можуть користуватися списком чатів, чатом і цим екраном налаштувань. Усе, що визначає, що їм дозволено, залишається за вами: бульбашка, картки підтвердження, інструменти Linux, параметри чату й розклади, а також екрани дозволів застосунків, ключів, правил, навичок, фонового режиму та резервної копії.</string>
     <string name="setup_ask_new_apps">Питати про кожен новий застосунок</string>
-    <string name="setup_ask_new_apps_info">Коли агент уперше працює в застосунку, який ви не налаштували в розділі «%1$s», Buddy питає, чи може він працювати там сам, чи має спершу запитати, і запам\'ятовує відповідь для цього застосунку. Лише в чатах у режимі «Питати» і ніколи для банківських і платіжних застосунків, Налаштувань і магазинів застосунків: вони питають завжди.</string>
+    <string name="setup_ask_new_apps_info">Коли агент уперше працює в застосунку, який ви не налаштували в розділі «%1$s», Mr Do It питає, чи може він працювати там сам, чи має спершу запитати, і запам\'ятовує відповідь для цього застосунку. Лише в чатах у режимі «Питати» і ніколи для банківських і платіжних застосунків, Налаштувань і магазинів застосунків: вони питають завжди.</string>
     <string name="first_app_question">Агент уперше працює в застосунку %1$s. Чи може він працювати там сам, чи має спершу запитати? Це можна змінити пізніше в розділі «%2$s».</string>
     <string name="first_app_trust">%1$s: працює сам</string>
     <string name="first_app_hard">%1$s: спершу питає</string>
@@ -1493,10 +1525,10 @@
     <string name="monitor_checking">Перевірка…</string>
     <string name="monitor_recent">Нещодавні</string>
     <string name="monitor_loading">Завантаження…</string>
-    <string name="monitor_service_off">Сервіс спеціальних можливостей Buddy вимкнено, тому сеанси неможливо перевірити. Увімкніть його на вкладці «Налаштування».</string>
+    <string name="monitor_service_off">Сервіс спеціальних можливостей Mr Do It вимкнено, тому сеанси неможливо перевірити. Увімкніть його на вкладці «Налаштування».</string>
     <string name="monitor_nothing_running">Нічого не запущено.</string>
     <!-- Title of a running session whose Buddy chat was deleted. -->
-    <string name="monitor_deleted_chat">Видалений чат Buddy</string>
+    <string name="monitor_deleted_chat">Видалений чат Mr Do It</string>
     <string name="monitor_background_session">Фоновий сеанс</string>
     <string name="monitor_terminal_session">Сеанс у терміналі</string>
     <!-- Small lowercase tag on a running session: where it runs. Keep very short. -->
@@ -1512,8 +1544,8 @@
     <string name="monitor_stop">Зупинити</string>
     <!-- Sheet title. %1$s = agent name (Claude Code, Codex or OpenCode). -->
     <string name="monitor_stop_title">Зупинити цей сеанс %1$s?</string>
-    <string name="monitor_stop_background_body">Він працює у фоні — наприклад, це чат, який ви продовжуєте в додатку Claude. Можливо, саме він зараз керує Buddy. Зупинка перерве поточну роботу в цій розмові.</string>
-    <string name="monitor_stop_terminal_body">Це може бути сеанс, яким ви зараз користуєтеся в терміналі. Можливо, саме він керує Buddy. Зупинка перерве поточну роботу в цій розмові.</string>
+    <string name="monitor_stop_background_body">Він працює у фоні — наприклад, це чат, який ви продовжуєте в додатку Claude. Можливо, саме він зараз керує Mr Do It. Зупинка перерве поточну роботу в цій розмові.</string>
+    <string name="monitor_stop_terminal_body">Це може бути сеанс, яким ви зараз користуєтеся в терміналі. Можливо, саме він керує Mr Do It. Зупинка перерве поточну роботу в цій розмові.</string>
     <string name="monitor_stopping">Зупиняю…</string>
     <string name="monitor_service_title">Фоновий сервіс Claude Code</string>
     <!-- Monospace details line. %1$d = process id, %2$s = how long it has been running (e.g. 1:02:03). -->
@@ -1537,7 +1569,7 @@
     <!-- Approval mode name (see perms_mode_trust), keep it short. Smart = the button rules, then a reviewer AI checks every other tap. -->
     <string name="perms_mode_smart">Розумний</string>
     <!-- Explains the three modes, one per line. Trust, Hard and Smart are the mode names above; Send, Pay, Delete are example button labels. -->
-    <string name="perms_modes_intro">Довіра: агент працює тут самостійно, без запитів на схвалення.\nСуворий: вирішують ваші правила кнопок. «Надіслати», «Оплатити», «Видалити»… потребують вашого дозволу на картці.\nРозумний: спершу правила, потім окремий ШІ-рецензент перевіряє кожне інше натискання на відповідність вашому запиту.\nАгент ніколи не може натискати бульбашку, картки чи налаштування самого Buddy.</string>
+    <string name="perms_modes_intro">Довіра: агент працює тут самостійно, без запитів на схвалення.\nСуворий: вирішують ваші правила кнопок. «Надіслати», «Оплатити», «Видалити»… потребують вашого дозволу на картці.\nРозумний: спершу правила, потім окремий ШІ-рецензент перевіряє кожне інше натискання на відповідність вашому запиту.\nАгент ніколи не може натискати бульбашку, картки чи налаштування самого Mr Do It.</string>
     <!-- Section title: which AI reviews the taps in apps set to Smart. -->
     <string name="perms_smart_reviewer">Рецензент режиму «Розумний»</string>
     <!-- Reviewer choice in a segmented control, next to “Claude Code” and “Codex”: the same agent as the chat. Keep it short. -->
@@ -1569,7 +1601,7 @@
     <string name="perms_builtin_title">Вбудовані ризиковані слова</string>
     <!-- Switch description. The words are examples from the built-in list, which only covers the languages named here:
          if your language isn't one of them, keep the example words in English. -->
-    <string name="perms_builtin_sub">Кнопки «Надіслати», «Опублікувати», «Сплатити», «Купити», «Замовити», «Видалити», «Зателефонувати», «Вийти»… завжди потребують дозволу, будь-якою мовою Buddy.</string>
+    <string name="perms_builtin_sub">Кнопки «Надіслати», «Опублікувати», «Сплатити», «Купити», «Замовити», «Видалити», «Зателефонувати», «Вийти»… завжди потребують дозволу, будь-якою мовою Mr Do It.</string>
     <!-- List title: buttons that always need the user's OK. -->
     <string name="perms_always_ask">Завжди питати</string>
     <!-- List title, and an option in a small segmented control (keep it short): buttons the agent may tap without asking. -->
@@ -1619,7 +1651,7 @@
     <!-- Quotation marks around text on the card (a draft message, a reason). Use your language's quotation marks. -->
     <string name="tools_card_quote">«%1$s»</string>
     <!-- In an app set to Smart, when neither Claude Code nor Codex is signed in to review the tap. -->
-    <string name="tools_card_no_reviewer">Рецензент недоступний (вхід не виконано), тож Buddy питає вас.</string>
+    <string name="tools_card_no_reviewer">Рецензент недоступний (вхід не виконано), тож Mr Do It питає вас.</string>
     <!-- The smart reviewer's answer. %1$s = Claude or Codex; %2$s = its short reason, in the reviewer's own words. -->
     <string name="tools_card_reviewer_block">%1$s радить цього не робити: %2$s</string>
     <!-- The smart reviewer's answer. %1$s = Claude or Codex; %2$s = its short reason, in the reviewer's own words. -->
@@ -1635,7 +1667,7 @@
     <!-- An app the agent opened the installer for is now installed (adjective). -->
     <string name="tools_status_installed">Установлено</string>
     <!-- Downloading Buddy's update. %1$s = version number, e.g. 2.1.13 -->
-    <string name="tools_status_downloading">Завантажую Buddy %1$s…</string>
+    <string name="tools_status_downloading">Завантажую Mr Do It %1$s…</string>
 
     <!-- Smart reviewer: its reason when it fails, shown on the approval card after “Claude says ask you:”, so it starts lowercase.
          %1$s = the technical reason (reviewer_no_answer, reviewer_timed_out, or an error in English). -->
@@ -1707,11 +1739,11 @@
     <string name="tools_card_clipboard">Дозволити агенту прочитати те, що ви скопіювали останнім?</string>
     <string name="tools_card_location">Передати агенту місцезнаходження цього телефона?</string>
     <string name="tools_photo_why">Зробіть фото: %1$s</string>
-    <string name="rules_service_label">Правила сповіщень Buddy</string>
+    <string name="rules_service_label">Правила сповіщень Mr Do It</string>
     <string name="rules_title">Правила сповіщень</string>
-    <string name="rules_intro">Коли надходить вибране вами сповіщення, Buddy передає агентові вашу вказівку, ніби ви самі написали йому повідомлення. Сповіщення, які не відповідають жодному правилу, ігноруються.</string>
+    <string name="rules_intro">Коли надходить вибране вами сповіщення, Mr Do It передає агентові вашу вказівку, ніби ви самі написали йому повідомлення. Сповіщення, які не відповідають жодному правилу, ігноруються.</string>
     <string name="rules_access_off_title">Доступ до сповіщень вимкнено</string>
-    <string name="rules_access_off_text">Він потрібен Buddy, щоб бачити сповіщення, які відстежують ваші правила.</string>
+    <string name="rules_access_off_text">Він потрібен Mr Do It, щоб бачити сповіщення, які відстежують ваші правила.</string>
     <string name="rules_access_turn_on">Увімкнути</string>
     <string name="rules_run">Виконувати правила</string>
     <string name="rules_run_info">Вимкніть, щоб призупинити всі правила.</string>
@@ -1757,12 +1789,12 @@
     <string name="waiting_open_chat">Відкрити чат</string>
     <string name="waiting_state_wrote_again">Відтоді прийшло нове повідомлення від %1$s: ця відповідь могла застаріти.</string>
     <string name="waiting_state_answered">Ви вже відповіли в %1$s.</string>
-    <string name="waiting_state_gone">Сповіщення вже немає: Buddy скопіює відповідь і відкриє %1$s, щоб ви її вставили.</string>
+    <string name="waiting_state_gone">Сповіщення вже немає: Mr Do It скопіює відповідь і відкриє %1$s, щоб ви її вставили.</string>
     <string name="waiting_sent">Надіслано: %1$s</string>
     <string name="waiting_copied">Скопійовано. Вставте в %1$s.</string>
     <string name="waiting_note_sent">✓ Надіслано з «Чекає на вас»: %1$s</string>
     <string name="rules_log_error">Не запущено: %1$s</string>
-    <string name="rules_log_no_service">сервіс спеціальних можливостей Buddy вимкнено</string>
+    <string name="rules_log_no_service">сервіс спеціальних можливостей Mr Do It вимкнено</string>
     <string name="rules_log_not_signed_in">вхід у %1$s не виконано</string>
     <string name="rules_new">Нове правило</string>
     <string name="rules_edit">Редагувати правило</string>
@@ -1773,7 +1805,7 @@
     <string name="rules_from_hint">Будь-хто або імена через кому</string>
     <string name="rules_words">Містить (необов\'язково)</string>
     <string name="rules_words_hint">Будь-що або слова через кому</string>
-    <string name="rules_instruction">Що має зробити Buddy?</string>
+    <string name="rules_instruction">Що має зробити Mr Do It?</string>
     <string name="rules_instruction_hint">Наприклад: Відповідай у моєму стилі. Ми працюємо з 8 до 18, у неділю вихідний.</string>
     <string name="rules_example_reply">Відповісти за мене</string>
     <string name="rules_example_reply_text">Відповідай у моєму стилі, коротко й дружньо.</string>
@@ -1796,11 +1828,11 @@
     <string name="rules_delete">Видалити</string>
     <string name="rules_delete_title">Видалити це правило?</string>
     <string name="rules_need_app">Спершу виберіть додаток.</string>
-    <string name="rules_need_instruction">Напишіть, що має зробити Buddy.</string>
+    <string name="rules_need_instruction">Напишіть, що має зробити Mr Do It.</string>
     <string name="rules_access_title">Дозволити доступ до сповіщень?</string>
-    <string name="rules_access_what">Buddy перевіряє кожне сповіщення на відповідність вашим правилам. Сповіщення, які не відповідають жодному правилу, одразу ігноруються: вони ніде не зберігаються й нікуди не надсилаються.</string>
+    <string name="rules_access_what">Mr Do It перевіряє кожне сповіщення на відповідність вашим правилам. Сповіщення, які не відповідають жодному правилу, одразу ігноруються: вони ніде не зберігаються й нікуди не надсилаються.</string>
     <string name="rules_access_data">Якщо сповіщення відповідає правилу, його додаток, відправник і текст передаються агентові цього правила (Claude Code, Codex або OpenCode) разом із вашою вказівкою.</string>
-    <string name="rules_access_reply">Buddy може відповідати через кнопку «Відповісти» в сповіщенні. Спершу він питає вас, якщо тільки ви не задасте для правила таймер.</string>
+    <string name="rules_access_reply">Mr Do It може відповідати через кнопку «Відповісти» в сповіщенні. Спершу він питає вас, якщо тільки ви не задасте для правила таймер.</string>
     <string name="rules_chat_shown">🔔 %1$s · %2$s: %3$s\n⚡ %4$s</string>
     <string name="rules_status_checking">Перевіряю на відповідність вашому правилу…</string>
     <string name="rules_channel_results">Правила сповіщень: результати</string>
@@ -1812,7 +1844,7 @@
     <!-- Background browser -->
     <string name="browser_section">Фоновий браузер</string>
     <string name="browser_switch">Фоновий браузер</string>
-    <string name="browser_switch_info">Браузер у Buddy, через який агенти працюють із вебсторінками, не займаючи ваш телефон. Його можна переглядати й використовувати в чаті. Першого разу Buddy завантажує Chromium (близько 300 МБ).</string>
+    <string name="browser_switch_info">Браузер у Mr Do It, через який агенти працюють із вебсторінками, не займаючи ваш телефон. Його можна переглядати й використовувати в чаті. Першого разу Mr Do It завантажує Chromium (близько 300 МБ).</string>
     <string name="browser_state_installing">встановлення Chromium…</string>
     <string name="browser_state_starting">запуск…</string>
     <string name="browser_state_running">працює</string>
@@ -1865,8 +1897,8 @@
     <string name="hub_tool_cancel_scheduled">Скасовує заплановане повідомлення</string>
     <string name="later_title">Повідомлення агента на %1$s</string>
     <string name="later_cancel">Скасувати повідомлення</string>
-    <string name="share_label">Запитати Buddy</string>
-    <string name="share_title">Поділитися з Buddy</string>
+    <string name="share_label">Запитати Mr Do It</string>
+    <string name="share_title">Поділитися з Mr Do It</string>
     <string name="share_new_chat">Новий чат з %1$s</string>
     <string name="usage_five">5 годин %1$d%% · скидання %2$s</string>
     <string name="usage_week">тиждень %1$d%% · скидання %2$s</string>
@@ -1874,24 +1906,24 @@
     <string name="usage_week_short">тиждень %1$d%%</string>
     <string name="usage_warn_five">Використано %1$d%% п’ятигодинного ліміту вашого плану. Скидання о %2$s.</string>
     <string name="usage_warn_week">Використано %1$d%% тижневого ліміту вашого плану. Скидання %2$s.</string>
-    <string name="check_title">Перевірити Buddy</string>
-    <string name="check_info">Зараз перевірить кожну частину Buddy і підкаже, як виправити проблеми</string>
+    <string name="check_title">Перевірити Mr Do It</string>
+    <string name="check_info">Зараз перевірить кожну частину Mr Do It і підкаже, як виправити проблеми</string>
     <string name="check_running">Перевірка…</string>
     <string name="check_all_ok">Усе працює</string>
     <string name="check_a11y">Служба спеціальних можливостей</string>
-    <string name="check_a11y_bad">Не запущена, тому Buddy не бачить екран і не може ним користуватися. Увімкніть Buddy у налаштуваннях спеціальних можливостей.</string>
+    <string name="check_a11y_bad">Не запущена, тому Mr Do It не бачить екран і не може ним користуватися. Увімкніть Mr Do It у налаштуваннях спеціальних можливостей.</string>
     <string name="check_notifications">Доступ до сповіщень</string>
     <string name="check_notifications_bad">Він потрібен вашим правилам сповіщень, а зараз вимкнений.</string>
     <string name="check_battery">Оптимізація батареї</string>
-    <string name="check_battery_bad">Увімкнена для Buddy: Android може зупинити його у фоні, і заплановані завдання можуть не запуститися.</string>
-    <string name="check_linux">Linux у Buddy</string>
+    <string name="check_battery_bad">Увімкнена для Mr Do It: Android може зупинити його у фоні, і заплановані завдання можуть не запуститися.</string>
+    <string name="check_linux">Linux у Mr Do It</string>
     <string name="check_linux_ok">Запускається за %1$.1f с</string>
     <string name="check_linux_bad">Не запускається: %1$s</string>
     <string name="check_linux_missing">Ще не встановлено. Налаштуйте його в налаштуваннях.</string>
-    <string name="check_helper">Помічник Buddy</string>
-    <string name="check_helper_bad">У Linux старіша копія, ніж у цій версії Buddy.</string>
+    <string name="check_helper">Помічник Mr Do It</string>
+    <string name="check_helper_bad">У Linux старіша копія, ніж у цій версії Mr Do It.</string>
     <string name="check_server">Сервер інструментів телефона</string>
-    <string name="check_server_bad">Не відповідає на 127.0.0.1:%1$d. Вимкніть і знову увімкніть Buddy у налаштуваннях спеціальних можливостей.</string>
+    <string name="check_server_bad">Не відповідає на 127.0.0.1:%1$d. Вимкніть і знову увімкніть Mr Do It у налаштуваннях спеціальних можливостей.</string>
     <string name="check_agent_version">Версія %1$s</string>
     <string name="check_network">Інтернет</string>
     <string name="check_network_bad">Не вдається знайти %1$s. Перевірте Wi-Fi або мобільні дані, а також VPN чи приватний DNS, що може це блокувати.</string>
@@ -1917,10 +1949,10 @@
     <string name="background_title">Фоновий режим</string>
     <string name="background_row">Агенти працюють на окремому екрані, поки ви користуєтеся телефоном</string>
     <string name="background_intro">У фоновому режимі агент працює на окремому екрані, якого ви не бачите. Ваш екран, клавіатура й кнопка «Назад» лишаються у вас, а робота триває й на заблокованому телефоні.</string>
-    <string name="background_how">Android дозволяє створити такий екран лише через функцію «Налагодження через Wi-Fi», тому Buddy один раз підключається до неї просто на цьому телефоні. Комп’ютер не потрібен.</string>
-    <string name="background_step1">1. Натисніть «Налаштувати». Buddy відкриє «Параметри розробника» і сам знайде пункт «Налагодження через Wi-Fi».</string>
-    <string name="background_step2">2. Buddy ввімкне налагодження через Wi-Fi (телефон має бути підключений до Wi-Fi) і відкриє «Підключати пристрій за допомогою коду підключення».</string>
-    <string name="background_step3">3. Він зчитає код, підключиться й поверне вас сюди. Якщо він десь зупиниться, зробіть цей крок самі — Buddy продовжить.</string>
+    <string name="background_how">Android дозволяє створити такий екран лише через функцію «Налагодження через Wi-Fi», тому Mr Do It один раз підключається до неї просто на цьому телефоні. Комп’ютер не потрібен.</string>
+    <string name="background_step1">1. Натисніть «Налаштувати». Mr Do It відкриє «Параметри розробника» і сам знайде пункт «Налагодження через Wi-Fi».</string>
+    <string name="background_step2">2. Mr Do It ввімкне налагодження через Wi-Fi (телефон має бути підключений до Wi-Fi) і відкриє «Підключати пристрій за допомогою коду підключення».</string>
+    <string name="background_step3">3. Він зчитає код, підключиться й поверне вас сюди. Якщо він десь зупиниться, зробіть цей крок самі — Mr Do It продовжить.</string>
     <string name="background_setup">Налаштувати</string>
     <string name="background_open_options">Відкрити «Параметри розробника»</string>
     <string name="background_installing">Завантажую adb для вбудованого Linux…</string>
@@ -1930,17 +1962,20 @@
     <string name="background_ready">Готово</string>
     <string name="background_ready_info">Вмикається для кожного чату окремо: Налаштування чату → Працювати у фоні.</string>
     <string name="background_paired">Підключено</string>
-    <string name="background_asleep">Допоміжна програма не запущена. Вона запуститься з першим фоновим завданням або просто зараз. Після перезавантаження телефона натисніть «Запустити зараз»: Buddy сам увімкне для цього налагодження через Wi-Fi (телефон має бути підключений до Wi-Fi).</string>
+    <string name="background_asleep">Допоміжна програма не запущена. Вона запуститься з першим фоновим завданням або просто зараз. Після перезавантаження телефона натисніть «Запустити зараз»: Mr Do It сам увімкне для цього налагодження через Wi-Fi (телефон має бути підключений до Wi-Fi).</string>
     <string name="background_start_now">Запустити зараз</string>
     <string name="background_failed">Не вдалося: %1$s</string>
     <string name="background_needs_linux">Фоновому режиму потрібен вбудований Linux. Спершу встановіть агента.</string>
     <string name="background_needs_dev">Спершу ввімкніть «Параметри розробника»: Налаштування → Про пристрій → натисніть «Номер складання» 7 разів.</string>
-    <string name="background_needs_service">Спершу ввімкніть сервіс спеціальних можливостей Buddy.</string>
-    <string name="background_no_dialog">Buddy не встиг побачити вікно підключення. Спробуйте ще раз.</string>
+    <string name="background_needs_service">Спершу ввімкніть сервіс спеціальних можливостей Mr Do It.</string>
+    <string name="background_no_dialog">Mr Do It не встиг побачити вікно підключення. Спробуйте ще раз.</string>
     <string name="background_remove">Вилучити</string>
-    <string name="background_remove_text">Buddy забуде підключення й зупинить допоміжну програму. Чати знову працюватимуть на справжньому екрані.</string>
+    <string name="background_remove_text">Mr Do It забуде підключення й зупинить допоміжну програму. Чати знову працюватимуть на справжньому екрані.</string>
     <string name="background_default">Нові чати працюють у фоні</string>
     <string name="background_default_info">Кожен чат, як і раніше, має власний перемикач у налаштуваннях чату.</string>
+    <string name="background_restart">Запускати знову після перезавантаження</string>
+    <string name="background_restart_info">Після перезавантаження телефона Mr Do It сам увімкне налагодження через Wi-Fi і запустить допоміжну програму, щойно телефон буде розблоковано. Після перезавантаження потрібен Wi-Fi, причому мережа, у якій налагодження через Wi-Fi дозволено завжди. Якщо не вдалося, натисніть «Запустити зараз».</string>
+    <string name="background_restart_cant">Цей телефон не дозволяє Mr Do It самому вмикати налагодження через Wi-Fi, тому тут це не спрацює: після перезавантаження натисніть «Запустити зараз».</string>
     <string name="chat_bg_connected">Підключено</string>
     <string name="chat_bg_disconnected">Не підключено</string>
     <string name="chat_bg_not_set_up">Не налаштовано</string>
@@ -1958,13 +1993,13 @@
     <string name="helper_stopped">Зупинено</string>
     <string name="helper_of">Субагент чату «%1$s»</string>
     <string name="helper_this_chat">Цей чат</string>
-    <string name="background_security">«Налагодження через Wi-Fi» дозволяє підключеним пристроям керувати цим телефоном. Buddy підключає лише себе, на цьому ж телефоні, а його допоміжна програма приймає з’єднання лише тут.</string>
+    <string name="background_security">«Налагодження через Wi-Fi» дозволяє підключеним пристроям керувати цим телефоном. Mr Do It підключає лише себе, на цьому ж телефоні, а його допоміжна програма приймає з’єднання лише тут.</string>
     <string name="background_brought">Перенесено на ваш екран: цей крок маєте зробити ви. Фоновий режим для цього чату тепер вимкнено.</string>
     <string name="chat_background">Працювати у фоні</string>
     <string name="chat_background_info">Агент працює на окремому екрані, а ви й далі користуєтеся телефоном. Крок, де потрібні ви, наприклад вхід в обліковий запис, з’явиться на вашому екрані.</string>
     <string name="background_preview">Фоновий екран</string>
     <string name="background_show">Показати на моєму екрані</string>
-    <string name="background_usb_note">Buddy також вмикає налагодження USB. З ним допоміжна програма працює далі, коли Wi-Fi зникає й Android вимикає налагодження через Wi-Fi. Не вимикайте його.</string>
+    <string name="background_usb_note">Mr Do It також вмикає налагодження USB. З ним допоміжна програма працює далі, коли Wi-Fi зникає й Android вимикає налагодження через Wi-Fi. Не вимикайте його.</string>
     <string name="background_shell">Команди на телефоні</string>
     <string name="background_shell_switch">Агенти можуть виконувати команди на телефоні</string>
     <string name="background_shell_info">У чатах з інструментами Linux агент може виконувати команди просто на телефоні, як це робить «adb shell»: встановлювати й запускати застосунки, змінювати налаштування, читати журнали й файли. Повідомлення чи вебсторінка, які він читає, можуть спробувати обманом змусити його виконати команду.</string>
@@ -1979,7 +2014,7 @@
     <string name="chat_earlier_gone">Раніші повідомлення більше не зберігаються: чат зберігає останні %1$d.</string>
     <string name="rules_recheck">Перевірити ще раз</string>
     <string name="setup_help">Довідка</string>
-    <string name="setup_help_info">Посібник Buddy на GitHub. Також можна запитати будь-якого агента, як працює Buddy.</string>
+    <string name="setup_help_info">Посібник Mr Do It на GitHub. Також можна запитати будь-якого агента, як працює Mr Do It.</string>
     <string name="signin_api_key">Використати ключ API</string>
     <string name="signin_api_base_bad">Введіть адресу, що починається з https:// (або http:// на цьому телефоні чи у вашій мережі)</string>
     <string name="account_plan_api_key_at">Ключ API · %1$s</string>
@@ -2011,7 +2046,7 @@
     <string name="skills_bad_file">Це не навичка: потрібен SKILL.md з назвою.</string>
     <string name="skills_slash_none">Немає навички з такою назвою. Натисніть, щоб додати навички.</string>
     <string name="github_row_none">Дозвольте агентам робити push у ваші репозиторії</string>
-    <string name="github_intro">Увійдіть у GitHub для інструментів Linux: Buddy встановить git і GitHub CLI у вбудований Linux, під’єднає їх до вашого акаунта й вкаже в git ваше ім’я та приватну адресу noreply.</string>
+    <string name="github_intro">Увійдіть у GitHub для інструментів Linux: Mr Do It встановить git і GitHub CLI у вбудований Linux, під’єднає їх до вашого акаунта й вкаже в git ваше ім’я та приватну адресу noreply.</string>
     <string name="github_risk">Тоді агенти в чатах з інструментами Linux зможуть клонувати, робити commit і push від вашого акаунта, а також відкривати issues і pull requests. Їм наказано питати вас перед будь-яким push чи публікацією.</string>
     <string name="github_sign_in">Увійти через GitHub</string>
     <string name="github_installing">Встановлення git і GitHub CLI…</string>
@@ -2026,21 +2061,23 @@
     <string name="github_sign_out_text">git і GitHub CLI у вбудованому Linux втратять доступ до вашого акаунта.</string>
     <string name="backup_title">Резервна копія й перенесення</string>
     <string name="backup_row">Ваші чати й налаштування в одному файлі</string>
-    <string name="backup_intro">Зберігає ваші чати, налаштування, правила, зображення, навички, проєкти агентів і те, що вони пам’ятають про кожну розмову, в один файл у Downloads/Buddy. Відновіть його тут або на іншому телефоні.</string>
+    <string name="backup_intro">Зберігає ваші чати, налаштування, правила, зображення, навички, проєкти агентів і те, що вони пам’ятають про кожну розмову, в один файл у Downloads/Mr Do It. Відновіть його тут або на іншому телефоні.</string>
     <string name="backup_left_out">Входів в акаунти й API-ключів у ньому немає: після відновлення увійдіть знову й додайте ключі. Папки збирання проєктів не зберігаються.</string>
     <string name="backup_now">Створити копію</string>
     <string name="backup_restore">Відновити з копії</string>
     <string name="backup_restore_title">Відновити цю копію?</string>
-    <string name="backup_restore_text">Ваші чати й налаштування на цьому телефоні буде замінено даними з копії. Після цього Buddy перезапуститься.</string>
+    <string name="backup_restore_text">Ваші чати й налаштування на цьому телефоні буде замінено даними з копії. Після цього Mr Do It перезапуститься.</string>
     <string name="backup_making">Створення копії… (проєкти можуть забрати час)</string>
     <string name="backup_restoring">Відновлення…</string>
-    <string name="backup_made">Збережено в Downloads/Buddy/%1$s.</string>
-    <string name="backup_restored">Відновлено. Buddy перезапускається.</string>
-    <string name="backup_restored_no_linux">Чати й налаштування відновлено. Для Linux-частини (навички, проєкти, записи агентів) потрібен вбудований Linux: налаштуйте агента й відновіть ще раз. Buddy перезапускається.</string>
+    <string name="backup_made">Збережено в Downloads/Mr Do It/%1$s.</string>
+    <string name="backup_restored">Відновлено. Mr Do It перезапускається.</string>
+    <string name="backup_restored_no_linux">Чати й налаштування відновлено. Для Linux-частини (навички, проєкти, записи агентів) потрібен вбудований Linux: налаштуйте агента й відновіть ще раз. Mr Do It перезапускається.</string>
     <string name="backup_failed">Не вийшло: %1$s</string>
-    <string name="backup_not_one">Цей файл не є резервною копією Buddy.</string>
+    <string name="backup_not_one">Цей файл не є резервною копією Mr Do It.</string>
     <string name="chat_incognito">Інкогніто</string>
-    <string name="chat_incognito_info">Цей чат видалиться під час перезапуску Buddy разом із тим, що агент із нього запам’ятав.</string>
+    <string name="chat_incognito_info">Цей чат видалиться під час перезапуску Mr Do It разом із тим, що агент із нього запам’ятав.</string>
+    <string name="chat_lite">Полегшений режим</string>
+    <string name="chat_lite_info">Для невеликих моделей: короткий старт із дюжиною інструментів телефона, агент завантажує решту, коли потрібно. Вмикається сам для моделі на цьому телефоні. Поки він увімкнений, інструментів Linux немає.</string>
     <string name="api_keys_remove_title">Видалити %1$s?</string>
     <string name="api_keys_remove">Видалити</string>
     <string name="api_keys_failed">Не вдалося отримати список моделей сервісу з цим ключем: %1$s</string>
@@ -2082,13 +2119,13 @@
     <string name="search_messages">Повідомлень: %1$d</string>
     <string name="mcp_title">Сервери MCP</string>
     <string name="mcp_row_none">Інструменти з ваших серверів</string>
-    <string name="mcp_intro">Підключіть власні сервери MCP, і кожен агент отримає їхні інструменти разом з інструментами телефона. До сервера звертаються за його адресою, через інтернет або вашу власну мережу. Ключі зберігаються на цьому телефоні в зашифрованому вигляді й ніколи не потрапляють до агентів: Buddy додає їх до кожного виклику.</string>
+    <string name="mcp_intro">Підключіть власні сервери MCP, і кожен агент отримає їхні інструменти разом з інструментами телефона. До сервера звертаються за його адресою, через інтернет або вашу власну мережу. Ключі зберігаються на цьому телефоні в зашифрованому вигляді й ніколи не потрапляють до агентів: Mr Do It додає їх до кожного виклику.</string>
     <string name="mcp_none">Серверів поки немає.</string>
     <string name="mcp_add">Додати сервер</string>
     <string name="mcp_import">Імпортувати список</string>
     <string name="mcp_export">Скопіювати список</string>
     <string name="mcp_exported">Скопійовано, без ключів.</string>
-    <string name="mcp_note">Ці інструменти працюють поза вашим телефоном, тому картки підтвердження Buddy на них не поширюються: додавайте лише сервери, яким довіряєте. Коли виконується правило сповіщень, вони не використовуються.</string>
+    <string name="mcp_note">Ці інструменти працюють поза вашим телефоном, тому картки підтвердження Mr Do It на них не поширюються: додавайте лише сервери, яким довіряєте. Коли виконується правило сповіщень, вони не використовуються.</string>
     <string name="mcp_name_hint">Назва (літери й цифри)</string>
     <string name="mcp_url_hint">Адреса (https://…/mcp)</string>
     <string name="mcp_key_hint">Ключ або токен (необов\'язково)</string>
@@ -2107,7 +2144,7 @@
     <string name="api_keys_models">%1$s · моделей: %2$d</string>
     <string name="api_keys_add">Додати API-ключ</string>
     <string name="api_keys_none">API-ключів поки немає.</string>
-    <string name="api_keys_intro">Використовуйте моделі інших сервісів із Claude Code, Codex і OpenCode — разом із підписками або замість них. Кожен чат вибирає модель у своєму меню моделей. Використання з ключем оплачується з рахунку цього ключа. Ключі зберігаються на телефоні в зашифрованому вигляді й ніколи не потрапляють до агентів: Buddy додає їх до кожного запиту.</string>
+    <string name="api_keys_intro">Використовуйте моделі інших сервісів із Claude Code, Codex і OpenCode — разом із підписками або замість них. Кожен чат вибирає модель у своєму меню моделей. Використання з ключем оплачується з рахунку цього ключа. Ключі зберігаються на телефоні в зашифрованому вигляді й ніколи не потрапляють до агентів: Mr Do It додає їх до кожного запиту.</string>
     <string name="api_keys_row_none">Моделі інших сервісів, з вашим ключем</string>
     <string name="api_keys_title">API-ключі</string>
     <string name="signin_api_keys">API-ключі</string>
@@ -2121,7 +2158,7 @@
     <string name="hub_compacted">Розмову стиснуто: %1$s → %2$s токенів</string>
     <string name="signin_api_models_none">Сервіс не повернув жодної моделі.</string>
     <string name="setup_step_signin_api_key">Або використайте API-ключ: Налаштування → Агенти й моделі → API-ключі.</string>
-    <string name="setup_step_signin_others">%1$s — ваш мозок за замовчуванням, але готові ці: %2$s. Зробіть один із них основним, і Buddy запрацює одразу.</string>
+    <string name="setup_step_signin_others">%1$s — ваш мозок за замовчуванням, але готові ці: %2$s. Зробіть один із них основним, і Mr Do It запрацює одразу.</string>
     <string name="setup_switch_default">Змінити основний</string>
     <string name="setup_switch_default_title">Мозок за замовчуванням</string>
     <string name="signin_api_key_on">%1$s працює на ваших API-ключах: виберіть модель у меню моделей чату або модель за замовчуванням у розділі «API-ключі».</string>
@@ -2130,6 +2167,9 @@
     <string name="api_keys_local_info">Для власного сервера (Ollama, LM Studio, llama.cpp): залиште API-ключ порожнім. Якщо сервер на ПК, вкажіть його адресу у вашій мережі Wi-Fi замість localhost, наприклад http://192.168.1.20:11434/v1.</string>
     <string name="main_section_pinned">Закріплені</string>
     <string name="main_section_archived">Архів (%1$d)</string>
+    <string name="main_archived_title">Архів</string>
+    <string name="main_archived_open">Архівні чати</string>
+    <string name="main_archived_back">Назад до чатів</string>
     <string name="chat_pinned_marker">Закріплено</string>
     <string name="chat_menu_rename">Перейменувати</string>
     <string name="chat_menu_pin">Закріпити зверху</string>
@@ -2141,4 +2181,176 @@
     <string name="chat_rename_title">Перейменувати чат</string>
     <string name="chat_rename_hint">Порожньо: перше повідомлення</string>
     <string name="chat_rename_save">Зберегти</string>
+    <string name="onphone_title">Моделі на цьому телефоні</string>
+    <string name="onphone_row_none">Запуск моделі на самому телефоні, без інтернету</string>
+    <string name="onphone_intro">Завантажте модель, і Mr Do It запустить її на самому телефоні: нічого не залишає телефон, і все працює без інтернету. Невеликі моделі впораються з простими проханнями (заряд, таймер, швидко зазирнути в застосунок) і помиляються в довших завданнях. Виберіть її в меню моделей чату OpenCode, у розділі «На цьому телефоні»; такі чати використовують полегшений режим.</string>
+    <string name="onphone_runs_on">Працює на</string>
+    <string name="onphone_dev_auto">Авто</string>
+    <string name="onphone_dev_npu">NPU</string>
+    <string name="onphone_dev_gpu">GPU</string>
+    <string name="onphone_dev_cpu">CPU</string>
+    <string name="onphone_runs_on_info">«Авто» бере найшвидше з того, що запуститься: NPU, потім GPU, потім CPU.</string>
+    <string name="onphone_ran_on">Минулого разу: %s.</string>
+    <string name="onphone_not_snapdragon">На цьому телефоні моделі працюють на CPU: рушій для NPU та GPU — для телефонів на Snapdragon.</string>
+    <string name="onphone_models">Моделі</string>
+    <string name="onphone_download">Завантажити</string>
+    <string name="onphone_delete">Видалити</string>
+    <string name="onphone_cancel">Скасувати</string>
+    <string name="onphone_size_license">%1$s · %2$s</string>
+    <string name="onphone_downloaded">На телефоні</string>
+    <string name="onphone_downloading">Завантаження… %1$d%%</string>
+    <string name="onphone_engine_downloading">Завантаження рушія… %1$d%%</string>
+    <string name="onphone_failed">Не вдалося: %s</string>
+    <string name="onphone_metered_title">Завантажити через мобільні дані?</string>
+    <string name="onphone_metered_text">%1$s займає %2$s. Через мобільні дані це може коштувати грошей.</string>
+    <string name="onphone_no_space">Замало місця: потрібно %1$s, вільно %2$s.</string>
+    <string name="onphone_delete_title">Видалити %s?</string>
+    <string name="onphone_delete_text">Модель буде видалено з телефона. Її можна завантажити знову будь-коли.</string>
+    <string name="onphone_source">Рушій — офіційна збірка llama.cpp для Android (%s) з GitHub; моделі надходять із Hugging Face. Mr Do It перевіряє кожне завантаження за контрольною сумою.</string>
+    <string name="onphone_service">На цьому телефоні</string>
+    <string name="onphone_note_gemma_e2b">Від Google. Швидка на NPU Snapdragon: для простих прохань в один крок.</string>
+    <string name="onphone_note_gemma_e4b">Від Google. Більша і приблизно вдвічі повільніша за E2B. Потрібно багато вільної пам\'яті.</string>
+    <string name="onphone_note_qwen_2b">Від Alibaba. Найменше завантаження і найшвидші відповіді.</string>
+    <string name="onphone_note_qwen_4b">Від Alibaba. Більша і приблизно вдвічі повільніша за 2B.</string>
+    <string name="hub_still_reading_phone">Ще працює… Моделі на цьому телефоні потрібна хвилинка, особливо для першої відповіді.</string>
+    <string name="onphone_too_hot">Телефон зараз надто гарячий для запуску моделі. Дайте йому охолонути кілька хвилин і спробуйте знову.</string>
+    <string name="onphone_think">Думати перед відповіддю</string>
+    <string name="onphone_think_info">Повільніше: кожен крок може тривати 20 секунд і більше. Без цього невеликі моделі швидкі й майже завжди обирають ті самі інструменти.</string>
+    <string name="tools_title">Інструменти</string>
+    <string name="tools_row">Увімкнено: %1$d з %2$d</string>
+    <string name="tools_intro">Що агенти можуть використовувати на вашому телефоні. Вимкнений інструмент не пропонується жодному агенту, а його виклик відхиляється. Зміна діє з наступного повідомлення.</string>
+    <string name="tools_always_on">Завжди ввімкнено: так агенти просять вашого дозволу</string>
+    <string name="tools_browser_off">Фоновий браузер вимкнено, тож ці інструменти не пропонуються, доки ви не ввімкнете його в розділі Налаштування → Фоновий браузер.</string>
+    <string name="tools_group_screen">Екран</string>
+    <string name="tools_group_apps">Додатки, посилання й файли</string>
+    <string name="tools_group_info">Відомості про телефон</string>
+    <string name="tools_group_quick">Швидкі дії</string>
+    <string name="tools_group_talk">Запитання вам</string>
+    <string name="tools_group_browser">Фоновий браузер</string>
+    <string name="tools_group_schedule">Розклади й правила</string>
+    <string name="tools_group_advanced">Додатково</string>
+    <string name="tool_read_screen">Читання екрана</string>
+    <string name="tool_read_screen_info">Читає, що на екрані: тексти, кнопки й поля</string>
+    <string name="tool_screenshot">Знімок екрана</string>
+    <string name="tool_screenshot_info">Робить знімок екрана для зображень, карт та ігор</string>
+    <string name="tool_tap">Натискання</string>
+    <string name="tool_tap_info">Натискає кнопку, поле або місце на екрані</string>
+    <string name="tool_long_press">Довге натискання</string>
+    <string name="tool_long_press_info">Натискає й утримує, наприклад щоб відкрити меню</string>
+    <string name="tool_type_text">Введення тексту</string>
+    <string name="tool_type_text_info">Вводить текст у поле</string>
+    <string name="tool_scroll">Прокручування</string>
+    <string name="tool_scroll_info">Прокручує список або сторінку</string>
+    <string name="tool_swipe">Проведення</string>
+    <string name="tool_swipe_info">Проводить пальцем по екрану</string>
+    <string name="tool_press">Системні кнопки</string>
+    <string name="tool_press_info">Назад, Головний екран, недавні додатки й Enter на клавіатурі</string>
+    <string name="tool_find">Пошук на екрані</string>
+    <string name="tool_find_info">Прокручує, доки не з\'явиться потрібний текст</string>
+    <string name="tool_collect">Читання довгого списку</string>
+    <string name="tool_collect_info">Прокручує список або розмову й збирає текст</string>
+    <string name="tool_do_steps">Кілька кроків одразу</string>
+    <string name="tool_do_steps_info">Натискання, введення й прокручування за один раз, наприклад щоб заповнити форму</string>
+    <string name="tool_wait">Очікування</string>
+    <string name="tool_wait_info">Трохи чекає, доки екран не встановиться</string>
+    <string name="tool_wait_for">Очікування події</string>
+    <string name="tool_wait_for_info">Чекає, доки не з\'явиться текст або екран</string>
+    <string name="tool_point_out">Вказати на екрані</string>
+    <string name="tool_point_out_info">Позначає для вас місце на екрані рамкою, колом або стрілкою</string>
+    <string name="tool_open_app">Відкрити додаток</string>
+    <string name="tool_open_app_info">Відкриває встановлений додаток за назвою</string>
+    <string name="tool_list_apps">Список додатків</string>
+    <string name="tool_list_apps_info">Перелічує додатки, встановлені на телефоні</string>
+    <string name="tool_open_url">Відкрити посилання</string>
+    <string name="tool_open_url_info">Відкриває посилання так само, як натискання на нього</string>
+    <string name="tool_share">Поділитися</string>
+    <string name="tool_share_info">Відкриває меню «Поділитися» Android з текстом або файлом</string>
+    <string name="tool_save_to_downloads">Зберегти в Downloads</string>
+    <string name="tool_save_to_downloads_info">Копіює файл із вбудованого Linux у вашу папку Downloads</string>
+    <string name="tool_install_apk">Встановити додаток</string>
+    <string name="tool_install_apk_info">Відкриває інсталятор Android для додатка, створеного агентом; «Установити» натискаєте ви</string>
+    <string name="tool_wait_for_install">Очікування встановлення</string>
+    <string name="tool_wait_for_install_info">Чекає, доки ви встановите або оновите додаток</string>
+    <string name="tool_update_buddy">Оновити Mr Do It</string>
+    <string name="tool_update_buddy_info">Перевіряє, чи є новий Mr Do It, і відкриває оновлення</string>
+    <string name="tool_device_status">Стан телефона</string>
+    <string name="tool_device_status_info">Акумулятор, мережа, дата й час, вільна пам\'ять</string>
+    <string name="tool_notifications">Читання сповіщень</string>
+    <string name="tool_notifications_info">Читає сповіщення, які зараз є на телефоні</string>
+    <string name="tool_reply_notification">Відповідь на сповіщення</string>
+    <string name="tool_reply_notification_info">Відповідає на повідомлення з його сповіщення</string>
+    <string name="tool_location">Місцезнаходження</string>
+    <string name="tool_location_info">Де зараз телефон; Android спершу запитає вас</string>
+    <string name="tool_calendar_events">Читання календаря</string>
+    <string name="tool_calendar_events_info">Читає події вашого календаря; Android спершу запитає вас</string>
+    <string name="tool_add_calendar_event">Додати подію</string>
+    <string name="tool_add_calendar_event_info">Відкриває додаток «Календар» із заповненою новою подією; «Зберегти» натискаєте ви</string>
+    <string name="tool_media">Керування медіа</string>
+    <string name="tool_media_info">Вмикає, ставить на паузу або перемикає музику й відео</string>
+    <string name="tool_clipboard_read">Читання буфера обміну</string>
+    <string name="tool_clipboard_read_info">Читає те, що ви скопіювали останнім; Mr Do It щоразу запитує вас</string>
+    <string name="tool_clipboard_write">Копіювання в буфер обміну</string>
+    <string name="tool_clipboard_write_info">Кладе текст у буфер обміну, щоб ви могли його вставити</string>
+    <string name="tool_set_alarm">Поставити будильник</string>
+    <string name="tool_set_alarm_info">Ставить будильник у додатку «Годинник»</string>
+    <string name="tool_set_timer">Запустити таймер</string>
+    <string name="tool_set_timer_info">Запускає таймер у додатку «Годинник»</string>
+    <string name="tool_take_photo">Зробити фото</string>
+    <string name="tool_take_photo_info">Відкриває камеру; знімок робите ви</string>
+    <string name="tool_notify">Рядок статусу</string>
+    <string name="tool_notify_info">Показує короткий рядок біля бульбашки, поки агент працює</string>
+    <string name="tool_confirm">Запит дозволу</string>
+    <string name="tool_confirm_info">Картка схвалення перед надсиланням, купівлею, видаленням або зміною чогось</string>
+    <string name="tool_ask">Запитання вам</string>
+    <string name="tool_ask_info">Картка з варіантами відповіді</string>
+    <string name="tool_browser_open">Відкрити сторінку</string>
+    <string name="tool_browser_open_info">Відкриває вебсторінку у фоновому браузері</string>
+    <string name="tool_browser_read">Читання сторінки</string>
+    <string name="tool_browser_read_info">Читає сторінку як текст</string>
+    <string name="tool_browser_click">Натискання на сторінці</string>
+    <string name="tool_browser_click_info">Натискає посилання або кнопку</string>
+    <string name="tool_browser_type">Введення на сторінці</string>
+    <string name="tool_browser_type_info">Вводить текст у поле на сторінці</string>
+    <string name="tool_browser_scroll">Прокручування сторінки</string>
+    <string name="tool_browser_scroll_info">Прокручує сторінку</string>
+    <string name="tool_browser_back">Назад</string>
+    <string name="tool_browser_back_info">Повертається на попередню сторінку</string>
+    <string name="tool_browser_screenshot">Знімок сторінки</string>
+    <string name="tool_browser_screenshot_info">Робить знімок сторінки</string>
+    <string name="tool_browser_tabs">Вкладки</string>
+    <string name="tool_browser_tabs_info">Відкриває, перемикає й закриває вкладки браузера</string>
+    <string name="tool_schedule_message">Запланувати повідомлення</string>
+    <string name="tool_schedule_message_info">Агент повернеться в чат пізніше, наприклад щоб щось перевірити</string>
+    <string name="tool_list_scheduled">Заплановані повідомлення</string>
+    <string name="tool_list_scheduled_info">Показує заплановані повідомлення чату</string>
+    <string name="tool_cancel_scheduled">Скасувати заплановане повідомлення</string>
+    <string name="tool_cancel_scheduled_info">Скасовує одне із запланованих повідомлень чату</string>
+    <string name="tool_add_notification_rule">Додати правило сповіщень</string>
+    <string name="tool_add_notification_rule_info">Приносить відповідні сповіщення в чат разом із вказівкою</string>
+    <string name="tool_delegate">Субагенти</string>
+    <string name="tool_delegate_info">Передає частини завдання помічникам, які працюють одночасно</string>
+    <string name="tool_subagents">Звіти субагентів</string>
+    <string name="tool_subagents_info">Чекає на помічників і збирає їхні звіти</string>
+    <string name="tool_phone_shell">Команди на телефоні</string>
+    <string name="tool_phone_shell_info">Виконує команди на телефоні; також потрібен перемикач «Команди на телефоні» в розділі «Фоновий режим»</string>
+    <string name="tools_chat_title">Інструменти в цьому чаті</string>
+    <string name="tools_chat_intro">Які інструменти отримує агент цього чату. Перемикач тут діє лише в цьому чаті; решта — як у налаштуваннях. Зміна діє з наступного повідомлення.</string>
+    <string name="tools_chat_own">лише цей чат</string>
+    <string name="tools_chat_reset">Як у налаштуваннях</string>
+    <string name="setup_face_gif">GIF або анімований WebP рухається в бульбашці.</string>
+    <string name="setup_face_anim">Анімація</string>
+    <string name="setup_face_anim_once">Під час розблокування</string>
+    <string name="setup_face_anim_loop">Завжди</string>
+    <string name="setup_face_anim_off">Вимк.</string>
+    <string name="setup_face_anim_note">Програється один раз під час кожного розблокування телефона, постійно або ніколи. Постійно — більша витрата батареї.</string>
+    <string name="tool_call_log">Читати журнал дзвінків</string>
+    <string name="tool_call_log_info">Нещодавні дзвінки: хто, коли, як довго; потрібен фоновий режим</string>
+    <string name="tool_sms_list">Читати SMS</string>
+    <string name="tool_sms_list_info">Нещодавні SMS; потрібен фоновий режим</string>
+    <string name="tools_sms_codes">Показувати коди в SMS</string>
+    <string name="tools_sms_codes_info">Одноразові коди й PIN-коди в повідомленнях видно як [code hidden], якщо це не ввімкнено</string>
+    <string name="hub_tool_call_log">Читає журнал дзвінків</string>
+    <string name="hub_tool_sms_list">Читає SMS</string>
+    <string name="setup_face_too_big">Анімація більша за 16 МБ, тому бульбашка показує її як нерухоме зображення.</string>
+    <string name="background_older">Помічник із версії до оновлення ще працює, тож фонові чати можуть працювати. Щоб запустити новий, Mr Do It один раз потрібне налагодження через Wi-Fi: натисніть «Запустити зараз».</string>
 </resources>

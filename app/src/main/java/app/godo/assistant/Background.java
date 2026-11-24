@@ -84,26 +84,165 @@ final class Background {
     private static final java.util.Map<String, Long> outsideUsed = new java.util.concurrent.ConcurrentHashMap<>();
     private static final java.util.Set<String> outsideOnScreen = java.util.concurrent.ConcurrentHashMap.newKeySet();
 
+    /** The outside session making this call (read on its thread), or null for a chat's agent. */
+    static String outsideCaller() {
+        String k = McpServer.CALLER_KEY.get();
+        return outside(k) ? k : null;
+    }
+
     /** A hidden screen of sessions outside Buddy: OUTSIDE (this phone's own terminal) or OUTSIDE-<computer>. */
     static boolean outside(String key) {
         return key != null && (key.equals(OUTSIDE) || key.startsWith(OUTSIDE + "-"));
     }
 
-    private static boolean idle(String key) {
+    /** own: the calls of its own the asker is in (its own call doesn't make it busy). */
+    private static boolean idle(String key, int own) {
+        java.util.concurrent.atomic.AtomicInteger busy = outsideBusy.get(key);
+        if (busy != null && busy.get() > own) return false; // another call still going (a card waiting): it stays
         Long at = outsideUsed.get(key);
         return at == null || System.currentTimeMillis() - at > OUTSIDE_IDLE_MS;
+    }
+
+    /** An outside session working on the real screen (not its hidden one) now. */
+    static boolean outsideWorkingOnRealScreen() {
+        for (String k : outsideActive()) if (!outsideHidden(k)) return true;
+        return false;
     }
 
     /** Does a call for this key (a chat id, or an outside key) work on a hidden screen? */
     static boolean onFor(Context c, String key) {
         if (!outside(key)) return on(c, key);
-        if (outsideOnScreen.contains(key) && idle(key)) outsideOnScreen.remove(key);
+        // (asked from within the session's call, which counts as one going)
+        if (outsideOnScreen.contains(key) && idle(key, 1)) outsideOnScreen.remove(key);
         return !outsideOnScreen.contains(key) && setUp(c) && Prefs.outsideBackground(c);
     }
 
     /** An outside session made a call: its hidden screen (or its turn on the real one) lasts a while longer. */
     static void outsideUsed(String key) {
         outsideUsed.put(key, System.currentTimeMillis());
+    }
+
+    /** An outside session counts as working (the Sessions tab, the "working" notification) this long after its last call. */
+    static final long OUTSIDE_WORKING_MS = 60_000;
+    /** After the user stops an outside session, its calls are refused this long (the agent should stop and ask). */
+    private static final long OUTSIDE_STOP_MS = 60_000;
+    private static final java.util.Map<String, Long> outsideStopped = new java.util.concurrent.ConcurrentHashMap<>();
+
+    /** Each outside session's calls still going (one can wait minutes on a card or a phone command). */
+    private static final java.util.Map<String, java.util.concurrent.atomic.AtomicInteger> outsideBusy =
+            new java.util.concurrent.ConcurrentHashMap<>();
+
+    /** An outside session's call starts (+1) or ends (-1), around the whole call (Tools.call). */
+    static void outsideCall(String key, int delta) {
+        outsideBusy.computeIfAbsent(key, k -> new java.util.concurrent.atomic.AtomicInteger()).addAndGet(delta);
+    }
+
+    /**
+     * The outside sessions at work on the phone, most recent first: a call in the last minute, a call still going
+     * (waiting on a card, say), or a hidden screen still open.
+     */
+    static java.util.List<String> outsideWorking() {
+        return outsideSessions(true);
+    }
+
+    /** As above, without the ones whose only sign is an open screen: those really at work (notification, pager). */
+    static java.util.List<String> outsideActive() {
+        return outsideSessions(false);
+    }
+
+    private static java.util.List<String> outsideSessions(boolean withScreens) {
+        long now = System.currentTimeMillis();
+        java.util.Set<String> keys = new java.util.HashSet<>();
+        for (java.util.Map.Entry<String, Long> e : outsideUsed.entrySet())
+            if (now - e.getValue() < OUTSIDE_WORKING_MS) keys.add(e.getKey());
+        // (a call still going counts once the session has used the phone: browser_* calls alone don't touch it)
+        for (java.util.Map.Entry<String, java.util.concurrent.atomic.AtomicInteger> e : outsideBusy.entrySet())
+            if (e.getValue().get() > 0 && outsideUsed.containsKey(e.getKey())) keys.add(e.getKey());
+        if (withScreens) for (String k : displays.keySet()) if (outside(k)) keys.add(k);
+        // a stopped one isn't at work, even while a call it made before the Stop (a long wait) is still returning
+        for (java.util.Map.Entry<String, Long> e : outsideStopped.entrySet()) if (e.getValue() > now) keys.remove(e.getKey());
+        java.util.List<String> l = new java.util.ArrayList<>(keys);
+        l.sort((a, b) -> Long.compare(outsideLastCall(b), outsideLastCall(a)));
+        return l;
+    }
+
+    /**
+     * An outside session that used the phone on the real screen within ms (and wasn't stopped): it may tap there again
+     * after thinking a while, so the user's touch still pauses it (see BuddyService.onScreenTouched).
+     */
+    static boolean outsideOnRealScreenWithin(long ms) {
+        long now = System.currentTimeMillis();
+        for (java.util.Map.Entry<String, Long> e : outsideUsed.entrySet()) {
+            Long stop = outsideStopped.get(e.getKey());
+            if (now - e.getValue() < ms && !outsideHidden(e.getKey()) && (stop == null || stop <= now)) return true;
+        }
+        return false;
+    }
+
+    /** Is this outside session among outsideActive() (without building that list)? */
+    static boolean outsideIsActive(String key) {
+        long now = System.currentTimeMillis();
+        Long stop = outsideStopped.get(key);
+        if (stop != null && stop > now) return false;
+        Long used = outsideUsed.get(key);
+        java.util.concurrent.atomic.AtomicInteger busy = outsideBusy.get(key);
+        return used != null && (now - used < OUTSIDE_WORKING_MS || busy != null && busy.get() > 0);
+    }
+
+    /** When this outside session last made a call (0: never). */
+    static long outsideLastCall(String key) {
+        Long t = outsideUsed.get(key);
+        return t == null ? 0 : t;
+    }
+
+    /** Does this outside session work on its hidden screen right now (rather than on the real one)? */
+    static boolean outsideHidden(String key) {
+        return displays.containsKey(key);
+    }
+
+    /** Who an outside session is: the paired computer's name, or this phone's own terminal. */
+    static String outsideName(Context c, String key) {
+        if (OUTSIDE.equals(key)) return c.getString(R.string.outside_terminal);
+        String id = key == null ? "" : key.substring(OUTSIDE.length() + 1);
+        String known = names.get(id); // asked on every repaint: the paired list is read once per computer
+        if (known != null) return known;
+        for (Tailnet.Device d : Tailnet.devices(c)) {
+            if (!d.id.equals(id)) continue;
+            names.put(id, d.name);
+            return d.name;
+        }
+        String unknown = c.getString(R.string.outside_computer); // no longer paired: not looked up again
+        names.put(id, unknown);
+        return unknown;
+    }
+
+    private static final java.util.Map<String, String> names = new java.util.concurrent.ConcurrentHashMap<>();
+
+    /**
+     * The user stopped an outside session (the Sessions tab, or Stop on the "working" notification): its hidden screen
+     * closes, its waiting cards are denied, and its calls are refused for a minute, which tells the agent to stop.
+     */
+    static void stopOutside(BuddyService svc, String key) {
+        outsideStopped.put(key, System.currentTimeMillis() + OUTSIDE_STOP_MS);
+        outsideUsed.remove(key);
+        outsideOnScreen.remove(key);
+        close(svc, key);
+        svc.runOnMain(() -> {
+            if (svc.bubble() != null) svc.bubble().denyFrom(key);
+            svc.outsideChanged();
+        });
+    }
+
+    /** What a stopped outside session's call is told, or null when it isn't stopped. */
+    static String outsideStopped(String key) {
+        Long until = outsideStopped.get(key);
+        if (until == null) return null;
+        if (System.currentTimeMillis() > until) {
+            outsideStopped.remove(key);
+            return null;
+        }
+        return "STOPPED: the user stopped your work on the phone from Buddy. Don't use the phone tools now; stop and ask "
+                + "the user what they want.";
     }
 
     /** An outside session's app comes to the real screen; the session works there from now on (see onFor). */
@@ -255,7 +394,7 @@ final class Background {
         keeper.scheduleWithFixedDelay(() -> {
             for (String chat : new ArrayList<>(displays.keySet())) {
                 if (outside(chat)) { // no run to end it: it goes after a while without calls, or when switched off
-                    if (idle(chat) || !Prefs.outsideBackground(c)) {
+                    if (idle(chat, 0) || !Prefs.outsideBackground(c)) {
                         close(c, chat);
                     } else {
                         try {
@@ -336,6 +475,36 @@ final class Background {
         return nl < 0 ? new String[]{all.trim(), ""} : new String[]{all.substring(0, nl), all.substring(nl + 1)};
     }
 
+    /**
+     * A command through the helper only if it already runs (this version's or an earlier one's): never starts it, so
+     * nothing opens on the user's screen. {exit code, output}, or null when no helper answers. Blocks: not for the
+     * main thread.
+     */
+    static String[] execIfRunning(Context c, String command, int seconds) {
+        try {
+            if (call(c, "ping").trim().isEmpty()) return null;
+            String all = new String(request(c, "exec\t" + seconds + "\t" + android.util.Base64.encodeToString(
+                    command.getBytes(StandardCharsets.UTF_8), android.util.Base64.NO_WRAP), (seconds + 20) * 1000), StandardCharsets.UTF_8);
+            int nl = all.indexOf('\n');
+            return nl < 0 ? new String[]{all.trim(), ""} : new String[]{all.substring(0, nl), all.substring(nl + 1)};
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    /**
+     * Is a helper from an earlier Buddy still running (it answers, with another version)? Chats still work through
+     * it; only starting this version's needs Wireless debugging (issue #79: it showed as just "not running").
+     */
+    static boolean olderRunning(Context c) {
+        try {
+            String r = call(c, "ping").trim();
+            return !r.isEmpty() && !r.startsWith(Shell.VERSION + " ");
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
     /** Is the helper running, and this version's? */
     static boolean alive(Context c) {
         try {
@@ -358,6 +527,12 @@ final class Background {
      * Settings (a phone that lets Buddy's adb grant it the right needs no walk).
      */
     static String start(Context c, boolean asked) {
+        String why = startNow(c, asked);
+        if (why == null) restartNote = null; // (it runs: why it didn't after the restart is history)
+        return why;
+    }
+
+    private static String startNow(Context c, boolean asked) {
         synchronized (starting) {
             if (alive(c)) return null;
             if (!setUp(c)) return "background mode isn't set up (Settings → Background mode)";
@@ -397,17 +572,35 @@ final class Background {
                 return "Wireless debugging is off, and background mode needs it once after a restart of the phone: the "
                         + "user opens Buddy → Settings → Background mode and taps Start now (Wi-Fi must be connected)";
             }
-            String out = launch(c, ports);
-            for (int i = 0; i < 20; i++) {
-                if (alive(c)) {
-                    stay(c);
-                    return null;
+            String out = "";
+            for (int attempt = 0; attempt < 2; attempt++) { // once more with a fresh adb server: a stale one can fail
+                out = launch(c, ports);
+                for (int i = 0; i < 20; i++) {
+                    if (alive(c)) {
+                        stay(c);
+                        return null;
+                    }
+                    sleep(300);
                 }
-                sleep(300);
+                if (out.contains("PORT=")) break; // adb worked: the helper itself didn't start
             }
-            return out.contains("PORT=") ? "its helper didn't start" + said(out)
-                    : "Buddy isn't paired with this phone's Wireless debugging any more (Settings → Background mode → Set up)";
+            if (out.contains("PORT=")) return "its helper didn't start" + said(out);
+            String tried = tried(out);
+            // only what adb itself says means the pairing is gone; anything else is shown as adb said it
+            if (out.contains("unauthorized") || out.contains("failed to authenticate")) {
+                return "Buddy isn't paired with this phone's Wireless debugging any more (Settings → Background mode → "
+                        + "Set up). adb said: " + tried;
+            }
+            return "adb couldn't connect to this phone's Wireless debugging. adb said: " + tried;
         }
+    }
+
+    /** adb's answers per port from launch's output (its TRIED lines), or the whole output when it had none. */
+    private static String tried(String out) {
+        StringBuilder b = new StringBuilder();
+        for (String l : out.split("\n")) if (l.startsWith("TRIED ")) b.append(b.length() == 0 ? "" : "; ").append(l.substring(6).trim());
+        String s = b.length() > 0 ? b.toString() : out.trim().isEmpty() ? "nothing" : out.trim();
+        return s.length() > 800 ? s.substring(0, 800) + "…" : s;
     }
 
     /** What the helper itself printed before it gave up (launch's output after LOG=), as ": …", or "". */
@@ -446,13 +639,21 @@ final class Background {
         String helper = "pkill -f '^app_process.*assistant.Shell'; CLASSPATH=" + c.getPackageCodePath()
                 + " setsid app_process / " + Shell.class.getName() + " " + PORT + " " + Prefs.backgroundToken(c)
                 + " >" + LOG + " 2>&1 </dev/null &";
-        String script = ADB + "adb start-server >/dev/null 2>&1; for p in" + list + "; do "
-                + "timeout 8 adb connect 127.0.0.1:$p >/dev/null 2>&1; "
-                + "if [ \"$(timeout 5 adb -s 127.0.0.1:$p get-state 2>/dev/null)\" = device ]; then echo PORT=$p; "
-                + "adb -s 127.0.0.1:$p shell \"pm grant " + c.getPackageName() + " " + SECURE + "\" >/dev/null 2>&1; "
-                + "adb -s 127.0.0.1:$p shell \"" + helper + "\"; sleep 2; echo LOG=; "
-                + "adb -s 127.0.0.1:$p shell \"tail -c 1500 " + LOG + "\" 2>&1; break; fi; "
-                + "adb disconnect 127.0.0.1:$p >/dev/null 2>&1; done; adb kill-server >/dev/null 2>&1";
+        // the port Wireless debugging announces on the Wi-Fi first (adb's own discovery): it moves now and then, and a
+        // scan can miss it while finding other apps' ports, which adb only calls "offline"
+        // each port on the phone's own address first, then on its Wi-Fi address: a Pixel on Android 17 answered
+        // "failed to connect to 127.0.0.1" while Wireless debugging listened there (issue #79)
+        String script = ADB + "adb start-server >/dev/null 2>&1; mp=''; for i in 1 2 3 4; do "
+                + "mp=$(adb mdns services 2>/dev/null | awk '/_adb-tls-connect._tcp/ {n=split($NF,a,\":\"); print a[n]; exit}'); "
+                + "[ -n \"$mp\" ] && break; sleep 1; done; ok=''; for p in $mp" + list + "; do for h in " + hosts() + "; do "
+                // what adb said for each port, for the reason when none works (it was guessed as "not paired")
+                + "d=$h:$p; r=$(timeout 8 adb connect $d 2>&1); s=$(timeout 5 adb -s $d get-state 2>&1); "
+                + "echo \"TRIED $d: $r / $s\" | tr '\\n' ' '; echo; "
+                + "if [ \"$s\" = device ]; then echo PORT=$p; ok=1; "
+                + "adb -s $d shell \"pm grant " + c.getPackageName() + " " + SECURE + "\" >/dev/null 2>&1; "
+                + "adb -s $d shell \"" + helper + "\"; sleep 2; echo LOG=; "
+                + "adb -s $d shell \"tail -c 1500 " + LOG + "\" 2>&1; break; fi; "
+                + "adb disconnect $d >/dev/null 2>&1; done; [ -n \"$ok\" ] && break; done; adb kill-server >/dev/null 2>&1";
         try {
             String out = Linux.exec(c, script, 150);
             Matcher m = Pattern.compile("PORT=(\\d+)").matcher(out);
@@ -461,6 +662,28 @@ final class Background {
         } catch (Exception e) {
             return String.valueOf(e.getMessage());
         }
+    }
+
+    /**
+     * Where Wireless debugging may listen, in the order to try: the phone's own address, then its Wi-Fi (and other
+     * network) IPv4 addresses. Some phones listen on the Wi-Fi address only (issue #79).
+     */
+    static String hosts() {
+        StringBuilder b = new StringBuilder("127.0.0.1");
+        try {
+            for (java.net.NetworkInterface n : Collections.list(java.net.NetworkInterface.getNetworkInterfaces())) {
+                if (!n.isUp() || n.isLoopback()) continue;
+                for (java.net.InetAddress a : Collections.list(n.getInetAddresses())) {
+                    if (a instanceof java.net.Inet4Address && !a.isLoopbackAddress()) {
+                        // Wi-Fi first: mobile data addresses aren't where Wireless debugging listens
+                        if (n.getName().startsWith("wlan")) b.insert("127.0.0.1".length(), " " + a.getHostAddress());
+                        else b.append(' ').append(a.getHostAddress());
+                    }
+                }
+            }
+        } catch (Exception ignored) { // (the phone's own address only, as before)
+        }
+        return b.toString();
     }
 
     private static boolean listening(int port) {
@@ -590,6 +813,204 @@ final class Background {
         }
     }
 
+    private static boolean wirelessDebuggingOn(Context c) {
+        return android.provider.Settings.Global.getInt(c.getContentResolver(), "adb_wifi_enabled", 0) == 1;
+    }
+
+    /** May Buddy switch Wireless debugging on by itself (the right its adb gave it when it paired, where the phone allows that)? */
+    static boolean canSwitchWireless(Context c) {
+        return c.checkSelfPermission(SECURE) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    // ------------------------------------------------------------------ after a restart of the phone
+
+    private static final int RESTART_TRIES = 3;
+    /** How long Buddy waits for Wi-Fi after a restart before it leaves the helper to Start now. */
+    private static final long RESTART_WIFI_MS = 30 * 60_000L;
+    private static volatile boolean restarting;
+    private static volatile String restartNote;
+    private static android.net.ConnectivityManager.NetworkCallback wifiWait;
+    /** Until when Buddy waits for Wi-Fi after this restart (ms since boot, sleep included; 0: it hasn't had to yet). */
+    private static long wifiUntil;
+    /** No try before then (ms since boot): the wait between two tries, which an unlock in between doesn't cut short. */
+    private static volatile long restartNotBefore;
+
+    /** Android's count of this phone's boots, or -1. */
+    private static int boot(Context c) {
+        return android.provider.Settings.Global.getInt(c.getContentResolver(), android.provider.Settings.Global.BOOT_COUNT, -1);
+    }
+
+    /**
+     * The switch "Start again after a restart". Turned on, it is for the restarts to come: the boot the phone is in
+     * counts as done, so a helper that isn't running now is still the user's to start.
+     */
+    static void setRestart(Context c, boolean on) {
+        Prefs.setBackgroundRestart(c, on);
+        restartNote = null;
+        if (on) Prefs.setBackgroundRestartTries(c, boot(c), RESTART_TRIES);
+    }
+
+    /** Why the helper wasn't started again after this restart, for the Background mode screen, or null. */
+    static String restartNote() {
+        return restartNote;
+    }
+
+    /**
+     * The phone was restarted, which ended the helper, and the user asked Buddy to start it again by itself (main
+     * thread; called when the accessibility service connects and each time the phone is unlocked, and it does
+     * something once per boot). With the phone unlocked and on Wi-Fi (it waits RESTART_WIFI_MS for one), Buddy switches Wireless debugging on if the
+     * phone gave it the right to, and starts the helper the way Start now does, only without walking Settings on the
+     * user's screen. At most RESTART_TRIES tries per boot, a minute and then two apart, kept in Prefs so that Buddy
+     * being restarted doesn't begin anew. It stops at once where trying again can't help: Buddy has no right to
+     * switch Wireless debugging on, Android took the switch back (on a Wi-Fi that isn't "always allowed" it asks the
+     * user instead), or the pairing is gone. Nothing is said to the user; the Background mode screen shows why.
+     */
+    static void afterRestart(final BuddyService svc) {
+        if (BuddyService.get() != svc || !Prefs.backgroundRestart(svc) || !setUp(svc) || restarting) return;
+        final int boot = boot(svc);
+        if (boot < 0) return;
+        if (Prefs.backgroundRestartBoot(svc) != boot) Prefs.setBackgroundRestartTries(svc, boot, 0);
+        if (Prefs.backgroundRestartTries(svc) >= RESTART_TRIES) return;
+        if (android.os.SystemClock.elapsedRealtime() < restartNotBefore) return; // (its turn comes: see below)
+        if (svc.getSystemService(android.app.KeyguardManager.class).isKeyguardLocked()) return; // again when it's unlocked
+        restarting = true;
+        new Thread(() -> {
+            long again = 0;
+            try {
+                again = restartTry(svc, boot);
+            } catch (Exception ignored) {
+            } finally {
+                restarting = false;
+            }
+            if (again > 0) {
+                restartNotBefore = android.os.SystemClock.elapsedRealtime() + again;
+                svc.mainHandler().postDelayed(() -> afterRestart(svc), again + 500);
+            }
+        }, "background-restart").start();
+    }
+
+    /** One try. When to try again (ms from now), or 0: it runs, it waits for Wi-Fi, or it's given up for this boot. */
+    private static long restartTry(BuddyService svc, int boot) {
+        if (alive(svc)) { // nothing to do in this boot (the switch came on, or the service came back, with it running)
+            Prefs.setBackgroundRestartTries(svc, boot, RESTART_TRIES);
+            return 0;
+        }
+        // the wait for Wi-Fi ran out, whether or not anything was still listening for one (a Wi-Fi that came while the
+        // phone was locked ended that) and however long the phone slept: not hours later on whatever Wi-Fi it finds
+        synchronized (Background.class) {
+            if (wifiUntil != 0 && android.os.SystemClock.elapsedRealtime() >= wifiUntil) {
+                stopWifiWait(svc);
+                return gaveUp(svc, boot, "there was no Wi-Fi after the restart");
+            }
+        }
+        if (!onWifi(svc)) { // Wireless debugging only exists on Wi-Fi: waiting for it isn't a try
+            waitForWifi(svc, boot);
+            return 0;
+        }
+        int tries = Prefs.backgroundRestartTries(svc) + 1;
+        Prefs.setBackgroundRestartTries(svc, boot, tries);
+        boolean was = wirelessDebuggingOn(svc);
+        if (!was) {
+            if (!wirelessDebugging(svc, true)) {
+                return gaveUp(svc, boot, "this phone doesn't let Buddy switch Wireless debugging on by itself after a restart");
+            }
+            sleep(3000);
+            if (!wirelessDebuggingOn(svc)) {
+                // (off again in Buddy's own words too: Android may be asking the user about this Wi-Fi, and a yes
+                // after Buddy has left would leave Wireless debugging on with nothing using it)
+                wirelessDebugging(svc, false);
+                return gaveUp(svc, boot, "Android didn't keep Wireless debugging on after the restart (it asks first on a "
+                        + "Wi-Fi it isn't always allowed on)");
+            }
+        }
+        String why;
+        try {
+            why = start(svc);
+        } catch (RuntimeException e) {
+            if (!was) wirelessDebugging(svc, false); // not started: as it was
+            throw e;
+        }
+        if (why == null) { // (Wireless debugging stays on, as after Start now; it goes off with the Wi-Fi)
+            restartNote = null;
+            Prefs.setBackgroundRestartTries(svc, boot, RESTART_TRIES);
+            return 0;
+        }
+        if (!was) wirelessDebugging(svc, false); // not started: as it was
+        restartNote = why;
+        // the pairing is gone, or Wireless debugging didn't come up although it was switched on: no use trying again
+        if (tries >= RESTART_TRIES || why.contains("paired") || why.startsWith("Wireless debugging is off")) {
+            Prefs.setBackgroundRestartTries(svc, boot, RESTART_TRIES);
+            return 0;
+        }
+        return tries * 60_000L;
+    }
+
+    private static long gaveUp(Context c, int boot, String why) {
+        restartNote = why;
+        Prefs.setBackgroundRestartTries(c, boot, RESTART_TRIES);
+        return 0;
+    }
+
+    /** Is the phone on a Wi-Fi network (under a VPN or not)? */
+    private static boolean onWifi(Context c) {
+        try {
+            android.net.ConnectivityManager cm = c.getSystemService(android.net.ConnectivityManager.class);
+            for (android.net.Network n : cm.getAllNetworks()) {
+                android.net.NetworkCapabilities nc = cm.getNetworkCapabilities(n);
+                if (nc != null && nc.hasTransport(android.net.NetworkCapabilities.TRANSPORT_WIFI)
+                        && !nc.hasTransport(android.net.NetworkCapabilities.TRANSPORT_VPN)) return true;
+            }
+        } catch (Exception ignored) {
+        }
+        return false;
+    }
+
+    /**
+     * No Wi-Fi after the restart: afterRestart goes on when one connects. If none does within RESTART_WIFI_MS, that
+     * was it for this boot: Wireless debugging isn't switched on hours later, on whatever Wi-Fi the phone then finds.
+     */
+    private static synchronized void waitForWifi(final BuddyService svc, final int boot) {
+        if (wifiWait != null) return;
+        long now = android.os.SystemClock.elapsedRealtime();
+        if (wifiUntil == 0) wifiUntil = now + RESTART_WIFI_MS; // (one wait in all: a Wi-Fi that comes and goes doesn't stretch it)
+        if (now >= wifiUntil) {
+            gaveUp(svc, boot, "there was no Wi-Fi after the restart");
+            return;
+        }
+        final android.net.ConnectivityManager.NetworkCallback cb = new android.net.ConnectivityManager.NetworkCallback() {
+            @Override
+            public void onAvailable(android.net.Network n) {
+                stopWifiWait(svc);
+                restartNotBefore = android.os.SystemClock.elapsedRealtime() + 5000; // (a moment for it to settle)
+                svc.mainHandler().postDelayed(() -> afterRestart(svc), 5500);
+            }
+        };
+        try {
+            svc.getSystemService(android.net.ConnectivityManager.class).registerNetworkCallback(
+                    new android.net.NetworkRequest.Builder().addTransportType(android.net.NetworkCapabilities.TRANSPORT_WIFI).build(), cb);
+        } catch (Exception e) {
+            return;
+        }
+        wifiWait = cb;
+        svc.mainHandler().postDelayed(() -> {
+            synchronized (Background.class) {
+                if (wifiWait != cb) return;
+                stopWifiWait(svc);
+                gaveUp(svc, boot, "there was no Wi-Fi after the restart");
+            }
+        }, wifiUntil - now);
+    }
+
+    /** Stops waiting for Wi-Fi (it came, it took too long, or the accessibility service ends). */
+    static synchronized void stopWifiWait(Context c) {
+        if (wifiWait == null) return;
+        try {
+            c.getSystemService(android.net.ConnectivityManager.class).unregisterNetworkCallback(wifiWait);
+        } catch (Exception ignored) {
+        }
+        wifiWait = null;
+    }
+
     private static void sleep(long ms) {
         try {
             Thread.sleep(ms);
@@ -673,9 +1094,11 @@ final class Background {
                     set(Step.FAILED, svc.getString(R.string.background_no_dialog) + "\n(no pairing port found)");
                     return;
                 }
-                String paired = Linux.exec(svc, ADB + "adb start-server >/dev/null 2>&1; for p in" + tryPorts + "; do "
-                        + "r=$(timeout 15 adb pair 127.0.0.1:$p " + found[0] + " 2>&1 | tail -2); echo \"$p: $r\"; "
-                        + "case \"$r\" in *'Successfully paired'*) break;; esac; done; "
+                // (on the phone's own address, then its Wi-Fi one, as for connecting: issue #79)
+                String paired = Linux.exec(svc, ADB + "adb start-server >/dev/null 2>&1; ok=''; for p in" + tryPorts + "; do "
+                        + "for h in " + hosts() + "; do "
+                        + "r=$(timeout 15 adb pair $h:$p " + found[0] + " 2>&1 | tail -2); echo \"$h:$p: $r\"; "
+                        + "case \"$r\" in *'Successfully paired'*) ok=1; break;; esac; done; [ -n \"$ok\" ] && break; done; "
                         + "adb kill-server >/dev/null 2>&1", 150);
                 if (!paired.contains("Successfully paired")) {
                     set(Step.FAILED, paired.trim());
@@ -899,5 +1322,15 @@ final class Background {
             }
         }
         for (int i = 0; i < n.getChildCount(); i++) scan(n.getChild(i), found, depth + 1);
+    }
+
+    /**
+     * Opens a screen on the user's real screen, not a session's hidden one: Android's installer and its "allow from
+     * this source" page are for the user to tap (an agent's taps are refused there), so on a hidden screen they'd
+     * wait where nobody can see them.
+     */
+    static void startOnUserScreen(android.content.Context c, android.content.Intent i) {
+        android.app.ActivityOptions o = android.app.ActivityOptions.makeBasic().setLaunchDisplayId(android.view.Display.DEFAULT_DISPLAY);
+        c.startActivity(i, o.toBundle());
     }
 }

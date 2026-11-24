@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Every text Buddy shows, in Japanese (です/ます). Source of truth: res/values/strings.xml. -->
 <resources>
-    <string name="service_label">Buddy アシスタント</string>
-    <string name="service_description">Buddy のチャットバブルを表示し、このスマートフォンの Buddy 内で動作する、選択したエージェント（Claude Code、Codex、OpenCode、Antigravity、または Grok）が、画面を読み取って、あなたの代わりにタップ、入力、スクロールできるようにします。エージェント自身がその AI サービス（Anthropic、OpenAI、Google、xAI、または OpenCode で選択したモデルのプロバイダー）に送信する内容以外は、スマートフォンの外に出ません。</string>
+    <string name="service_label">Mr Do It アシスタント</string>
+    <string name="service_description">Mr Do It のチャットバブルを表示し、このスマートフォンの Mr Do It 内で動作する、選択したエージェント（Claude Code、Codex、OpenCode、Antigravity、または Grok）が、画面を読み取って、あなたの代わりにタップ、入力、スクロールできるようにします。エージェント自身がその AI サービス（Anthropic、OpenAI、Google、xAI、または OpenCode で選択したモデルのプロバイダー）に送信する内容以外は、スマートフォンの外に出ません。</string>
 
     <!-- ===== First run (OnboardingActivity), the Chats home screen (MainActivity), updates, appearance ===== -->
 
@@ -16,7 +16,7 @@
     <string name="onboarding_stuck">お困りですか？</string>
 
     <!-- Guide, welcome screen. -->
-    <string name="onboarding_welcome_title">Buddy へようこそ</string>
+    <string name="onboarding_welcome_title">Mr Do It へようこそ</string>
     <string name="onboarding_welcome_text">あなたの代わりにスマートフォンを操作できるチャットバブルです。</string>
     <string name="onboarding_welcome_ask_title">いつもの言葉で頼めます</string>
     <string name="onboarding_welcome_ask_text">「佐藤さんに遅れるって返信して」「カートに牛乳を入れて」など。</string>
@@ -47,13 +47,13 @@
     <string name="onboarding_recommended">おすすめ</string>
 
     <!-- Guide, step: turn on Buddy's accessibility service. -->
-    <string name="onboarding_access_title">Buddy に画面の操作を許可</string>
+    <string name="onboarding_access_title">Mr Do It に画面の操作を許可</string>
     <string name="onboarding_access_done">ユーザー補助がオンになっています。</string>
-    <string name="onboarding_access_text">Buddy のユーザー補助サービスはバブルを表示し、あなたが何かを頼んだときだけ、エージェントが画面を読み取ってタップや入力をできるようにします。</string>
+    <string name="onboarding_access_text">Mr Do It のユーザー補助サービスはバブルを表示し、あなたが何かを頼んだときだけ、エージェントが画面を読み取ってタップや入力をできるようにします。</string>
     <string name="onboarding_access_privacy">%1$s が応答のために %2$s に送信する内容以外は、スマートフォンの外に出ません。送信、投稿、購入、削除の前には必ず承認を求めます。</string>
     <string name="onboarding_access_privacy_both">Claude Code と Codex が応答のために Anthropic と OpenAI に送信する内容以外は、スマートフォンの外に出ません。送信、投稿、購入、削除の前には必ず承認を求めます。</string>
     <string name="onboarding_access_privacy_opencode">%1$s が応答のためにモデルのプロバイダーに送信する内容以外は、スマートフォンの外に出ません。送信、投稿、購入、削除の前には必ず承認を求めます。</string>
-    <string name="onboarding_access_list_hint">一覧で「ダウンロードしたアプリ」→「Buddy アシスタント」を開き、オンにします。</string>
+    <string name="onboarding_access_list_hint">一覧で「ダウンロードしたアプリ」→「Mr Do It アシスタント」を開き、オンにします。</string>
     <string name="onboarding_access_open">ユーザー補助の設定を開く</string>
     <string name="onboarding_access_greyed_title">スイッチがグレー表示ですか？</string>
     <string name="onboarding_access_greyed_text">Android では、ファイルからインストールしたアプリに対してこの設定がブロックされます。下の「アプリ情報」をタップし、右上の ⋮ →「制限付き設定を許可」をタップしてから、もう一度お試しください。</string>
@@ -65,7 +65,7 @@
     <string name="onboarding_agents_done_title">準備完了</string>
     <string name="onboarding_agents_done">%1$s のインストールとログインが完了しました。</string>
     <string name="onboarding_agents_done_both">Claude Code と Codex のインストールとログインが完了しました。</string>
-    <string name="onboarding_agents_text">Buddy がアプリ内に %1$s をインストールします。あとは一度ログインするだけです。Termux は不要です。</string>
+    <string name="onboarding_agents_text">Mr Do It がアプリ内に %1$s をインストールします。あとは一度ログインするだけです。Termux は不要です。</string>
     <string name="onboarding_agent_names_both">Claude Code と Codex</string>
     <!-- Agent card status lines: small lowercase mono text, one line. -->
     <string name="onboarding_agent_ready">準備完了 · %1$s</string>
@@ -75,46 +75,46 @@
     <string name="onboarding_agent_installing">インストール中…</string>
     <string name="onboarding_agent_installed">インストール済み · 未ログイン</string>
     <string name="onboarding_agent_not_installed">未インストール</string>
-    <string name="onboarding_agent_sign_in_claude">Claude アカウントでログインします。ブラウザが開いたら「承認」（Authorize）をタップしてください。自動的に Buddy に戻ります。</string>
+    <string name="onboarding_agent_sign_in_claude">Claude アカウントでログインします。ブラウザが開いたら「承認」（Authorize）をタップしてください。自動的に Mr Do It に戻ります。</string>
     <string name="onboarding_agent_checking_opencode">OpenCode を確認中…</string>
     <string name="onboarding_agent_sign_in_codex">ブラウザで ChatGPT アカウントにログインしてから、戻ってきてください。</string>
-    <string name="onboarding_agent_sign_in_agy">Google アカウントでログインします。ブラウザが開いたらそこでログインしてください。Buddy が自動的にコードを受け取ります。</string>
-    <string name="onboarding_agent_sign_in_grok">Grok アカウントでログインします。ブラウザが開いたらそこでコードを確認してください。自動的に Buddy に戻ります。</string>
-    <string name="onboarding_agent_download_claude">初回のみ約 235 MB をダウンロードします（Buddy の Linux と Anthropic の Claude Code）。</string>
-    <string name="onboarding_agent_download_opencode">初回のみ約 230 MB をダウンロードします（Buddy の Linux、Node.js、OpenCode）。アカウントは不要です。</string>
-    <string name="onboarding_agent_download_codex">初回のみ約 150 MB をダウンロードします（Buddy の Linux、Node.js、OpenAI の Codex）。</string>
-    <string name="onboarding_agent_download_agy">初回のみ約 200 MB をダウンロードします（Buddy の Linux と Google の Antigravity CLI）。</string>
-    <string name="onboarding_agent_download_grok">初回のみ約 170 MB をダウンロードします（Buddy の Linux と xAI の Grok Build）。</string>
+    <string name="onboarding_agent_sign_in_agy">Google アカウントでログインします。ブラウザが開いたらそこでログインしてください。Mr Do It が自動的にコードを受け取ります。</string>
+    <string name="onboarding_agent_sign_in_grok">Grok アカウントでログインします。ブラウザが開いたらそこでコードを確認してください。自動的に Mr Do It に戻ります。</string>
+    <string name="onboarding_agent_download_claude">初回のみ約 235 MB をダウンロードします（Mr Do It の Linux と Anthropic の Claude Code）。</string>
+    <string name="onboarding_agent_download_opencode">初回のみ約 230 MB をダウンロードします（Mr Do It の Linux、Node.js、OpenCode）。アカウントは不要です。</string>
+    <string name="onboarding_agent_download_codex">初回のみ約 150 MB をダウンロードします（Mr Do It の Linux、Node.js、OpenAI の Codex）。</string>
+    <string name="onboarding_agent_download_agy">初回のみ約 200 MB をダウンロードします（Mr Do It の Linux と Google の Antigravity CLI）。</string>
+    <string name="onboarding_agent_download_grok">初回のみ約 170 MB をダウンロードします（Mr Do It の Linux と xAI の Grok Build）。</string>
     <string name="onboarding_sign_in_claude">Claude でログイン</string>
     <string name="onboarding_sign_in_chatgpt">ChatGPT でログイン</string>
     <string name="onboarding_sign_in_google">Google でログイン</string>
     <string name="onboarding_sign_in_grok">Grok でログイン</string>
     <string name="onboarding_install_agent">%1$s をインストール</string>
     <string name="onboarding_agents_wifi">できれば Wi-Fi を使用してください。インストール中はこの画面を離れてもかまいません。</string>
-    <string name="onboarding_stuck_sign_in_q">ログイン後に Buddy に戻りませんか？</string>
-    <string name="onboarding_stuck_sign_in_a">Claude の場合：Claude のページで「コードをコピー」（Copy Code）をタップしてから Buddy に戻ってください。クリップボードからコードが自動で読み取られます。</string>
+    <string name="onboarding_stuck_sign_in_q">ログイン後に Mr Do It に戻りませんか？</string>
+    <string name="onboarding_stuck_sign_in_a">Claude の場合：Claude のページで「コードをコピー」（Copy Code）をタップしてから Mr Do It に戻ってください。クリップボードからコードが自動で読み取られます。</string>
     <string name="onboarding_stuck_install_q">インストールに失敗しましたか？</string>
     <string name="onboarding_stuck_install_a">接続を確認して、もう一度「インストール」をタップしてください。中断したところから再開します。</string>
 
     <!-- Guide, step: let Buddy run in the background (Android's battery optimization). -->
     <string name="onboarding_background_title">バックグラウンドで実行</string>
-    <string name="onboarding_background_done">Buddy はバックグラウンドで実行できます。</string>
-    <string name="onboarding_background_text">エージェントの作業中に、電池を節約するためにスマートフォンが Buddy を停止しないようにします。</string>
+    <string name="onboarding_background_done">Mr Do It はバックグラウンドで実行できます。</string>
+    <string name="onboarding_background_text">エージェントの作業中に、電池を節約するためにスマートフォンが Mr Do It を停止しないようにします。</string>
     <string name="onboarding_allow">許可</string>
     <string name="onboarding_skip_for_now">今はスキップ</string>
 
     <!-- Guide, step: how much the agent asks before acting. -->
     <string name="onboarding_safety_title">どこまで確認しますか？</string>
-    <string name="onboarding_safety_text">メッセージ、SNS、ショッピング、決済、銀行のアプリでは、Buddy が送信、投稿、購入、削除をする前に必ず承認が必要です。その他のアプリでは：</string>
+    <string name="onboarding_safety_text">メッセージ、SNS、ショッピング、決済、銀行のアプリでは、Mr Do It が送信、投稿、購入、削除をする前に必ず承認が必要です。その他のアプリでは：</string>
     <string name="onboarding_safety_ask_title">先に確認する</string>
     <string name="onboarding_safety_ask_text">設定の変更など、リスクのある操作の前にエージェントが確認します。より安全ですが、ポップアップが増えます。</string>
     <string name="onboarding_safety_auto_title">自動で進める</string>
     <string name="onboarding_safety_auto_text">ポップアップなし：カメラや照明をオンにするなど、頼んだことをエージェントがそのまま実行します。</string>
-    <string name="onboarding_safety_note">アプリごとにいつでも変更できます（設定 → 安全と承認 → アプリの権限）。アプリを「信頼」にするとエージェントがポップアップなしで操作し、「厳格」にすると Buddy 自身があなたに確認します。</string>
+    <string name="onboarding_safety_note">アプリごとにいつでも変更できます（設定 → 安全と承認 → アプリの権限）。アプリを「信頼」にするとエージェントがポップアップなしで操作し、「厳格」にすると Mr Do It 自身があなたに確認します。</string>
 
     <!-- Guide, last step: try a first task. -->
     <string name="onboarding_try_title">準備ができました</string>
-    <string name="onboarding_try_text">最初のタスクを試してみましょう。Buddy が設定アプリを開いて、代わりに確認します。</string>
+    <string name="onboarding_try_text">最初のタスクを試してみましょう。Mr Do It が設定アプリを開いて、代わりに確認します。</string>
     <string name="onboarding_try_prompt">設定を開いて、Android のバージョンを教えて</string>
     <string name="onboarding_try_prompt_quoted">「%1$s」</string>
     <string name="onboarding_try_tip">ヒント：バブルは他のアプリの上に表示されます。✕ までドラッグすると非表示になります。</string>
@@ -127,7 +127,7 @@
     <string name="main_status_setup">セットアップ %1$d/%2$d</string>
     <string name="main_setup_title">チャットを使うにはセットアップを完了してください</string>
     <string name="main_setup_next">次：%1$s</string>
-    <string name="main_setup_next_accessibility">次：Buddy のユーザー補助サービスを開く</string>
+    <string name="main_setup_next_accessibility">次：Mr Do It のユーザー補助サービスを開く</string>
     <string name="main_section_working">実行中</string>
     <string name="main_section_recent">最近</string>
     <string name="main_empty_title">チャットはまだありません</string>
@@ -154,27 +154,27 @@
 
     <!-- Notification shown after the bubble is dragged away to hide it. -->
     <string name="notice_channel_name">非表示のバブル</string>
-    <string name="notice_hidden_title">Buddy は非表示です</string>
+    <string name="notice_hidden_title">Mr Do It は非表示です</string>
     <string name="notice_hidden_text">タップするとバブルを再表示します。</string>
     <string name="notice_open_chats">チャットを開く</string>
 
     <!-- Buddy's own updates (GitHub version): notification, update sheet and messages. -->
-    <string name="update_channel_name">Buddy のアップデート</string>
-    <string name="update_available_title">Buddy %1$s を利用できます</string>
+    <string name="update_channel_name">Mr Do It のアップデート</string>
+    <string name="update_available_title">Mr Do It %1$s を利用できます</string>
     <string name="update_notification_text">現在のバージョンは %1$s です。タップすると新機能を確認してアップデートできます。チャットはそのまま残ります。</string>
     <string name="update_action">アップデート</string>
     <string name="update_mute">通知しない</string>
     <string name="update_muted">アップデートの通知をオフにしました。「設定」の「アップデートの通知」で再びオンにできます。</string>
     <string name="update_checking">アップデートを確認中…</string>
     <string name="update_check_failed">GitHub に接続できませんでした。しばらくしてからもう一度お試しください。</string>
-    <string name="update_up_to_date">Buddy %1$s は最新バージョンです。</string>
+    <string name="update_up_to_date">Mr Do It %1$s は最新バージョンです。</string>
     <string name="update_sheet_text">現在のバージョンは %1$s です。アップデートしても、チャット、設定、ログイン状態はそのまま残ります。</string>
     <string name="update_later">後で</string>
     <string name="update_downloading">ダウンロード中…</string>
-    <string name="update_needs_permission">Buddy に「不明なアプリのインストール」を許可してから、もう一度「アップデート」をタップしてください。</string>
+    <string name="update_needs_permission">Mr Do It に「不明なアプリのインストール」を許可してから、もう一度「アップデート」をタップしてください。</string>
     <string name="update_error_no_apk">このリリースにはまだ buddy.apk がありません。</string>
     <string name="update_error_download">ダウンロードに失敗しました（%1$s）。</string>
-    <string name="update_error_not_newer">ダウンロードしたファイルは新しいバージョンの Buddy ではないため、開きませんでした。</string>
+    <string name="update_error_not_newer">ダウンロードしたファイルは新しいバージョンの Mr Do It ではないため、開きませんでした。</string>
     <string name="update_failed_manual">%1$s %2$s（buddy.apk）から入手することもできます。Obtainium を使うと自動でアップデートできます（%3$s を参照）。</string>
 
     <!-- Settings, Appearance: option names. -->
@@ -195,7 +195,7 @@
     <!-- ===== The bubble, its hold menu, chat panel and approval cards (Bubble, RadialMenu, ControlIndicator) ===== -->
 
     <!-- Floating bubble, read by TalkBack. -->
-    <string name="bubble_face_description">Buddy。タップで開く、長押しでメニューを表示</string>
+    <string name="bubble_face_description">Mr Do It。タップで開く、長押しでメニューを表示</string>
     <string name="bubble_show_actions">メニューを表示</string>
 
     <!-- Status pill beside the bubble: at most two lines, about 250dp wide; longer text is cut off with "…". -->
@@ -240,10 +240,10 @@
     <string name="bubble_tip_stop_voice">ヒント：バブルを長押しすると音声を停止できます</string>
     <string name="bubble_tip_hold_menu">ヒント：バブルを長押しすると、一時停止、停止、指示の追加ができます</string>
     <string name="bubble_stopping">停止中…</string>
-    <string name="bubble_nothing_running">Buddy のチャットで実行中のタスクはありません。</string>
+    <string name="bubble_nothing_running">Mr Do It のチャットで実行中のタスクはありません。</string>
     <string name="bubble_nothing_running_chat">このチャットで実行中のタスクはありません。</string>
-    <string name="bubble_allow_mic_tap_mic">Buddy でマイクを許可してから、もう一度マイクをタップしてください。</string>
-    <string name="bubble_allow_mic_tap_bubble">Buddy でマイクを許可してから、もう一度バブルをタップしてください。</string>
+    <string name="bubble_allow_mic_tap_mic">Mr Do It でマイクを許可してから、もう一度マイクをタップしてください。</string>
+    <string name="bubble_allow_mic_tap_bubble">Mr Do It でマイクを許可してから、もう一度バブルをタップしてください。</string>
     <string name="bubble_note_added">了解しました：%1$s が指示を反映します</string>
     <string name="bubble_copied">コピーしました</string>
 
@@ -294,6 +294,14 @@
     <string name="card_label_approval">承認が必要</string>
     <string name="card_label_question">質問</string>
     <string name="card_label_other_session">%1$s · 別のセッションから</string>
+    <string name="card_label_from">%1$s · %2$s から</string>
+    <string name="outside_terminal">このスマホのターミナル</string>
+    <string name="outside_computer">コンピューター</string>
+    <string name="monitor_outside">Mr Do It の外</string>
+    <string name="monitor_outside_hidden">専用の隠れた画面で作業中 · 最後の操作 %1$s</string>
+    <string name="monitor_outside_screen">あなたの画面で作業中 · 最後の操作 %1$s</string>
+    <string name="monitor_outside_bring">自分の画面に移す</string>
+    <string name="monitor_outside_stopped">停止しました。1 分間はスマホのツールが拒否され、待機中のカードは拒否されました。</string>
     <string name="card_label_queue">%1$s · 1 / %2$d 件</string>
     <string name="card_deny">拒否</string>
     <string name="card_change">変更</string>
@@ -311,13 +319,13 @@
     <string name="card_note_skipped">質問をスキップしました</string>
 
     <!-- Notification while an agent operates the phone; on Android 16 also a chip in the status bar. -->
-    <string name="control_channel_name">Buddy がスマートフォンを操作中</string>
+    <string name="control_channel_name">Mr Do It がスマートフォンを操作中</string>
     <string name="control_channel_description">エージェントがスマートフォンを操作している間、ステータスバーに表示されます。</string>
-    <string name="control_title">Buddy がスマートフォンを操作中</string>
+    <string name="control_title">Mr Do It がスマートフォンを操作中</string>
     <string name="control_text">完了するまで画面に触れないでください。自分で操作する場合は「停止」をタップしてください。</string>
     <string name="control_stop">停止</string>
-    <string name="work_title">Buddy がバックグラウンドで作業中です</string>
-    <string name="pause_call_ended_title">通話終了 · Buddy は一時停止中</string>
+    <string name="work_title">Mr Do It がバックグラウンドで作業中です</string>
+    <string name="pause_call_ended_title">通話終了 · Mr Do It は一時停止中</string>
     <string name="pause_call_ended_text">タップしてタスクを再開</string>
 
     <!-- ===== Full-screen chat, agent progress lines, transcripts, shared UI, voice (ChatActivity, ChatHub, Ui, BuddyService, Voice) ===== -->
@@ -330,7 +338,7 @@
 
     <!-- Chat screen: Linux tools, the chip beside the model chip (also in the bubble's panel and the New chat sheets) -->
     <string name="chat_linux_tools">Linux ツール</string>
-    <string name="chat_linux_tools_info">Buddy の Linux でのコマンド実行、ファイル編集、アプリのビルド</string>
+    <string name="chat_linux_tools_info">Mr Do It の Linux でのコマンド実行、ファイル編集、アプリのビルド</string>
     <string name="chat_linux_tools_title">Linux ツールをオンにしますか？</string>
     <string name="chat_linux_tools_what">エージェントがコマンドの実行、パッケージのインストール、~/.buddy/work 内のファイル編集を行えるようになり、アプリのビルドもできます。</string>
     <string name="chat_linux_tools_when">このチャットのみで、次のメッセージから有効になります。</string>
@@ -345,7 +353,7 @@
     <string name="chat_approvals_info">このチャットのエージェントが操作する前に、どのように確認するかを決めます。変更するまでそのままで、新しいチャットは「確認する」から始まります。</string>
     <string name="chat_approvals_ask">確認する</string>
     <string name="chat_approvals_ask_info">各アプリは「%1$s」の設定に従います。</string>
-    <string name="chat_approvals_strict_info">「%1$s」に設定したアプリでも、送信、投稿、購入、削除の前に Buddy が確認します。</string>
+    <string name="chat_approvals_strict_info">「%1$s」に設定したアプリでも、送信、投稿、購入、削除の前に Mr Do It が確認します。</string>
     <string name="chat_approvals_apps_set">エージェントが操作したアプリと、「%1$s」での各アプリの設定です。ここでの変更はすべてのチャットに適用されます。</string>
     <string name="chat_approvals_routine">定型操作を許可</string>
     <string name="chat_approvals_routine_info">定型的な操作は、どのアプリでもカードなしで進みます。メッセージの送信や、レビュー担当が確認を求めるような操作が対象です。それぞれチャットに記録されます。支払い、購入、削除、インストール、パスワード、セキュリティ設定は引き続き確認し、銀行・決済アプリ、設定、アプリストア内の操作もすべて確認します。</string>
@@ -362,7 +370,7 @@
     <string name="schedule_title">スケジュール</string>
     <string name="schedule_set">スケジュールを設定</string>
     <string name="schedule_set_info">決まった時刻にこのチャットへ自動でメッセージを送ります（例：毎日14:00）。</string>
-    <string name="schedule_info">設定した時刻に、Buddy があなたが入力したのと同じようにこのメッセージをチャットへ送ります。エージェントとオプションはこのチャットのものです。承認カードはこれまでどおりあなたを待ちます。スマホがロック中に画面が必要になったら、ロック解除をお願いします。</string>
+    <string name="schedule_info">設定した時刻に、Mr Do It があなたが入力したのと同じようにこのメッセージをチャットへ送ります。エージェントとオプションはこのチャットのものです。承認カードはこれまでどおりあなたを待ちます。スマホがロック中に画面が必要になったら、ロック解除をお願いします。</string>
     <string name="schedule_time">時刻</string>
     <string name="schedule_add_time">時刻を追加</string>
     <string name="schedule_remove_time">%1$s を削除</string>
@@ -374,7 +382,7 @@
     <string name="schedule_message_hint">送る内容（例：アプリを開いて今日のチェックインをして）</string>
     <string name="schedule_wake">このタスクのためにスマホを起こす</string>
     <string name="schedule_wake_info">画面が必要になると画面がオンになります（PIN、パターン、指紋のないロック画面は解除されます）。実行中は近くの人にも画面が見えます。</string>
-    <string name="schedule_inexact">Buddy の正確なアラームがオフのため、数分遅れて始まることがあります。</string>
+    <string name="schedule_inexact">Mr Do It の正確なアラームがオフのため、数分遅れて始まることがあります。</string>
     <string name="schedule_allow_exact">正確なアラームを許可</string>
     <string name="schedule_save">保存</string>
     <string name="schedule_remove">削除</string>
@@ -390,7 +398,7 @@
     <string name="schedule_skipped_title">スケジュールされたタスクをスキップしました：%1$s</string>
     <string name="schedule_stopped_title">スケジュールされたタスクを停止しました：%1$s</string>
     <string name="schedule_skip_running">このチャットはまだ前のタスクを実行中でした。</string>
-    <string name="schedule_skip_busy">Buddy が1時間ふさがっていました（別のタスク、一時停止、またはインターネットなし）。</string>
+    <string name="schedule_skip_busy">Mr Do It が1時間ふさがっていました（別のタスク、一時停止、またはインターネットなし）。</string>
     <string name="schedule_skip_screen">スマホが1時間ロックされたままでした。</string>
     <string name="schedule_marker">スケジュール</string>
 
@@ -431,7 +439,7 @@
     <string name="live_ended">ライブ音声を終了しました。</string>
     <string name="live_ended_why">ライブ音声を終了しました：%1$s</string>
     <string name="live_ended_screen_off">画面がオフになりました</string>
-    <string name="live_ended_paused">Buddy が一時停止されました</string>
+    <string name="live_ended_paused">Mr Do It が一時停止されました</string>
     <string name="live_ended_idle">5 分間何も話されませんでした</string>
     <string name="live_notification_title">%1$s とライブ音声</string>
     <string name="live_mic_busy">ライブ音声がマイクを使用中です。先に終了してください。</string>
@@ -473,6 +481,26 @@
 
     <!-- Chat messages -->
     <string name="chat_copied">コピーしました</string>
+    <string name="chat_copy">コピー</string>
+    <string name="chat_quote">引用</string>
+    <string name="chat_quote_remove">引用を削除</string>
+    <string name="chat_edit">編集</string>
+    <string name="chat_fork">ここから分岐</string>
+    <string name="chat_fork_title">%1$s · 分岐</string>
+    <string name="chat_forked_from">「%1$s」から分岐</string>
+    <string name="chat_forked">分岐しました: ここからの新しいチャット</string>
+    <string name="chat_before_edit_title">%1$s (編集前)</string>
+    <string name="chat_edit_running">このチャットが終わるまで待ってから編集してください。</string>
+    <string name="chat_edit_failed">メッセージを編集できませんでした。</string>
+    <string name="chat_edit_title">メッセージを編集</string>
+    <string name="chat_edit_info">エージェントはここから答え直し、このメッセージより前のチャットで新たに始めます。これより後はこのチャットから消え、元のチャットはアーカイブに残ります。</string>
+    <string name="chat_edit_send">送信</string>
+    <string name="chat_edited">編集済み</string>
+    <string name="setup_voice_pause">この間が空いたら聞き取りを終了</string>
+    <string name="setup_voice_auto">自動</string>
+    <string name="setup_voice_pause_info">聞き取った言葉がその時間変わらなければ、音楽や騒音があっても Mr Do It は止めて送信します。自動: 音声エンジンが判断し、静かになるのを待ちます。</string>
+    <string name="setup_voice_max">最長の録音</string>
+    <string name="setup_voice_no_limit">制限なし</string>
     <string name="chat_copy_whole_reply">返信全体をコピー</string>
     <plurals name="chat_tool_calls">
         <item quantity="other">ツール呼び出し %1$d 件</item>
@@ -482,23 +510,23 @@
     <string name="hub_continuing">以前の %1$s セッションを続けます。ターミナルでまだ開いている場合は、先にそちらで閉じてください。</string>
     <string name="hub_still_working_attachments">このチャットはまだ実行中です。完了してから添付ファイルを送信してください。</string>
     <string name="hub_service_off">%1$s はオフになっています（設定 → エージェントとモデル → API キー）。オンにするか、このチャットで別のモデルを選んでください。</string>
-    <string name="hub_accessibility_dead">Buddy のユーザー補助サービスはオンなのに動いていません。Android が Buddy を停止し、サービスを再開しなかったため、エージェントがスマホを操作できません。Android の設定 → ユーザー補助 で Buddy をオフにしてからオンにしてください。再発を防ぐには、スマホのアプリ設定に自動起動の設定があれば Buddy に許可し、マイクは「この時のみ」ではなく「アプリの使用中のみ」にしてください。</string>
-    <string name="hub_accessibility_off">Buddy のユーザー補助サービスがオフのため、エージェントがスマホを操作できません。Android の設定 → ユーザー補助 で Buddy をオンにしてください。</string>
-    <string name="voice_mic_while_using">「アプリの使用中のみ」を選んでください。「この時のみ」だと、Buddy を離れて 1 分後に Android が Buddy を停止します。タスクの途中でもです。</string>
+    <string name="hub_accessibility_dead">Mr Do It のユーザー補助サービスはオンなのに動いていません。Android が Mr Do It を停止し、サービスを再開しなかったため、エージェントがスマホを操作できません。Android の設定 → ユーザー補助 で Mr Do It をオフにしてからオンにしてください。再発を防ぐには、スマホのアプリ設定に自動起動の設定があれば Mr Do It に許可し、マイクは「この時のみ」ではなく「アプリの使用中のみ」にしてください。</string>
+    <string name="hub_accessibility_off">Mr Do It のユーザー補助サービスがオフのため、エージェントがスマホを操作できません。Android の設定 → ユーザー補助 で Mr Do It をオンにしてください。</string>
+    <string name="voice_mic_while_using">「アプリの使用中のみ」を選んでください。「この時のみ」だと、Mr Do It を離れて 1 分後に Android が Mr Do It を停止します。タスクの途中でもです。</string>
     <string name="hub_thinking">考え中…</string>
     <string name="hub_still_waiting">まだモデルの応答を待っています…</string>
     <string name="hub_still_reading_local">読み込み中… 自分のコンピューターで動くモデルは、特に最初の回答に数分かかることがあります。</string>
     <string name="hub_no_answer">モデルから応答がありませんでした。混み合っている可能性があります。もう一度試すか、チャット上部で別のモデルを選んでください。</string>
-    <string name="hub_helper_gone">この実行は途中で止まりました。Buddy の Linux でエージェントを動かすヘルパーが停止しました。メッセージをもう一度送ってください。</string>
+    <string name="hub_helper_gone">この実行は途中で止まりました。Mr Do It の Linux でエージェントを動かすヘルパーが停止しました。メッセージをもう一度送ってください。</string>
     <string name="hub_helper_killed">Android がエージェントのプロセスを終了しました。一部のスマートフォンは、アプリのバックグラウンド プロセスが多くなると停止します(複数のサブエージェントを使うときなど)。動かし続けるには: 設定 → システム → 開発者向けオプション → 子プロセスの制限を無効にする。</string>
     <string name="hub_model_set">モデル：%1$s</string>
     <string name="hub_effort_set">思考レベル：%1$s</string>
     <string name="hub_effort_default">思考レベル：デフォルト</string>
     <string name="hub_stopping">停止中…</string>
     <string name="hub_stopped">停止しました。</string>
-    <string name="hub_interrupted">エージェントの作業中に Android が Buddy を閉じたため、停止しました。</string>
+    <string name="hub_interrupted">エージェントの作業中に Android が Mr Do It を閉じたため、停止しました。</string>
     <string name="hub_resume_message">中断したところから続けてください</string>
-    <string name="chat_interrupted">%1$s がこの作業中に Android が Buddy を閉じました。「続ける」で完了済みの内容を確認し、そこから再開します。</string>
+    <string name="chat_interrupted">%1$s がこの作業中に Android が Mr Do It を閉じました。「続ける」で完了済みの内容を確認し、そこから再開します。</string>
     <string name="chat_interrupted_continue">続ける</string>
     <string name="chat_interrupted_dismiss">閉じる</string>
     <string name="hub_agent_stopped">%1$s が停止しました。</string>
@@ -587,8 +615,8 @@
     <string name="hub_tool_asking">質問中：%1$s</string>
     <string name="hub_tool_point_out">マーク表示中：%1$s</string>
     <string name="hub_tool_point_out_any">画面上にマークを表示中</string>
-    <string name="hub_tool_update_download">Buddy のアップデートをダウンロード中</string>
-    <string name="hub_tool_update_check">Buddy のアップデートを確認中</string>
+    <string name="hub_tool_update_download">Mr Do It のアップデートをダウンロード中</string>
+    <string name="hub_tool_update_check">Mr Do It のアップデートを確認中</string>
     <string name="hub_tool_web_search">ウェブを検索中：%1$s</string>
     <string name="hub_tool_web_fetch">%1$s を読み込み中</string>
     <string name="hub_tool_command">実行中：%1$s</string>
@@ -600,7 +628,7 @@
 
     <!-- Transcript of an earlier agent session that isn't a Buddy chat (read-only) -->
     <string name="transcript_loading">読み込み中…</string>
-    <string name="transcript_continue">Buddy で続ける</string>
+    <string name="transcript_continue">Mr Do It で続ける</string>
     <string name="transcript_empty">このセッションには表示できるメッセージがありません。</string>
     <plurals name="transcript_last_messages">
         <item quantity="other">最新 %1$d 件のメッセージ · 閲覧のみ</item>
@@ -610,11 +638,11 @@
     <string name="ui_no_app_for_link">このリンクを開けるアプリがありません</string>
 
     <!-- Accessibility disclosure, shown before Android's accessibility settings open (required by Google Play) -->
-    <string name="ui_a11y_title">Buddy によるユーザー補助の使用について</string>
-    <string name="ui_a11y_what">Buddy は Android のユーザー補助サービスを使って、他のアプリであなたが頼んだことを実行します。画面に表示されている内容を読み取り、あなたの代わりにタップ、入力、スクロールを行います。フローティングバブルの表示にも使用します。</string>
+    <string name="ui_a11y_title">Mr Do It によるユーザー補助の使用について</string>
+    <string name="ui_a11y_what">Mr Do It は Android のユーザー補助サービスを使って、他のアプリであなたが頼んだことを実行します。画面に表示されている内容を読み取り、あなたの代わりにタップ、入力、スクロールを行います。フローティングバブルの表示にも使用します。</string>
     <string name="ui_a11y_data">タスクの実行中は、画面の内容（メッセージ、名前、住所などの個人情報が含まれる場合があります）が、リクエストを実行する目的でのみ、選択したエージェントの AI サービス（Claude Code は Anthropic、Codex は OpenAI、Antigravity は Google、Grok は xAI、OpenCode は選択したモデルのプロバイダー）に送信されます。</string>
-    <string name="ui_a11y_no_servers">Buddy は独自のサーバーを持っていません。このデータを収集、販売、共有することはなく、広告に使用することもありません。</string>
-    <string name="ui_a11y_asks">送信、投稿、購入、削除を行う前に、Buddy は承認を求めます。このサービスは Android のユーザー補助の設定でいつでもオフにできます。</string>
+    <string name="ui_a11y_no_servers">Mr Do It は独自のサーバーを持っていません。このデータを収集、販売、共有することはなく、広告に使用することもありません。</string>
+    <string name="ui_a11y_asks">送信、投稿、購入、削除を行う前に、Mr Do It は承認を求めます。このサービスは Android のユーザー補助の設定でいつでもオフにできます。</string>
     <string name="ui_privacy_policy">プライバシーポリシー</string>
     <string name="ui_no_thanks">同意しない</string>
     <string name="ui_agree_continue">同意して続行</string>
@@ -625,7 +653,7 @@
     <string name="ui_nav_settings">設定</string>
 
     <!-- Accessibility service: pause from the bubble's hold menu, Stop on the control indicator -->
-    <string name="service_pause_expired">5 分間一時停止したままだったため、Buddy はタスクを停止しました。</string>
+    <string name="service_pause_expired">5 分間一時停止したままだったため、Mr Do It はタスクを停止しました。</string>
     <string name="service_stopped_toast">停止しました。スマートフォンを自由に使えます。</string>
     <string name="service_paused_note">一時停止中：再開するまでスマートフォンを自由に使えます</string>
     <string name="service_paused_toast">一時停止しました。スマートフォンを使ったら、バブルの横の「一時停止中」をタップして再開してください。</string>
@@ -634,7 +662,7 @@
     <string name="service_autopaused_call">通話のため一時停止しました。バブルの横の「一時停止中」をタップすると再開します。</string>
 
     <!-- Voice input and output -->
-    <string name="voice_mic_needed">Buddy にはマイクが必要です。Buddy アプリを開き、🎙 を一度タップして許可してください。</string>
+    <string name="voice_mic_needed">Mr Do It にはマイクが必要です。Mr Do It アプリを開き、🎙 を一度タップして許可してください。</string>
     <string name="voice_no_recognizer">このスマートフォンには音声認識サービスがありません。</string>
     <string name="voice_starting">開始中…</string>
     <string name="voice_finishing">処理中…</string>
@@ -652,16 +680,16 @@
 
     <!-- Sign-in screen: the agent isn't installed yet. -->
     <string name="signin_install">%1$s をインストール</string>
-    <string name="signin_install_sub_claude">Claude のサブスクリプションを使って、Buddy 内で Claude Code を実行します。</string>
-    <string name="signin_install_sub_opencode">Buddy 内で OpenCode を実行します。無料モデルはアカウント不要ですぐに使えます。お使いのプロバイダー（Anthropic、OpenAI、GitHub Copilot など）もいつでも接続できます。</string>
-    <string name="signin_install_sub_codex">ChatGPT のプランを使って、Buddy 内で Codex を実行します。</string>
-    <string name="signin_install_sub_agy">Google アカウント（無料プラン、Google AI Pro、Ultra）を使って、Buddy 内で Google の Antigravity CLI を実行します。</string>
-    <string name="signin_install_sub_grok">Grok アカウント（Google または X でのログインも可）を使って、Buddy 内で xAI の Grok Build を実行します。</string>
-    <string name="signin_install_size_claude">Buddy の Linux と Anthropic の Claude Code を初回のみダウンロードします（約 235 MB）。できれば Wi-Fi を使用してください。</string>
-    <string name="signin_install_size_opencode">Buddy の Linux、Node.js、OpenCode を初回のみダウンロードします（約 230 MB）。できれば Wi-Fi を使用してください。</string>
-    <string name="signin_install_size_codex">Buddy の Linux、Node.js、OpenAI の Codex を初回のみダウンロードします（約 150 MB）。できれば Wi-Fi を使用してください。</string>
-    <string name="signin_install_size_agy">Buddy の Linux と Google の Antigravity CLI を初回のみダウンロードします（約 200 MB）。できれば Wi-Fi を使用してください。</string>
-    <string name="signin_install_size_grok">Buddy の Linux と xAI の Grok Build を初回のみダウンロードします（約 170 MB）。できれば Wi-Fi を使用してください。</string>
+    <string name="signin_install_sub_claude">Claude のサブスクリプションを使って、Mr Do It 内で Claude Code を実行します。</string>
+    <string name="signin_install_sub_opencode">Mr Do It 内で OpenCode を実行します。無料モデルはアカウント不要ですぐに使えます。お使いのプロバイダー（Anthropic、OpenAI、GitHub Copilot など）もいつでも接続できます。</string>
+    <string name="signin_install_sub_codex">ChatGPT のプランを使って、Mr Do It 内で Codex を実行します。</string>
+    <string name="signin_install_sub_agy">Google アカウント（無料プラン、Google AI Pro、Ultra）を使って、Mr Do It 内で Google の Antigravity CLI を実行します。</string>
+    <string name="signin_install_sub_grok">Grok アカウント（Google または X でのログインも可）を使って、Mr Do It 内で xAI の Grok Build を実行します。</string>
+    <string name="signin_install_size_claude">Mr Do It の Linux と Anthropic の Claude Code を初回のみダウンロードします（約 235 MB）。できれば Wi-Fi を使用してください。</string>
+    <string name="signin_install_size_opencode">Mr Do It の Linux、Node.js、OpenCode を初回のみダウンロードします（約 230 MB）。できれば Wi-Fi を使用してください。</string>
+    <string name="signin_install_size_codex">Mr Do It の Linux、Node.js、OpenAI の Codex を初回のみダウンロードします（約 150 MB）。できれば Wi-Fi を使用してください。</string>
+    <string name="signin_install_size_agy">Mr Do It の Linux と Google の Antigravity CLI を初回のみダウンロードします（約 200 MB）。できれば Wi-Fi を使用してください。</string>
+    <string name="signin_install_size_grok">Mr Do It の Linux と xAI の Grok Build を初回のみダウンロードします（約 170 MB）。できれば Wi-Fi を使用してください。</string>
 
     <!-- Sign-in screen: install or update in progress (screen titles). -->
     <string name="signin_installing">インストール中</string>
@@ -673,10 +701,10 @@
     <string name="signin_title_chatgpt">ChatGPT にログイン</string>
     <string name="signin_title_google">Google にログイン</string>
     <string name="signin_title_grok">Grok にログイン</string>
-    <string name="signin_sub_claude">Claude アカウント（Pro または Max）を使用します。ブラウザが開いたらそこで承認してください。自動的に Buddy に戻ります。</string>
-    <string name="signin_sub_chatgpt">ChatGPT アカウント（Plus、Pro、Business）を使用します。ブラウザが開いたらそこで承認してください。自動的に Buddy に戻ります。</string>
-    <string name="signin_sub_agy">Google アカウントを使用します。ブラウザが開いたらそこでログインしてください。Buddy が自動的にコードを受け取ります。Antigravity の待ち時間は約 1 分です。</string>
-    <string name="signin_sub_grok">Grok アカウントを使用します（Google または X でのログインも可）。ブラウザがコード付きで開くので、そこで確認してください。自動的に Buddy に戻ります。</string>
+    <string name="signin_sub_claude">Claude アカウント（Pro または Max）を使用します。ブラウザが開いたらそこで承認してください。自動的に Mr Do It に戻ります。</string>
+    <string name="signin_sub_chatgpt">ChatGPT アカウント（Plus、Pro、Business）を使用します。ブラウザが開いたらそこで承認してください。自動的に Mr Do It に戻ります。</string>
+    <string name="signin_sub_agy">Google アカウントを使用します。ブラウザが開いたらそこでログインしてください。Mr Do It が自動的にコードを受け取ります。Antigravity の待ち時間は約 1 分です。</string>
+    <string name="signin_sub_grok">Grok アカウントを使用します（Google または X でのログインも可）。ブラウザがコード付きで開くので、そこで確認してください。自動的に Mr Do It に戻ります。</string>
     <string name="signin_with_claude">Claude でログイン</string>
     <string name="signin_with_chatgpt">ChatGPT でログイン</string>
     <string name="signin_with_google">Google でログイン</string>
@@ -693,10 +721,10 @@
     <string name="signin_sign_in">ログイン</string>
     <string name="signin_starting">ログインを開始しています…</string>
     <string name="signin_approve_title">ブラウザで承認してください</string>
-    <string name="signin_approve_claude">Claude のページで「承認」（Authorize）をタップしてください。Buddy がコードを受け取り、自動的に戻ります。</string>
-    <string name="signin_approve_codex">ログインして Codex を許可してください。そのあと Buddy に戻ると、自動的に完了します。</string>
-    <string name="signin_approve_agy">ログインして Antigravity を許可してください。ページに表示されたコードを Buddy が受け取り、自動的に戻ります。1 分以上かかった場合は、もう一度ログインを開始してください。</string>
-    <string name="signin_approve_grok">ページに %1$s と表示されていることを確認してから、承認してログインしてください。自動的に Buddy に戻ります。</string>
+    <string name="signin_approve_claude">Claude のページで「承認」（Authorize）をタップしてください。Mr Do It がコードを受け取り、自動的に戻ります。</string>
+    <string name="signin_approve_codex">ログインして Codex を許可してください。そのあと Mr Do It に戻ると、自動的に完了します。</string>
+    <string name="signin_approve_agy">ログインして Antigravity を許可してください。ページに表示されたコードを Mr Do It が受け取り、自動的に戻ります。1 分以上かかった場合は、もう一度ログインを開始してください。</string>
+    <string name="signin_approve_grok">ページに %1$s と表示されていることを確認してから、承認してログインしてください。自動的に Mr Do It に戻ります。</string>
     <string name="signin_open_again">ログインページをもう一度開く</string>
     <string name="signin_signing_in">ログイン中</string>
     <string name="signin_finishing">ログインを完了しています…</string>
@@ -705,9 +733,9 @@
     <!-- Sign-in screen: signing in from another device. -->
     <string name="signin_remote_claude">任意のデバイスでこのリンクを開いて承認してください。次に、ページに表示されたコードをコピーして、下に貼り付けてください。</string>
     <string name="signin_enter_code">このコードを入力してください</string>
-    <string name="signin_remote_codex">任意のデバイスで下のリンクを開き、ChatGPT にログインしてコードを入力してください。あとは Buddy が自動的に完了します。</string>
+    <string name="signin_remote_codex">任意のデバイスで下のリンクを開き、ChatGPT にログインしてコードを入力してください。あとは Mr Do It が自動的に完了します。</string>
     <string name="signin_remote_agy">任意のデバイスでこのリンクを開いてログインしてください。次に、ページに表示されたコードをコピーして、約 1 分以内に下に貼り付けてください。</string>
-    <string name="signin_remote_grok">任意のデバイスで下のリンクを開き、Grok にログインしてコードを確認してください。あとは Buddy が自動的に完了します。</string>
+    <string name="signin_remote_grok">任意のデバイスで下のリンクを開き、Grok にログインしてコードを確認してください。あとは Mr Do It が自動的に完了します。</string>
     <string name="signin_copy_code">コードをコピー</string>
     <string name="signin_code_copied">コードをコピーしました</string>
     <string name="signin_code_expiry">コードの有効期間は 15 分です。</string>
@@ -721,8 +749,8 @@
 
     <!-- Sign-in screen: fold-out box for pasting Claude's sign-in code by hand. -->
     <string name="signin_paste_instead">代わりにコードを貼り付ける</string>
-    <string name="signin_paste_help">Buddy に自動で戻らない場合は、Claude のページで「コードをコピー」（Copy Code）をタップしてから、ここに貼り付けてください。</string>
-    <string name="signin_paste_help_agy">Buddy に自動で戻らない場合は、Antigravity のページで「Copy to Clipboard」（クリップボードにコピー）をタップしてから、コードをここに貼り付けてください。</string>
+    <string name="signin_paste_help">Mr Do It に自動で戻らない場合は、Claude のページで「コードをコピー」（Copy Code）をタップしてから、ここに貼り付けてください。</string>
+    <string name="signin_paste_help_agy">Mr Do It に自動で戻らない場合は、Antigravity のページで「Copy to Clipboard」（クリップボードにコピー）をタップしてから、コードをここに貼り付けてください。</string>
     <string name="signin_code_hint">コード</string>
     <string name="signin_use_code">使用</string>
     <string name="signin_start_again">先にもう一度ログインを開始してください。</string>
@@ -733,11 +761,11 @@
     <string name="signin_done">完了</string>
     <string name="signin_sign_out">ログアウト</string>
     <string name="signin_sign_out_title">%1$s からログアウトしますか？</string>
-    <string name="signin_sign_out_text">再度ログインするまで、Buddy の %1$s は使用できなくなります。</string>
+    <string name="signin_sign_out_text">再度ログインするまで、Mr Do It の %1$s は使用できなくなります。</string>
     <string name="signin_opencode_ready">OpenCode の準備ができました</string>
     <string name="signin_opencode_free">OpenCode の無料モデルを使用しています。チャット上部のモデル表示からチャットごとに選ぶか、お使いのプロバイダーを接続してください。</string>
     <string name="signin_opencode_connected">接続済み：%1$s。OpenCode の無料モデルも引き続き使えます。</string>
-    <string name="signin_opencode_connect_note">プロバイダーを接続すると、Buddy のターミナルが %1$s で開きます。プロバイダーを選んで手順に従ってください。後で削除するには、そこで %2$s を実行します。</string>
+    <string name="signin_opencode_connect_note">プロバイダーを接続すると、Mr Do It のターミナルが %1$s で開きます。プロバイダーを選んで手順に従ってください。後で削除するには、そこで %2$s を実行します。</string>
     <string name="signin_connect_provider">プロバイダーを接続</string>
     <string name="signin_version">%1$s バージョン %2$s</string>
     <string name="signin_version_old_opencode">OpenCode %1$s。OpenCode 2 がリリースされました。今後も新しいバージョンを使うにはアップデートしてください。接続済みのプロバイダーはそのまま残ります。</string>
@@ -755,14 +783,14 @@
     <string name="account_tagline_agy">Google アカウントを使用</string>
     <string name="account_tagline_grok">Grok アカウントを使用</string>
     <string name="agent_tag_free">無料・上限あり</string>
-    <string name="account_setting_up_linux">Buddy の Linux をセットアップ中…</string>
+    <string name="account_setting_up_linux">Mr Do It の Linux をセットアップ中…</string>
     <string name="account_installing_tools">ツールをインストール中…</string>
     <string name="account_downloading_claude">Claude Code をダウンロード中（約 230 MB）…</string>
     <string name="account_downloading">%1$s をダウンロード中…</string>
     <string name="account_check_failed">%1$s を確認できませんでした：%2$s</string>
     <string name="account_install_failed">インストールに失敗しました：%1$s</string>
     <string name="account_install_no_space">スマホの空き容量が足りません。約 1 GB 空けてから、もう一度お試しください。</string>
-    <string name="account_install_network">Buddy がダウンロードサーバーに接続できませんでした。Wi-Fi やモバイルデータ（またはブロックしている VPN やプライベート DNS）を確認して、もう一度お試しください。</string>
+    <string name="account_install_network">Mr Do It がダウンロードサーバーに接続できませんでした。Wi-Fi やモバイルデータ（またはブロックしている VPN やプライベート DNS）を確認して、もう一度お試しください。</string>
     <string name="account_install_refused">ダウンロードサーバーがリクエストを拒否したか、間隔を空けるよう求めました。数分後にもう一度お試しください。</string>
     <string name="account_install_space_needed">空きは %1$s だけです。エージェントのインストールには約 1 GB 必要です。空き容量を増やしてからもう一度お試しください。</string>
     <string name="signin_details">詳細</string>
@@ -809,65 +837,65 @@
     <string name="remote_start_failed">開始できませんでした：%1$s</string>
     <string name="remote_keeps_stopping">セッションが何度も停止します。一度オフにしてからオンに戻すか、Claude Code のログイン状態を確認してください。</string>
     <string name="codex_pair_getting">コードを取得中…</string>
-    <string name="codex_pair_text">このコードを ChatGPT に入力してください。スマートフォンでは Codex で、パソコンでは［設定］→［接続］→［他のデバイスを操作］で入力します。%1$s まで 1 回だけ使えます。Buddy は「localhost」として表示されます。</string>
+    <string name="codex_pair_text">このコードを ChatGPT に入力してください。スマートフォンでは Codex で、パソコンでは［設定］→［接続］→［他のデバイスを操作］で入力します。%1$s まで 1 回だけ使えます。Mr Do It は「localhost」として表示されます。</string>
     <string name="codex_pair_failed">ペアリングコードを取得できませんでした：%1$s</string>
     <string name="codex_keeps_stopping">Codex セッションが何度も停止します：%1$s</string>
     <string name="ssh_keeps_stopping">SSH サーバーが何度も停止します：%1$s</string>
-    <string name="ssh_key_added">完了しました。Termux から Buddy の Linux を開くには、ssh buddy と入力してください。</string>
-    <string name="ssh_code_expired">このコマンドは使用済みか、10 分以上経過しています。Buddy の「設定」でもう一度コピーしてください。</string>
+    <string name="ssh_key_added">完了しました。Termux から Mr Do It の Linux を開くには、ssh buddy と入力してください。</string>
+    <string name="ssh_code_expired">このコマンドは使用済みか、10 分以上経過しています。Mr Do It の「設定」でもう一度コピーしてください。</string>
 
     <!-- ===== Settings, the built-in Linux, terminal and sessions (SetupActivity, Linux, Terminal*, MonitorActivity) ===== -->
 
     <!-- Settings screen: header. -->
     <string name="setup_settings_title">設定</string>
-    <string name="setup_settings_subtitle">Buddy は、お使いのサブスクリプション（または OpenCode の無料モデルや Antigravity の無料プラン）を使って、アプリ内で Claude Code、Codex、OpenCode、Antigravity、Grok を実行します。</string>
+    <string name="setup_settings_subtitle">Mr Do It は、お使いのサブスクリプション（または OpenCode の無料モデルや Antigravity の無料プラン）を使って、アプリ内で Claude Code、Codex、OpenCode、Antigravity、Grok を実行します。</string>
     <string name="settings_agents">エージェントとモデル</string>
     <string name="settings_agents_sub">既定のエージェント、サインイン、API キー、既定のモデル、GitHub、ダウンロードサーバー</string>
     <string name="settings_bubble">バブルとチャット</string>
     <string name="settings_bubble_sub">バブルの表示、タップ時の動作、パネルのサイズ</string>
     <string name="settings_voice_sub">音声入力と出力、言語、ライブ音声、返信の読み上げ</string>
     <string name="settings_safety">安全と承認</string>
-    <string name="settings_safety_sub">アプリの権限、通知ルール、Linux ツール、Buddy 自身の画面</string>
+    <string name="settings_safety_sub">アプリの権限、通知ルール、Linux ツール、Mr Do It 自身の画面</string>
     <string name="settings_background">バックグラウンドと自動化</string>
     <string name="settings_background_sub">バックグラウンドモード、スケジュールしたタスク、バックグラウンドブラウザ</string>
     <string name="settings_tools">ツールと接続</string>
     <string name="settings_tools_sub">MCP サーバー、スキル、他のターミナル向けのスマホツール、Remote Control、SSH</string>
-    <string name="settings_appearance_sub">ライトまたはダーク、アクセントカラー、サーフェス、Buddy の見た目</string>
+    <string name="settings_appearance_sub">ライトまたはダーク、アクセントカラー、サーフェス、Mr Do It の見た目</string>
     <string name="settings_about">バックアップと情報</string>
-    <string name="settings_about_sub">バックアップと移行、アップデート、ガイド、セットアップの確認</string>
+    <string name="settings_about_sub">バックアップと移行、アップデート、ガイド、Mr Do It をチェック</string>
 
     <!-- Settings screen: the setup checklist card (5 steps). -->
     <string name="setup_card_title">セットアップ</string>
     <string name="setup_open_guide">ステップごとのガイドを開く</string>
-    <string name="setup_all_set">すべて完了しました。Buddy を使う準備ができています。</string>
+    <string name="setup_all_set">すべて完了しました。Mr Do It を使う準備ができています。</string>
     <string name="setup_next_step">次：%1$s</string>
-    <string name="setup_step_a11y_title">Buddy のユーザー補助サービスをオンにする</string>
-    <string name="setup_step_a11y_body">バブルを表示し、Buddy があなたの代わりに画面を読み取ってタップや入力をできるようにします。</string>
+    <string name="setup_step_a11y_title">Mr Do It のユーザー補助サービスをオンにする</string>
+    <string name="setup_step_a11y_body">バブルを表示し、Mr Do It があなたの代わりに画面を読み取ってタップや入力をできるようにします。</string>
     <string name="setup_step_a11y_restricted">スイッチがグレー表示（「制限付き設定」）になっていますか？Android では、ファイルからインストールしたアプリに対してこの設定がブロックされます。「アプリ情報」をタップし、右上の ⋮ →「制限付き設定を許可」をタップしてから、もう一度お試しください。</string>
     <string name="setup_open_settings">設定を開く</string>
     <string name="setup_app_info">アプリ情報</string>
     <string name="setup_step_install_title">%1$s をインストール</string>
-    <string name="setup_step_install_done">%1$s は Buddy にインストール済みです。</string>
-    <string name="setup_step_install_claude">Buddy が専用の小さな Linux と Anthropic の %1$s をダウンロードします（約 235 MB）。</string>
-    <string name="setup_step_install_opencode">Buddy が専用の小さな Linux と %1$s をダウンロードします（Node.js を含めて約 230 MB）。</string>
-    <string name="setup_step_install_codex">Buddy が専用の小さな Linux と OpenAI の %1$s をダウンロードします（約 150 MB）。</string>
-    <string name="setup_step_install_grok">Buddy が専用の小さな Linux と xAI の %1$s をダウンロードします（約 170 MB）。</string>
+    <string name="setup_step_install_done">%1$s は Mr Do It にインストール済みです。</string>
+    <string name="setup_step_install_claude">Mr Do It が専用の小さな Linux と Anthropic の %1$s をダウンロードします（約 235 MB）。</string>
+    <string name="setup_step_install_opencode">Mr Do It が専用の小さな Linux と %1$s をダウンロードします（Node.js を含めて約 230 MB）。</string>
+    <string name="setup_step_install_codex">Mr Do It が専用の小さな Linux と OpenAI の %1$s をダウンロードします（約 150 MB）。</string>
+    <string name="setup_step_install_grok">Mr Do It が専用の小さな Linux と xAI の %1$s をダウンロードします（約 170 MB）。</string>
     <string name="setup_install">インストール</string>
     <string name="setup_step_signin_title">ログイン</string>
     <string name="setup_step_signin_opencode_done">ログインは不要です。OpenCode の無料モデルはすぐに使えます。お使いのプロバイダーもいつでも接続できます。</string>
     <string name="setup_step_signin_opencode">OpenCode の無料モデルはログイン不要です。</string>
     <string name="setup_step_signin_done">ログインしました。</string>
     <string name="setup_step_signin_done_email">%1$s でログインしています。</string>
-    <string name="setup_step_signin_claude">Claude アカウント（Pro または Max）でログインします。ブラウザが開いたらそこで承認してください。自動的に Buddy に戻ります。</string>
-    <string name="setup_step_signin_codex">ChatGPT アカウントでログインします。ブラウザが開いたらそこで承認してください。自動的に Buddy に戻ります。</string>
-    <string name="setup_step_signin_grok">Grok アカウントでログインします。ブラウザが開いたらそこでコードを確認してください。自動的に Buddy に戻ります。</string>
+    <string name="setup_step_signin_claude">Claude アカウント（Pro または Max）でログインします。ブラウザが開いたらそこで承認してください。自動的に Mr Do It に戻ります。</string>
+    <string name="setup_step_signin_codex">ChatGPT アカウントでログインします。ブラウザが開いたらそこで承認してください。自動的に Mr Do It に戻ります。</string>
+    <string name="setup_step_signin_grok">Grok アカウントでログインします。ブラウザが開いたらそこでコードを確認してください。自動的に Mr Do It に戻ります。</string>
     <string name="setup_sign_in">ログイン</string>
-    <string name="setup_step_background_title">Buddy のバックグラウンド実行を許可</string>
+    <string name="setup_step_background_title">Mr Do It のバックグラウンド実行を許可</string>
     <string name="setup_step_background_done">許可されています。</string>
-    <string name="setup_step_background_body">エージェントの作業中に、電池を節約するためにスマートフォンが Buddy を停止しないようにします。</string>
+    <string name="setup_step_background_body">エージェントの作業中に、電池を節約するためにスマートフォンが Mr Do It を停止しないようにします。</string>
     <string name="setup_allow">許可</string>
     <string name="setup_step_try_title">試してみる</string>
-    <string name="setup_step_try_done">Buddy が応答しました。ほかにも頼みたいことがあれば、いつでもバブルをタップしてください。</string>
+    <string name="setup_step_try_done">Mr Do It が応答しました。ほかにも頼みたいことがあれば、いつでもバブルをタップしてください。</string>
     <string name="setup_step_try_body">画面の端にあるバブルをタップして「LINE を開いて」のように頼むか、ここでチャットを始めてください。</string>
     <string name="setup_step_try_wait">先に上のステップを完了してください。</string>
     <!-- Short names of the setup steps, shown after "Next:" in the Chats header. -->
@@ -880,17 +908,17 @@
     <string name="setup_theme_mode">モード</string>
     <string name="setup_accent">アクセントカラー</string>
     <string name="setup_surface">背景</string>
-    <string name="setup_surface_note">「ウォーム」は Buddy 本来のトーンです。「ブラック」（完全な黒）はダークモードでのみ適用されます。</string>
-    <string name="setup_face">Buddy の見た目</string>
+    <string name="setup_surface_note">「ウォーム」は Mr Do It 本来のトーンです。「ブラック」（完全な黒）はダークモードでのみ適用されます。</string>
+    <string name="setup_face">Mr Do It の見た目</string>
     <string name="setup_face_buddy">オリジナル</string>
     <string name="setup_face_picture">自分の画像</string>
-    <string name="setup_face_note">背景が透明な PNG か WebP がおすすめです。バブルと Buddy の返信の横に表示されます。</string>
+    <string name="setup_face_note">背景が透明な PNG か WebP がおすすめです。バブルと Mr Do It の返信の横に表示されます。</string>
     <string name="setup_face_change">別の画像を選ぶ</string>
     <string name="setup_face_unreadable">この画像を読み込めませんでした。PNG か WebP を試してください。</string>
     <string name="setup_custom_colour">カスタムカラー</string>
     <string name="setup_mirror">ダウンロードサーバー</string>
     <string name="setup_mirror_default">標準</string>
-    <string name="setup_mirror_info">Buddy の Linux とそのパッケージ、npm でインストールするエージェント（Codex、OpenCode）のダウンロード元です。お使いの地域でインストールが失敗する、または極端に遅い場合を除き、標準のままにしてください。別のサーバーを選ぶと、Buddy の Linux はお使いのネットワークの DNS サーバーも使います。</string>
+    <string name="setup_mirror_info">Mr Do It の Linux とそのパッケージ、npm でインストールするエージェント（Codex、OpenCode）のダウンロード元です。お使いの地域でインストールが失敗する、または極端に遅い場合を除き、標準のままにしてください。別のサーバーを選ぶと、Mr Do It の Linux はお使いのネットワークの DNS サーバーも使います。</string>
     <string name="setup_mirror_default_sub">Alpine と npm の公式サーバー</string>
     <string name="setup_mirror_china">中国本土</string>
     <string name="setup_mirror_russia">ロシア</string>
@@ -924,7 +952,7 @@
 
     <!-- Settings screen: Phone tools in your own sessions (MCP server). -->
     <string name="setup_phone_tools">自分のセッションでスマートフォンツールを使う</string>
-    <string name="setup_phone_tools_info">Buddy のスマートフォンツールは、このスマートフォン上で動く通常の MCP サーバーです。スマートフォンのターミナル（Termux など）でこれを一度実行すると、そのエージェントはバブルがなくても、すべてのセッションでスマートフォンツールを使えるようになります。</string>
+    <string name="setup_phone_tools_info">Mr Do It のスマートフォンツールは、このスマートフォン上で動く通常の MCP サーバーです。スマートフォンのターミナル（Termux など）でこれを一度実行すると、そのエージェントはバブルがなくても、すべてのセッションでスマートフォンツールを使えるようになります。</string>
     <string name="setup_copy_command">コマンドをコピー</string>
     <string name="setup_command_copied">コピーしました。ターミナルに貼り付けてください。</string>
     <string name="setup_outside_background">バックグラウンドで作業</string>
@@ -935,12 +963,14 @@
     <string name="setup_tailnet_no_address">このスマートフォンで Tailscale が接続されていないため、今はパソコンから届きません。</string>
     <string name="setup_tailnet_computer">パソコン %1$d</string>
     <string name="setup_tailnet_pair_info">Tailscale をオンにしたパソコンのターミナルでこれを実行してください。このスマートフォンが承認を求め、承認するとパソコンの Claude Code が専用のキーでスマホツールを使えるようになります。</string>
-    <string name="tools_card_pair">パソコン「%1$s」(Tailscale %2$s)をペアリングしますか? 専用のキーで Buddy のスマホツールを使えるようになります。キーは設定で削除できます。</string>
+    <string name="tools_card_pair">パソコン「%1$s」(Tailscale %2$s)をペアリングしますか? 専用のキーで Mr Do It のスマホツールを使えるようになります。キーは設定で削除できます。</string>
 
     <!-- Settings screen: Voice. -->
     <string name="setup_voice">音声</string>
-    <string name="setup_assist">Buddyをスマホのアシスタントにしたとき</string>
-    <string name="setup_assist_info">Androidの設定 → アプリ → デフォルトのアプリ → デジタルアシスタントアプリでBuddyを選びます。電源ボタンを長押しするとBuddyが起動します：話すは依頼を1回送信、ライブ音声は音声での会話を開始します（Codexへのログインが必要。ない場合は話す）。</string>
+    <string name="setup_assist">Mr Do Itをスマホのアシスタントにしたとき</string>
+    <string name="setup_assist_info">Androidの設定 → アプリ → デフォルトのアプリ → デジタルアシスタントアプリでMr Do Itを選びます。電源ボタンを長押しするとMr Do Itが起動します：話すは依頼を1回送信、ライブ音声は音声での会話を開始します（Codexへのログインが必要。ない場合は話す）。</string>
+    <string name="setup_assist_unlocked">ロック解除中のみ</string>
+    <string name="setup_assist_unlocked_info">ロック画面やスタンバイ中は、電源ボタンを長押ししても何も起こりません。</string>
     <string name="setup_live_agent">ライブ音声で使うエージェント</string>
     <string name="setup_live_agent_default">デフォルト</string>
     <string name="setup_live_agent_info">バブルや電源ボタンの長押しから始めるライブ音声は、このエージェントで新しいチャットを開きます。デフォルトは既定のエージェント（現在は%1$s）です。</string>
@@ -948,13 +978,13 @@
     <string name="setup_live_continue_info">オン：ライブ音声はそのエージェントとの最新のチャットを続けます。オフ：毎回新しいチャット。</string>
     <string name="setup_voice_input">音声入力</string>
     <string name="setup_voice_phone">端末</string>
-    <string name="setup_voice_input_claude">Claude のプランで使える Claude Code の音声入力です。精度が非常に高く、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語、オランダ語、トルコ語、ロシア語、日本語などに対応していますが、アラビア語には対応していません。アラビア語の場合、Buddy は端末の音声認識を使用します。少し間を置くと文字が表示されます。</string>
+    <string name="setup_voice_input_claude">Claude のプランで使える Claude Code の音声入力です。精度が非常に高く、英語、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語、オランダ語、トルコ語、ロシア語、日本語などに対応していますが、アラビア語には対応していません。アラビア語の場合、Mr Do It は端末の音声認識を使用します。少し間を置くと文字が表示されます。</string>
     <string name="setup_voice_input_chatgpt">ChatGPT のプランで、Codex 経由で ChatGPT の音声を使います。どの言語でも、1 つの文に複数の言語が混ざっていても理解できます。使われるのはあなたの言葉だけです。ChatGPT の音声による返答はミュートされ、ChatGPT が何かを実行することはできません。</string>
     <string name="setup_voice_input_phone">端末の音声認識です（ほとんどの端末では Google）。話している間にリアルタイムで文字が表示され、選んだ言語のうちどれを話しているかを自動で判別します。</string>
     <string name="setup_voice_output">音声出力</string>
     <string name="setup_voice_output_chatgpt">返信を ChatGPT の自然な音声で読み上げます（ChatGPT のプランで Codex 経由）。ChatGPT の音声の使用量にカウントされます。利用できない場合は、代わりに端末の音声で読み上げます。</string>
     <string name="setup_voice_output_phone">返信の言語に合わせて、端末のテキスト読み上げ音声を使用します。</string>
-    <string name="setup_voice_sample">Bonjour ! こんにちは、Buddy です。こんな声で話します。</string>
+    <string name="setup_voice_sample">Bonjour ! こんにちは、Mr Do It です。こんな声で話します。</string>
     <string name="setup_languages">言語</string>
     <string name="setup_languages_hint">タップして、話す言語を選びます。長押しするとその言語がデフォルトになります。チャットでは、マイクを長押しすると言語を切り替えられます。</string>
     <string name="setup_sign_in_first">先に %1$s にログインしてください</string>
@@ -965,7 +995,7 @@
     <!-- Settings screen: Remote Control (a Claude Code session you continue from the Claude app). -->
     <string name="setup_remote_control">リモートコントロール</string>
     <string name="setup_remote_session">Claude Code セッション</string>
-    <string name="setup_remote_session_info">Buddy 内でスマートフォンツールとともに動作する Claude Code セッションです。このスマートフォンでも、ほかの場所からでも、Claude アプリ（Code）で続けられます。</string>
+    <string name="setup_remote_session_info">Mr Do It 内でスマートフォンツールとともに動作する Claude Code セッションです。このスマートフォンでも、ほかの場所からでも、Claude アプリ（Code）で続けられます。</string>
     <string name="setup_remote_sign_in_first">先に Claude Code にログインしてください。</string>
     <string name="setup_remote_active">有効 · Claude アプリの「%1$s」</string>
     <string name="setup_remote_starting">開始中…</string>
@@ -973,13 +1003,13 @@
     <string name="setup_remote_open">Claude アプリで開く</string>
     <string name="setup_remote_open_failed">開けませんでした。</string>
     <string name="setup_codex_session">Codex セッション</string>
-    <string name="setup_codex_session_info">Buddy 内でスマートフォンツールとともに動作する Codex です。このスマートフォンやパソコンの ChatGPT アプリ（Codex）から使えます。Codex のサンドボックスはここでは動かないため、デフォルトの権限ではコマンドごとに確認します。</string>
+    <string name="setup_codex_session_info">Mr Do It 内でスマートフォンツールとともに動作する Codex です。このスマートフォンやパソコンの ChatGPT アプリ（Codex）から使えます。Codex のサンドボックスはここでは動かないため、デフォルトの権限ではコマンドごとに確認します。</string>
     <string name="setup_codex_active">実行中 · ChatGPT の「localhost」</string>
     <string name="setup_codex_pair">デバイスをペアリング</string>
     <string name="setup_ssh">Termux から SSH</string>
-    <string name="setup_ssh_info">SSH で Termux から Buddy の Linux を使えます。接続できるのはこのスマートフォンのアプリだけで、鍵が必要です。</string>
+    <string name="setup_ssh_info">SSH で Termux から Mr Do It の Linux を使えます。接続できるのはこのスマートフォンのアプリだけで、鍵が必要です。</string>
     <string name="setup_ssh_active">実行中 · ポート %1$d</string>
-    <string name="setup_ssh_how">このコマンドをコピーし、10 分以内に Termux で 1 回実行してください。その後は、Termux で ssh buddy と入力すると Buddy の Linux が開きます。</string>
+    <string name="setup_ssh_how">このコマンドをコピーし、10 分以内に Termux で 1 回実行してください。その後は、Termux で ssh buddy と入力すると Mr Do It の Linux が開きます。</string>
 
     <!-- Settings screen: chats left over from when Buddy ran its agents in Termux. -->
     <string name="setup_old_chats_title">古い Termux のチャットを削除</string>
@@ -989,49 +1019,51 @@
     <plurals name="setup_old_chats_remove">
         <item quantity="other">古いチャット %1$d 件を削除しますか？</item>
     </plurals>
-    <string name="setup_old_chats_remove_body">Buddy のチャット一覧から削除します。この操作は元に戻せません。</string>
+    <string name="setup_old_chats_remove_body">Mr Do It のチャット一覧から削除します。この操作は元に戻せません。</string>
     <string name="setup_remove">削除</string>
     <string name="setup_removed">削除しました。</string>
 
     <!-- Settings screen: Experience. -->
     <string name="setup_chat_bubble">チャットバブル</string>
     <string name="setup_chat_bubble_info">他のアプリの上に表示されます。✕ までドラッグすると非表示になりますが、エージェントが承認を必要とするときは承認カードが表示されます。</string>
+    <string name="setup_bubble_hide_in_app">Mr Do It を開いている間は非表示</string>
+    <string name="setup_bubble_hide_in_app_info">Mr Do It 自身の画面の上にはバブルを表示しません。承認カードや質問があるときはそこにも表示され、Mr Do It を離れると元に戻ります。</string>
     <string name="setup_tap_action">バブルをタップしたとき</string>
     <string name="setup_tap_panel">パネル</string>
     <string name="setup_tap_talk">話す</string>
     <string name="setup_tap_app">アプリ</string>
     <string name="setup_tap_panel_info">使用中のアプリの上に、フローティングのチャットを開きます。バブルを長押しすると、ほかの操作もできます。</string>
-    <string name="setup_tap_app_info">Buddy でチャットを全画面で開きます。バブルを長押しすると、ほかの操作もできます。</string>
+    <string name="setup_tap_app_info">Mr Do It でチャットを全画面で開きます。バブルを長押しすると、ほかの操作もできます。</string>
     <string name="setup_panel_size">チャットパネルのサイズ</string>
     <string name="setup_panel_full">全画面</string>
     <string name="setup_panel_compact">コンパクト</string>
     <string name="setup_panel_size_info">「全画面」は画面の端から端まで広がります。「コンパクト」は小さめで画面の端を空けるので、端からのジェスチャーも引き続き使えます。</string>
     <string name="setup_tap_to_talk_info">1 回タップするとマイクがオンになります。話して少し間を置くと送信されます。バブルを長押しすると、チャットなどを開けます。</string>
     <string name="setup_read_aloud">返信を読み上げる</string>
-    <string name="setup_read_aloud_info">エージェントの返信を、「音声」で選んだ声で Buddy が読み上げます。</string>
+    <string name="setup_read_aloud_info">エージェントの返信を、「音声」で選んだ声で Mr Do It が読み上げます。</string>
     <string name="setup_pause_media">読み上げ中はメディアを一時停止</string>
-    <string name="setup_pause_media_info">Buddy が返信を読み上げている間、再生中の音楽や動画を一時停止し、終わったら再開します。再開するのは Buddy が停止したものだけで、その間に再生を操作した場合は再開しません。「返信を読み上げる」と通知へのアクセスが必要です。</string>
+    <string name="setup_pause_media_info">Mr Do It が返信を読み上げている間、再生中の音楽や動画を一時停止し、終わったら再開します。再開するのは Mr Do It が停止したものだけで、その間に再生を操作した場合は再開しません。「返信を読み上げる」と通知へのアクセスが必要です。</string>
     <string name="setup_pause_listening">聞き取り中はメディアを一時停止</string>
-    <string name="setup_pause_listening_info">Buddy があなたの声を聞いている間、再生中の音楽や動画を一時停止し、動画ではなくあなたの声を聞き取ってから再開します。「読み上げ中はメディアを一時停止」もオンなら、返答の読み上げが終わるまで停止したままです。Buddy が再開するのは自分で止めたものだけで、その間にあなたが再生を変えた場合は再開しません。通知へのアクセスが必要です。</string>
+    <string name="setup_pause_listening_info">Mr Do It があなたの声を聞いている間、再生中の音楽や動画を一時停止し、動画ではなくあなたの声を聞き取ってから再開します。「読み上げ中はメディアを一時停止」もオンなら、返答の読み上げが終わるまで停止したままです。Mr Do It が再開するのは自分で止めたものだけで、その間にあなたが再生を変えた場合は再開しません。通知へのアクセスが必要です。</string>
     <string name="setup_voice_cards">カードに声で答える</string>
-    <string name="setup_voice_cards_info">カードを読み上げたあと、Buddy が聞き取ります。「承認」か「拒否」、または選びたい選択肢を言ってください。「返信を読み上げる」がオンのときに使えます。スマートフォンがロック中は使えません。声の届く範囲にいる人なら誰でも答えられます。</string>
-    <string name="voice_card_approval">Buddy が承認を求めています。%1$s</string>
-    <string name="voice_card_question">Buddy からの質問：%1$s 選択肢：%2$s</string>
+    <string name="setup_voice_cards_info">カードを読み上げたあと、Mr Do It が聞き取ります。「承認」か「拒否」、または選びたい選択肢を言ってください。「返信を読み上げる」がオンのときに使えます。スマートフォンがロック中は使えません。声の届く範囲にいる人なら誰でも答えられます。</string>
+    <string name="voice_card_approval">Mr Do It が承認を求めています。%1$s</string>
+    <string name="voice_card_question">Mr Do It からの質問：%1$s 選択肢：%2$s</string>
     <string name="voice_card_hint">承認か拒否と言ってください。</string>
     <string name="voice_card_yes">承認,しょうにん,はい,オーケー,ok,お願い</string>
     <string name="voice_card_no">拒否,きょひ,いいえ,だめ,ストップ,キャンセル</string>
     <string name="setup_update_notices">アップデートの通知</string>
-    <string name="setup_update_notices_info">Buddy が 1 日 1 回 GitHub を確認し、新しいバージョンが公開されたらお知らせします。</string>
+    <string name="setup_update_notices_info">Mr Do It が 1 日 1 回 GitHub を確認し、新しいバージョンが公開されたらお知らせします。</string>
     <string name="setup_check_updates">アップデートを確認</string>
-    <string name="setup_check_updates_info">現在のバージョンは Buddy %1$s です。どのエージェントにも「アップデートして」と頼めます。</string>
+    <string name="setup_check_updates_info">現在のバージョンは Mr Do It %1$s です。どのエージェントにも「アップデートして」と頼めます。</string>
     <string name="setup_app_permissions">アプリの権限</string>
-    <string name="setup_app_permissions_info">アプリごとに選べます。「信頼」ではエージェントがポップアップなしで操作し、「厳格」では送信、支払い、削除などの前に Buddy 自身が確認します。</string>
+    <string name="setup_app_permissions_info">アプリごとに選べます。「信頼」ではエージェントがポップアップなしで操作し、「厳格」では送信、支払い、削除などの前に Mr Do It 自身が確認します。</string>
     <string name="setup_dev_mode">新しいチャットの Linux ツール</string>
     <string name="setup_dev_mode_info">Linux ツールを使うと、エージェントがコマンドの実行、パッケージのインストール、~/.buddy/work 内のファイル編集を行えるため、アプリのビルドもできます。新しいチャットはこの設定で始まり、各チャットのタイトルの下で変更できます。</string>
-    <string name="setup_agents_tap">エージェントによる Buddy の画面操作を許可</string>
-    <string name="setup_agents_tap_info">エージェントで Buddy をテストするための設定です（例：Termux の Claude Code とスマートフォン用ツール）。オンにすると、エージェントはチャット一覧、チャット、この設定画面を操作できます。エージェントに何を許すかを決める部分は、引き続きあなただけが操作できます。吹き出し、承認カード、Linux ツール、チャットのオプションとスケジュール、アプリの権限・キー・ルール・スキル・バックグラウンドモード・バックアップの各画面です。</string>
+    <string name="setup_agents_tap">エージェントによる Mr Do It の画面操作を許可</string>
+    <string name="setup_agents_tap_info">エージェントで Mr Do It をテストするための設定です（例：Termux の Claude Code とスマートフォン用ツール）。オンにすると、エージェントはチャット一覧、チャット、この設定画面を操作できます。エージェントに何を許すかを決める部分は、引き続きあなただけが操作できます。吹き出し、承認カード、Linux ツール、チャットのオプションとスケジュール、アプリの権限・キー・ルール・スキル・バックグラウンドモード・バックアップの各画面です。</string>
     <string name="setup_ask_new_apps">新しいアプリごとに確認する</string>
-    <string name="setup_ask_new_apps_info">「%1$s」で設定していないアプリでエージェントが初めて作業するとき、そこで自分で作業してよいか、先に確認するかを Buddy が尋ね、そのアプリの答えを保存します。「確認する」のチャットのみで、常に確認する銀行・決済アプリ、設定、アプリストアは対象外です。</string>
+    <string name="setup_ask_new_apps_info">「%1$s」で設定していないアプリでエージェントが初めて作業するとき、そこで自分で作業してよいか、先に確認するかを Mr Do It が尋ね、そのアプリの答えを保存します。「確認する」のチャットのみで、常に確認する銀行・決済アプリ、設定、アプリストアは対象外です。</string>
     <string name="first_app_question">エージェントが %1$s で初めて作業します。自分で作業させますか、それとも先に確認させますか？あとで「%2$s」で変更できます。</string>
     <string name="first_app_trust">%1$s: 自分で作業する</string>
     <string name="first_app_hard">%1$s: 先に確認する</string>
@@ -1062,7 +1094,7 @@
     <string name="terminal_session_ended_code">セッション終了 · 終了コード %1$d</string>
     <string name="terminal_close">閉じる</string>
     <string name="terminal_restart">再起動</string>
-    <string name="terminal_needs_linux">先に「設定」で Claude Code、Codex、OpenCode、Antigravity、Grok のいずれかをインストールしてください。これで Buddy の Linux がセットアップされます。</string>
+    <string name="terminal_needs_linux">先に「設定」で Claude Code、Codex、OpenCode、Antigravity、Grok のいずれかをインストールしてください。これで Mr Do It の Linux がセットアップされます。</string>
     <string name="terminal_start_failed">ターミナルを起動できませんでした：%1$s</string>
     <string name="terminal_close_title">%1$s を閉じますか？</string>
     <string name="terminal_close_running">まだ実行中です。閉じると、このセッションとそこから起動したものがすべて停止します。</string>
@@ -1086,15 +1118,15 @@
     <string name="monitor_title">セッション</string>
     <string name="monitor_subtitle">このスマートフォン上のすべての Claude Code、Codex、OpenCode、Antigravity、Grok のセッションです。</string>
     <string name="monitor_terminal_running">シェルを実行中 · タップして戻る</string>
-    <string name="monitor_terminal_idle">Buddy の Linux のシェル</string>
+    <string name="monitor_terminal_idle">Mr Do It の Linux のシェル</string>
     <string name="monitor_running_now">実行中</string>
     <string name="monitor_refresh">3 秒ごとに更新</string>
     <string name="monitor_checking">確認中…</string>
     <string name="monitor_recent">最近</string>
     <string name="monitor_loading">読み込み中…</string>
-    <string name="monitor_service_off">Buddy のユーザー補助サービスがオフのため、セッションを確認できません。「設定」でオンにしてください。</string>
+    <string name="monitor_service_off">Mr Do It のユーザー補助サービスがオフのため、セッションを確認できません。「設定」でオンにしてください。</string>
     <string name="monitor_nothing_running">実行中のものはありません。</string>
-    <string name="monitor_deleted_chat">削除された Buddy のチャット</string>
+    <string name="monitor_deleted_chat">削除された Mr Do It のチャット</string>
     <string name="monitor_background_session">バックグラウンドのセッション</string>
     <string name="monitor_terminal_session">ターミナルのセッション</string>
     <string name="monitor_tag_background">バックグラウンド</string>
@@ -1104,8 +1136,8 @@
     <string name="monitor_open_chat">チャットを開く</string>
     <string name="monitor_stop">停止</string>
     <string name="monitor_stop_title">この %1$s セッションを停止しますか？</string>
-    <string name="monitor_stop_background_body">バックグラウンドで実行されているセッションです（例：Claude アプリから続けているチャット）。Buddy を操作しているセッションの可能性もあります。停止すると、その会話で進行中の作業が終了します。</string>
-    <string name="monitor_stop_terminal_body">今ターミナルで使っているセッションかもしれません。Buddy を操作しているセッションの可能性もあります。停止すると、その会話で進行中の作業が終了します。</string>
+    <string name="monitor_stop_background_body">バックグラウンドで実行されているセッションです（例：Claude アプリから続けているチャット）。Mr Do It を操作しているセッションの可能性もあります。停止すると、その会話で進行中の作業が終了します。</string>
+    <string name="monitor_stop_terminal_body">今ターミナルで使っているセッションかもしれません。Mr Do It を操作しているセッションの可能性もあります。停止すると、その会話で進行中の作業が終了します。</string>
     <string name="monitor_stopping">停止中…</string>
     <string name="monitor_service_title">Claude Code のバックグラウンドサービス</string>
     <string name="monitor_service_meta">pid %1$d · 稼働時間 %2$s · バックグラウンドのセッションを実行</string>
@@ -1120,7 +1152,7 @@
     <string name="perms_mode_trust">信頼</string>
     <string name="perms_mode_hard">厳格</string>
     <string name="perms_mode_smart">スマート</string>
-    <string name="perms_modes_intro">信頼：このアプリではエージェントが自分で操作し、承認のポップアップは表示されません。\n厳格：ボタンのルールで判断します。送信、支払い、削除などのボタンは、カードでの承認が必要です。\nスマート：ルールに加えて、それ以外のすべてのタップを別のレビュー AI がリクエストと照らし合わせて確認します。\nエージェントが Buddy 自身のバブル、カード、設定をタップすることはできません。</string>
+    <string name="perms_modes_intro">信頼：このアプリではエージェントが自分で操作し、承認のポップアップは表示されません。\n厳格：ボタンのルールで判断します。送信、支払い、削除などのボタンは、カードでの承認が必要です。\nスマート：ルールに加えて、それ以外のすべてのタップを別のレビュー AI がリクエストと照らし合わせて確認します。\nエージェントが Mr Do It 自身のバブル、カード、設定をタップすることはできません。</string>
     <string name="perms_smart_reviewer">スマートモードのレビュー AI</string>
     <string name="perms_reviewer_same">チャットと同じ</string>
     <string name="perms_reviewer_sign_in">先に %1$s にログインしてください（設定）。</string>
@@ -1137,7 +1169,7 @@
     <!-- Button rules screen: buttons that always or never need the user's OK. -->
     <string name="perms_rules_intro">「厳格」または「スマート」のアプリが対象です。候補から選んだルールはそのアプリに、入力したテキストはすべてのアプリに適用されます。ルールをタップすると削除できます。</string>
     <string name="perms_builtin_title">組み込みの危険ワード</string>
-    <string name="perms_builtin_sub">送信、投稿、支払い、購入、注文、削除、発信、ログアウトなどは、Buddy のどの言語でも常に確認が必要です。</string>
+    <string name="perms_builtin_sub">送信、投稿、支払い、購入、注文、削除、発信、ログアウトなどは、Mr Do It のどの言語でも常に確認が必要です。</string>
     <string name="perms_always_ask">常に確認</string>
     <string name="perms_never_ask">確認しない</string>
     <string name="perms_ask">確認</string>
@@ -1164,7 +1196,7 @@
     <string name="tools_card_enter_in">%1$s で Enter キーを押して送信</string>
     <string name="tools_card_detail">%1$s：\n%2$s</string>
     <string name="tools_card_quote">「%1$s」</string>
-    <string name="tools_card_no_reviewer">レビューできるエージェントがログインしていないため、Buddy があなたに確認します。</string>
+    <string name="tools_card_no_reviewer">レビューできるエージェントがログインしていないため、Mr Do It があなたに確認します。</string>
     <string name="tools_card_reviewer_block">%1$s はおすすめしません：%2$s</string>
     <string name="tools_card_reviewer_ask">%1$s は確認を求めています：%2$s</string>
 
@@ -1173,7 +1205,7 @@
     <string name="tools_status_tap_install">「インストール」をタップしてから確定してください</string>
     <string name="tools_status_tap_update">「更新」をタップしてから確定してください</string>
     <string name="tools_status_installed">インストール済み</string>
-    <string name="tools_status_downloading">Buddy %1$s をダウンロード中…</string>
+    <string name="tools_status_downloading">Mr Do It %1$s をダウンロード中…</string>
 
     <!-- Smart reviewer: its reason when it fails, shown on the approval card after "Claude says ask you:". -->
     <string name="reviewer_failed">レビュー AI が応答できませんでした（%1$s）</string>
@@ -1181,7 +1213,7 @@
     <string name="reviewer_timed_out">タイムアウト</string>
 
     <!-- Error when a chat can't start because Buddy's built-in Linux isn't set up yet. -->
-    <string name="helper_linux_missing">Buddy の Linux がまだインストールされていません。「設定」を開いてセットアップしてください。</string>
+    <string name="helper_linux_missing">Mr Do It の Linux がまだインストールされていません。「設定」を開いてセットアップしてください。</string>
 
     <!-- Voice input (dictation): Claude voice and ChatGPT voice. Status lines show in the voice bar, errors as toasts. -->
     <string name="dictation_claude_sign_in">Claude 音声を使うには、「設定」で Claude Code にログインしてください。</string>
@@ -1222,11 +1254,11 @@
     <string name="tools_card_clipboard">最後にコピーした内容をエージェントに読ませますか?</string>
     <string name="tools_card_location">この端末の位置情報をエージェントと共有しますか?</string>
     <string name="tools_photo_why">写真を撮ってください: %1$s</string>
-    <string name="rules_service_label">Buddy 通知ルール</string>
+    <string name="rules_service_label">Mr Do It 通知ルール</string>
     <string name="rules_title">通知ルール</string>
-    <string name="rules_intro">選んだ通知が届くと、Buddy はあなたの指示を、自分で入力したメッセージと同じようにエージェントに渡します。どのルールにも一致しない通知は無視されます。</string>
+    <string name="rules_intro">選んだ通知が届くと、Mr Do It はあなたの指示を、自分で入力したメッセージと同じようにエージェントに渡します。どのルールにも一致しない通知は無視されます。</string>
     <string name="rules_access_off_title">通知へのアクセスがオフです</string>
-    <string name="rules_access_off_text">ルールの対象となる通知を Buddy が確認するために必要です。</string>
+    <string name="rules_access_off_text">ルールの対象となる通知を Mr Do It が確認するために必要です。</string>
     <string name="rules_access_turn_on">オンにする</string>
     <string name="rules_run">ルールを実行</string>
     <string name="rules_run_info">オフにすると、すべてのルールが一時停止します。</string>
@@ -1272,12 +1304,12 @@
     <string name="waiting_open_chat">チャットを開く</string>
     <string name="waiting_state_wrote_again">その後 %1$s さんから新しいメッセージが届きました。この返信は古くなっている可能性があります。</string>
     <string name="waiting_state_answered">すでに %1$s で返信済みです。</string>
-    <string name="waiting_state_gone">通知が消えています。Buddy が返信をコピーして %1$s を開くので、貼り付けてください。</string>
+    <string name="waiting_state_gone">通知が消えています。Mr Do It が返信をコピーして %1$s を開くので、貼り付けてください。</string>
     <string name="waiting_sent">%1$s さんに送信しました</string>
     <string name="waiting_copied">コピーしました。%1$s に貼り付けてください。</string>
     <string name="waiting_note_sent">✓「確認待ち」リストから送信しました：%1$s</string>
     <string name="rules_log_error">実行されませんでした：%1$s</string>
-    <string name="rules_log_no_service">Buddy のユーザー補助サービスがオフです</string>
+    <string name="rules_log_no_service">Mr Do It のユーザー補助サービスがオフです</string>
     <string name="rules_log_not_signed_in">%1$s にログインしていません</string>
     <string name="rules_new">新しいルール</string>
     <string name="rules_edit">ルールを編集</string>
@@ -1288,7 +1320,7 @@
     <string name="rules_from_hint">誰でも、またはカンマ区切りの名前</string>
     <string name="rules_words">含まれる語句（任意）</string>
     <string name="rules_words_hint">何でも、またはカンマ区切りの語句</string>
-    <string name="rules_instruction">Buddy に何をしてもらいますか？</string>
+    <string name="rules_instruction">Mr Do It に何をしてもらいますか？</string>
     <string name="rules_instruction_hint">例：私の口調で返信して。営業時間は 8 時〜18 時で、日曜は定休日。</string>
     <string name="rules_example_reply">代わりに返信</string>
     <string name="rules_example_reply_text">私の口調で、短くフレンドリーに返信して。</string>
@@ -1311,11 +1343,11 @@
     <string name="rules_delete">削除</string>
     <string name="rules_delete_title">このルールを削除しますか？</string>
     <string name="rules_need_app">先にアプリを選択してください。</string>
-    <string name="rules_need_instruction">Buddy にしてほしいことを入力してください。</string>
+    <string name="rules_need_instruction">Mr Do It にしてほしいことを入力してください。</string>
     <string name="rules_access_title">通知へのアクセスを許可しますか？</string>
-    <string name="rules_access_what">Buddy は届いた通知を一つひとつルールと照らし合わせます。どのルールにも一致しない通知はすぐに無視され、保存されることも、どこかに送信されることもありません。</string>
+    <string name="rules_access_what">Mr Do It は届いた通知を一つひとつルールと照らし合わせます。どのルールにも一致しない通知はすぐに無視され、保存されることも、どこかに送信されることもありません。</string>
     <string name="rules_access_data">一致した場合は、その通知のアプリ、送信者、本文が、あなたの指示とともに、そのルールで指定したエージェント（Claude Code、Codex、OpenCode のいずれか）に送られます。</string>
-    <string name="rules_access_reply">Buddy は通知の「返信」ボタンから返信できます。ルールにカウントダウンを設定しない限り、先にあなたに確認します。</string>
+    <string name="rules_access_reply">Mr Do It は通知の「返信」ボタンから返信できます。ルールにカウントダウンを設定しない限り、先にあなたに確認します。</string>
     <string name="rules_chat_shown">🔔 %1$s · %2$s：%3$s\n⚡ %4$s</string>
     <string name="rules_status_checking">ルールと照らし合わせて確認中…</string>
     <string name="rules_channel_results">通知ルール：結果</string>
@@ -1328,7 +1360,7 @@
     <!-- Background browser -->
     <string name="browser_section">バックグラウンドブラウザ</string>
     <string name="browser_switch">バックグラウンドブラウザ</string>
-    <string name="browser_switch_info">エージェントがウェブページに使う、Buddy 内のブラウザです。スマートフォンの操作を奪うことはありません。チャットで様子を見たり、自分で操作したりできます。初回は Buddy が Chromium（約 300 MB）をダウンロードします。</string>
+    <string name="browser_switch_info">エージェントがウェブページに使う、Mr Do It 内のブラウザです。スマートフォンの操作を奪うことはありません。チャットで様子を見たり、自分で操作したりできます。初回は Mr Do It が Chromium（約 300 MB）をダウンロードします。</string>
     <string name="browser_state_installing">Chromium をインストール中…</string>
     <string name="browser_state_starting">起動中…</string>
     <string name="browser_state_running">実行中</string>
@@ -1381,8 +1413,8 @@
     <string name="hub_tool_cancel_scheduled">予約メッセージを取り消し中</string>
     <string name="later_title">%1$s のエージェントのメッセージ</string>
     <string name="later_cancel">メッセージを取り消す</string>
-    <string name="share_label">Buddy に聞く</string>
-    <string name="share_title">Buddy と共有</string>
+    <string name="share_label">Mr Do It に聞く</string>
+    <string name="share_title">Mr Do It と共有</string>
     <string name="share_new_chat">%1$s で新しいチャット</string>
     <string name="usage_five">5時間 %1$d%% · %2$s にリセット</string>
     <string name="usage_week">週間 %1$d%% · %2$s にリセット</string>
@@ -1390,24 +1422,24 @@
     <string name="usage_week_short">週 %1$d%%</string>
     <string name="usage_warn_five">プランの5時間の上限の %1$d%% を使いました。%2$s にリセットされます。</string>
     <string name="usage_warn_week">プランの週間上限の %1$d%% を使いました。%2$s にリセットされます。</string>
-    <string name="check_title">Buddy をチェック</string>
-    <string name="check_info">Buddy の各部分を今テストし、問題の直し方を教えます</string>
+    <string name="check_title">Mr Do It をチェック</string>
+    <string name="check_info">Mr Do It の各部分を今テストし、問題の直し方を教えます</string>
     <string name="check_running">チェック中…</string>
     <string name="check_all_ok">すべて正常です</string>
     <string name="check_a11y">ユーザー補助サービス</string>
-    <string name="check_a11y_bad">動いていないため、Buddy は画面を見たり操作したりできません。ユーザー補助の設定で Buddy をオンにしてください。</string>
+    <string name="check_a11y_bad">動いていないため、Mr Do It は画面を見たり操作したりできません。ユーザー補助の設定で Mr Do It をオンにしてください。</string>
     <string name="check_notifications">通知へのアクセス</string>
     <string name="check_notifications_bad">通知ルールに必要ですが、オフになっています。</string>
     <string name="check_battery">バッテリーの最適化</string>
-    <string name="check_battery_bad">Buddy に対してオンです。Android がバックグラウンドで停止し、スケジュールしたタスクが動かないことがあります。</string>
-    <string name="check_linux">Buddy の Linux</string>
+    <string name="check_battery_bad">Mr Do It に対してオンです。Android がバックグラウンドで停止し、スケジュールしたタスクが動かないことがあります。</string>
+    <string name="check_linux">Mr Do It の Linux</string>
     <string name="check_linux_ok">%1$.1f 秒で起動</string>
     <string name="check_linux_bad">起動しません：%1$s</string>
     <string name="check_linux_missing">まだインストールされていません。設定でセットアップしてください。</string>
-    <string name="check_helper">Buddy のヘルパー</string>
-    <string name="check_helper_bad">Linux 内のコピーがこのバージョンの Buddy より古いです。</string>
+    <string name="check_helper">Mr Do It のヘルパー</string>
+    <string name="check_helper_bad">Linux 内のコピーがこのバージョンの Mr Do It より古いです。</string>
     <string name="check_server">スマホツールのサーバー</string>
-    <string name="check_server_bad">127.0.0.1:%1$d で応答がありません。ユーザー補助の設定で Buddy をオフにして、もう一度オンにしてください。</string>
+    <string name="check_server_bad">127.0.0.1:%1$d で応答がありません。ユーザー補助の設定で Mr Do It をオフにして、もう一度オンにしてください。</string>
     <string name="check_agent_version">バージョン %1$s</string>
     <string name="check_network">インターネット</string>
     <string name="check_network_bad">%1$s が見つかりません。Wi-Fi やモバイルデータ、またはブロックしている VPN やプライベート DNS を確認してください。</string>
@@ -1430,30 +1462,33 @@
     <string name="background_title">バックグラウンド モード</string>
     <string name="background_row">スマートフォンを使っている間、エージェントは専用の画面で作業します</string>
     <string name="background_intro">バックグラウンド モードでは、エージェントはあなたには見えない専用の画面で作業します。画面もキーボードも戻るボタンもあなたがそのまま使え、スマートフォンをロックしていても作業は続きます。</string>
-    <string name="background_how">Android でこのような画面を作れるのは「ワイヤレス デバッグ」だけなので、Buddy がこのスマートフォン上で一度だけペア設定します。パソコンは不要です。</string>
-    <string name="background_step1">1. 「セットアップ」をタップします。Buddy が「開発者向けオプション」を開き、「ワイヤレス デバッグ」を探します。</string>
-    <string name="background_step2">2. Buddy が「ワイヤレス デバッグ」をオンにして（Wi-Fi に接続している必要があります）、「ペア設定コードによるデバイスのペア設定」を開きます。</string>
-    <string name="background_step3">3. Buddy がコードを読み取ってペア設定し、この画面に戻ります。途中で止まったら、その手順だけ自分で行ってください。続きは Buddy が進めます。</string>
+    <string name="background_how">Android でこのような画面を作れるのは「ワイヤレス デバッグ」だけなので、Mr Do It がこのスマートフォン上で一度だけペア設定します。パソコンは不要です。</string>
+    <string name="background_step1">1. 「セットアップ」をタップします。Mr Do It が「開発者向けオプション」を開き、「ワイヤレス デバッグ」を探します。</string>
+    <string name="background_step2">2. Mr Do It が「ワイヤレス デバッグ」をオンにして（Wi-Fi に接続している必要があります）、「ペア設定コードによるデバイスのペア設定」を開きます。</string>
+    <string name="background_step3">3. Mr Do It がコードを読み取ってペア設定し、この画面に戻ります。途中で止まったら、その手順だけ自分で行ってください。続きは Mr Do It が進めます。</string>
     <string name="background_setup">セットアップ</string>
     <string name="background_open_options">開発者向けオプションを開く</string>
-    <string name="background_installing">Buddy の Linux 用の adb を取得中…</string>
+    <string name="background_installing">Mr Do It の Linux 用の adb を取得中…</string>
     <string name="background_waiting">「ワイヤレス デバッグ」で「ペア設定コードによるデバイスのペア設定」が開くのを待っています…</string>
     <string name="background_pairing">ペア設定中…</string>
     <string name="background_starting">ヘルパーを起動中…</string>
     <string name="background_ready">準備完了</string>
     <string name="background_ready_info">チャットごとにオンにします：チャットのオプション →「バックグラウンドで作業する」</string>
     <string name="background_paired">ペア設定済み</string>
-    <string name="background_asleep">ヘルパーが動いていません。最初のバックグラウンド作業のときに起動しますが、今すぐ起動することもできます。スマートフォンを再起動した後は「今すぐ起動」をタップしてください。Buddy がそのために「ワイヤレス デバッグ」をオンにします（Wi-Fi に接続している必要があります）。</string>
+    <string name="background_asleep">ヘルパーが動いていません。最初のバックグラウンド作業のときに起動しますが、今すぐ起動することもできます。スマートフォンを再起動した後は「今すぐ起動」をタップしてください。Mr Do It がそのために「ワイヤレス デバッグ」をオンにします（Wi-Fi に接続している必要があります）。</string>
     <string name="background_start_now">今すぐ起動</string>
     <string name="background_failed">うまくいきませんでした：%1$s</string>
-    <string name="background_needs_linux">バックグラウンド モードには Buddy の Linux が必要です。先にエージェントをインストールしてください。</string>
+    <string name="background_needs_linux">バックグラウンド モードには Mr Do It の Linux が必要です。先にエージェントをインストールしてください。</string>
     <string name="background_needs_dev">先に「開発者向けオプション」をオンにしてください：「設定」→「デバイス情報」→「ビルド番号」を 7 回タップします。</string>
-    <string name="background_needs_service">先に Buddy のユーザー補助サービスをオンにしてください。</string>
-    <string name="background_no_dialog">Buddy がペア設定のダイアログを時間内に見つけられませんでした。もう一度お試しください。</string>
+    <string name="background_needs_service">先に Mr Do It のユーザー補助サービスをオンにしてください。</string>
+    <string name="background_no_dialog">Mr Do It がペア設定のダイアログを時間内に見つけられませんでした。もう一度お試しください。</string>
     <string name="background_remove">解除</string>
-    <string name="background_remove_text">Buddy はペア設定を破棄し、ヘルパーを停止します。チャットは再び実際の画面で作業します。</string>
+    <string name="background_remove_text">Mr Do It はペア設定を破棄し、ヘルパーを停止します。チャットは再び実際の画面で作業します。</string>
     <string name="background_default">新しいチャットはバックグラウンドで作業する</string>
     <string name="background_default_info">チャットごとのスイッチは、これまでどおりチャットのオプションにあります。</string>
+    <string name="background_restart">再起動後に自動で起動し直す</string>
+    <string name="background_restart_info">スマートフォンの再起動後、ロックが解除されると、Mr Do It が自分で「ワイヤレス デバッグ」をオンにしてヘルパーを起動します。再起動後に Wi-Fi が必要で、ワイヤレス デバッグが常に許可されているネットワークに限ります。うまくいかなかった場合は「今すぐ起動」をタップしてください。</string>
+    <string name="background_restart_cant">このスマートフォンでは Mr Do It が自分で「ワイヤレス デバッグ」をオンにできないため、ここでは使えません。再起動後は「今すぐ起動」をタップしてください。</string>
     <string name="chat_bg_connected">接続中</string>
     <string name="chat_bg_disconnected">未接続</string>
     <string name="chat_bg_not_set_up">未設定</string>
@@ -1471,13 +1506,13 @@
     <string name="helper_stopped">停止</string>
     <string name="helper_of">「%1$s」のサブエージェント</string>
     <string name="helper_this_chat">このチャット</string>
-    <string name="background_security">「ワイヤレス デバッグ」では、ペア設定したデバイスがこのスマートフォンを操作できます。Buddy がペア設定するのはこのスマートフォン上の Buddy 自身だけで、ヘルパーもこのスマートフォン内からの接続しか受け付けません。</string>
+    <string name="background_security">「ワイヤレス デバッグ」では、ペア設定したデバイスがこのスマートフォンを操作できます。Mr Do It がペア設定するのはこのスマートフォン上の Mr Do It 自身だけで、ヘルパーもこのスマートフォン内からの接続しか受け付けません。</string>
     <string name="background_brought">あなたの画面に移しました：この手順はあなたの操作が必要です。このチャットのバックグラウンド モードはオフになりました。</string>
     <string name="chat_background">バックグラウンドで作業する</string>
     <string name="chat_background_info">エージェントは専用の画面を使い、あなたはスマートフォンをそのまま使えます。ログインなど、あなたの操作が必要な手順はあなたの画面に表示されます。</string>
     <string name="background_preview">バックグラウンドの画面</string>
     <string name="background_show">自分の画面に表示</string>
-    <string name="background_usb_note">Buddy は「USB デバッグ」もオンにします。これにより、Wi-Fi が切れて Android が「ワイヤレス デバッグ」をオフにしても、ヘルパーは動き続けます。オンのままにしてください。</string>
+    <string name="background_usb_note">Mr Do It は「USB デバッグ」もオンにします。これにより、Wi-Fi が切れて Android が「ワイヤレス デバッグ」をオフにしても、ヘルパーは動き続けます。オンのままにしてください。</string>
     <string name="background_shell">スマートフォンのコマンド</string>
     <string name="background_shell_switch">エージェントにスマートフォンでのコマンド実行を許可</string>
     <string name="background_shell_info">Linux ツールを使うチャットでは、エージェントが「adb shell」と同じように、スマートフォン本体でコマンドを実行できます。アプリのインストールや起動、設定の変更、ログやファイルの読み取りなどです。エージェントが読んだメッセージやウェブページが、だましてコマンドを実行させようとするおそれがあります。</string>
@@ -1492,7 +1527,7 @@
     <string name="chat_earlier_gone">これより前のメッセージは保存されていません。チャットが保持するのは最新の %1$d 件です。</string>
     <string name="rules_recheck">もう一度確認</string>
     <string name="setup_help">ヘルプ</string>
-    <string name="setup_help_info">GitHub にある Buddy のガイドです。Buddy の使い方はどのエージェントにも聞けます。</string>
+    <string name="setup_help_info">GitHub にある Mr Do It のガイドです。Mr Do It の使い方はどのエージェントにも聞けます。</string>
     <string name="signin_api_key">代わりに API キーを使う</string>
     <string name="signin_api_base_bad">https:// で始まるアドレスを入力してください（この端末や自分のネットワーク上なら http:// も可）</string>
     <string name="account_plan_api_key_at">API キー · %1$s</string>
@@ -1505,7 +1540,7 @@
     <string name="skills_title">スキル</string>
     <string name="skills_row_none">エージェント共通の手順書</string>
     <string name="skills_intro">スキルは、エージェントが特定の種類の作業で従う手順書です。文章のスタイル、チェックリスト、アプリでの操作手順などです。Claude Code、Codex、OpenCode は、作業に合うときや、メッセージ欄で / を入力して選んだときにスキルを使います。SKILL.md 形式なので、Claude や ChatGPT のスキルもここで使えます。</string>
-    <string name="skills_need_linux">スキルは Buddy の Linux に保存されます。先にエージェントを設定してください。</string>
+    <string name="skills_need_linux">スキルは Mr Do It の Linux に保存されます。先にエージェントを設定してください。</string>
     <string name="skills_none">スキルはまだありません。</string>
     <string name="skills_import">インポート</string>
     <string name="skills_write">自分で書く</string>
@@ -1524,7 +1559,7 @@
     <string name="skills_bad_file">スキルではありません。名前の入った SKILL.md が必要です。</string>
     <string name="skills_slash_none">その名前のスキルはありません。タップしてスキルを追加できます。</string>
     <string name="github_row_none">エージェントがリポジトリに push できるようにする</string>
-    <string name="github_intro">Linux ツール用に GitHub にログインします。Buddy は自分の Linux に git と GitHub CLI をインストールし、あなたのアカウントでログインさせ、git にあなたの名前と非公開の noreply メールを設定します。</string>
+    <string name="github_intro">Linux ツール用に GitHub にログインします。Mr Do It は自分の Linux に git と GitHub CLI をインストールし、あなたのアカウントでログインさせ、git にあなたの名前と非公開の noreply メールを設定します。</string>
     <string name="github_risk">これで Linux ツールのあるチャットのエージェントが、あなたのアカウントで clone、commit、push をしたり、issue や pull request を作成したりできます。push や投稿の前には必ずあなたに確認するよう指示されています。</string>
     <string name="github_sign_in">GitHub でログイン</string>
     <string name="github_installing">git と GitHub CLI をインストール中…</string>
@@ -1536,24 +1571,26 @@
     <string name="github_signed_in">\@%1$s としてログイン中</string>
     <string name="github_signed_in_info">Linux ツールのあるチャットのエージェントは、このアカウントで git と gh を使えます。</string>
     <string name="github_sign_out_title">GitHub からログアウトしますか？</string>
-    <string name="github_sign_out_text">Buddy の Linux の git と GitHub CLI は、あなたのアカウントにアクセスできなくなります。</string>
+    <string name="github_sign_out_text">Mr Do It の Linux の git と GitHub CLI は、あなたのアカウントにアクセスできなくなります。</string>
     <string name="backup_title">バックアップと引っ越し</string>
     <string name="backup_row">チャットと設定を 1 つのファイルに</string>
-    <string name="backup_intro">チャット、設定、ルール、画像、スキル、エージェントのプロジェクト、各会話についてエージェントが残している内容を、Downloads/Buddy の 1 つのファイルに保存します。この端末でも別の端末でも復元できます。</string>
+    <string name="backup_intro">チャット、設定、ルール、画像、スキル、エージェントのプロジェクト、各会話についてエージェントが残している内容を、Downloads/Mr Do It の 1 つのファイルに保存します。この端末でも別の端末でも復元できます。</string>
     <string name="backup_left_out">ログイン情報と API キーは含まれません。復元後にもう一度ログインし、キーを追加してください。プロジェクトのビルドフォルダも含まれません。</string>
     <string name="backup_now">今すぐバックアップ</string>
     <string name="backup_restore">バックアップから復元</string>
     <string name="backup_restore_title">このバックアップを復元しますか？</string>
-    <string name="backup_restore_text">この端末のチャットと設定がバックアップの内容に置き換わります。完了すると Buddy が再起動します。</string>
+    <string name="backup_restore_text">この端末のチャットと設定がバックアップの内容に置き換わります。完了すると Mr Do It が再起動します。</string>
     <string name="backup_making">バックアップ中…（プロジェクトは時間がかかることがあります）</string>
     <string name="backup_restoring">復元中…</string>
-    <string name="backup_made">Downloads/Buddy/%1$s に保存しました。</string>
-    <string name="backup_restored">復元しました。Buddy を再起動します。</string>
-    <string name="backup_restored_no_linux">チャットと設定を復元しました。Linux 部分（スキル、プロジェクト、エージェントの記録）には Buddy の Linux が必要です。エージェントを設定してから、もう一度復元してください。Buddy を再起動します。</string>
+    <string name="backup_made">Downloads/Mr Do It/%1$s に保存しました。</string>
+    <string name="backup_restored">復元しました。Mr Do It を再起動します。</string>
+    <string name="backup_restored_no_linux">チャットと設定を復元しました。Linux 部分（スキル、プロジェクト、エージェントの記録）には Mr Do It の Linux が必要です。エージェントを設定してから、もう一度復元してください。Mr Do It を再起動します。</string>
     <string name="backup_failed">うまくいきませんでした: %1$s</string>
-    <string name="backup_not_one">このファイルは Buddy のバックアップではありません。</string>
+    <string name="backup_not_one">このファイルは Mr Do It のバックアップではありません。</string>
     <string name="chat_incognito">シークレット</string>
-    <string name="chat_incognito_info">このチャットは、エージェントが残した内容とともに、Buddy の再起動時に削除されます。</string>
+    <string name="chat_incognito_info">このチャットは、エージェントが残した内容とともに、Mr Do It の再起動時に削除されます。</string>
+    <string name="chat_lite">ライトモード</string>
+    <string name="chat_lite_info">小さなモデル向け：電話ツール十数個で短く始め、必要なときにエージェントが追加で読み込みます。このスマホのモデルでは自動でオン。オンの間は Linux ツールは使えません。</string>
     <string name="api_keys_remove_title">%1$s を削除しますか?</string>
     <string name="api_keys_remove">削除</string>
     <string name="api_keys_failed">このキーでサービスのモデル一覧を取得できませんでした: %1$s</string>
@@ -1595,13 +1632,13 @@
     <string name="search_messages">メッセージ：%1$d</string>
     <string name="mcp_title">MCP サーバー</string>
     <string name="mcp_row_none">自分のサーバーのツール</string>
-    <string name="mcp_intro">自分の MCP サーバーを接続すると、どのエージェントもスマートフォンのツールに加えてそのツールを使えます。サーバーにはアドレスで、インターネットまたは自分のネットワーク経由で接続します。キーはこのスマートフォンに暗号化して保存され、エージェントには渡りません。Buddy が呼び出しごとに付け加えます。</string>
+    <string name="mcp_intro">自分の MCP サーバーを接続すると、どのエージェントもスマートフォンのツールに加えてそのツールを使えます。サーバーにはアドレスで、インターネットまたは自分のネットワーク経由で接続します。キーはこのスマートフォンに暗号化して保存され、エージェントには渡りません。Mr Do It が呼び出しごとに付け加えます。</string>
     <string name="mcp_none">サーバーはまだありません。</string>
     <string name="mcp_add">サーバーを追加</string>
     <string name="mcp_import">リストを読み込む</string>
     <string name="mcp_export">リストをコピー</string>
     <string name="mcp_exported">コピーしました（キーは含みません）。</string>
-    <string name="mcp_note">これらのツールはスマートフォンの外で動くため、Buddy の承認カードの対象になりません。信頼できるサーバーだけを追加してください。通知ルールの実行時には使われません。</string>
+    <string name="mcp_note">これらのツールはスマートフォンの外で動くため、Mr Do It の承認カードの対象になりません。信頼できるサーバーだけを追加してください。通知ルールの実行時には使われません。</string>
     <string name="mcp_name_hint">名前（英数字）</string>
     <string name="mcp_url_hint">アドレス（https://…/mcp）</string>
     <string name="mcp_key_hint">キーまたはトークン（任意）</string>
@@ -1620,7 +1657,7 @@
     <string name="api_keys_models">%1$s · %2$d 個のモデル</string>
     <string name="api_keys_add">APIキーを追加</string>
     <string name="api_keys_none">APIキーはまだありません。</string>
-    <string name="api_keys_intro">Claude Code、Codex、OpenCode で他サービスのモデルを、プランと併用またはプランの代わりに使えます。各チャットはモデルメニューでモデルを選びます。キーでの利用はそのキーのアカウントに請求されます。キーはこの端末に暗号化して保存され、エージェントには渡りません。Buddy が各リクエストに付け加えます。</string>
+    <string name="api_keys_intro">Claude Code、Codex、OpenCode で他サービスのモデルを、プランと併用またはプランの代わりに使えます。各チャットはモデルメニューでモデルを選びます。キーでの利用はそのキーのアカウントに請求されます。キーはこの端末に暗号化して保存され、エージェントには渡りません。Mr Do It が各リクエストに付け加えます。</string>
     <string name="api_keys_row_none">他サービスのモデルを自分のキーで</string>
     <string name="api_keys_title">APIキー</string>
     <string name="signin_api_keys">APIキー</string>
@@ -1634,7 +1671,7 @@
     <string name="hub_compacted">会話を圧縮しました: %1$s → %2$s トークン</string>
     <string name="signin_api_models_none">サービスはモデルを返しませんでした。</string>
     <string name="setup_step_signin_api_key">またはAPIキーを使う: 設定 → エージェントとモデル → APIキー。</string>
-    <string name="setup_step_signin_others">既定の頭脳は %1$s ですが、次のものは準備できています：%2$s。どれかを既定にすればすぐに Buddy を使えます。</string>
+    <string name="setup_step_signin_others">既定の頭脳は %1$s ですが、次のものは準備できています：%2$s。どれかを既定にすればすぐに Mr Do It を使えます。</string>
     <string name="setup_switch_default">既定を切り替え</string>
     <string name="setup_switch_default_title">既定の頭脳</string>
     <string name="signin_api_key_on">%1$s はAPIキーで動いています。チャットのモデルメニューでモデルを選ぶか、APIキーでデフォルトを設定してください。</string>
@@ -1643,6 +1680,9 @@
     <string name="api_keys_local_info">自分のサーバー（Ollama、LM Studio、llama.cpp）の場合: API キーは空のままにします。PC で動かす場合は、localhost の代わりに Wi-Fi 上の PC のアドレスを入力します（例: http://192.168.1.20:11434/v1）。</string>
     <string name="main_section_pinned">固定済み</string>
     <string name="main_section_archived">アーカイブ (%1$d)</string>
+    <string name="main_archived_title">アーカイブ</string>
+    <string name="main_archived_open">アーカイブしたチャット</string>
+    <string name="main_archived_back">チャットに戻る</string>
     <string name="chat_pinned_marker">固定済み</string>
     <string name="chat_menu_rename">名前を変更</string>
     <string name="chat_menu_pin">一番上に固定</string>
@@ -1654,4 +1694,176 @@
     <string name="chat_rename_title">チャットの名前を変更</string>
     <string name="chat_rename_hint">空欄: 最初のメッセージ</string>
     <string name="chat_rename_save">保存</string>
+    <string name="onphone_title">このスマホのモデル</string>
+    <string name="onphone_row_none">スマホ本体でオフラインのモデルを動かす</string>
+    <string name="onphone_intro">モデルをダウンロードすると、Mr Do It がスマホ本体で動かします。データはスマホの外に出ず、インターネットなしでも動きます。小さなモデルは簡単な依頼（バッテリー、タイマー、アプリをちょっと確認）をこなせますが、長い作業では間違えます。OpenCode チャットのモデルメニューの「このスマホ」から選んでください。そのチャットはライトモードになります。</string>
+    <string name="onphone_runs_on">実行先</string>
+    <string name="onphone_dev_auto">自動</string>
+    <string name="onphone_dev_npu">NPU</string>
+    <string name="onphone_dev_gpu">GPU</string>
+    <string name="onphone_dev_cpu">CPU</string>
+    <string name="onphone_runs_on_info">自動は起動できる中で最速のものを使います：NPU、次に GPU、次に CPU。</string>
+    <string name="onphone_ran_on">前回：%s</string>
+    <string name="onphone_not_snapdragon">このスマホではモデルは CPU で動きます。NPU と GPU 用のエンジンは Snapdragon のスマホ向けです。</string>
+    <string name="onphone_models">モデル</string>
+    <string name="onphone_download">ダウンロード</string>
+    <string name="onphone_delete">削除</string>
+    <string name="onphone_cancel">キャンセル</string>
+    <string name="onphone_size_license">%1$s · %2$s</string>
+    <string name="onphone_downloaded">スマホにあります</string>
+    <string name="onphone_downloading">ダウンロード中… %1$d%%</string>
+    <string name="onphone_engine_downloading">エンジンを取得中… %1$d%%</string>
+    <string name="onphone_failed">うまくいきませんでした：%s</string>
+    <string name="onphone_metered_title">モバイルデータでダウンロードしますか？</string>
+    <string name="onphone_metered_text">%1$s は %2$s あります。モバイルデータでは料金がかかることがあります。</string>
+    <string name="onphone_no_space">空き容量が足りません：%1$s 必要で、空きは %2$s です。</string>
+    <string name="onphone_delete_title">%s を削除しますか？</string>
+    <string name="onphone_delete_text">スマホから削除されます。いつでもまたダウンロードできます。</string>
+    <string name="onphone_source">エンジンは GitHub にある llama.cpp の公式 Android ビルド（%s）、モデルは Hugging Face から取得します。Mr Do It は各ダウンロードをチェックサムで確認します。</string>
+    <string name="onphone_service">このスマホ</string>
+    <string name="onphone_note_gemma_e2b">Google 製。Snapdragon の NPU で速く、1 ステップの簡単な依頼向け。</string>
+    <string name="onphone_note_gemma_e4b">Google 製。E2B より大きく、速度はおよそ半分。空きメモリが多く必要です。</string>
+    <string name="onphone_note_qwen_2b">Alibaba 製。いちばん小さなダウンロードで、返答もいちばん速い。</string>
+    <string name="onphone_note_qwen_4b">Alibaba 製。2B より大きく、速度はおよそ半分。</string>
+    <string name="hub_still_reading_phone">処理中… このスマホのモデルは、特に最初の返答に少し時間がかかります。</string>
+    <string name="onphone_too_hot">スマホが熱すぎるため、今はモデルを動かせません。数分冷ましてから、もう一度試してください。</string>
+    <string name="onphone_think">答える前に考える</string>
+    <string name="onphone_think_info">遅くなります：1 ステップに 20 秒以上かかることがあります。オフでも小さなモデルは速く、ほとんど同じツールを選びます。</string>
+    <string name="tools_title">ツール</string>
+    <string name="tools_row">%2$d 個中 %1$d 個がオン</string>
+    <string name="tools_intro">エージェントがスマートフォンで使えるツールです。オフのツールはどのエージェントにも提供されず、呼び出しても拒否されます。変更は次のメッセージから反映されます。</string>
+    <string name="tools_always_on">常にオン：エージェントはこれで承認を求めます</string>
+    <string name="tools_browser_off">バックグラウンドブラウザがオフのため、設定 → バックグラウンドブラウザ でオンにするまで、これらのツールは提供されません。</string>
+    <string name="tools_group_screen">画面</string>
+    <string name="tools_group_apps">アプリ、リンク、ファイル</string>
+    <string name="tools_group_info">スマートフォンの情報</string>
+    <string name="tools_group_quick">クイック操作</string>
+    <string name="tools_group_talk">あなたへの確認</string>
+    <string name="tools_group_browser">バックグラウンドブラウザ</string>
+    <string name="tools_group_schedule">スケジュールとルール</string>
+    <string name="tools_group_advanced">詳細</string>
+    <string name="tool_read_screen">画面を読み取る</string>
+    <string name="tool_read_screen_info">画面上のテキスト、ボタン、入力欄を読み取ります</string>
+    <string name="tool_screenshot">スクリーンショット</string>
+    <string name="tool_screenshot_info">画面を撮影します。画像、地図、ゲーム向け</string>
+    <string name="tool_tap">タップ</string>
+    <string name="tool_tap_info">ボタン、入力欄、画面上の位置をタップします</string>
+    <string name="tool_long_press">長押し</string>
+    <string name="tool_long_press_info">押したままにします（メニューを開くときなど）</string>
+    <string name="tool_type_text">入力</string>
+    <string name="tool_type_text_info">入力欄にテキストを入力します</string>
+    <string name="tool_scroll">スクロール</string>
+    <string name="tool_scroll_info">リストやページをスクロールします</string>
+    <string name="tool_swipe">スワイプ</string>
+    <string name="tool_swipe_info">画面上で指をドラッグします</string>
+    <string name="tool_press">システムボタン</string>
+    <string name="tool_press_info">戻る、ホーム、最近使ったアプリ、キーボードの Enter</string>
+    <string name="tool_find">画面上で探す</string>
+    <string name="tool_find_info">テキストが表示されるまでスクロールします</string>
+    <string name="tool_collect">長いリストを読む</string>
+    <string name="tool_collect_info">リストや会話をスクロールしてテキストを集めます</string>
+    <string name="tool_do_steps">複数のステップを一度に</string>
+    <string name="tool_do_steps_info">タップ、入力、スクロールをまとめて実行します（フォームの入力など）</string>
+    <string name="tool_wait">待機</string>
+    <string name="tool_wait_info">画面が落ち着くまで少し待ちます</string>
+    <string name="tool_wait_for">表示を待つ</string>
+    <string name="tool_wait_for_info">テキストや画面が表示されるまで待ちます</string>
+    <string name="tool_point_out">場所を示す</string>
+    <string name="tool_point_out_info">画面上の位置を枠、丸、矢印で示します</string>
+    <string name="tool_open_app">アプリを開く</string>
+    <string name="tool_open_app_info">インストール済みのアプリを名前で開きます</string>
+    <string name="tool_list_apps">アプリの一覧</string>
+    <string name="tool_list_apps_info">スマートフォンにインストールされたアプリを一覧表示します</string>
+    <string name="tool_open_url">リンクを開く</string>
+    <string name="tool_open_url_info">タップしたときと同じようにリンクを開きます</string>
+    <string name="tool_share">共有</string>
+    <string name="tool_share_info">テキストやファイルで Android の共有メニューを開きます</string>
+    <string name="tool_save_to_downloads">Downloads に保存</string>
+    <string name="tool_save_to_downloads_info">Mr Do It の Linux から Downloads フォルダにファイルをコピーします</string>
+    <string name="tool_install_apk">アプリをインストール</string>
+    <string name="tool_install_apk_info">エージェントが作ったアプリの Android インストーラを開きます。「インストール」はあなたがタップします</string>
+    <string name="tool_wait_for_install">インストールを待つ</string>
+    <string name="tool_wait_for_install_info">アプリのインストールや更新が終わるまで待ちます</string>
+    <string name="tool_update_buddy">Mr Do It をアップデート</string>
+    <string name="tool_update_buddy_info">新しい Mr Do It を確認し、アップデートを開きます</string>
+    <string name="tool_device_status">スマートフォンの状態</string>
+    <string name="tool_device_status_info">バッテリー、ネットワーク、日時、空き容量</string>
+    <string name="tool_notifications">通知を読む</string>
+    <string name="tool_notifications_info">スマートフォンにある現在の通知を読み取ります</string>
+    <string name="tool_reply_notification">通知に返信</string>
+    <string name="tool_reply_notification_info">通知からメッセージに返信します</string>
+    <string name="tool_location">位置情報</string>
+    <string name="tool_location_info">スマートフォンの現在地。最初に Android が確認します</string>
+    <string name="tool_calendar_events">カレンダーを読む</string>
+    <string name="tool_calendar_events_info">カレンダーの予定を読み取ります。最初に Android が確認します</string>
+    <string name="tool_add_calendar_event">カレンダーに予定を追加</string>
+    <string name="tool_add_calendar_event_info">新しい予定を入力した状態でカレンダーアプリを開きます。「保存」はあなたがタップします</string>
+    <string name="tool_media">メディア操作</string>
+    <string name="tool_media_info">音楽や動画の再生、一時停止、スキップ</string>
+    <string name="tool_clipboard_read">クリップボードを読む</string>
+    <string name="tool_clipboard_read_info">最後にコピーした内容を読み取ります。毎回 Mr Do It が確認します</string>
+    <string name="tool_clipboard_write">クリップボードにコピー</string>
+    <string name="tool_clipboard_write_info">貼り付けられるようにテキストをクリップボードに入れます</string>
+    <string name="tool_set_alarm">アラームを設定</string>
+    <string name="tool_set_alarm_info">時計アプリでアラームを設定します</string>
+    <string name="tool_set_timer">タイマーを設定</string>
+    <string name="tool_set_timer_info">時計アプリでタイマーを開始します</string>
+    <string name="tool_take_photo">写真を撮る</string>
+    <string name="tool_take_photo_info">カメラを開きます。撮影はあなたが行います</string>
+    <string name="tool_notify">ステータス表示</string>
+    <string name="tool_notify_info">エージェントの作業中、バブルに短い一行を表示します</string>
+    <string name="tool_confirm">承認を求める</string>
+    <string name="tool_confirm_info">送信、購入、削除、変更の前に出る承認カード</string>
+    <string name="tool_ask">質問する</string>
+    <string name="tool_ask_info">答えを選べるカード</string>
+    <string name="tool_browser_open">ページを開く</string>
+    <string name="tool_browser_open_info">バックグラウンドブラウザでウェブページを開きます</string>
+    <string name="tool_browser_read">ページを読む</string>
+    <string name="tool_browser_read_info">ページをテキストとして読み取ります</string>
+    <string name="tool_browser_click">ページでクリック</string>
+    <string name="tool_browser_click_info">リンクやボタンをクリックします</string>
+    <string name="tool_browser_type">ページで入力</string>
+    <string name="tool_browser_type_info">ページの入力欄に入力します</string>
+    <string name="tool_browser_scroll">ページをスクロール</string>
+    <string name="tool_browser_scroll_info">ページをスクロールします</string>
+    <string name="tool_browser_back">戻る</string>
+    <string name="tool_browser_back_info">前のページに戻ります</string>
+    <string name="tool_browser_screenshot">ページの画像</string>
+    <string name="tool_browser_screenshot_info">ページを撮影します</string>
+    <string name="tool_browser_tabs">タブ</string>
+    <string name="tool_browser_tabs_info">ブラウザのタブを開く、切り替える、閉じる</string>
+    <string name="tool_schedule_message">メッセージをスケジュール</string>
+    <string name="tool_schedule_message_info">あとでエージェントがチャットに戻ってきます（何かを確認するときなど）</string>
+    <string name="tool_list_scheduled">スケジュールしたメッセージの一覧</string>
+    <string name="tool_list_scheduled_info">チャットのスケジュールしたメッセージを一覧表示します</string>
+    <string name="tool_cancel_scheduled">スケジュールしたメッセージを取り消す</string>
+    <string name="tool_cancel_scheduled_info">チャットのスケジュールしたメッセージを 1 件取り消します</string>
+    <string name="tool_add_notification_rule">通知ルールを追加</string>
+    <string name="tool_add_notification_rule_info">条件に合う通知を、指示と一緒にチャットに取り込みます</string>
+    <string name="tool_delegate">サブエージェント</string>
+    <string name="tool_delegate_info">タスクの一部を、同時に動くヘルパーに任せます</string>
+    <string name="tool_subagents">サブエージェントの報告</string>
+    <string name="tool_subagents_info">ヘルパーを待って、その報告を集めます</string>
+    <string name="tool_phone_shell">スマートフォンのコマンド</string>
+    <string name="tool_phone_shell_info">スマートフォンでコマンドを実行します。バックグラウンド モードの「スマートフォンのコマンド」スイッチも必要です</string>
+    <string name="tools_chat_title">このチャットのツール</string>
+    <string name="tools_chat_intro">このチャットのエージェントが使えるツール。ここのスイッチはこのチャットだけに適用され、ほかは設定に従います。変更は次のメッセージから適用されます。</string>
+    <string name="tools_chat_own">このチャットのみ</string>
+    <string name="tools_chat_reset">設定と同じにする</string>
+    <string name="setup_face_gif">GIF やアニメーション WebP はバブルで動きます。</string>
+    <string name="setup_face_anim">アニメーション</string>
+    <string name="setup_face_anim_once">ロック解除時</string>
+    <string name="setup_face_anim_loop">常に</string>
+    <string name="setup_face_anim_off">オフ</string>
+    <string name="setup_face_anim_note">スマートフォンのロックを解除するたびに 1 回再生、常に再生、または再生しません。常に再生するとバッテリーを多く使います。</string>
+    <string name="tool_call_log">通話履歴を読む</string>
+    <string name="tool_call_log_info">最近の通話: 相手、日時、通話時間。バックグラウンド モードが必要です</string>
+    <string name="tool_sms_list">SMS を読む</string>
+    <string name="tool_sms_list_info">最近の SMS。バックグラウンド モードが必要です</string>
+    <string name="tools_sms_codes">SMS のコードを表示</string>
+    <string name="tools_sms_codes_info">メッセージ内のワンタイムコードや PIN は、これがオンでない限り [code hidden] と表示されます</string>
+    <string name="hub_tool_call_log">通話履歴を読み取り中</string>
+    <string name="hub_tool_sms_list">SMS を読み取り中</string>
+    <string name="setup_face_too_big">このアニメーションは 16 MB を超えるため、バブルには静止画として表示されます。</string>
+    <string name="background_older">アップデート前のヘルパーがまだ動いているため、バックグラウンドのチャットは動くことがあります。新しいヘルパーを起動するには、一度だけワイヤレス デバッグが必要です: 「今すぐ起動」をタップしてください。</string>
 </resources>
