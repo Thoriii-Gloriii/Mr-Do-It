@@ -57,13 +57,15 @@ jobs:
       - name: Build release APKs (GitHub and F-Droid)
         env:
           BUDDY_KEYSTORE_PASSWORD: ${{ secrets.BUDDY_KEYSTORE_PASSWORD }}
-        run: ./gradlew --no-daemon assembleGithubRelease assembleFdroidRelease
+        run: ./gradlew --no-daemon assembleGithubRelease assembleFdroidRelease assembleGithubDebug
 
       - name: Collect APK
         run: |
-          mkdir -p dist
+          mkdir -p dist debug
           apk=$(find app/build/outputs/apk/github/release -name '*.apk' | head -1)
           cp "$apk" "dist/mrdoit-${GITHUB_REF_NAME//\//-}.apk"
+          debug_apk=$(find app/build/outputs/apk/github/debug -name '*.apk' | head -1)
+          cp "$debug_apk" debug/mrdoit-debug.apk
           # fixed name too, so releases/latest/download/mrdoit.apk always gets the newest version
           if [[ "$GITHUB_REF" == refs/tags/v* ]]; then cp "$apk" dist/mrdoit.apk; fi
           fd=$(find app/build/outputs/apk/fdroid/release -name '*.apk' | head -1)
@@ -76,6 +78,11 @@ jobs:
         with:
           name: mrdoit-apk
           path: dist/*.apk
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: mrdoit-debug-apk
+          path: debug/mrdoit-debug.apk
 
       - name: Publish GitHub release
         if: startsWith(github.ref, 'refs/tags/v')
