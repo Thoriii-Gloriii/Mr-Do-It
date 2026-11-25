@@ -41,23 +41,23 @@ jobs:
         env:
           NDK_VERSION: 27.2.12479018
 
-      # Release signing is optional: add the MRDOIT_KEYSTORE_BASE64 and MRDOIT_KEYSTORE_PASSWORD
+      # Release signing is optional: add the BUDDY_KEYSTORE_BASE64 and BUDDY_KEYSTORE_PASSWORD
       # repository secrets to get a signed APK; otherwise the APK is unsigned.
       - name: Decode signing key
         id: decode
         env:
-          KEYSTORE_BASE64: ${{ secrets.MRDOIT_KEYSTORE_BASE64 }}
+          KEYSTORE_BASE64: ${{ secrets.BUDDY_KEYSTORE_BASE64 }}
         if: env.KEYSTORE_BASE64 != ''
         run: |
           echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
-          echo "MRDOIT_KEYSTORE=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+          echo "BUDDY_KEYSTORE=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
           echo "has_key=true" >> "$GITHUB_OUTPUT"
 
       # github: the release here. fdroid: F-Droid builds it from this source too, and ships this signed copy when its
       # own build comes out identical (reproducible builds), so users can switch between the two.
       - name: Build release APKs (GitHub and F-Droid)
         env:
-          MRDOIT_KEYSTORE_PASSWORD: ${{ secrets.MRDOIT_KEYSTORE_PASSWORD }}
+          BUDDY_KEYSTORE_PASSWORD: ${{ secrets.BUDDY_KEYSTORE_PASSWORD }}
         run: ./gradlew --no-daemon assembleGithubRelease assembleFdroidRelease
 
       - name: Collect APK
@@ -112,7 +112,7 @@ jobs:
           export PATH="$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1):$PATH" # apksigner
           cd rebuild-check
           ANDROID_NDK_HOME="$ANDROID_HOME/ndk/27.2.12479018" native/build.sh
-          env -u MRDOIT_KEYSTORE ./gradlew --no-daemon assembleFdroidRelease
+          env -u BUDDY_KEYSTORE ./gradlew --no-daemon assembleFdroidRelease
           unsigned=$(find app/build/outputs/apk/fdroid/release -name '*.apk' | head -1)
           apksigcopier compare --unsigned "$FDROID_APK" "$unsigned"
           echo "The F-Droid APK is reproducible"

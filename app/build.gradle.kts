@@ -27,14 +27,14 @@ android {
 
     // Release signing comes from environment variables (set as GitHub Actions secrets).
     // Without them, assembleRelease produces an unsigned APK.
-    val keystorePath = System.getenv("MRDOIT_KEYSTORE")
+    val keystorePath = System.getenv("BUDDY_KEYSTORE")
     signingConfigs {
         if (keystorePath != null) {
             create("release") {
                 storeFile = file(keystorePath)
-                storePassword = System.getenv("MRDOIT_KEYSTORE_PASSWORD")
-                keyAlias = System.getenv("MRDOIT_KEY_ALIAS") ?: "mrdoit"
-                keyPassword = System.getenv("MRDOIT_KEY_PASSWORD") ?: System.getenv("MRDOIT_KEYSTORE_PASSWORD")
+                storePassword = System.getenv("BUDDY_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("BUDDY_KEY_ALIAS") ?: "buddy"
+                keyPassword = System.getenv("BUDDY_KEY_PASSWORD") ?: System.getenv("BUDDY_KEYSTORE_PASSWORD")
             }
         }
     }
