@@ -18,7 +18,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "app.mrdoit.mothusi"
+        applicationId = "app.godo.assistant"
         minSdk = 30
         targetSdk = 36
         versionCode = appVersionCode

@@ -215,7 +215,7 @@
 
         <provider
             android:name=".FilesProvider"
-            android:authorities="app.mrdoit.mothusi.files"
+            android:authorities="app.godo.assistant.files"
             android:exported="false"
             android:grantUriPermissions="true" />
 

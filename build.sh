@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 
 SDK_JAR=${SDK_JAR:-/root/android-sdk/android-36/android.jar}
 KEYSTORE=${KEYSTORE:-/root/.mrdoit/keys/apps.jks}
-PACKAGE=app.mrdoit.mothusi
+PACKAGE=app.godo.assistant
 INFO=app/src/main/java/app/mrdoit/mothusi/BuildInfo.java
 VERSION_NAME=$(sed -n 's/.*VERSION = "\(.*\)";/\1/p' "$INFO")
 VERSION_CODE=$(sed -n 's/.*VERSION_CODE = \([0-9]*\);/\1/p' "$INFO")
