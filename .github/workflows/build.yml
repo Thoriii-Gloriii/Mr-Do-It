@@ -41,15 +41,13 @@ jobs:
         env:
           NDK_VERSION: 27.2.12479018
 
-      # A release build must be signed, so fail clearly when either repository secret is missing.
+      # Release signing is optional: without the keystore secret the APK is unsigned.
       - name: Decode signing key
         id: decode
         env:
           KEYSTORE_BASE64: ${{ secrets.BUDDY_KEYSTORE_BASE64 }}
-          KEYSTORE_PASSWORD: ${{ secrets.BUDDY_KEYSTORE_PASSWORD }}
+        if: env.KEYSTORE_BASE64 != ''
         run: |
-          : "${KEYSTORE_BASE64:?Missing repository secret BUDDY_KEYSTORE_BASE64}"
-          : "${KEYSTORE_PASSWORD:?Missing repository secret BUDDY_KEYSTORE_PASSWORD}"
           echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
           echo "BUDDY_KEYSTORE=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
           echo "has_key=true" >> "$GITHUB_OUTPUT"
